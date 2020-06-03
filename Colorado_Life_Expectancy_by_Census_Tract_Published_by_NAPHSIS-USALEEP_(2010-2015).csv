@@ -1,0 +1,1250 @@
+﻿OBJECTID,FIPS,Life_Expectancy_Label,COUNTY,TRACT_NAME,LE_20102015,LE_StdError,LE_L95CI,LE_U95CI,LE_STATE
+1,08043979000,81.3 Years (95% C.I. 74.1 - 88.5 Years),FREMONT,"Census Tract 9790, Fremont County, Colorado",81.3,3.68,74.1,88.5,80.5
+2,08045951600,82.7 Years (95% C.I. 79.1 - 86.3 Years),GARFIELD,"Census Tract 9516, Garfield County, Colorado",82.7,1.82,79.1,86.3,80.5
+3,08125963200,80.6 Years (95% C.I. 77.1 - 84.1 Years),YUMA,"Census Tract 9632, Yuma County, Colorado",80.6,1.76,77.1,84.1,80.5
+4,08103951200,78.5 Years (95% C.I. 76.1 - 80.9 Years),RIO BLANCO,"Census Tract 9512, Rio Blanco County, Colorado",78.5,1.23,76.1,80.9,80.5
+5,08103951100,79.4 Years (95% C.I. 76.4 - 82.4 Years),RIO BLANCO,"Census Tract 9511, Rio Blanco County, Colorado",79.4,1.54,76.4,82.4,80.5
+6,08049000201,80.4 Years (95% C.I. 77.4 - 83.4 Years),GRAND,"Census Tract 2.01, Grand County, Colorado",80.4,1.53,77.4,83.4,80.5
+7,08049000202,81.7 Years (95% C.I. 75.9 - 87.5 Years),GRAND,"Census Tract 2.02, Grand County, Colorado",81.7,2.94,75.9,87.5,80.5
+8,08049000100,79.5 Years (95% C.I. 76.2 - 82.8 Years),GRAND,"Census Tract 1, Grand County, Colorado",79.5,1.69,76.2,82.8,80.5
+9,08081000600,77.6 Years (95% C.I. 75.2 - 80 Years),MOFFAT,"Census Tract 6, Moffat County, Colorado",77.6,1.24,75.2,80,80.5
+10,08081000500,79.7 Years (95% C.I. 75.5 - 83.9 Years),MOFFAT,"Census Tract 5, Moffat County, Colorado",79.7,2.16,75.5,83.9,80.5
+11,08081000400,75.4 Years (95% C.I. 73 - 77.8 Years),MOFFAT,"Census Tract 4, Moffat County, Colorado",75.4,1.23,73,77.8,80.5
+12,08081000300,79 Years (95% C.I. 75.6 - 82.4 Years),MOFFAT,"Census Tract 3, Moffat County, Colorado",79,1.71,75.6,82.4,80.5
+13,08057955600,78.7 Years (95% C.I. 76.4 - 81 Years),JACKSON,"Census Tract 9556, Jackson County, Colorado",78.7,1.16,76.4,81,80.5
+14,08121924100,80 Years (95% C.I. 77 - 83 Years),WASHINGTON,"Census Tract 9241, Washington County, Colorado",80,1.53,77,83,80.5
+15,08107000800,81.4 Years (95% C.I. 78.3 - 84.5 Years),ROUTT,"Census Tract 8, Routt County, Colorado",81.4,1.57,78.3,84.5,80.5
+16,08107000700,81.7 Years (95% C.I. 76.4 - 87 Years),ROUTT,"Census Tract 7, Routt County, Colorado",81.7,2.69,76.4,87,80.5
+17,08107000500,81.9 Years (95% C.I. 77.7 - 86.1 Years),ROUTT,"Census Tract 5, Routt County, Colorado",81.9,2.15,77.7,86.1,80.5
+18,08107000200,83.9 Years (95% C.I. 79.1 - 88.7 Years),ROUTT,"Census Tract 2, Routt County, Colorado",83.9,2.43,79.1,88.7,80.5
+19,08107000400,77.7 Years (95% C.I. 71.4 - 84 Years),ROUTT,"Census Tract 4, Routt County, Colorado",77.7,3.22,71.4,84,80.5
+20,08107000600,82.2 Years (95% C.I. 75.4 - 89 Years),ROUTT,"Census Tract 6, Routt County, Colorado",82.2,3.49,75.4,89,80.5
+21,08107000300,83.9 Years (95% C.I. 79.9 - 87.9 Years),ROUTT,"Census Tract 3, Routt County, Colorado",83.9,2.05,79.9,87.9,80.5
+22,08107000100,81.4 Years (95% C.I. 75.3 - 87.5 Years),ROUTT,"Census Tract 1, Routt County, Colorado",81.4,3.14,75.3,87.5,80.5
+23,08051963700,79.2 Years (95% C.I. 76.5 - 81.9 Years),GUNNISON,"Census Tract 9637, Gunnison County, Colorado",79.2,1.37,76.5,81.9,80.5
+24,08051963600,81.4 Years (95% C.I. 78.9 - 83.9 Years),GUNNISON,"Census Tract 9636, Gunnison County, Colorado",81.4,1.28,78.9,83.9,80.5
+25,08051963800,81.4 Years (95% C.I. 77.2 - 85.6 Years),GUNNISON,"Census Tract 9638, Gunnison County, Colorado",81.4,2.12,77.2,85.6,80.5
+26,08021974900,79.6 Years (95% C.I. 77.1 - 82.1 Years),CONEJOS,"Census Tract 9749, Conejos County, Colorado",79.6,1.26,77.1,82.1,80.5
+27,08021974800,84.9 Years (95% C.I. 80.6 - 89.2 Years),CONEJOS,"Census Tract 9748, Conejos County, Colorado",84.9,2.21,80.6,89.2,80.5
+28,08037000301,83.1 Years (95% C.I. 77 - 89.2 Years),EAGLE,"Census Tract 3.01, Eagle County, Colorado",83.1,3.14,77,89.2,80.5
+29,08037000403,82.6 Years (95% C.I. 77.8 - 87.4 Years),EAGLE,"Census Tract 4.03, Eagle County, Colorado",82.6,2.42,77.8,87.4,80.5
+30,08037000503,81.5 Years (95% C.I. 74.6 - 88.4 Years),EAGLE,"Census Tract 5.03, Eagle County, Colorado",81.5,3.54,74.6,88.4,80.5
+31,08037000200,82.4 Years (95% C.I. 76.8 - 88 Years),EAGLE,"Census Tract 2, Eagle County, Colorado",82.4,2.86,76.8,88,80.5
+32,08045951901,77.6 Years (95% C.I. 74.9 - 80.3 Years),GARFIELD,"Census Tract 9519.01, Garfield County, Colorado",77.6,1.36,74.9,80.3,80.5
+33,08045951701,81.7 Years (95% C.I. 76.4 - 87 Years),GARFIELD,"Census Tract 9517.01, Garfield County, Colorado",81.7,2.71,76.4,87,80.5
+34,08045951902,82.6 Years (95% C.I. 76.9 - 88.3 Years),GARFIELD,"Census Tract 9519.02, Garfield County, Colorado",82.6,2.89,76.9,88.3,80.5
+35,08045951702,78.3 Years (95% C.I. 75 - 81.6 Years),GARFIELD,"Census Tract 9517.02, Garfield County, Colorado",78.3,1.67,75,81.6,80.5
+36,08045952001,79.8 Years (95% C.I. 75 - 84.6 Years),GARFIELD,"Census Tract 9520.01, Garfield County, Colorado",79.8,2.44,75,84.6,80.5
+37,08045952002,74.9 Years (95% C.I. 72.7 - 77.1 Years),GARFIELD,"Census Tract 9520.02, Garfield County, Colorado",74.9,1.14,72.7,77.1,80.5
+38,08045951803,81.2 Years (95% C.I. 76.8 - 85.6 Years),GARFIELD,"Census Tract 9518.03, Garfield County, Colorado",81.2,2.24,76.8,85.6,80.5
+39,08045951804,84.5 Years (95% C.I. 78.9 - 90.1 Years),GARFIELD,"Census Tract 9518.04, Garfield County, Colorado",84.5,2.87,78.9,90.1,80.5
+40,08045952100,89.4 Years (95% C.I. 81.9 - 96.9 Years),GARFIELD,"Census Tract 9521, Garfield County, Colorado",89.4,3.83,81.9,96.9,80.5
+41,08067970704,82.1 Years (95% C.I. 77.7 - 86.5 Years),LA PLATA,"Census Tract 9707.04, La Plata County, Colorado",82.1,2.23,77.7,86.5,80.5
+42,08067970703,81.9 Years (95% C.I. 78.1 - 85.7 Years),LA PLATA,"Census Tract 9707.03, La Plata County, Colorado",81.9,1.96,78.1,85.7,80.5
+43,08067970701,82.6 Years (95% C.I. 79.8 - 85.4 Years),LA PLATA,"Census Tract 9707.01, La Plata County, Colorado",82.6,1.41,79.8,85.4,80.5
+44,08067940300,85.5 Years (95% C.I. 81.8 - 89.2 Years),LA PLATA,"Census Tract 9403, La Plata County, Colorado",85.5,1.87,81.8,89.2,80.5
+45,08097000500,82.6 Years (95% C.I. 75 - 90.2 Years),PITKIN,"Census Tract 5, Pitkin County, Colorado",82.6,3.88,75,90.2,80.5
+46,08097000401,81.9 Years (95% C.I. 77.7 - 86.1 Years),PITKIN,"Census Tract 4.01, Pitkin County, Colorado",81.9,2.15,77.7,86.1,80.5
+47,08097000402,82.6 Years (95% C.I. 79 - 86.2 Years),PITKIN,"Census Tract 4.02, Pitkin County, Colorado",82.6,1.82,79,86.2,80.5
+48,08097000100,82.6 Years (95% C.I. 77.4 - 87.8 Years),PITKIN,"Census Tract 1, Pitkin County, Colorado",82.6,2.68,77.4,87.8,80.5
+49,08117000401,81.7 Years (95% C.I. 75.5 - 87.9 Years),SUMMIT,"Census Tract 4.01, Summit County, Colorado",81.7,3.16,75.5,87.9,80.5
+50,08117000200,82.4 Years (95% C.I. 75.1 - 89.7 Years),SUMMIT,"Census Tract 2, Summit County, Colorado",82.4,3.74,75.1,89.7,80.5
+51,08067971100,76.5 Years (95% C.I. 73.4 - 79.6 Years),LA PLATA,"Census Tract 9711, La Plata County, Colorado",76.5,1.58,73.4,79.6,80.5
+52,08067971000,80.5 Years (95% C.I. 77.3 - 83.7 Years),LA PLATA,"Census Tract 9710, La Plata County, Colorado",80.5,1.62,77.3,83.7,80.5
+53,08067970900,81.9 Years (95% C.I. 77.5 - 86.3 Years),LA PLATA,"Census Tract 9709, La Plata County, Colorado",81.9,2.23,77.5,86.3,80.5
+54,08067970800,78.9 Years (95% C.I. 76.7 - 81.1 Years),LA PLATA,"Census Tract 9708, La Plata County, Colorado",78.9,1.12,76.7,81.1,80.5
+55,08067940400,81.2 Years (95% C.I. 78.5 - 83.9 Years),LA PLATA,"Census Tract 9404, La Plata County, Colorado",81.2,1.39,78.5,83.9,80.5
+56,08067970600,86.1 Years (95% C.I. 80.6 - 91.6 Years),LA PLATA,"Census Tract 9706, La Plata County, Colorado",86.1,2.81,80.6,91.6,80.5
+57,08065961700,78.6 Years (95% C.I. 74.3 - 82.9 Years),LAKE,"Census Tract 9617, Lake County, Colorado",78.6,2.18,74.3,82.9,80.5
+58,08029965100,77.8 Years (95% C.I. 74.5 - 81.1 Years),DELTA,"Census Tract 9651, Delta County, Colorado",77.8,1.67,74.5,81.1,80.5
+59,08029965200,78.5 Years (95% C.I. 75.1 - 81.9 Years),DELTA,"Census Tract 9652, Delta County, Colorado",78.5,1.73,75.1,81.9,80.5
+60,08029964600,78.1 Years (95% C.I. 75.2 - 81 Years),DELTA,"Census Tract 9646, Delta County, Colorado",78.1,1.5,75.2,81,80.5
+61,08029965000,79.5 Years (95% C.I. 75.9 - 83.1 Years),DELTA,"Census Tract 9650, Delta County, Colorado",79.5,1.83,75.9,83.1,80.5
+62,08029964900,79.7 Years (95% C.I. 76.8 - 82.6 Years),DELTA,"Census Tract 9649, Delta County, Colorado",79.7,1.49,76.8,82.6,80.5
+63,08029964800,79.8 Years (95% C.I. 76.6 - 83 Years),DELTA,"Census Tract 9648, Delta County, Colorado",79.8,1.65,76.6,83,80.5
+64,08029964700,78.8 Years (95% C.I. 75.4 - 82.2 Years),DELTA,"Census Tract 9647, Delta County, Colorado",78.8,1.75,75.4,82.2,80.5
+65,08003960300,75.1 Years (95% C.I. 71.9 - 78.3 Years),ALAMOSA,"Census Tract 9603, Alamosa County, Colorado",75.1,1.63,71.9,78.3,80.5
+66,08003960200,75.5 Years (95% C.I. 73.7 - 77.3 Years),ALAMOSA,"Census Tract 9602, Alamosa County, Colorado",75.5,0.94,73.7,77.3,80.5
+67,08113968200,80.4 Years (95% C.I. 76.2 - 84.6 Years),SAN MIGUEL,"Census Tract 9682, San Miguel County, Colorado",80.4,2.15,76.2,84.6,80.5
+68,08083941100,75.5 Years (95% C.I. 69.6 - 81.4 Years),MONTEZUMA,"Census Tract 9411, Montezuma County, Colorado",75.5,3.01,69.6,81.4,80.5
+69,08083969400,79.5 Years (95% C.I. 76.2 - 82.8 Years),MONTEZUMA,"Census Tract 9694, Montezuma County, Colorado",79.5,1.69,76.2,82.8,80.5
+70,08083969100,80.4 Years (95% C.I. 77.2 - 83.6 Years),MONTEZUMA,"Census Tract 9691, Montezuma County, Colorado",80.4,1.65,77.2,83.6,80.5
+71,08083969200,86.2 Years (95% C.I. 79.3 - 93.1 Years),MONTEZUMA,"Census Tract 9692, Montezuma County, Colorado",86.2,3.5,79.3,93.1,80.5
+72,08083969000,80.4 Years (95% C.I. 78 - 82.8 Years),MONTEZUMA,"Census Tract 9690, Montezuma County, Colorado",80.4,1.22,78,82.8,80.5
+73,08083969600,87.2 Years (95% C.I. 81.4 - 93 Years),MONTEZUMA,"Census Tract 9696, Montezuma County, Colorado",87.2,2.97,81.4,93,80.5
+74,08083969300,76.6 Years (95% C.I. 73.9 - 79.3 Years),MONTEZUMA,"Census Tract 9693, Montezuma County, Colorado",76.6,1.39,73.9,79.3,80.5
+75,08003960000,81 Years (95% C.I. 78.7 - 83.3 Years),ALAMOSA,"Census Tract 9600, Alamosa County, Colorado",81,1.18,78.7,83.3,80.5
+76,08003960100,81 Years (95% C.I. 78.4 - 83.6 Years),ALAMOSA,"Census Tract 9601, Alamosa County, Colorado",81,1.3,78.4,83.6,80.5
+77,08091967600,83.2 Years (95% C.I. 78.5 - 87.9 Years),OURAY,"Census Tract 9676, Ouray County, Colorado",83.2,2.39,78.5,87.9,80.5
+78,08033000100,76.8 Years (95% C.I. 75.2 - 78.4 Years),DOLORES,"Census Tract 1, Dolores County, Colorado",76.8,0.84,75.2,78.4,80.5
+79,08109977600,87.5 Years (95% C.I. 81.2 - 93.8 Years),SAGUACHE,"Census Tract 9776, Saguache County, Colorado",87.5,3.24,81.2,93.8,80.5
+80,08109977700,77.7 Years (95% C.I. 75 - 80.4 Years),SAGUACHE,"Census Tract 9777, Saguache County, Colorado",77.7,1.39,75,80.4,80.5
+81,08105976700,74.4 Years (95% C.I. 71.9 - 76.9 Years),RIO GRANDE,"Census Tract 9767, Rio Grande County, Colorado",74.4,1.26,71.9,76.9,80.5
+82,08105977000,87.6 Years (95% C.I. 82.5 - 92.7 Years),RIO GRANDE,"Census Tract 9770, Rio Grande County, Colorado",87.6,2.61,82.5,92.7,80.5
+83,08105976800,74.8 Years (95% C.I. 71.5 - 78.1 Years),RIO GRANDE,"Census Tract 9768, Rio Grande County, Colorado",74.8,1.71,71.5,78.1,80.5
+84,08077001706,76.8 Years (95% C.I. 73.8 - 79.8 Years),MESA,"Census Tract 17.06, Mesa County, Colorado",76.8,1.56,73.8,79.8,80.5
+85,08077001707,77.3 Years (95% C.I. 71.8 - 82.8 Years),MESA,"Census Tract 17.07, Mesa County, Colorado",77.3,2.83,71.8,82.8,80.5
+86,08077001001,79 Years (95% C.I. 75.5 - 82.5 Years),MESA,"Census Tract 10.01, Mesa County, Colorado",79,1.76,75.5,82.5,80.5
+87,08077000602,75.4 Years (95% C.I. 71.6 - 79.2 Years),MESA,"Census Tract 6.02, Mesa County, Colorado",75.4,1.94,71.6,79.2,80.5
+88,08077000400,78.1 Years (95% C.I. 74.5 - 81.7 Years),MESA,"Census Tract 4, Mesa County, Colorado",78.1,1.82,74.5,81.7,80.5
+89,08077001302,82.1 Years (95% C.I. 78.8 - 85.4 Years),MESA,"Census Tract 13.02, Mesa County, Colorado",82.1,1.67,78.8,85.4,80.5
+90,08077001102,81.2 Years (95% C.I. 78.4 - 84 Years),MESA,"Census Tract 11.02, Mesa County, Colorado",81.2,1.41,78.4,84,80.5
+91,08077000300,73 Years (95% C.I. 68.3 - 77.7 Years),MESA,"Census Tract 3, Mesa County, Colorado",73,2.38,68.3,77.7,80.5
+92,08077000200,74.3 Years (95% C.I. 71.3 - 77.3 Years),MESA,"Census Tract 2, Mesa County, Colorado",74.3,1.55,71.3,77.3,80.5
+93,08077001501,77.8 Years (95% C.I. 75.7 - 79.9 Years),MESA,"Census Tract 15.01, Mesa County, Colorado",77.8,1.06,75.7,79.9,80.5
+94,08077001403,80.9 Years (95% C.I. 77.8 - 84 Years),MESA,"Census Tract 14.03, Mesa County, Colorado",80.9,1.59,77.8,84,80.5
+95,08077001301,76.7 Years (95% C.I. 74.2 - 79.2 Years),MESA,"Census Tract 13.01, Mesa County, Colorado",76.7,1.29,74.2,79.2,80.5
+96,08077001002,81.7 Years (95% C.I. 79.6 - 83.8 Years),MESA,"Census Tract 10.02, Mesa County, Colorado",81.7,1.08,79.6,83.8,80.5
+97,08077000900,78.6 Years (95% C.I. 74.5 - 82.7 Years),MESA,"Census Tract 9, Mesa County, Colorado",78.6,2.08,74.5,82.7,80.5
+98,08077001101,78.9 Years (95% C.I. 75.6 - 82.2 Years),MESA,"Census Tract 11.01, Mesa County, Colorado",78.9,1.68,75.6,82.2,80.5
+99,08077000800,77.8 Years (95% C.I. 74.3 - 81.3 Years),MESA,"Census Tract 8, Mesa County, Colorado",77.8,1.78,74.3,81.3,80.5
+100,08077000700,72.8 Years (95% C.I. 70.3 - 75.3 Years),MESA,"Census Tract 7, Mesa County, Colorado",72.8,1.25,70.3,75.3,80.5
+101,08077001900,79.9 Years (95% C.I. 77.3 - 82.5 Years),MESA,"Census Tract 19, Mesa County, Colorado",79.9,1.34,77.3,82.5,80.5
+102,08077000601,74.6 Years (95% C.I. 71.8 - 77.4 Years),MESA,"Census Tract 6.01, Mesa County, Colorado",74.6,1.45,71.8,77.4,80.5
+103,08077001402,83.1 Years (95% C.I. 79.9 - 86.3 Years),MESA,"Census Tract 14.02, Mesa County, Colorado",83.1,1.62,79.9,86.3,80.5
+104,08077001600,78.7 Years (95% C.I. 74.9 - 82.5 Years),MESA,"Census Tract 16, Mesa County, Colorado",78.7,1.95,74.9,82.5,80.5
+105,08077001502,81.2 Years (95% C.I. 78.1 - 84.3 Years),MESA,"Census Tract 15.02, Mesa County, Colorado",81.2,1.56,78.1,84.3,80.5
+106,08077001703,78.3 Years (95% C.I. 75.3 - 81.3 Years),MESA,"Census Tract 17.03, Mesa County, Colorado",78.3,1.52,75.3,81.3,80.5
+107,08077001800,83.8 Years (95% C.I. 79.7 - 87.9 Years),MESA,"Census Tract 18, Mesa County, Colorado",83.8,2.11,79.7,87.9,80.5
+108,08077001702,79.5 Years (95% C.I. 78.1 - 80.9 Years),MESA,"Census Tract 17.02, Mesa County, Colorado",79.5,0.71,78.1,80.9,80.5
+109,08077001705,73.6 Years (95% C.I. 71.2 - 76 Years),MESA,"Census Tract 17.05, Mesa County, Colorado",73.6,1.2,71.2,76,80.5
+110,08077001200,82.2 Years (95% C.I. 77 - 87.4 Years),MESA,"Census Tract 12, Mesa County, Colorado",82.2,2.64,77,87.4,80.5
+111,08019014900,80.4 Years (95% C.I. 73.4 - 87.4 Years),CLEAR CREEK,"Census Tract 149, Clear Creek County, Colorado",80.4,3.58,73.4,87.4,80.5
+112,08053973100,81.4 Years (95% C.I. 78.9 - 83.9 Years),HINSDALE,"Census Tract 9731, Hinsdale County, Colorado",81.4,1.3,78.9,83.9,80.5
+113,08015000401,79.6 Years (95% C.I. 76.4 - 82.8 Years),CHAFFEE,"Census Tract 4.01, Chaffee County, Colorado",79.6,1.64,76.4,82.8,80.5
+114,08015000100,76.7 Years (95% C.I. 74.1 - 79.3 Years),CHAFFEE,"Census Tract 1, Chaffee County, Colorado",76.7,1.34,74.1,79.3,80.5
+115,08015000200,79.7 Years (95% C.I. 78.2 - 81.2 Years),CHAFFEE,"Census Tract 2, Chaffee County, Colorado",79.7,0.77,78.2,81.2,80.5
+116,08015000300,83.8 Years (95% C.I. 79.6 - 88 Years),CHAFFEE,"Census Tract 3, Chaffee County, Colorado",83.8,2.15,79.6,88,80.5
+117,08085966502,82.1 Years (95% C.I. 78.6 - 85.6 Years),MONTROSE,"Census Tract 9665.02, Montrose County, Colorado",82.1,1.81,78.6,85.6,80.5
+118,08085966601,79.3 Years (95% C.I. 75.4 - 83.2 Years),MONTROSE,"Census Tract 9666.01, Montrose County, Colorado",79.3,1.97,75.4,83.2,80.5
+119,08085966602,80.3 Years (95% C.I. 76.8 - 83.8 Years),MONTROSE,"Census Tract 9666.02, Montrose County, Colorado",80.3,1.79,76.8,83.8,80.5
+120,08085966201,82.6 Years (95% C.I. 76.6 - 88.6 Years),MONTROSE,"Census Tract 9662.01, Montrose County, Colorado",82.6,3.05,76.6,88.6,80.5
+121,08085966503,77.1 Years (95% C.I. 71.4 - 82.8 Years),MONTROSE,"Census Tract 9665.03, Montrose County, Colorado",77.1,2.9,71.4,82.8,80.5
+122,08085966501,79 Years (95% C.I. 74 - 84 Years),MONTROSE,"Census Tract 9665.01, Montrose County, Colorado",79,2.56,74,84,80.5
+123,08085966202,81.4 Years (95% C.I. 78.3 - 84.5 Years),MONTROSE,"Census Tract 9662.02, Montrose County, Colorado",81.4,1.58,78.3,84.5,80.5
+124,08085966100,78.2 Years (95% C.I. 76.4 - 80 Years),MONTROSE,"Census Tract 9661, Montrose County, Colorado",78.2,0.9,76.4,80,80.5
+125,08085966400,77.3 Years (95% C.I. 75.3 - 79.3 Years),MONTROSE,"Census Tract 9664, Montrose County, Colorado",77.3,1.03,75.3,79.3,80.5
+126,08085966300,76.5 Years (95% C.I. 74.2 - 78.8 Years),MONTROSE,"Census Tract 9663, Montrose County, Colorado",76.5,1.19,74.2,78.8,80.5
+127,08007940400,79.8 Years (95% C.I. 77.4 - 82.2 Years),ARCHULETA,"Census Tract 9404, Archuleta County, Colorado",79.8,1.24,77.4,82.2,80.5
+128,08007974200,79.3 Years (95% C.I. 76.5 - 82.1 Years),ARCHULETA,"Census Tract 9742, Archuleta County, Colorado",79.3,1.42,76.5,82.1,80.5
+129,08007974400,81.3 Years (95% C.I. 78.3 - 84.3 Years),ARCHULETA,"Census Tract 9744, Archuleta County, Colorado",81.3,1.51,78.3,84.3,80.5
+130,08007974300,87.8 Years (95% C.I. 81.4 - 94.2 Years),ARCHULETA,"Census Tract 9743, Archuleta County, Colorado",87.8,3.25,81.4,94.2,80.5
+131,08093000100,79.9 Years (95% C.I. 77 - 82.8 Years),PARK,"Census Tract 1, Park County, Colorado",79.9,1.5,77,82.8,80.5
+132,08093000200,81 Years (95% C.I. 76.2 - 85.8 Years),PARK,"Census Tract 2, Park County, Colorado",81,2.42,76.2,85.8,80.5
+133,08001009606,77.8 Years (95% C.I. 72.6 - 83 Years),ADAMS,"Census Tract 96.06, Adams County, Colorado",77.8,2.66,72.6,83,80.5
+134,08001009320,72.4 Years (95% C.I. 68.4 - 76.4 Years),ADAMS,"Census Tract 93.20, Adams County, Colorado",72.4,2.06,68.4,76.4,80.5
+135,08001009409,82.2 Years (95% C.I. 77.6 - 86.8 Years),ADAMS,"Census Tract 94.09, Adams County, Colorado",82.2,2.33,77.6,86.8,80.5
+136,08001009322,80.8 Years (95% C.I. 76.3 - 85.3 Years),ADAMS,"Census Tract 93.22, Adams County, Colorado",80.8,2.3,76.3,85.3,80.5
+137,08001009607,77.3 Years (95% C.I. 74.1 - 80.5 Years),ADAMS,"Census Tract 96.07, Adams County, Colorado",77.3,1.62,74.1,80.5,80.5
+138,08001009304,77.8 Years (95% C.I. 74.4 - 81.2 Years),ADAMS,"Census Tract 93.04, Adams County, Colorado",77.8,1.73,74.4,81.2,80.5
+139,08001060200,79 Years (95% C.I. 72.9 - 85.1 Years),ADAMS,"Census Tract 602, Adams County, Colorado",79,3.12,72.9,85.1,80.5
+140,08001009325,84.1 Years (95% C.I. 78.7 - 89.5 Years),ADAMS,"Census Tract 93.25, Adams County, Colorado",84.1,2.75,78.7,89.5,80.5
+141,08069001601,77.4 Years (95% C.I. 73.8 - 81 Years),LARIMER,"Census Tract 16.01, Larimer County, Colorado",77.4,1.84,73.8,81,80.5
+142,08069001301,84.1 Years (95% C.I. 77.8 - 90.4 Years),LARIMER,"Census Tract 13.01, Larimer County, Colorado",84.1,3.21,77.8,90.4,80.5
+143,08069001114,81.9 Years (95% C.I. 79.5 - 84.3 Years),LARIMER,"Census Tract 11.14, Larimer County, Colorado",81.9,1.22,79.5,84.3,80.5
+144,08069001113,80.2 Years (95% C.I. 76.5 - 83.9 Years),LARIMER,"Census Tract 11.13, Larimer County, Colorado",80.2,1.87,76.5,83.9,80.5
+145,08069001107,78.6 Years (95% C.I. 75.1 - 82.1 Years),LARIMER,"Census Tract 11.07, Larimer County, Colorado",78.6,1.8,75.1,82.1,80.5
+146,08069001104,79.8 Years (95% C.I. 75.9 - 83.7 Years),LARIMER,"Census Tract 11.04, Larimer County, Colorado",79.8,2.01,75.9,83.7,80.5
+147,08069001112,76.4 Years (95% C.I. 73.8 - 79 Years),LARIMER,"Census Tract 11.12, Larimer County, Colorado",76.4,1.3,73.8,79,80.5
+148,08069001010,79.5 Years (95% C.I. 75.5 - 83.5 Years),LARIMER,"Census Tract 10.10, Larimer County, Colorado",79.5,2.05,75.5,83.5,80.5
+149,08069001007,87.2 Years (95% C.I. 81.7 - 92.7 Years),LARIMER,"Census Tract 10.07, Larimer County, Colorado",87.2,2.81,81.7,92.7,80.5
+150,08069000300,81.4 Years (95% C.I. 77.8 - 85 Years),LARIMER,"Census Tract 3, Larimer County, Colorado",81.4,1.85,77.8,85,80.5
+151,08069002700,79.9 Years (95% C.I. 77.2 - 82.6 Years),LARIMER,"Census Tract 27, Larimer County, Colorado",79.9,1.4,77.2,82.6,80.5
+152,08069002600,81.3 Years (95% C.I. 78.3 - 84.3 Years),LARIMER,"Census Tract 26, Larimer County, Colorado",81.3,1.55,78.3,84.3,80.5
+153,08001015000,74.2 Years (95% C.I. 71.2 - 77.2 Years),ADAMS,"Census Tract 150, Adams County, Colorado",74.2,1.51,71.2,77.2,80.5
+154,08001008538,81.3 Years (95% C.I. 77.1 - 85.5 Years),ADAMS,"Census Tract 85.38, Adams County, Colorado",81.3,2.13,77.1,85.5,80.5
+155,08001009326,82.3 Years (95% C.I. 78.9 - 85.7 Years),ADAMS,"Census Tract 93.26, Adams County, Colorado",82.3,1.73,78.9,85.7,80.5
+156,08001009206,79.3 Years (95% C.I. 73.2 - 85.4 Years),ADAMS,"Census Tract 92.06, Adams County, Colorado",79.3,3.12,73.2,85.4,80.5
+157,08001008546,81.3 Years (95% C.I. 75.3 - 87.3 Years),ADAMS,"Census Tract 85.46, Adams County, Colorado",81.3,3.06,75.3,87.3,80.5
+158,08001008901,75.8 Years (95% C.I. 71.5 - 80.1 Years),ADAMS,"Census Tract 89.01, Adams County, Colorado",75.8,2.22,71.5,80.1,80.5
+159,08001009608,82.3 Years (95% C.I. 75.4 - 89.2 Years),ADAMS,"Census Tract 96.08, Adams County, Colorado",82.3,3.52,75.4,89.2,80.5
+160,08001009604,76 Years (95% C.I. 73.7 - 78.3 Years),ADAMS,"Census Tract 96.04, Adams County, Colorado",76,1.17,73.7,78.3,80.5
+161,08001009202,76.5 Years (95% C.I. 73.8 - 79.2 Years),ADAMS,"Census Tract 92.02, Adams County, Colorado",76.5,1.37,73.8,79.2,80.5
+162,08001008801,74.8 Years (95% C.I. 71.9 - 77.7 Years),ADAMS,"Census Tract 88.01, Adams County, Colorado",74.8,1.46,71.9,77.7,80.5
+163,08001009401,79.7 Years (95% C.I. 76.9 - 82.5 Years),ADAMS,"Census Tract 94.01, Adams County, Colorado",79.7,1.41,76.9,82.5,80.5
+164,08001009406,80.4 Years (95% C.I. 76.8 - 84 Years),ADAMS,"Census Tract 94.06, Adams County, Colorado",80.4,1.83,76.8,84,80.5
+165,08001008542,76.8 Years (95% C.I. 72.4 - 81.2 Years),ADAMS,"Census Tract 85.42, Adams County, Colorado",76.8,2.25,72.4,81.2,80.5
+166,08001008539,81 Years (95% C.I. 75.6 - 86.4 Years),ADAMS,"Census Tract 85.39, Adams County, Colorado",81,2.75,75.6,86.4,80.5
+167,08001009327,79.8 Years (95% C.I. 76.9 - 82.7 Years),ADAMS,"Census Tract 93.27, Adams County, Colorado",79.8,1.47,76.9,82.7,80.5
+168,08001009207,79.4 Years (95% C.I. 75.2 - 83.6 Years),ADAMS,"Census Tract 92.07, Adams County, Colorado",79.4,2.14,75.2,83.6,80.5
+169,08001060100,83.2 Years (95% C.I. 76.7 - 89.7 Years),ADAMS,"Census Tract 601, Adams County, Colorado",83.2,3.31,76.7,89.7,80.5
+170,08001009410,80 Years (95% C.I. 77.5 - 82.5 Years),ADAMS,"Census Tract 94.10, Adams County, Colorado",80,1.28,77.5,82.5,80.5
+171,08001008802,74.7 Years (95% C.I. 70.8 - 78.6 Years),ADAMS,"Census Tract 88.02, Adams County, Colorado",74.7,2,70.8,78.6,80.5
+172,08001008529,80 Years (95% C.I. 76.1 - 83.9 Years),ADAMS,"Census Tract 85.29, Adams County, Colorado",80,2.01,76.1,83.9,80.5
+173,08001008534,78.9 Years (95% C.I. 74.9 - 82.9 Years),ADAMS,"Census Tract 85.34, Adams County, Colorado",78.9,2.02,74.9,82.9,80.5
+174,08001009103,77.5 Years (95% C.I. 72.2 - 82.8 Years),ADAMS,"Census Tract 91.03, Adams County, Colorado",77.5,2.71,72.2,82.8,80.5
+175,08001008603,74.8 Years (95% C.I. 71.8 - 77.8 Years),ADAMS,"Census Tract 86.03, Adams County, Colorado",74.8,1.55,71.8,77.8,80.5
+176,08001009408,86.3 Years (95% C.I. 79.1 - 93.5 Years),ADAMS,"Census Tract 94.08, Adams County, Colorado",86.3,3.66,79.1,93.5,80.5
+177,08001008524,78.6 Years (95% C.I. 75.2 - 82 Years),ADAMS,"Census Tract 85.24, Adams County, Colorado",78.6,1.76,75.2,82,80.5
+178,08001008508,76.4 Years (95% C.I. 72.4 - 80.4 Years),ADAMS,"Census Tract 85.08, Adams County, Colorado",76.4,2.02,72.4,80.4,80.5
+179,08001008401,76.1 Years (95% C.I. 73.7 - 78.5 Years),ADAMS,"Census Tract 84.01, Adams County, Colorado",76.1,1.24,73.7,78.5,80.5
+180,08001008523,79.2 Years (95% C.I. 75.2 - 83.2 Years),ADAMS,"Census Tract 85.23, Adams County, Colorado",79.2,2.06,75.2,83.2,80.5
+181,08001008402,77.3 Years (95% C.I. 73.9 - 80.7 Years),ADAMS,"Census Tract 84.02, Adams County, Colorado",77.3,1.73,73.9,80.7,80.5
+182,08069002802,82.7 Years (95% C.I. 78.7 - 86.7 Years),LARIMER,"Census Tract 28.02, Larimer County, Colorado",82.7,2.02,78.7,86.7,80.5
+183,08069002503,83.7 Years (95% C.I. 78.6 - 88.8 Years),LARIMER,"Census Tract 25.03, Larimer County, Colorado",83.7,2.63,78.6,88.8,80.5
+184,08069001608,83.1 Years (95% C.I. 78.1 - 88.1 Years),LARIMER,"Census Tract 16.08, Larimer County, Colorado",83.1,2.57,78.1,88.1,80.5
+185,08069001607,80.8 Years (95% C.I. 76.4 - 85.2 Years),LARIMER,"Census Tract 16.07, Larimer County, Colorado",80.8,2.27,76.4,85.2,80.5
+186,08125963100,78.7 Years (95% C.I. 77.1 - 80.3 Years),YUMA,"Census Tract 9631, Yuma County, Colorado",78.7,0.8,77.1,80.3,80.5
+187,08001008547,75 Years (95% C.I. 71.9 - 78.1 Years),ADAMS,"Census Tract 85.47, Adams County, Colorado",75,1.6,71.9,78.1,80.5
+188,08001008543,76.6 Years (95% C.I. 74.1 - 79.1 Years),ADAMS,"Census Tract 85.43, Adams County, Colorado",76.6,1.27,74.1,79.1,80.5
+189,08001008544,81.3 Years (95% C.I. 77.4 - 85.2 Years),ADAMS,"Census Tract 85.44, Adams County, Colorado",81.3,1.98,77.4,85.2,80.5
+190,08001008545,81.7 Years (95% C.I. 77.2 - 86.2 Years),ADAMS,"Census Tract 85.45, Adams County, Colorado",81.7,2.31,77.2,86.2,80.5
+191,08069000202,77.3 Years (95% C.I. 73 - 81.6 Years),LARIMER,"Census Tract 2.02, Larimer County, Colorado",77.3,2.17,73,81.6,80.5
+192,08069001307,79.9 Years (95% C.I. 76.2 - 83.6 Years),LARIMER,"Census Tract 13.07, Larimer County, Colorado",79.9,1.89,76.2,83.6,80.5
+193,08069002801,84.6 Years (95% C.I. 80.7 - 88.5 Years),LARIMER,"Census Tract 28.01, Larimer County, Colorado",84.6,1.97,80.7,88.5,80.5
+194,08069001808,83.4 Years (95% C.I. 80.2 - 86.6 Years),LARIMER,"Census Tract 18.08, Larimer County, Colorado",83.4,1.61,80.2,86.6,80.5
+195,08069001605,81.4 Years (95% C.I. 74.3 - 88.5 Years),LARIMER,"Census Tract 16.05, Larimer County, Colorado",81.4,3.61,74.3,88.5,80.5
+196,08069002502,80.8 Years (95% C.I. 76.8 - 84.8 Years),LARIMER,"Census Tract 25.02, Larimer County, Colorado",80.8,2.06,76.8,84.8,80.5
+197,08069002501,85.4 Years (95% C.I. 81 - 89.8 Years),LARIMER,"Census Tract 25.01, Larimer County, Colorado",85.4,2.23,81,89.8,80.5
+198,08069002011,81.7 Years (95% C.I. 79 - 84.4 Years),LARIMER,"Census Tract 20.11, Larimer County, Colorado",81.7,1.38,79,84.4,80.5
+199,08001008550,83.2 Years (95% C.I. 76.9 - 89.5 Years),ADAMS,"Census Tract 85.50, Adams County, Colorado",83.2,3.24,76.9,89.5,80.5
+200,08001008541,83.1 Years (95% C.I. 76.5 - 89.7 Years),ADAMS,"Census Tract 85.41, Adams County, Colorado",83.1,3.35,76.5,89.7,80.5
+201,08001008540,82.4 Years (95% C.I. 76.2 - 88.6 Years),ADAMS,"Census Tract 85.40, Adams County, Colorado",82.4,3.17,76.2,88.6,80.5
+202,08001008535,78.4 Years (95% C.I. 72.7 - 84.1 Years),ADAMS,"Census Tract 85.35, Adams County, Colorado",78.4,2.89,72.7,84.1,80.5
+203,08001008537,80.4 Years (95% C.I. 76.3 - 84.5 Years),ADAMS,"Census Tract 85.37, Adams County, Colorado",80.4,2.08,76.3,84.5,80.5
+204,08001008606,79 Years (95% C.I. 75.2 - 82.8 Years),ADAMS,"Census Tract 86.06, Adams County, Colorado",79,1.93,75.2,82.8,80.5
+205,08001009104,77.3 Years (95% C.I. 72.1 - 82.5 Years),ADAMS,"Census Tract 91.04, Adams County, Colorado",77.3,2.65,72.1,82.5,80.5
+206,08069002010,80.3 Years (95% C.I. 76.6 - 84 Years),LARIMER,"Census Tract 20.10, Larimer County, Colorado",80.3,1.9,76.6,84,80.5
+207,08069001809,81.2 Years (95% C.I. 78.7 - 83.7 Years),LARIMER,"Census Tract 18.09, Larimer County, Colorado",81.2,1.27,78.7,83.7,80.5
+208,08069001709,84.6 Years (95% C.I. 80.9 - 88.3 Years),LARIMER,"Census Tract 17.09, Larimer County, Colorado",84.6,1.89,80.9,88.3,80.5
+209,08069001708,79.4 Years (95% C.I. 75.4 - 83.4 Years),LARIMER,"Census Tract 17.08, Larimer County, Colorado",79.4,2.07,75.4,83.4,80.5
+210,08069001308,84.2 Years (95% C.I. 81 - 87.4 Years),LARIMER,"Census Tract 13.08, Larimer County, Colorado",84.2,1.64,81,87.4,80.5
+211,08069000802,68.8 Years (95% C.I. 65.3 - 72.3 Years),LARIMER,"Census Tract 8.02, Larimer County, Colorado",68.8,1.76,65.3,72.3,80.5
+212,08069000801,79.4 Years (95% C.I. 76 - 82.8 Years),LARIMER,"Census Tract 8.01, Larimer County, Colorado",79.4,1.73,76,82.8,80.5
+213,08069000503,75.2 Years (95% C.I. 68.6 - 81.8 Years),LARIMER,"Census Tract 5.03, Larimer County, Colorado",75.2,3.37,68.6,81.8,80.5
+214,08069000402,79.9 Years (95% C.I. 75.4 - 84.4 Years),LARIMER,"Census Tract 4.02, Larimer County, Colorado",79.9,2.31,75.4,84.4,80.5
+215,08069000401,76.1 Years (95% C.I. 70.4 - 81.8 Years),LARIMER,"Census Tract 4.01, Larimer County, Colorado",76.1,2.93,70.4,81.8,80.5
+216,08069001902,81.1 Years (95% C.I. 79.1 - 83.1 Years),LARIMER,"Census Tract 19.02, Larimer County, Colorado",81.1,1.02,79.1,83.1,80.5
+217,08001008604,77.7 Years (95% C.I. 75.2 - 80.2 Years),ADAMS,"Census Tract 86.04, Adams County, Colorado",77.7,1.29,75.2,80.2,80.5
+218,08001008605,77.1 Years (95% C.I. 74.9 - 79.3 Years),ADAMS,"Census Tract 86.05, Adams County, Colorado",77.1,1.15,74.9,79.3,80.5
+219,08001009553,74.3 Years (95% C.I. 69.7 - 78.9 Years),ADAMS,"Census Tract 95.53, Adams County, Colorado",74.3,2.36,69.7,78.9,80.5
+220,08001008706,72.9 Years (95% C.I. 70.2 - 75.6 Years),ADAMS,"Census Tract 87.06, Adams County, Colorado",72.9,1.38,70.2,75.6,80.5
+221,08001009101,75.5 Years (95% C.I. 72.7 - 78.3 Years),ADAMS,"Census Tract 91.01, Adams County, Colorado",75.5,1.43,72.7,78.3,80.5
+222,08001009002,77.8 Years (95% C.I. 75 - 80.6 Years),ADAMS,"Census Tract 90.02, Adams County, Colorado",77.8,1.43,75,80.6,80.5
+223,08069002007,77.5 Years (95% C.I. 74.6 - 80.4 Years),LARIMER,"Census Tract 20.07, Larimer County, Colorado",77.5,1.47,74.6,80.4,80.5
+224,08069002005,80.9 Years (95% C.I. 76.8 - 85 Years),LARIMER,"Census Tract 20.05, Larimer County, Colorado",80.9,2.09,76.8,85,80.5
+225,08069002008,78.1 Years (95% C.I. 75.5 - 80.7 Years),LARIMER,"Census Tract 20.08, Larimer County, Colorado",78.1,1.32,75.5,80.7,80.5
+226,08069001903,81.4 Years (95% C.I. 77.7 - 85.1 Years),LARIMER,"Census Tract 19.03, Larimer County, Colorado",81.4,1.91,77.7,85.1,80.5
+227,08069001804,80.3 Years (95% C.I. 75.9 - 84.7 Years),LARIMER,"Census Tract 18.04, Larimer County, Colorado",80.3,2.23,75.9,84.7,80.5
+228,08069001901,75.6 Years (95% C.I. 73.2 - 78 Years),LARIMER,"Census Tract 19.01, Larimer County, Colorado",75.6,1.23,73.2,78,80.5
+229,08069001807,81.8 Years (95% C.I. 78.3 - 85.3 Years),LARIMER,"Census Tract 18.07, Larimer County, Colorado",81.8,1.79,78.3,85.3,80.5
+230,08001009308,79.5 Years (95% C.I. 75.5 - 83.5 Years),ADAMS,"Census Tract 93.08, Adams County, Colorado",79.5,2.06,75.5,83.5,80.5
+231,08001009001,76.8 Years (95% C.I. 73.4 - 80.2 Years),ADAMS,"Census Tract 90.01, Adams County, Colorado",76.8,1.75,73.4,80.2,80.5
+232,08001009306,81.3 Years (95% C.I. 73.8 - 88.8 Years),ADAMS,"Census Tract 93.06, Adams County, Colorado",81.3,3.83,73.8,88.8,80.5
+233,08001009318,77.1 Years (95% C.I. 72.1 - 82.1 Years),ADAMS,"Census Tract 93.18, Adams County, Colorado",77.1,2.54,72.1,82.1,80.5
+234,08001008705,74.9 Years (95% C.I. 72.1 - 77.7 Years),ADAMS,"Census Tract 87.05, Adams County, Colorado",74.9,1.44,72.1,77.7,80.5
+235,08001008533,76.4 Years (95% C.I. 74.1 - 78.7 Years),ADAMS,"Census Tract 85.33, Adams County, Colorado",76.4,1.17,74.1,78.7,80.5
+236,08001009204,77.9 Years (95% C.I. 73.3 - 82.5 Years),ADAMS,"Census Tract 92.04, Adams County, Colorado",77.9,2.36,73.3,82.5,80.5
+237,08001008507,79.6 Years (95% C.I. 75.4 - 83.8 Years),ADAMS,"Census Tract 85.07, Adams County, Colorado",79.6,2.14,75.4,83.8,80.5
+238,08069001707,78.5 Years (95% C.I. 74.6 - 82.4 Years),LARIMER,"Census Tract 17.07, Larimer County, Colorado",78.5,2.01,74.6,82.4,80.5
+239,08069001806,81.5 Years (95% C.I. 79 - 84 Years),LARIMER,"Census Tract 18.06, Larimer County, Colorado",81.5,1.27,79,84,80.5
+240,08069001704,78.1 Years (95% C.I. 75.7 - 80.5 Years),LARIMER,"Census Tract 17.04, Larimer County, Colorado",78.1,1.23,75.7,80.5,80.5
+241,08069001706,79.1 Years (95% C.I. 75.8 - 82.4 Years),LARIMER,"Census Tract 17.06, Larimer County, Colorado",79.1,1.66,75.8,82.4,80.5
+242,08069001109,81.6 Years (95% C.I. 78.3 - 84.9 Years),LARIMER,"Census Tract 11.09, Larimer County, Colorado",81.6,1.7,78.3,84.9,80.5
+243,08069001106,80.8 Years (95% C.I. 75.2 - 86.4 Years),LARIMER,"Census Tract 11.06, Larimer County, Colorado",80.8,2.85,75.2,86.4,80.5
+244,08001009203,77.1 Years (95% C.I. 72.9 - 81.3 Years),ADAMS,"Census Tract 92.03, Adams County, Colorado",77.1,2.15,72.9,81.3,80.5
+245,08001008505,77.1 Years (95% C.I. 73.7 - 80.5 Years),ADAMS,"Census Tract 85.05, Adams County, Colorado",77.1,1.75,73.7,80.5,80.5
+246,08001008506,72.7 Years (95% C.I. 69.9 - 75.5 Years),ADAMS,"Census Tract 85.06, Adams County, Colorado",72.7,1.41,69.9,75.5,80.5
+247,08001009501,78.7 Years (95% C.I. 76.2 - 81.2 Years),ADAMS,"Census Tract 95.01, Adams County, Colorado",78.7,1.27,76.2,81.2,80.5
+248,08001009502,79.3 Years (95% C.I. 75 - 83.6 Years),ADAMS,"Census Tract 95.02, Adams County, Colorado",79.3,2.2,75,83.6,80.5
+249,08001009309,78.7 Years (95% C.I. 76.3 - 81.1 Years),ADAMS,"Census Tract 93.09, Adams County, Colorado",78.7,1.24,76.3,81.1,80.5
+250,08001009310,79.5 Years (95% C.I. 76 - 83 Years),ADAMS,"Census Tract 93.10, Adams County, Colorado",79.5,1.8,76,83,80.5
+251,08001009319,67.7 Years (95% C.I. 65.4 - 70 Years),ADAMS,"Census Tract 93.19, Adams County, Colorado",67.7,1.16,65.4,70,80.5
+252,08069001110,79.8 Years (95% C.I. 76.6 - 83 Years),LARIMER,"Census Tract 11.10, Larimer County, Colorado",79.8,1.64,76.6,83,80.5
+253,08069001008,80.7 Years (95% C.I. 75.2 - 86.2 Years),LARIMER,"Census Tract 10.08, Larimer County, Colorado",80.7,2.82,75.2,86.2,80.5
+254,08069001004,85.8 Years (95% C.I. 81.6 - 90 Years),LARIMER,"Census Tract 10.04, Larimer County, Colorado",85.8,2.12,81.6,90,80.5
+255,08069001003,78.7 Years (95% C.I. 75.6 - 81.8 Years),LARIMER,"Census Tract 10.03, Larimer County, Colorado",78.7,1.57,75.6,81.8,80.5
+256,08069000902,85 Years (95% C.I. 80.8 - 89.2 Years),LARIMER,"Census Tract 9.02, Larimer County, Colorado",85,2.15,80.8,89.2,80.5
+257,08069001603,80 Years (95% C.I. 76.2 - 83.8 Years),LARIMER,"Census Tract 16.03, Larimer County, Colorado",80,1.91,76.2,83.8,80.5
+258,08069000901,78.9 Years (95% C.I. 75.9 - 81.9 Years),LARIMER,"Census Tract 9.01, Larimer County, Colorado",78.9,1.51,75.9,81.9,80.5
+259,08069001304,80.2 Years (95% C.I. 72.4 - 88 Years),LARIMER,"Census Tract 13.04, Larimer County, Colorado",80.2,3.98,72.4,88,80.5
+260,08069000700,78.8 Years (95% C.I. 73.8 - 83.8 Years),LARIMER,"Census Tract 7, Larimer County, Colorado",78.8,2.53,73.8,83.8,80.5
+261,08001009316,78.7 Years (95% C.I. 76 - 81.4 Years),ADAMS,"Census Tract 93.16, Adams County, Colorado",78.7,1.39,76,81.4,80.5
+262,08001009603,76.1 Years (95% C.I. 73.3 - 78.9 Years),ADAMS,"Census Tract 96.03, Adams County, Colorado",76.1,1.45,73.3,78.9,80.5
+263,08001009321,77.4 Years (95% C.I. 73.6 - 81.2 Years),ADAMS,"Census Tract 93.21, Adams County, Colorado",77.4,1.95,73.6,81.2,80.5
+264,08001009407,78.5 Years (95% C.I. 74.7 - 82.3 Years),ADAMS,"Census Tract 94.07, Adams County, Colorado",78.5,1.95,74.7,82.3,80.5
+265,08001009323,78.8 Years (95% C.I. 74 - 83.6 Years),ADAMS,"Census Tract 93.23, Adams County, Colorado",78.8,2.43,74,83.6,80.5
+266,08001009411,79.2 Years (95% C.I. 76.4 - 82 Years),ADAMS,"Census Tract 94.11, Adams County, Colorado",79.2,1.4,76.4,82,80.5
+267,08001009307,79.6 Years (95% C.I. 72.9 - 86.3 Years),ADAMS,"Census Tract 93.07, Adams County, Colorado",79.6,3.42,72.9,86.3,80.5
+268,08069001009,80.3 Years (95% C.I. 78.2 - 82.4 Years),LARIMER,"Census Tract 10.09, Larimer County, Colorado",80.3,1.09,78.2,82.4,80.5
+269,08069002300,83.9 Years (95% C.I. 79.7 - 88.1 Years),LARIMER,"Census Tract 23, Larimer County, Colorado",83.9,2.16,79.7,88.1,80.5
+270,08069001602,85.3 Years (95% C.I. 81.8 - 88.8 Years),LARIMER,"Census Tract 16.02, Larimer County, Colorado",85.3,1.79,81.8,88.8,80.5
+271,08069001305,78 Years (95% C.I. 71.6 - 84.4 Years),LARIMER,"Census Tract 13.05, Larimer County, Colorado",78,3.28,71.6,84.4,80.5
+272,08059010305,77.5 Years (95% C.I. 74.6 - 80.4 Years),JEFFERSON,"Census Tract 103.05, Jefferson County, Colorado",77.5,1.48,74.6,80.4,80.5
+273,08059009832,78.8 Years (95% C.I. 76.5 - 81.1 Years),JEFFERSON,"Census Tract 98.32, Jefferson County, Colorado",78.8,1.18,76.5,81.1,80.5
+274,08059009833,82 Years (95% C.I. 77.6 - 86.4 Years),JEFFERSON,"Census Tract 98.33, Jefferson County, Colorado",82,2.27,77.6,86.4,80.5
+275,08059009834,82.3 Years (95% C.I. 76.8 - 87.8 Years),JEFFERSON,"Census Tract 98.34, Jefferson County, Colorado",82.3,2.82,76.8,87.8,80.5
+276,08059010210,79.4 Years (95% C.I. 77.3 - 81.5 Years),JEFFERSON,"Census Tract 102.10, Jefferson County, Colorado",79.4,1.09,77.3,81.5,80.5
+277,08059010206,82 Years (95% C.I. 78.9 - 85.1 Years),JEFFERSON,"Census Tract 102.06, Jefferson County, Colorado",82,1.56,78.9,85.1,80.5
+278,08059009835,82.7 Years (95% C.I. 78.5 - 86.9 Years),JEFFERSON,"Census Tract 98.35, Jefferson County, Colorado",82.7,2.12,78.5,86.9,80.5
+279,08059009828,81 Years (95% C.I. 78.3 - 83.7 Years),JEFFERSON,"Census Tract 98.28, Jefferson County, Colorado",81,1.4,78.3,83.7,80.5
+280,08059010205,82.2 Years (95% C.I. 78.9 - 85.5 Years),JEFFERSON,"Census Tract 102.05, Jefferson County, Colorado",82.2,1.69,78.9,85.5,80.5
+281,08059010303,78.3 Years (95% C.I. 75.5 - 81.1 Years),JEFFERSON,"Census Tract 103.03, Jefferson County, Colorado",78.3,1.41,75.5,81.1,80.5
+282,08087000600,79.6 Years (95% C.I. 76.7 - 82.5 Years),MORGAN,"Census Tract 6, Morgan County, Colorado",79.6,1.48,76.7,82.5,80.5
+283,08087000200,81.4 Years (95% C.I. 77.3 - 85.5 Years),MORGAN,"Census Tract 2, Morgan County, Colorado",81.4,2.08,77.3,85.5,80.5
+284,08087000100,84.4 Years (95% C.I. 77.9 - 90.9 Years),MORGAN,"Census Tract 1, Morgan County, Colorado",84.4,3.32,77.9,90.9,80.5
+285,08087000500,77.8 Years (95% C.I. 73.3 - 82.3 Years),MORGAN,"Census Tract 5, Morgan County, Colorado",77.8,2.28,73.3,82.3,80.5
+286,08087000800,81.1 Years (95% C.I. 74.9 - 87.3 Years),MORGAN,"Census Tract 8, Morgan County, Colorado",81.1,3.17,74.9,87.3,80.5
+287,08087000400,78.2 Years (95% C.I. 75.6 - 80.8 Years),MORGAN,"Census Tract 4, Morgan County, Colorado",78.2,1.32,75.6,80.8,80.5
+288,08087000300,80 Years (95% C.I. 72.3 - 87.7 Years),MORGAN,"Census Tract 3, Morgan County, Colorado",80,3.91,72.3,87.7,80.5
+289,08087000700,75.2 Years (95% C.I. 72.9 - 77.5 Years),MORGAN,"Census Tract 7, Morgan County, Colorado",75.2,1.18,72.9,77.5,80.5
+290,08059009830,79.4 Years (95% C.I. 75.5 - 83.3 Years),JEFFERSON,"Census Tract 98.30, Jefferson County, Colorado",79.4,2,75.5,83.3,80.5
+291,08059010212,77.5 Years (95% C.I. 75 - 80 Years),JEFFERSON,"Census Tract 102.12, Jefferson County, Colorado",77.5,1.27,75,80,80.5
+292,08059009824,82.1 Years (95% C.I. 78.2 - 86 Years),JEFFERSON,"Census Tract 98.24, Jefferson County, Colorado",82.1,1.97,78.2,86,80.5
+293,08059009823,79.7 Years (95% C.I. 76.3 - 83.1 Years),JEFFERSON,"Census Tract 98.23, Jefferson County, Colorado",79.7,1.74,76.3,83.1,80.5
+294,08059010208,80.1 Years (95% C.I. 75.7 - 84.5 Years),JEFFERSON,"Census Tract 102.08, Jefferson County, Colorado",80.1,2.25,75.7,84.5,80.5
+295,08059010213,77.2 Years (95% C.I. 74.8 - 79.6 Years),JEFFERSON,"Census Tract 102.13, Jefferson County, Colorado",77.2,1.23,74.8,79.6,80.5
+296,08059010304,80.6 Years (95% C.I. 77 - 84.2 Years),JEFFERSON,"Census Tract 103.04, Jefferson County, Colorado",80.6,1.83,77,84.2,80.5
+297,08059060300,82.3 Years (95% C.I. 79.1 - 85.5 Years),JEFFERSON,"Census Tract 603, Jefferson County, Colorado",82.3,1.64,79.1,85.5,80.5
+298,08059060500,79 Years (95% C.I. 77 - 81 Years),JEFFERSON,"Census Tract 605, Jefferson County, Colorado",79,1.04,77,81,80.5
+299,08059060400,80.1 Years (95% C.I. 76.4 - 83.8 Years),JEFFERSON,"Census Tract 604, Jefferson County, Colorado",80.1,1.9,76.4,83.8,80.5
+300,08059009851,85 Years (95% C.I. 80.5 - 89.5 Years),JEFFERSON,"Census Tract 98.51, Jefferson County, Colorado",85,2.32,80.5,89.5,80.5
+301,08059009837,81 Years (95% C.I. 76.7 - 85.3 Years),JEFFERSON,"Census Tract 98.37, Jefferson County, Colorado",81,2.18,76.7,85.3,80.5
+302,08059009838,87 Years (95% C.I. 81.1 - 92.9 Years),JEFFERSON,"Census Tract 98.38, Jefferson County, Colorado",87,3,81.1,92.9,80.5
+303,08059009827,81.3 Years (95% C.I. 78.1 - 84.5 Years),JEFFERSON,"Census Tract 98.27, Jefferson County, Colorado",81.3,1.64,78.1,84.5,80.5
+304,08059009815,83.9 Years (95% C.I. 80.7 - 87.1 Years),JEFFERSON,"Census Tract 98.15, Jefferson County, Colorado",83.9,1.63,80.7,87.1,80.5
+305,08059009808,80.4 Years (95% C.I. 77 - 83.8 Years),JEFFERSON,"Census Tract 98.08, Jefferson County, Colorado",80.4,1.72,77,83.8,80.5
+306,08059009840,83.3 Years (95% C.I. 79.6 - 87 Years),JEFFERSON,"Census Tract 98.40, Jefferson County, Colorado",83.3,1.89,79.6,87,80.5
+307,08059009836,81.1 Years (95% C.I. 76.9 - 85.3 Years),JEFFERSON,"Census Tract 98.36, Jefferson County, Colorado",81.1,2.17,76.9,85.3,80.5
+308,08115968300,76.1 Years (95% C.I. 73.1 - 79.1 Years),SEDGWICK,"Census Tract 9683, Sedgwick County, Colorado",76.1,1.51,73.1,79.1,80.5
+309,08059010211,78.9 Years (95% C.I. 76.3 - 81.5 Years),JEFFERSON,"Census Tract 102.11, Jefferson County, Colorado",78.9,1.3,76.3,81.5,80.5
+310,08059010307,78.7 Years (95% C.I. 75.6 - 81.8 Years),JEFFERSON,"Census Tract 103.07, Jefferson County, Colorado",78.7,1.61,75.6,81.8,80.5
+311,08059010306,79.4 Years (95% C.I. 76.9 - 81.9 Years),JEFFERSON,"Census Tract 103.06, Jefferson County, Colorado",79.4,1.28,76.9,81.9,80.5
+312,08059009841,83 Years (95% C.I. 79 - 87 Years),JEFFERSON,"Census Tract 98.41, Jefferson County, Colorado",83,2.03,79,87,80.5
+313,08095967600,79.6 Years (95% C.I. 76.4 - 82.8 Years),PHILLIPS,"Census Tract 9676, Phillips County, Colorado",79.6,1.64,76.4,82.8,80.5
+314,08095967700,80.6 Years (95% C.I. 76.9 - 84.3 Years),PHILLIPS,"Census Tract 9677, Phillips County, Colorado",80.6,1.87,76.9,84.3,80.5
+315,08013013003,83.4 Years (95% C.I. 79.6 - 87.2 Years),BOULDER,"Census Tract 130.03, Boulder County, Colorado",83.4,1.96,79.6,87.2,80.5
+316,08013013401,79.2 Years (95% C.I. 75.7 - 82.7 Years),BOULDER,"Census Tract 134.01, Boulder County, Colorado",79.2,1.81,75.7,82.7,80.5
+317,08013013503,78.1 Years (95% C.I. 74.7 - 81.5 Years),BOULDER,"Census Tract 135.03, Boulder County, Colorado",78.1,1.76,74.7,81.5,80.5
+318,08013013006,83.4 Years (95% C.I. 76.1 - 90.7 Years),BOULDER,"Census Tract 130.06, Boulder County, Colorado",83.4,3.7,76.1,90.7,80.5
+319,08013012203,83 Years (95% C.I. 79.1 - 86.9 Years),BOULDER,"Census Tract 122.03, Boulder County, Colorado",83,1.99,79.1,86.9,80.5
+320,08013013402,79.1 Years (95% C.I. 76.7 - 81.5 Years),BOULDER,"Census Tract 134.02, Boulder County, Colorado",79.1,1.22,76.7,81.5,80.5
+321,08013013210,79.2 Years (95% C.I. 76.8 - 81.6 Years),BOULDER,"Census Tract 132.10, Boulder County, Colorado",79.2,1.21,76.8,81.6,80.5
+322,08013013302,82.5 Years (95% C.I. 78.3 - 86.7 Years),BOULDER,"Census Tract 133.02, Boulder County, Colorado",82.5,2.12,78.3,86.7,80.5
+323,08013013307,77.9 Years (95% C.I. 74.6 - 81.2 Years),BOULDER,"Census Tract 133.07, Boulder County, Colorado",77.9,1.67,74.6,81.2,80.5
+324,08013013308,75.5 Years (95% C.I. 73.4 - 77.6 Years),BOULDER,"Census Tract 133.08, Boulder County, Colorado",75.5,1.06,73.4,77.6,80.5
+325,08013012510,83.4 Years (95% C.I. 79.8 - 87 Years),BOULDER,"Census Tract 125.10, Boulder County, Colorado",83.4,1.86,79.8,87,80.5
+326,08013013305,83.3 Years (95% C.I. 77 - 89.6 Years),BOULDER,"Census Tract 133.05, Boulder County, Colorado",83.3,3.2,77,89.6,80.5
+327,08013060900,80.1 Years (95% C.I. 76.8 - 83.4 Years),BOULDER,"Census Tract 609, Boulder County, Colorado",80.1,1.68,76.8,83.4,80.5
+328,08013012509,84.7 Years (95% C.I. 81.1 - 88.3 Years),BOULDER,"Census Tract 125.09, Boulder County, Colorado",84.7,1.82,81.1,88.3,80.5
+329,08013013208,80.2 Years (95% C.I. 77.9 - 82.5 Years),BOULDER,"Census Tract 132.08, Boulder County, Colorado",80.2,1.15,77.9,82.5,80.5
+330,08013012701,80.9 Years (95% C.I. 78.3 - 83.5 Years),BOULDER,"Census Tract 127.01, Boulder County, Colorado",80.9,1.33,78.3,83.5,80.5
+331,08013012507,81.2 Years (95% C.I. 78.5 - 83.9 Years),BOULDER,"Census Tract 125.07, Boulder County, Colorado",81.2,1.36,78.5,83.9,80.5
+332,08013012505,86.2 Years (95% C.I. 82 - 90.4 Years),BOULDER,"Census Tract 125.05, Boulder County, Colorado",86.2,2.13,82,90.4,80.5
+333,08013013201,78.5 Years (95% C.I. 75.6 - 81.4 Years),BOULDER,"Census Tract 132.01, Boulder County, Colorado",78.5,1.48,75.6,81.4,80.5
+334,08013013211,82.8 Years (95% C.I. 77.9 - 87.7 Years),BOULDER,"Census Tract 132.11, Boulder County, Colorado",82.8,2.52,77.9,87.7,80.5
+335,08013013207,84.8 Years (95% C.I. 79.3 - 90.3 Years),BOULDER,"Census Tract 132.07, Boulder County, Colorado",84.8,2.79,79.3,90.3,80.5
+336,08013013306,76.8 Years (95% C.I. 74.4 - 79.2 Years),BOULDER,"Census Tract 133.06, Boulder County, Colorado",76.8,1.22,74.4,79.2,80.5
+337,08013012705,83.6 Years (95% C.I. 77.8 - 89.4 Years),BOULDER,"Census Tract 127.05, Boulder County, Colorado",83.6,2.94,77.8,89.4,80.5
+338,08013012708,81.8 Years (95% C.I. 79.2 - 84.4 Years),BOULDER,"Census Tract 127.08, Boulder County, Colorado",81.8,1.33,79.2,84.4,80.5
+339,08013013601,82.4 Years (95% C.I. 79 - 85.8 Years),BOULDER,"Census Tract 136.01, Boulder County, Colorado",82.4,1.71,79,85.8,80.5
+340,08013012710,83.8 Years (95% C.I. 79.3 - 88.3 Years),BOULDER,"Census Tract 127.10, Boulder County, Colorado",83.8,2.27,79.3,88.3,80.5
+341,08013013701,82.2 Years (95% C.I. 79.7 - 84.7 Years),BOULDER,"Census Tract 137.01, Boulder County, Colorado",82.2,1.28,79.7,84.7,80.5
+342,08013013702,85.8 Years (95% C.I. 79.3 - 92.3 Years),BOULDER,"Census Tract 137.02, Boulder County, Colorado",85.8,3.3,79.3,92.3,80.5
+343,08013013602,82.2 Years (95% C.I. 78.3 - 86.1 Years),BOULDER,"Census Tract 136.02, Boulder County, Colorado",82.2,1.98,78.3,86.1,80.5
+344,08013012903,83 Years (95% C.I. 78.4 - 87.6 Years),BOULDER,"Census Tract 129.03, Boulder County, Colorado",83,2.36,78.4,87.6,80.5
+345,08013012501,84.3 Years (95% C.I. 77.8 - 90.8 Years),BOULDER,"Census Tract 125.01, Boulder County, Colorado",84.3,3.33,77.8,90.8,80.5
+346,08013012603,86.3 Years (95% C.I. 79.6 - 93 Years),BOULDER,"Census Tract 126.03, Boulder County, Colorado",86.3,3.4,79.6,93,80.5
+347,08013012511,80.6 Years (95% C.I. 78.9 - 82.3 Years),BOULDER,"Census Tract 125.11, Boulder County, Colorado",80.6,0.85,78.9,82.3,80.5
+348,08013012709,83.8 Years (95% C.I. 79.9 - 87.7 Years),BOULDER,"Census Tract 127.09, Boulder County, Colorado",83.8,2.01,79.9,87.7,80.5
+349,08075966300,78.7 Years (95% C.I. 77.2 - 80.2 Years),LOGAN,"Census Tract 9663, Logan County, Colorado",78.7,0.75,77.2,80.2,80.5
+350,08075966200,78 Years (95% C.I. 74.3 - 81.7 Years),LOGAN,"Census Tract 9662, Logan County, Colorado",78,1.91,74.3,81.7,80.5
+351,08075966100,78.7 Years (95% C.I. 77.1 - 80.3 Years),LOGAN,"Census Tract 9661, Logan County, Colorado",78.7,0.84,77.1,80.3,80.5
+352,08075966000,77.5 Years (95% C.I. 72.8 - 82.2 Years),LOGAN,"Census Tract 9660, Logan County, Colorado",77.5,2.38,72.8,82.2,80.5
+353,08075966400,77.3 Years (95% C.I. 74.5 - 80.1 Years),LOGAN,"Census Tract 9664, Logan County, Colorado",77.3,1.42,74.5,80.1,80.5
+354,08075965900,78.9 Years (95% C.I. 75.6 - 82.2 Years),LOGAN,"Census Tract 9659, Logan County, Colorado",78.9,1.68,75.6,82.2,80.5
+355,08013060800,78.4 Years (95% C.I. 75.7 - 81.1 Years),BOULDER,"Census Tract 608, Boulder County, Colorado",78.4,1.36,75.7,81.1,80.5
+356,08013013505,76.8 Years (95% C.I. 74 - 79.6 Years),BOULDER,"Census Tract 135.05, Boulder County, Colorado",76.8,1.44,74,79.6,80.5
+357,08013013212,79.8 Years (95% C.I. 77.7 - 81.9 Years),BOULDER,"Census Tract 132.12, Boulder County, Colorado",79.8,1.06,77.7,81.9,80.5
+358,08013013508,83.3 Years (95% C.I. 78 - 88.6 Years),BOULDER,"Census Tract 135.08, Boulder County, Colorado",83.3,2.71,78,88.6,80.5
+359,08013013506,82.9 Years (95% C.I. 78.4 - 87.4 Years),BOULDER,"Census Tract 135.06, Boulder County, Colorado",82.9,2.3,78.4,87.4,80.5
+360,08013013213,79.2 Years (95% C.I. 74.8 - 83.6 Years),BOULDER,"Census Tract 132.13, Boulder County, Colorado",79.2,2.23,74.8,83.6,80.5
+361,08013012608,73.9 Years (95% C.I. 71.2 - 76.6 Years),BOULDER,"Census Tract 126.08, Boulder County, Colorado",73.9,1.39,71.2,76.6,80.5
+362,08013060600,79.5 Years (95% C.I. 75 - 84 Years),BOULDER,"Census Tract 606, Boulder County, Colorado",79.5,2.3,75,84,80.5
+363,08013060700,82.6 Years (95% C.I. 78.2 - 87 Years),BOULDER,"Census Tract 607, Boulder County, Colorado",82.6,2.25,78.2,87,80.5
+364,08013013005,84.4 Years (95% C.I. 78.8 - 90 Years),BOULDER,"Census Tract 130.05, Boulder County, Colorado",84.4,2.84,78.8,90,80.5
+365,08013013004,80.6 Years (95% C.I. 75.2 - 86 Years),BOULDER,"Census Tract 130.04, Boulder County, Colorado",80.6,2.78,75.2,86,80.5
+366,08013012102,80.3 Years (95% C.I. 76.5 - 84.1 Years),BOULDER,"Census Tract 121.02, Boulder County, Colorado",80.3,1.92,76.5,84.1,80.5
+367,08013012105,83.1 Years (95% C.I. 78.1 - 88.1 Years),BOULDER,"Census Tract 121.05, Boulder County, Colorado",83.1,2.54,78.1,88.1,80.5
+368,08013012104,81.5 Years (95% C.I. 76.7 - 86.3 Years),BOULDER,"Census Tract 121.04, Boulder County, Colorado",81.5,2.43,76.7,86.3,80.5
+369,08013012904,80.6 Years (95% C.I. 77.2 - 84 Years),BOULDER,"Census Tract 129.04, Boulder County, Colorado",80.6,1.76,77.2,84,80.5
+370,08013012707,79.9 Years (95% C.I. 76.9 - 82.9 Years),BOULDER,"Census Tract 127.07, Boulder County, Colorado",79.9,1.53,76.9,82.9,80.5
+371,08013012905,81.6 Years (95% C.I. 76.2 - 87 Years),BOULDER,"Census Tract 129.05, Boulder County, Colorado",81.6,2.75,76.2,87,80.5
+372,08013012800,88.5 Years (95% C.I. 82.2 - 94.8 Years),BOULDER,"Census Tract 128, Boulder County, Colorado",88.5,3.2,82.2,94.8,80.5
+373,08123001412,75.8 Years (95% C.I. 70.7 - 80.9 Years),WELD,"Census Tract 14.12, Weld County, Colorado",75.8,2.62,70.7,80.9,80.5
+374,08123001407,82.2 Years (95% C.I. 78.5 - 85.9 Years),WELD,"Census Tract 14.07, Weld County, Colorado",82.2,1.87,78.5,85.9,80.5
+375,08123001408,79.9 Years (95% C.I. 75.8 - 84 Years),WELD,"Census Tract 14.08, Weld County, Colorado",79.9,2.08,75.8,84,80.5
+376,08123001405,80.4 Years (95% C.I. 76.2 - 84.6 Years),WELD,"Census Tract 14.05, Weld County, Colorado",80.4,2.15,76.2,84.6,80.5
+377,08123001406,81.3 Years (95% C.I. 77.6 - 85 Years),WELD,"Census Tract 14.06, Weld County, Colorado",81.3,1.88,77.6,85,80.5
+378,08123001414,80 Years (95% C.I. 76.8 - 83.2 Years),WELD,"Census Tract 14.14, Weld County, Colorado",80,1.64,76.8,83.2,80.5
+379,08123001003,75.9 Years (95% C.I. 71.8 - 80 Years),WELD,"Census Tract 10.03, Weld County, Colorado",75.9,2.12,71.8,80,80.5
+380,08123002207,83.1 Years (95% C.I. 76.2 - 90 Years),WELD,"Census Tract 22.07, Weld County, Colorado",83.1,3.51,76.2,90,80.5
+381,08123001908,79.1 Years (95% C.I. 74.7 - 83.5 Years),WELD,"Census Tract 19.08, Weld County, Colorado",79.1,2.22,74.7,83.5,80.5
+382,08123002010,79.8 Years (95% C.I. 74.3 - 85.3 Years),WELD,"Census Tract 20.10, Weld County, Colorado",79.8,2.83,74.3,85.3,80.5
+383,08123002103,82.5 Years (95% C.I. 76.3 - 88.7 Years),WELD,"Census Tract 21.03, Weld County, Colorado",82.5,3.14,76.3,88.7,80.5
+384,08123001410,83.7 Years (95% C.I. 80.6 - 86.8 Years),WELD,"Census Tract 14.10, Weld County, Colorado",83.7,1.6,80.6,86.8,80.5
+385,08123001417,80.7 Years (95% C.I. 73.1 - 88.3 Years),WELD,"Census Tract 14.17, Weld County, Colorado",80.7,3.86,73.1,88.3,80.5
+386,08123001416,85.1 Years (95% C.I. 79.5 - 90.7 Years),WELD,"Census Tract 14.16, Weld County, Colorado",85.1,2.86,79.5,90.7,80.5
+387,08123001005,76.4 Years (95% C.I. 73 - 79.8 Years),WELD,"Census Tract 10.05, Weld County, Colorado",76.4,1.76,73,79.8,80.5
+388,08123001004,74.4 Years (95% C.I. 71.3 - 77.5 Years),WELD,"Census Tract 10.04, Weld County, Colorado",74.4,1.59,71.3,77.5,80.5
+389,08123000705,74.4 Years (95% C.I. 67.8 - 81 Years),WELD,"Census Tract 7.05, Weld County, Colorado",74.4,3.35,67.8,81,80.5
+390,08123000800,73.2 Years (95% C.I. 70.4 - 76 Years),WELD,"Census Tract 8, Weld County, Colorado",73.2,1.45,70.4,76,80.5
+391,08123000100,75.6 Years (95% C.I. 73 - 78.2 Years),WELD,"Census Tract 1, Weld County, Colorado",75.6,1.3,73,78.2,80.5
+392,08123000900,81 Years (95% C.I. 78.5 - 83.5 Years),WELD,"Census Tract 9, Weld County, Colorado",81,1.26,78.5,83.5,80.5
+393,08123000402,80.4 Years (95% C.I. 74.6 - 86.2 Years),WELD,"Census Tract 4.02, Weld County, Colorado",80.4,2.94,74.6,86.2,80.5
+394,08123001202,73.9 Years (95% C.I. 68 - 79.8 Years),WELD,"Census Tract 12.02, Weld County, Colorado",73.9,3.01,68,79.8,80.5
+395,08123001300,75.6 Years (95% C.I. 72.6 - 78.6 Years),WELD,"Census Tract 13, Weld County, Colorado",75.6,1.53,72.6,78.6,80.5
+396,08123001201,75.6 Years (95% C.I. 71.7 - 79.5 Years),WELD,"Census Tract 12.01, Weld County, Colorado",75.6,1.99,71.7,79.5,80.5
+397,08123000502,77.8 Years (95% C.I. 71.3 - 84.3 Years),WELD,"Census Tract 5.02, Weld County, Colorado",77.8,3.29,71.3,84.3,80.5
+398,08123000401,78.5 Years (95% C.I. 75.1 - 81.9 Years),WELD,"Census Tract 4.01, Weld County, Colorado",78.5,1.72,75.1,81.9,80.5
+399,08123001100,76.2 Years (95% C.I. 73.6 - 78.8 Years),WELD,"Census Tract 11, Weld County, Colorado",76.2,1.32,73.6,78.8,80.5
+400,08123001800,80.7 Years (95% C.I. 78.3 - 83.1 Years),WELD,"Census Tract 18, Weld County, Colorado",80.7,1.23,78.3,83.1,80.5
+401,08123000600,76.1 Years (95% C.I. 69.4 - 82.8 Years),WELD,"Census Tract 6, Weld County, Colorado",76.1,3.44,69.4,82.8,80.5
+402,08123001700,88 Years (95% C.I. 82.1 - 93.9 Years),WELD,"Census Tract 17, Weld County, Colorado",88,3,82.1,93.9,80.5
+403,08123001404,80.5 Years (95% C.I. 73.7 - 87.3 Years),WELD,"Census Tract 14.04, Weld County, Colorado",80.5,3.45,73.7,87.3,80.5
+404,08123002502,81.6 Years (95% C.I. 77.6 - 85.6 Years),WELD,"Census Tract 25.02, Weld County, Colorado",81.6,2.04,77.6,85.6,80.5
+405,08123001902,77.9 Years (95% C.I. 73 - 82.8 Years),WELD,"Census Tract 19.02, Weld County, Colorado",77.9,2.51,73,82.8,80.5
+406,08123001500,78.7 Years (95% C.I. 76.5 - 80.9 Years),WELD,"Census Tract 15, Weld County, Colorado",78.7,1.12,76.5,80.9,80.5
+407,08123002300,83.9 Years (95% C.I. 79.3 - 88.5 Years),WELD,"Census Tract 23, Weld County, Colorado",83.9,2.36,79.3,88.5,80.5
+408,08123000701,77.2 Years (95% C.I. 74.2 - 80.2 Years),WELD,"Census Tract 7.01, Weld County, Colorado",77.2,1.53,74.2,80.2,80.5
+409,08123001600,76.8 Years (95% C.I. 72 - 81.6 Years),WELD,"Census Tract 16, Weld County, Colorado",76.8,2.43,72,81.6,80.5
+410,08123002501,83 Years (95% C.I. 78.8 - 87.2 Years),WELD,"Census Tract 25.01, Weld County, Colorado",83,2.14,78.8,87.2,80.5
+411,08123000501,77.3 Years (95% C.I. 74.2 - 80.4 Years),WELD,"Census Tract 5.01, Weld County, Colorado",77.3,1.58,74.2,80.4,80.5
+412,08123002013,78.5 Years (95% C.I. 71.9 - 85.1 Years),WELD,"Census Tract 20.13, Weld County, Colorado",78.5,3.36,71.9,85.1,80.5
+413,08121924200,80.3 Years (95% C.I. 77.8 - 82.8 Years),WASHINGTON,"Census Tract 9242, Washington County, Colorado",80.3,1.29,77.8,82.8,80.5
+414,08123002102,84 Years (95% C.I. 78.9 - 89.1 Years),WELD,"Census Tract 21.02, Weld County, Colorado",84,2.61,78.9,89.1,80.5
+415,08123002101,78.6 Years (95% C.I. 74.8 - 82.4 Years),WELD,"Census Tract 21.01, Weld County, Colorado",78.6,1.92,74.8,82.4,80.5
+416,08123002209,88.5 Years (95% C.I. 81.4 - 95.6 Years),WELD,"Census Tract 22.09, Weld County, Colorado",88.5,3.64,81.4,95.6,80.5
+417,08123002206,80.1 Years (95% C.I. 76.2 - 84 Years),WELD,"Census Tract 22.06, Weld County, Colorado",80.1,1.98,76.2,84,80.5
+418,08123002205,75.5 Years (95% C.I. 73.1 - 77.9 Years),WELD,"Census Tract 22.05, Weld County, Colorado",75.5,1.25,73.1,77.9,80.5
+419,08014031100,80.5 Years (95% C.I. 77.6 - 83.4 Years),BROOMFIELD,"Census Tract 311, Broomfield County, Colorado",80.5,1.47,77.6,83.4,80.5
+420,08014031400,85.4 Years (95% C.I. 79.7 - 91.1 Years),BROOMFIELD,"Census Tract 314, Broomfield County, Colorado",85.4,2.91,79.7,91.1,80.5
+421,08014030600,78.1 Years (95% C.I. 73.6 - 82.6 Years),BROOMFIELD,"Census Tract 306, Broomfield County, Colorado",78.1,2.28,73.6,82.6,80.5
+422,08014030900,81.1 Years (95% C.I. 78.4 - 83.8 Years),BROOMFIELD,"Census Tract 309, Broomfield County, Colorado",81.1,1.37,78.4,83.8,80.5
+423,08014030800,79.3 Years (95% C.I. 75.3 - 83.3 Years),BROOMFIELD,"Census Tract 308, Broomfield County, Colorado",79.3,2.05,75.3,83.3,80.5
+424,08014031000,84.9 Years (95% C.I. 78.6 - 91.2 Years),BROOMFIELD,"Census Tract 310, Broomfield County, Colorado",84.9,3.2,78.6,91.2,80.5
+425,08123002203,81.4 Years (95% C.I. 76.6 - 86.2 Years),WELD,"Census Tract 22.03, Weld County, Colorado",81.4,2.47,76.6,86.2,80.5
+426,08123002014,77.6 Years (95% C.I. 73.7 - 81.5 Years),WELD,"Census Tract 20.14, Weld County, Colorado",77.6,2,73.7,81.5,80.5
+427,08123001907,79.7 Years (95% C.I. 75.8 - 83.6 Years),WELD,"Census Tract 19.07, Weld County, Colorado",79.7,1.99,75.8,83.6,80.5
+428,08123001905,80.6 Years (95% C.I. 75.2 - 86 Years),WELD,"Census Tract 19.05, Weld County, Colorado",80.6,2.74,75.2,86,80.5
+429,08014030500,84.3 Years (95% C.I. 80 - 88.6 Years),BROOMFIELD,"Census Tract 305, Broomfield County, Colorado",84.3,2.21,80,88.6,80.5
+430,08014030300,76.1 Years (95% C.I. 73.7 - 78.5 Years),BROOMFIELD,"Census Tract 303, Broomfield County, Colorado",76.1,1.23,73.7,78.5,80.5
+431,08014030000,81.4 Years (95% C.I. 76.7 - 86.1 Years),BROOMFIELD,"Census Tract 300, Broomfield County, Colorado",81.4,2.4,76.7,86.1,80.5
+432,08014030100,78.8 Years (95% C.I. 75.6 - 82 Years),BROOMFIELD,"Census Tract 301, Broomfield County, Colorado",78.8,1.61,75.6,82,80.5
+433,08014030400,82 Years (95% C.I. 77 - 87 Years),BROOMFIELD,"Census Tract 304, Broomfield County, Colorado",82,2.54,77,87,80.5
+434,08014031200,81.1 Years (95% C.I. 76.7 - 85.5 Years),BROOMFIELD,"Census Tract 312, Broomfield County, Colorado",81.1,2.27,76.7,85.5,80.5
+435,08014030700,78.9 Years (95% C.I. 71.7 - 86.1 Years),BROOMFIELD,"Census Tract 307, Broomfield County, Colorado",78.9,3.67,71.7,86.1,80.5
+436,08123002020,81.2 Years (95% C.I. 75.4 - 87 Years),WELD,"Census Tract 20.20, Weld County, Colorado",81.2,2.94,75.4,87,80.5
+437,08123002018,73.5 Years (95% C.I. 66.7 - 80.3 Years),WELD,"Census Tract 20.18, Weld County, Colorado",73.5,3.49,66.7,80.3,80.5
+438,08123002019,76.2 Years (95% C.I. 71.7 - 80.7 Years),WELD,"Census Tract 20.19, Weld County, Colorado",76.2,2.29,71.7,80.7,80.5
+439,08123002008,82.1 Years (95% C.I. 77.5 - 86.7 Years),WELD,"Census Tract 20.08, Weld County, Colorado",82.1,2.37,77.5,86.7,80.5
+440,08123002007,82.3 Years (95% C.I. 77.8 - 86.8 Years),WELD,"Census Tract 20.07, Weld County, Colorado",82.3,2.29,77.8,86.8,80.5
+441,08123002004,74.4 Years (95% C.I. 71.1 - 77.7 Years),WELD,"Census Tract 20.04, Weld County, Colorado",74.4,1.67,71.1,77.7,80.5
+442,08123000703,79.5 Years (95% C.I. 73.2 - 85.8 Years),WELD,"Census Tract 7.03, Weld County, Colorado",79.5,3.19,73.2,85.8,80.5
+443,08123001006,79.5 Years (95% C.I. 76.8 - 82.2 Years),WELD,"Census Tract 10.06, Weld County, Colorado",79.5,1.37,76.8,82.2,80.5
+444,08123001413,79.2 Years (95% C.I. 75.6 - 82.8 Years),WELD,"Census Tract 14.13, Weld County, Colorado",79.2,1.86,75.6,82.8,80.5
+445,08123001415,82.1 Years (95% C.I. 77.1 - 87.1 Years),WELD,"Census Tract 14.15, Weld County, Colorado",82.1,2.53,77.1,87.1,80.5
+446,08123001409,79.1 Years (95% C.I. 76.3 - 81.9 Years),WELD,"Census Tract 14.09, Weld County, Colorado",79.1,1.44,76.3,81.9,80.5
+447,08047013800,81.8 Years (95% C.I. 75.3 - 88.3 Years),GILPIN,"Census Tract 138, Gilpin County, Colorado",81.8,3.33,75.3,88.3,80.5
+448,08071000800,82.2 Years (95% C.I. 78 - 86.4 Years),LAS ANIMAS,"Census Tract 8, Las Animas County, Colorado",82.2,2.14,78,86.4,80.5
+449,08071000100,78 Years (95% C.I. 74.6 - 81.4 Years),LAS ANIMAS,"Census Tract 1, Las Animas County, Colorado",78,1.71,74.6,81.4,80.5
+450,08071000200,82.4 Years (95% C.I. 77.8 - 87 Years),LAS ANIMAS,"Census Tract 2, Las Animas County, Colorado",82.4,2.35,77.8,87,80.5
+451,08071000300,80.7 Years (95% C.I. 74.2 - 87.2 Years),LAS ANIMAS,"Census Tract 3, Las Animas County, Colorado",80.7,3.3,74.2,87.2,80.5
+452,08071000500,72.7 Years (95% C.I. 69.5 - 75.9 Years),LAS ANIMAS,"Census Tract 5, Las Animas County, Colorado",72.7,1.64,69.5,75.9,80.5
+453,08071000400,75.7 Years (95% C.I. 71.1 - 80.3 Years),LAS ANIMAS,"Census Tract 4, Las Animas County, Colorado",75.7,2.32,71.1,80.3,80.5
+454,08043979400,79 Years (95% C.I. 76.7 - 81.3 Years),FREMONT,"Census Tract 9794, Fremont County, Colorado",79,1.16,76.7,81.3,80.5
+455,08043979100,75.7 Years (95% C.I. 72.9 - 78.5 Years),FREMONT,"Census Tract 9791, Fremont County, Colorado",75.7,1.42,72.9,78.5,80.5
+456,08043978100,75.3 Years (95% C.I. 72.5 - 78.1 Years),FREMONT,"Census Tract 9781, Fremont County, Colorado",75.3,1.45,72.5,78.1,80.5
+457,08043978200,73.8 Years (95% C.I. 70.7 - 76.9 Years),FREMONT,"Census Tract 9782, Fremont County, Colorado",73.8,1.58,70.7,76.9,80.5
+458,08043979200,72.6 Years (95% C.I. 68.2 - 77 Years),FREMONT,"Census Tract 9792, Fremont County, Colorado",72.6,2.26,68.2,77,80.5
+459,08043978800,74.3 Years (95% C.I. 70.1 - 78.5 Years),FREMONT,"Census Tract 9788, Fremont County, Colorado",74.3,2.16,70.1,78.5,80.5
+460,08043978600,76.2 Years (95% C.I. 72.7 - 79.7 Years),FREMONT,"Census Tract 9786, Fremont County, Colorado",76.2,1.78,72.7,79.7,80.5
+461,08043978300,77.7 Years (95% C.I. 74.7 - 80.7 Years),FREMONT,"Census Tract 9783, Fremont County, Colorado",77.7,1.55,74.7,80.7,80.5
+462,08043978500,72.2 Years (95% C.I. 70.1 - 74.3 Years),FREMONT,"Census Tract 9785, Fremont County, Colorado",72.2,1.09,70.1,74.3,80.5
+463,08043978400,79.4 Years (95% C.I. 76 - 82.8 Years),FREMONT,"Census Tract 9784, Fremont County, Colorado",79.4,1.75,76,82.8,80.5
+464,08001008709,76.8 Years (95% C.I. 73.2 - 80.4 Years),ADAMS,"Census Tract 87.09, Adams County, Colorado",76.8,1.82,73.2,80.4,80.5
+465,08001009751,72.3 Years (95% C.I. 68.2 - 76.4 Years),ADAMS,"Census Tract 97.51, Adams County, Colorado",72.3,2.1,68.2,76.4,80.5
+466,08001009752,79.4 Years (95% C.I. 73.6 - 85.2 Years),ADAMS,"Census Tract 97.52, Adams County, Colorado",79.4,2.97,73.6,85.2,80.5
+467,08001007801,74.4 Years (95% C.I. 66.6 - 82.2 Years),ADAMS,"Census Tract 78.01, Adams County, Colorado",74.4,3.97,66.6,82.2,80.5
+468,08001008309,75 Years (95% C.I. 71.4 - 78.6 Years),ADAMS,"Census Tract 83.09, Adams County, Colorado",75,1.81,71.4,78.6,80.5
+469,08001008308,72.3 Years (95% C.I. 69.5 - 75.1 Years),ADAMS,"Census Tract 83.08, Adams County, Colorado",72.3,1.4,69.5,75.1,80.5
+470,08001008100,80.9 Years (95% C.I. 77 - 84.8 Years),ADAMS,"Census Tract 81, Adams County, Colorado",80.9,1.97,77,84.8,80.5
+471,08001008000,77.2 Years (95% C.I. 74.7 - 79.7 Years),ADAMS,"Census Tract 80, Adams County, Colorado",77.2,1.3,74.7,79.7,80.5
+472,08001008353,79.4 Years (95% C.I. 73.8 - 85 Years),ADAMS,"Census Tract 83.53, Adams County, Colorado",79.4,2.88,73.8,85,80.5
+473,08001007900,69.8 Years (95% C.I. 66.7 - 72.9 Years),ADAMS,"Census Tract 79, Adams County, Colorado",69.8,1.6,66.7,72.9,80.5
+474,08027970100,82.7 Years (95% C.I. 78 - 87.4 Years),CUSTER,"Census Tract 9701, Custer County, Colorado",82.7,2.4,78,87.4,80.5
+475,08025969600,76.4 Years (95% C.I. 75 - 77.8 Years),CROWLEY,"Census Tract 9696, Crowley County, Colorado",76.4,0.7,75,77.8,80.5
+476,08089968100,72.3 Years (95% C.I. 68.8 - 75.8 Years),OTERO,"Census Tract 9681, Otero County, Colorado",72.3,1.81,68.8,75.8,80.5
+477,08089968200,77.5 Years (95% C.I. 74.6 - 80.4 Years),OTERO,"Census Tract 9682, Otero County, Colorado",77.5,1.48,74.6,80.4,80.5
+478,08089968400,78.9 Years (95% C.I. 72.9 - 84.9 Years),OTERO,"Census Tract 9684, Otero County, Colorado",78.9,3.05,72.9,84.9,80.5
+479,08089968300,77.5 Years (95% C.I. 74.7 - 80.3 Years),OTERO,"Census Tract 9683, Otero County, Colorado",77.5,1.42,74.7,80.3,80.5
+480,08089968600,73.7 Years (95% C.I. 71.4 - 76 Years),OTERO,"Census Tract 9686, Otero County, Colorado",73.7,1.17,71.4,76,80.5
+481,08089968000,74.9 Years (95% C.I. 71.7 - 78.1 Years),OTERO,"Census Tract 9680, Otero County, Colorado",74.9,1.62,71.7,78.1,80.5
+482,08089968500,83.8 Years (95% C.I. 76.7 - 90.9 Years),OTERO,"Census Tract 9685, Otero County, Colorado",83.8,3.64,76.7,90.9,80.5
+483,08011966700,78 Years (95% C.I. 75.4 - 80.6 Years),BENT,"Census Tract 9667, Bent County, Colorado",78,1.32,75.4,80.6,80.5
+484,08017960600,89.5 Years (95% C.I. 83.9 - 95.1 Years),CHEYENNE,"Census Tract 9606, Cheyenne County, Colorado",89.5,2.87,83.9,95.1,80.5
+485,08039961209,78.6 Years (95% C.I. 74.1 - 83.1 Years),ELBERT,"Census Tract 9612.09, Elbert County, Colorado",78.6,2.28,74.1,83.1,80.5
+486,08039961208,79.9 Years (95% C.I. 77.6 - 82.2 Years),ELBERT,"Census Tract 9612.08, Elbert County, Colorado",79.9,1.18,77.6,82.2,80.5
+487,08039961207,81 Years (95% C.I. 77.2 - 84.8 Years),ELBERT,"Census Tract 9612.07, Elbert County, Colorado",81,1.94,77.2,84.8,80.5
+488,08039961206,81.1 Years (95% C.I. 77 - 85.2 Years),ELBERT,"Census Tract 9612.06, Elbert County, Colorado",81.1,2.08,77,85.2,80.5
+489,08039961205,79.8 Years (95% C.I. 73.9 - 85.7 Years),ELBERT,"Census Tract 9612.05, Elbert County, Colorado",79.8,3.02,73.9,85.7,80.5
+490,08039961204,80.1 Years (95% C.I. 76.4 - 83.8 Years),ELBERT,"Census Tract 9612.04, Elbert County, Colorado",80.1,1.9,76.4,83.8,80.5
+491,08039961100,83.1 Years (95% C.I. 78 - 88.2 Years),ELBERT,"Census Tract 9611, Elbert County, Colorado",83.1,2.6,78,88.2,80.5
+492,08001007802,74.3 Years (95% C.I. 69.8 - 78.8 Years),ADAMS,"Census Tract 78.02, Adams County, Colorado",74.3,2.31,69.8,78.8,80.5
+493,08023972700,78.9 Years (95% C.I. 76.5 - 81.3 Years),COSTILLA,"Census Tract 9727, Costilla County, Colorado",78.9,1.23,76.5,81.3,80.5
+494,08023972600,80.1 Years (95% C.I. 78.3 - 81.9 Years),COSTILLA,"Census Tract 9726, Costilla County, Colorado",80.1,0.93,78.3,81.9,80.5
+495,08001008200,76.6 Years (95% C.I. 72.7 - 80.5 Years),ADAMS,"Census Tract 82, Adams County, Colorado",76.6,1.99,72.7,80.5,80.5
+496,08059010406,73.9 Years (95% C.I. 70.4 - 77.4 Years),JEFFERSON,"Census Tract 104.06, Jefferson County, Colorado",73.9,1.8,70.4,77.4,80.5
+497,08059011100,76.3 Years (95% C.I. 73.5 - 79.1 Years),JEFFERSON,"Census Tract 111, Jefferson County, Colorado",76.3,1.44,73.5,79.1,80.5
+498,08059011723,76.3 Years (95% C.I. 73.3 - 79.3 Years),JEFFERSON,"Census Tract 117.23, Jefferson County, Colorado",76.3,1.54,73.3,79.3,80.5
+499,08059012057,77.7 Years (95% C.I. 75.4 - 80 Years),JEFFERSON,"Census Tract 120.57, Jefferson County, Colorado",77.7,1.18,75.4,80,80.5
+500,08099000700,81.9 Years (95% C.I. 77.6 - 86.2 Years),PROWERS,"Census Tract 7, Prowers County, Colorado",81.9,2.18,77.6,86.2,80.5
+501,08059012050,84.9 Years (95% C.I. 79.3 - 90.5 Years),JEFFERSON,"Census Tract 120.50, Jefferson County, Colorado",84.9,2.84,79.3,90.5,80.5
+502,08059011724,83.8 Years (95% C.I. 77.6 - 90 Years),JEFFERSON,"Census Tract 117.24, Jefferson County, Colorado",83.8,3.16,77.6,90,80.5
+503,08059009807,77.6 Years (95% C.I. 73.5 - 81.7 Years),JEFFERSON,"Census Tract 98.07, Jefferson County, Colorado",77.6,2.08,73.5,81.7,80.5
+504,08059009806,84.3 Years (95% C.I. 80.3 - 88.3 Years),JEFFERSON,"Census Tract 98.06, Jefferson County, Colorado",84.3,2.02,80.3,88.3,80.5
+505,08059010402,74.8 Years (95% C.I. 72.5 - 77.1 Years),JEFFERSON,"Census Tract 104.02, Jefferson County, Colorado",74.8,1.19,72.5,77.1,80.5
+506,08059011729,79.3 Years (95% C.I. 77.2 - 81.4 Years),JEFFERSON,"Census Tract 117.29, Jefferson County, Colorado",79.3,1.07,77.2,81.4,80.5
+507,08059010000,80.4 Years (95% C.I. 78.4 - 82.4 Years),JEFFERSON,"Census Tract 100, Jefferson County, Colorado",80.4,1.01,78.4,82.4,80.5
+508,08059012041,78.1 Years (95% C.I. 72.5 - 83.7 Years),JEFFERSON,"Census Tract 120.41, Jefferson County, Colorado",78.1,2.87,72.5,83.7,80.5
+509,08073961700,83.3 Years (95% C.I. 79.6 - 87 Years),LINCOLN,"Census Tract 9617, Lincoln County, Colorado",83.3,1.87,79.6,87,80.5
+510,08073961800,78.3 Years (95% C.I. 74.9 - 81.7 Years),LINCOLN,"Census Tract 9618, Lincoln County, Colorado",78.3,1.72,74.9,81.7,80.5
+511,08059015800,79.7 Years (95% C.I. 76.7 - 82.7 Years),JEFFERSON,"Census Tract 158, Jefferson County, Colorado",79.7,1.52,76.7,82.7,80.5
+512,08059011401,67.3 Years (95% C.I. 64.1 - 70.5 Years),JEFFERSON,"Census Tract 114.01, Jefferson County, Colorado",67.3,1.61,64.1,70.5,80.5
+513,08059012059,78.7 Years (95% C.I. 76.2 - 81.2 Years),JEFFERSON,"Census Tract 120.59, Jefferson County, Colorado",78.7,1.27,76.2,81.2,80.5
+514,08059009849,78.1 Years (95% C.I. 74.7 - 81.5 Years),JEFFERSON,"Census Tract 98.49, Jefferson County, Colorado",78.1,1.72,74.7,81.5,80.5
+515,08059012060,78.5 Years (95% C.I. 74.3 - 82.7 Years),JEFFERSON,"Census Tract 120.60, Jefferson County, Colorado",78.5,2.14,74.3,82.7,80.5
+516,08059011805,73.8 Years (95% C.I. 70.8 - 76.8 Years),JEFFERSON,"Census Tract 118.05, Jefferson County, Colorado",73.8,1.55,70.8,76.8,80.5
+517,08059011806,78.5 Years (95% C.I. 76.4 - 80.6 Years),JEFFERSON,"Census Tract 118.06, Jefferson County, Colorado",78.5,1.05,76.4,80.6,80.5
+518,08059011733,78.7 Years (95% C.I. 72.1 - 85.3 Years),JEFFERSON,"Census Tract 117.33, Jefferson County, Colorado",78.7,3.39,72.1,85.3,80.5
+519,08099000200,72.8 Years (95% C.I. 67.6 - 78 Years),PROWERS,"Census Tract 2, Prowers County, Colorado",72.8,2.63,67.6,78,80.5
+520,08099000100,82.4 Years (95% C.I. 76.3 - 88.5 Years),PROWERS,"Census Tract 1, Prowers County, Colorado",82.4,3.1,76.3,88.5,80.5
+521,08099000300,77.3 Years (95% C.I. 74.6 - 80 Years),PROWERS,"Census Tract 3, Prowers County, Colorado",77.3,1.39,74.6,80,80.5
+522,08099000600,79.9 Years (95% C.I. 76 - 83.8 Years),PROWERS,"Census Tract 6, Prowers County, Colorado",79.9,2.01,76,83.8,80.5
+523,08059011402,77.3 Years (95% C.I. 73.6 - 81 Years),JEFFERSON,"Census Tract 114.02, Jefferson County, Colorado",77.3,1.88,73.6,81,80.5
+524,08059015900,85.1 Years (95% C.I. 78 - 92.2 Years),JEFFERSON,"Census Tract 159, Jefferson County, Colorado",85.1,3.6,78,92.2,80.5
+525,08059009850,81.3 Years (95% C.I. 75.7 - 86.9 Years),JEFFERSON,"Census Tract 98.50, Jefferson County, Colorado",81.3,2.88,75.7,86.9,80.5
+526,08059009852,81.8 Years (95% C.I. 79 - 84.6 Years),JEFFERSON,"Census Tract 98.52, Jefferson County, Colorado",81.8,1.45,79,84.6,80.5
+527,08059012047,83.6 Years (95% C.I. 76.3 - 90.9 Years),JEFFERSON,"Census Tract 120.47, Jefferson County, Colorado",83.6,3.74,76.3,90.9,80.5
+528,08059011712,82 Years (95% C.I. 80 - 84 Years),JEFFERSON,"Census Tract 117.12, Jefferson County, Colorado",82,1.05,80,84,80.5
+529,08059010901,80.8 Years (95% C.I. 76.6 - 85 Years),JEFFERSON,"Census Tract 109.01, Jefferson County, Colorado",80.8,2.13,76.6,85,80.5
+530,08059012032,82.2 Years (95% C.I. 78.8 - 85.6 Years),JEFFERSON,"Census Tract 120.32, Jefferson County, Colorado",82.2,1.72,78.8,85.6,80.5
+531,08059012033,78.4 Years (95% C.I. 75 - 81.8 Years),JEFFERSON,"Census Tract 120.33, Jefferson County, Colorado",78.4,1.73,75,81.8,80.5
+532,08059009843,80.4 Years (95% C.I. 78.2 - 82.6 Years),JEFFERSON,"Census Tract 98.43, Jefferson County, Colorado",80.4,1.11,78.2,82.6,80.5
+533,08059012027,76.5 Years (95% C.I. 72.9 - 80.1 Years),JEFFERSON,"Census Tract 120.27, Jefferson County, Colorado",76.5,1.84,72.9,80.1,80.5
+534,08059010405,80.8 Years (95% C.I. 73.8 - 87.8 Years),JEFFERSON,"Census Tract 104.05, Jefferson County, Colorado",80.8,3.57,73.8,87.8,80.5
+535,08059012026,85.8 Years (95% C.I. 79.5 - 92.1 Years),JEFFERSON,"Census Tract 120.26, Jefferson County, Colorado",85.8,3.24,79.5,92.1,80.5
+536,08059012035,83.5 Years (95% C.I. 79.9 - 87.1 Years),JEFFERSON,"Census Tract 120.35, Jefferson County, Colorado",83.5,1.83,79.9,87.1,80.5
+537,08059012037,81.4 Years (95% C.I. 77.1 - 85.7 Years),JEFFERSON,"Census Tract 120.37, Jefferson County, Colorado",81.4,2.2,77.1,85.7,80.5
+538,08059012031,83.4 Years (95% C.I. 77.8 - 89 Years),JEFFERSON,"Census Tract 120.31, Jefferson County, Colorado",83.4,2.83,77.8,89,80.5
+539,08059009847,81.9 Years (95% C.I. 77.2 - 86.6 Years),JEFFERSON,"Census Tract 98.47, Jefferson County, Colorado",81.9,2.41,77.2,86.6,80.5
+540,08059012023,81.1 Years (95% C.I. 75.6 - 86.6 Years),JEFFERSON,"Census Tract 120.23, Jefferson County, Colorado",81.1,2.81,75.6,86.6,80.5
+541,08059009845,80.2 Years (95% C.I. 74.2 - 86.2 Years),JEFFERSON,"Census Tract 98.45, Jefferson County, Colorado",80.2,3.06,74.2,86.2,80.5
+542,08059009842,85.9 Years (95% C.I. 80.3 - 91.5 Years),JEFFERSON,"Census Tract 98.42, Jefferson County, Colorado",85.9,2.84,80.3,91.5,80.5
+543,08059012042,87.1 Years (95% C.I. 80.2 - 94 Years),JEFFERSON,"Census Tract 120.42, Jefferson County, Colorado",87.1,3.5,80.2,94,80.5
+544,08059011720,83.6 Years (95% C.I. 79 - 88.2 Years),JEFFERSON,"Census Tract 117.20, Jefferson County, Colorado",83.6,2.35,79,88.2,80.5
+545,08059012054,81.5 Years (95% C.I. 78.9 - 84.1 Years),JEFFERSON,"Census Tract 120.54, Jefferson County, Colorado",81.5,1.32,78.9,84.1,80.5
+546,08059011803,79.4 Years (95% C.I. 77.6 - 81.2 Years),JEFFERSON,"Census Tract 118.03, Jefferson County, Colorado",79.4,0.94,77.6,81.2,80.5
+547,08059011602,69.7 Years (95% C.I. 67.4 - 72 Years),JEFFERSON,"Census Tract 116.02, Jefferson County, Colorado",69.7,1.15,67.4,72,80.5
+548,08059010603,74.4 Years (95% C.I. 70.6 - 78.2 Years),JEFFERSON,"Census Tract 106.03, Jefferson County, Colorado",74.4,1.92,70.6,78.2,80.5
+549,08059012039,79.7 Years (95% C.I. 74.7 - 84.7 Years),JEFFERSON,"Census Tract 120.39, Jefferson County, Colorado",79.7,2.54,74.7,84.7,80.5
+550,08059010100,79.3 Years (95% C.I. 75 - 83.6 Years),JEFFERSON,"Census Tract 101, Jefferson County, Colorado",79.3,2.19,75,83.6,80.5
+551,08059012036,82.1 Years (95% C.I. 76.4 - 87.8 Years),JEFFERSON,"Census Tract 120.36, Jefferson County, Colorado",82.1,2.91,76.4,87.8,80.5
+552,08059012051,82.2 Years (95% C.I. 79.4 - 85 Years),JEFFERSON,"Census Tract 120.51, Jefferson County, Colorado",82.2,1.43,79.4,85,80.5
+553,08059012055,79.7 Years (95% C.I. 76.7 - 82.7 Years),JEFFERSON,"Census Tract 120.55, Jefferson County, Colorado",79.7,1.55,76.7,82.7,80.5
+554,08059012052,77.6 Years (95% C.I. 70.7 - 84.5 Years),JEFFERSON,"Census Tract 120.52, Jefferson County, Colorado",77.6,3.51,70.7,84.5,80.5
+555,08059012046,81.5 Years (95% C.I. 76.5 - 86.5 Years),JEFFERSON,"Census Tract 120.46, Jefferson County, Colorado",81.5,2.56,76.5,86.5,80.5
+556,08059012024,83.2 Years (95% C.I. 79.5 - 86.9 Years),JEFFERSON,"Census Tract 120.24, Jefferson County, Colorado",83.2,1.91,79.5,86.9,80.5
+557,08059012022,81.8 Years (95% C.I. 77.7 - 85.9 Years),JEFFERSON,"Census Tract 120.22, Jefferson County, Colorado",81.8,2.08,77.7,85.9,80.5
+558,08059012045,78.4 Years (95% C.I. 75.2 - 81.6 Years),JEFFERSON,"Census Tract 120.45, Jefferson County, Colorado",78.4,1.65,75.2,81.6,80.5
+559,08059011904,81.9 Years (95% C.I. 77.1 - 86.7 Years),JEFFERSON,"Census Tract 119.04, Jefferson County, Colorado",81.9,2.46,77.1,86.7,80.5
+560,08059011728,81.8 Years (95% C.I. 78.2 - 85.4 Years),JEFFERSON,"Census Tract 117.28, Jefferson County, Colorado",81.8,1.84,78.2,85.4,80.5
+561,08059011702,79.5 Years (95% C.I. 77.4 - 81.6 Years),JEFFERSON,"Census Tract 117.02, Jefferson County, Colorado",79.5,1.08,77.4,81.6,80.5
+562,08059011701,80.5 Years (95% C.I. 78.1 - 82.9 Years),JEFFERSON,"Census Tract 117.01, Jefferson County, Colorado",80.5,1.21,78.1,82.9,80.5
+563,08059012049,83.9 Years (95% C.I. 79.9 - 87.9 Years),JEFFERSON,"Census Tract 120.49, Jefferson County, Colorado",83.9,2.04,79.9,87.9,80.5
+564,08059011730,80.2 Years (95% C.I. 75.1 - 85.3 Years),JEFFERSON,"Census Tract 117.30, Jefferson County, Colorado",80.2,2.6,75.1,85.3,80.5
+565,08059011727,80 Years (95% C.I. 77.3 - 82.7 Years),JEFFERSON,"Census Tract 117.27, Jefferson County, Colorado",80,1.36,77.3,82.7,80.5
+566,08059012053,83.7 Years (95% C.I. 79.3 - 88.1 Years),JEFFERSON,"Census Tract 120.53, Jefferson County, Colorado",83.7,2.24,79.3,88.1,80.5
+567,08059011202,79.8 Years (95% C.I. 77.2 - 82.4 Years),JEFFERSON,"Census Tract 112.02, Jefferson County, Colorado",79.8,1.32,77.2,82.4,80.5
+568,08059011804,83.9 Years (95% C.I. 80.4 - 87.4 Years),JEFFERSON,"Census Tract 118.04, Jefferson County, Colorado",83.9,1.81,80.4,87.4,80.5
+569,08059011711,77.7 Years (95% C.I. 75.1 - 80.3 Years),JEFFERSON,"Census Tract 117.11, Jefferson County, Colorado",77.7,1.32,75.1,80.3,80.5
+570,08059011951,78.9 Years (95% C.I. 76.2 - 81.6 Years),JEFFERSON,"Census Tract 119.51, Jefferson County, Colorado",78.9,1.37,76.2,81.6,80.5
+571,08059012038,81.3 Years (95% C.I. 74.4 - 88.2 Years),JEFFERSON,"Census Tract 120.38, Jefferson County, Colorado",81.3,3.5,74.4,88.2,80.5
+572,08059011725,82.1 Years (95% C.I. 79.2 - 85 Years),JEFFERSON,"Census Tract 117.25, Jefferson County, Colorado",82.1,1.49,79.2,85,80.5
+573,08059011721,77.8 Years (95% C.I. 74.9 - 80.7 Years),JEFFERSON,"Census Tract 117.21, Jefferson County, Colorado",77.8,1.5,74.9,80.7,80.5
+574,08059011710,82.4 Years (95% C.I. 77.6 - 87.2 Years),JEFFERSON,"Census Tract 117.10, Jefferson County, Colorado",82.4,2.47,77.6,87.2,80.5
+575,08059011709,79.4 Years (95% C.I. 75.1 - 83.7 Years),JEFFERSON,"Census Tract 117.09, Jefferson County, Colorado",79.4,2.18,75.1,83.7,80.5
+576,08059011726,82.5 Years (95% C.I. 79.6 - 85.4 Years),JEFFERSON,"Census Tract 117.26, Jefferson County, Colorado",82.5,1.5,79.6,85.4,80.5
+577,08059011601,73.2 Years (95% C.I. 71 - 75.4 Years),JEFFERSON,"Census Tract 116.01, Jefferson County, Colorado",73.2,1.14,71,75.4,80.5
+578,08059011731,81.1 Years (95% C.I. 77 - 85.2 Years),JEFFERSON,"Census Tract 117.31, Jefferson County, Colorado",81.1,2.11,77,85.2,80.5
+579,08059011550,75.6 Years (95% C.I. 72 - 79.2 Years),JEFFERSON,"Census Tract 115.50, Jefferson County, Colorado",75.6,1.84,72,79.2,80.5
+580,08059011300,73.5 Years (95% C.I. 70.7 - 76.3 Years),JEFFERSON,"Census Tract 113, Jefferson County, Colorado",73.5,1.41,70.7,76.3,80.5
+581,08059010702,73.1 Years (95% C.I. 70.2 - 76 Years),JEFFERSON,"Census Tract 107.02, Jefferson County, Colorado",73.1,1.46,70.2,76,80.5
+582,08059010701,78.9 Years (95% C.I. 76.2 - 81.6 Years),JEFFERSON,"Census Tract 107.01, Jefferson County, Colorado",78.9,1.37,76.2,81.6,80.5
+583,08059010502,79.4 Years (95% C.I. 77 - 81.8 Years),JEFFERSON,"Census Tract 105.02, Jefferson County, Colorado",79.4,1.23,77,81.8,80.5
+584,08059010604,75.7 Years (95% C.I. 71.3 - 80.1 Years),JEFFERSON,"Census Tract 106.04, Jefferson County, Colorado",75.7,2.25,71.3,80.1,80.5
+585,08059011000,75.6 Years (95% C.I. 73.2 - 78 Years),JEFFERSON,"Census Tract 110, Jefferson County, Colorado",75.6,1.22,73.2,78,80.5
+586,08059010902,70.7 Years (95% C.I. 66.7 - 74.7 Years),JEFFERSON,"Census Tract 109.02, Jefferson County, Colorado",70.7,2.04,66.7,74.7,80.5
+587,08059010801,81.7 Years (95% C.I. 78.2 - 85.2 Years),JEFFERSON,"Census Tract 108.01, Jefferson County, Colorado",81.7,1.79,78.2,85.2,80.5
+588,08059010504,80.7 Years (95% C.I. 78.1 - 83.3 Years),JEFFERSON,"Census Tract 105.04, Jefferson County, Colorado",80.7,1.32,78.1,83.3,80.5
+589,08059010503,78.8 Years (95% C.I. 75.1 - 82.5 Years),JEFFERSON,"Census Tract 105.03, Jefferson County, Colorado",78.8,1.87,75.1,82.5,80.5
+590,08059010403,74.9 Years (95% C.I. 71.9 - 77.9 Years),JEFFERSON,"Census Tract 104.03, Jefferson County, Colorado",74.9,1.54,71.9,77.9,80.5
+591,08059010308,80.1 Years (95% C.I. 77.2 - 83 Years),JEFFERSON,"Census Tract 103.08, Jefferson County, Colorado",80.1,1.5,77.2,83,80.5
+592,08035014112,82.4 Years (95% C.I. 79 - 85.8 Years),DOUGLAS,"Census Tract 141.12, Douglas County, Colorado",82.4,1.74,79,85.8,80.5
+593,08035014110,80.8 Years (95% C.I. 78.4 - 83.2 Years),DOUGLAS,"Census Tract 141.10, Douglas County, Colorado",80.8,1.24,78.4,83.2,80.5
+594,08035014109,85.4 Years (95% C.I. 81.5 - 89.3 Years),DOUGLAS,"Census Tract 141.09, Douglas County, Colorado",85.4,2.01,81.5,89.3,80.5
+595,08035014108,82.1 Years (95% C.I. 79.3 - 84.9 Years),DOUGLAS,"Census Tract 141.08, Douglas County, Colorado",82.1,1.43,79.3,84.9,80.5
+596,08035014202,82.2 Years (95% C.I. 78.4 - 86 Years),DOUGLAS,"Census Tract 142.02, Douglas County, Colorado",82.2,1.96,78.4,86,80.5
+597,08035014116,81.3 Years (95% C.I. 75 - 87.6 Years),DOUGLAS,"Census Tract 141.16, Douglas County, Colorado",81.3,3.24,75,87.6,80.5
+598,08035014107,83.7 Years (95% C.I. 79.5 - 87.9 Years),DOUGLAS,"Census Tract 141.07, Douglas County, Colorado",83.7,2.12,79.5,87.9,80.5
+599,08035014122,81.1 Years (95% C.I. 77.2 - 85 Years),DOUGLAS,"Census Tract 141.22, Douglas County, Colorado",81.1,2,77.2,85,80.5
+600,08035014602,81.6 Years (95% C.I. 78.5 - 84.7 Years),DOUGLAS,"Census Tract 146.02, Douglas County, Colorado",81.6,1.61,78.5,84.7,80.5
+601,08035013901,87.1 Years (95% C.I. 82.3 - 91.9 Years),DOUGLAS,"Census Tract 139.01, Douglas County, Colorado",87.1,2.43,82.3,91.9,80.5
+602,08035014503,82 Years (95% C.I. 77.3 - 86.7 Years),DOUGLAS,"Census Tract 145.03, Douglas County, Colorado",82,2.41,77.3,86.7,80.5
+603,08035013909,81.6 Years (95% C.I. 77.9 - 85.3 Years),DOUGLAS,"Census Tract 139.09, Douglas County, Colorado",81.6,1.87,77.9,85.3,80.5
+604,08101003600,75.1 Years (95% C.I. 72.1 - 78.1 Years),PUEBLO,"Census Tract 36, Pueblo County, Colorado",75.1,1.52,72.1,78.1,80.5
+605,08101003500,74.8 Years (95% C.I. 68.3 - 81.3 Years),PUEBLO,"Census Tract 35, Pueblo County, Colorado",74.8,3.32,68.3,81.3,80.5
+606,08101002916,77.2 Years (95% C.I. 73.8 - 80.6 Years),PUEBLO,"Census Tract 29.16, Pueblo County, Colorado",77.2,1.72,73.8,80.6,80.5
+607,08101002914,76.6 Years (95% C.I. 73.9 - 79.3 Years),PUEBLO,"Census Tract 29.14, Pueblo County, Colorado",76.6,1.38,73.9,79.3,80.5
+608,08063962200,79 Years (95% C.I. 75.5 - 82.5 Years),KIT CARSON,"Census Tract 9622, Kit Carson County, Colorado",79,1.77,75.5,82.5,80.5
+609,08063962300,80.7 Years (95% C.I. 76.1 - 85.3 Years),KIT CARSON,"Census Tract 9623, Kit Carson County, Colorado",80.7,2.33,76.1,85.3,80.5
+610,08063962100,80.4 Years (95% C.I. 78.1 - 82.7 Years),KIT CARSON,"Census Tract 9621, Kit Carson County, Colorado",80.4,1.17,78.1,82.7,80.5
+611,08101002912,77.9 Years (95% C.I. 74.2 - 81.6 Years),PUEBLO,"Census Tract 29.12, Pueblo County, Colorado",77.9,1.9,74.2,81.6,80.5
+612,08101002917,80.8 Years (95% C.I. 76.2 - 85.4 Years),PUEBLO,"Census Tract 29.17, Pueblo County, Colorado",80.8,2.34,76.2,85.4,80.5
+613,08101003106,74.8 Years (95% C.I. 69.3 - 80.3 Years),PUEBLO,"Census Tract 31.06, Pueblo County, Colorado",74.8,2.82,69.3,80.3,80.5
+614,08101003105,79.7 Years (95% C.I. 76.9 - 82.5 Years),PUEBLO,"Census Tract 31.05, Pueblo County, Colorado",79.7,1.43,76.9,82.5,80.5
+615,08101002915,81 Years (95% C.I. 76.9 - 85.1 Years),PUEBLO,"Census Tract 29.15, Pueblo County, Colorado",81,2.12,76.9,85.1,80.5
+616,08101002918,80.9 Years (95% C.I. 76 - 85.8 Years),PUEBLO,"Census Tract 29.18, Pueblo County, Colorado",80.9,2.49,76,85.8,80.5
+617,08101002913,81.7 Years (95% C.I. 78.4 - 85 Years),PUEBLO,"Census Tract 29.13, Pueblo County, Colorado",81.7,1.67,78.4,85,80.5
+618,08101002911,80.5 Years (95% C.I. 76.2 - 84.8 Years),PUEBLO,"Census Tract 29.11, Pueblo County, Colorado",80.5,2.17,76.2,84.8,80.5
+619,08101002600,67.9 Years (95% C.I. 65 - 70.8 Years),PUEBLO,"Census Tract 26, Pueblo County, Colorado",67.9,1.46,65,70.8,80.5
+620,08101002801,77.1 Years (95% C.I. 74.6 - 79.6 Years),PUEBLO,"Census Tract 28.01, Pueblo County, Colorado",77.1,1.28,74.6,79.6,80.5
+621,08101002000,73.8 Years (95% C.I. 67.8 - 79.8 Years),PUEBLO,"Census Tract 20, Pueblo County, Colorado",73.8,3.07,67.8,79.8,80.5
+622,08101001800,76.4 Years (95% C.I. 72.8 - 80 Years),PUEBLO,"Census Tract 18, Pueblo County, Colorado",76.4,1.82,72.8,80,80.5
+623,08101001900,78.5 Years (95% C.I. 75.6 - 81.4 Years),PUEBLO,"Census Tract 19, Pueblo County, Colorado",78.5,1.47,75.6,81.4,80.5
+624,08101002400,74.7 Years (95% C.I. 70.1 - 79.3 Years),PUEBLO,"Census Tract 24, Pueblo County, Colorado",74.7,2.35,70.1,79.3,80.5
+625,08101001400,70.2 Years (95% C.I. 65.5 - 74.9 Years),PUEBLO,"Census Tract 14, Pueblo County, Colorado",70.2,2.39,65.5,74.9,80.5
+626,08101001700,79.2 Years (95% C.I. 77 - 81.4 Years),PUEBLO,"Census Tract 17, Pueblo County, Colorado",79.2,1.13,77,81.4,80.5
+627,08101000905,71.1 Years (95% C.I. 67.2 - 75 Years),PUEBLO,"Census Tract 9.05, Pueblo County, Colorado",71.1,1.98,67.2,75,80.5
+628,08101003104,79 Years (95% C.I. 75.9 - 82.1 Years),PUEBLO,"Census Tract 31.04, Pueblo County, Colorado",79,1.57,75.9,82.1,80.5
+629,08101002300,72.1 Years (95% C.I. 68.6 - 75.6 Years),PUEBLO,"Census Tract 23, Pueblo County, Colorado",72.1,1.8,68.6,75.6,80.5
+630,08101002200,70.4 Years (95% C.I. 65.8 - 75 Years),PUEBLO,"Census Tract 22, Pueblo County, Colorado",70.4,2.37,65.8,75,80.5
+631,08101002100,68.8 Years (95% C.I. 64.8 - 72.8 Years),PUEBLO,"Census Tract 21, Pueblo County, Colorado",68.8,2.03,64.8,72.8,80.5
+632,08101002802,79.7 Years (95% C.I. 75.8 - 83.6 Years),PUEBLO,"Census Tract 28.02, Pueblo County, Colorado",79.7,1.98,75.8,83.6,80.5
+633,08101000200,77.8 Years (95% C.I. 73 - 82.6 Years),PUEBLO,"Census Tract 2, Pueblo County, Colorado",77.8,2.44,73,82.6,80.5
+634,08101002906,82.5 Years (95% C.I. 77.6 - 87.4 Years),PUEBLO,"Census Tract 29.06, Pueblo County, Colorado",82.5,2.48,77.6,87.4,80.5
+635,08101002700,76.1 Years (95% C.I. 73.5 - 78.7 Years),PUEBLO,"Census Tract 27, Pueblo County, Colorado",76.1,1.31,73.5,78.7,80.5
+636,08101001600,77.6 Years (95% C.I. 74.9 - 80.3 Years),PUEBLO,"Census Tract 16, Pueblo County, Colorado",77.6,1.39,74.9,80.3,80.5
+637,08101002903,78.7 Years (95% C.I. 76.1 - 81.3 Years),PUEBLO,"Census Tract 29.03, Pueblo County, Colorado",78.7,1.34,76.1,81.3,80.5
+638,08101000500,75 Years (95% C.I. 70.1 - 79.9 Years),PUEBLO,"Census Tract 5, Pueblo County, Colorado",75,2.49,70.1,79.9,80.5
+639,08101000800,73.7 Years (95% C.I. 68.6 - 78.8 Years),PUEBLO,"Census Tract 8, Pueblo County, Colorado",73.7,2.62,68.6,78.8,80.5
+640,08101002901,72.8 Years (95% C.I. 68.9 - 76.7 Years),PUEBLO,"Census Tract 29.01, Pueblo County, Colorado",72.8,1.98,68.9,76.7,80.5
+641,08101002500,73.5 Years (95% C.I. 70.1 - 76.9 Years),PUEBLO,"Census Tract 25, Pueblo County, Colorado",73.5,1.72,70.1,76.9,80.5
+642,08101003103,75.6 Years (95% C.I. 70.7 - 80.5 Years),PUEBLO,"Census Tract 31.03, Pueblo County, Colorado",75.6,2.48,70.7,80.5,80.5
+643,08101003001,77.7 Years (95% C.I. 74.3 - 81.1 Years),PUEBLO,"Census Tract 30.01, Pueblo County, Colorado",77.7,1.74,74.3,81.1,80.5
+644,08101001000,73.7 Years (95% C.I. 71.1 - 76.3 Years),PUEBLO,"Census Tract 10, Pueblo County, Colorado",73.7,1.35,71.1,76.3,80.5
+645,08101000904,77.1 Years (95% C.I. 74 - 80.2 Years),PUEBLO,"Census Tract 9.04, Pueblo County, Colorado",77.1,1.58,74,80.2,80.5
+646,08101003004,79.8 Years (95% C.I. 77 - 82.6 Years),PUEBLO,"Census Tract 30.04, Pueblo County, Colorado",79.8,1.43,77,82.6,80.5
+647,08101001100,77 Years (95% C.I. 69.9 - 84.1 Years),PUEBLO,"Census Tract 11, Pueblo County, Colorado",77,3.63,69.9,84.1,80.5
+648,08101000902,75.5 Years (95% C.I. 73 - 78 Years),PUEBLO,"Census Tract 9.02, Pueblo County, Colorado",75.5,1.29,73,78,80.5
+649,08101003200,81 Years (95% C.I. 77 - 85 Years),PUEBLO,"Census Tract 32, Pueblo County, Colorado",81,2.02,77,85,80.5
+650,08101000400,75.1 Years (95% C.I. 71.8 - 78.4 Years),PUEBLO,"Census Tract 4, Pueblo County, Colorado",75.1,1.7,71.8,78.4,80.5
+651,08101002806,82 Years (95% C.I. 78.2 - 85.8 Years),PUEBLO,"Census Tract 28.06, Pueblo County, Colorado",82,1.95,78.2,85.8,80.5
+652,08101002804,80.4 Years (95% C.I. 77.8 - 83 Years),PUEBLO,"Census Tract 28.04, Pueblo County, Colorado",80.4,1.3,77.8,83,80.5
+653,08101001200,71.6 Years (95% C.I. 67.5 - 75.7 Years),PUEBLO,"Census Tract 12, Pueblo County, Colorado",71.6,2.08,67.5,75.7,80.5
+654,08101000600,68.8 Years (95% C.I. 64.6 - 73 Years),PUEBLO,"Census Tract 6, Pueblo County, Colorado",68.8,2.13,64.6,73,80.5
+655,08101002808,81.5 Years (95% C.I. 76.4 - 86.6 Years),PUEBLO,"Census Tract 28.08, Pueblo County, Colorado",81.5,2.59,76.4,86.6,80.5
+656,08101001500,75.2 Years (95% C.I. 72.5 - 77.9 Years),PUEBLO,"Census Tract 15, Pueblo County, Colorado",75.2,1.38,72.5,77.9,80.5
+657,08101000100,74.8 Years (95% C.I. 71.3 - 78.3 Years),PUEBLO,"Census Tract 1, Pueblo County, Colorado",74.8,1.77,71.3,78.3,80.5
+658,08035014006,85.6 Years (95% C.I. 77.8 - 93.4 Years),DOUGLAS,"Census Tract 140.06, Douglas County, Colorado",85.6,4,77.8,93.4,80.5
+659,08035013910,82.1 Years (95% C.I. 77.6 - 86.6 Years),DOUGLAS,"Census Tract 139.10, Douglas County, Colorado",82.1,2.31,77.6,86.6,80.5
+660,08035014140,81.6 Years (95% C.I. 77.8 - 85.4 Years),DOUGLAS,"Census Tract 141.40, Douglas County, Colorado",81.6,1.93,77.8,85.4,80.5
+661,08035014132,84.4 Years (95% C.I. 78.3 - 90.5 Years),DOUGLAS,"Census Tract 141.32, Douglas County, Colorado",84.4,3.13,78.3,90.5,80.5
+662,08035014124,80.4 Years (95% C.I. 74.2 - 86.6 Years),DOUGLAS,"Census Tract 141.24, Douglas County, Colorado",80.4,3.16,74.2,86.6,80.5
+663,08035014405,82.4 Years (95% C.I. 77.2 - 87.6 Years),DOUGLAS,"Census Tract 144.05, Douglas County, Colorado",82.4,2.67,77.2,87.6,80.5
+664,08035014505,78.6 Years (95% C.I. 76.6 - 80.6 Years),DOUGLAS,"Census Tract 145.05, Douglas County, Colorado",78.6,1.01,76.6,80.6,80.5
+665,08035014603,80 Years (95% C.I. 75.5 - 84.5 Years),DOUGLAS,"Census Tract 146.03, Douglas County, Colorado",80,2.3,75.5,84.5,80.5
+666,08035014403,84.5 Years (95% C.I. 78.4 - 90.6 Years),DOUGLAS,"Census Tract 144.03, Douglas County, Colorado",84.5,3.12,78.4,90.6,80.5
+667,08035014404,82.2 Years (95% C.I. 79.4 - 85 Years),DOUGLAS,"Census Tract 144.04, Douglas County, Colorado",82.2,1.42,79.4,85,80.5
+668,08035014134,81.3 Years (95% C.I. 77.9 - 84.7 Years),DOUGLAS,"Census Tract 141.34, Douglas County, Colorado",81.3,1.74,77.9,84.7,80.5
+669,08035014136,83.2 Years (95% C.I. 76.3 - 90.1 Years),DOUGLAS,"Census Tract 141.36, Douglas County, Colorado",83.2,3.54,76.3,90.1,80.5
+670,08035014126,81.3 Years (95% C.I. 77.9 - 84.7 Years),DOUGLAS,"Census Tract 141.26, Douglas County, Colorado",81.3,1.76,77.9,84.7,80.5
+671,08035014203,84.7 Years (95% C.I. 79.5 - 89.9 Years),DOUGLAS,"Census Tract 142.03, Douglas County, Colorado",84.7,2.64,79.5,89.9,80.5
+672,08035014406,80.7 Years (95% C.I. 78.3 - 83.1 Years),DOUGLAS,"Census Tract 144.06, Douglas County, Colorado",80.7,1.22,78.3,83.1,80.5
+673,08035014133,82.5 Years (95% C.I. 75.2 - 89.8 Years),DOUGLAS,"Census Tract 141.33, Douglas County, Colorado",82.5,3.73,75.2,89.8,80.5
+674,08035014204,82.2 Years (95% C.I. 77.7 - 86.7 Years),DOUGLAS,"Census Tract 142.04, Douglas County, Colorado",82.2,2.27,77.7,86.7,80.5
+675,08035014135,81.7 Years (95% C.I. 77.1 - 86.3 Years),DOUGLAS,"Census Tract 141.35, Douglas County, Colorado",81.7,2.37,77.1,86.3,80.5
+676,08035014131,84.2 Years (95% C.I. 81 - 87.4 Years),DOUGLAS,"Census Tract 141.31, Douglas County, Colorado",84.2,1.65,81,87.4,80.5
+677,08035014137,86 Years (95% C.I. 78.4 - 93.6 Years),DOUGLAS,"Census Tract 141.37, Douglas County, Colorado",86,3.88,78.4,93.6,80.5
+678,08035014127,81.6 Years (95% C.I. 78.2 - 85 Years),DOUGLAS,"Census Tract 141.27, Douglas County, Colorado",81.6,1.73,78.2,85,80.5
+679,08035014125,86.7 Years (95% C.I. 79.1 - 94.3 Years),DOUGLAS,"Census Tract 141.25, Douglas County, Colorado",86.7,3.87,79.1,94.3,80.5
+680,08035014005,80.9 Years (95% C.I. 76.8 - 85 Years),DOUGLAS,"Census Tract 140.05, Douglas County, Colorado",80.9,2.11,76.8,85,80.5
+681,08035014007,80.3 Years (95% C.I. 74.2 - 86.4 Years),DOUGLAS,"Census Tract 140.07, Douglas County, Colorado",80.3,3.1,74.2,86.4,80.5
+682,08035014011,79.5 Years (95% C.I. 76 - 83 Years),DOUGLAS,"Census Tract 140.11, Douglas County, Colorado",79.5,1.77,76,83,80.5
+683,08035014013,81.2 Years (95% C.I. 77.9 - 84.5 Years),DOUGLAS,"Census Tract 140.13, Douglas County, Colorado",81.2,1.69,77.9,84.5,80.5
+684,08035014012,81.4 Years (95% C.I. 78.5 - 84.3 Years),DOUGLAS,"Census Tract 140.12, Douglas County, Colorado",81.4,1.49,78.5,84.3,80.5
+685,08035014010,84.1 Years (95% C.I. 76.4 - 91.8 Years),DOUGLAS,"Census Tract 140.10, Douglas County, Colorado",84.1,3.93,76.4,91.8,80.5
+686,08035013911,78.7 Years (95% C.I. 74.7 - 82.7 Years),DOUGLAS,"Census Tract 139.11, Douglas County, Colorado",78.7,2.04,74.7,82.7,80.5
+687,08035014123,81.4 Years (95% C.I. 77.8 - 85 Years),DOUGLAS,"Census Tract 141.23, Douglas County, Colorado",81.4,1.81,77.8,85,80.5
+688,08035014504,79.7 Years (95% C.I. 76.7 - 82.7 Years),DOUGLAS,"Census Tract 145.04, Douglas County, Colorado",79.7,1.55,76.7,82.7,80.5
+689,08035013908,82 Years (95% C.I. 78.4 - 85.6 Years),DOUGLAS,"Census Tract 139.08, Douglas County, Colorado",82,1.81,78.4,85.6,80.5
+690,08035013907,83.9 Years (95% C.I. 78.2 - 89.6 Years),DOUGLAS,"Census Tract 139.07, Douglas County, Colorado",83.9,2.92,78.2,89.6,80.5
+691,08035013905,78.4 Years (95% C.I. 75.4 - 81.4 Years),DOUGLAS,"Census Tract 139.05, Douglas County, Colorado",78.4,1.54,75.4,81.4,80.5
+692,08035013904,79.8 Years (95% C.I. 77.3 - 82.3 Years),DOUGLAS,"Census Tract 139.04, Douglas County, Colorado",79.8,1.29,77.3,82.3,80.5
+693,08035014001,81.4 Years (95% C.I. 77.4 - 85.4 Years),DOUGLAS,"Census Tract 140.01, Douglas County, Colorado",81.4,2.05,77.4,85.4,80.5
+694,08035014115,83.7 Years (95% C.I. 77.9 - 89.5 Years),DOUGLAS,"Census Tract 141.15, Douglas County, Colorado",83.7,2.95,77.9,89.5,80.5
+695,08035014114,78.8 Years (95% C.I. 75.6 - 82 Years),DOUGLAS,"Census Tract 141.14, Douglas County, Colorado",78.8,1.63,75.6,82,80.5
+696,08035014113,81.5 Years (95% C.I. 78.5 - 84.5 Years),DOUGLAS,"Census Tract 141.13, Douglas County, Colorado",81.5,1.54,78.5,84.5,80.5
+697,08009964600,83.9 Years (95% C.I. 78.5 - 89.3 Years),BACA,"Census Tract 9646, Baca County, Colorado",83.9,2.73,78.5,89.3,80.5
+698,08009964700,76.1 Years (95% C.I. 73.3 - 78.9 Years),BACA,"Census Tract 9647, Baca County, Colorado",76.1,1.42,73.3,78.9,80.5
+699,08019014700,84.4 Years (95% C.I. 76.6 - 92.2 Years),CLEAR CREEK,"Census Tract 147, Clear Creek County, Colorado",84.4,3.98,76.6,92.2,80.5
+700,08019014800,83.9 Years (95% C.I. 77.8 - 90 Years),CLEAR CREEK,"Census Tract 148, Clear Creek County, Colorado",83.9,3.13,77.8,90,80.5
+701,08119010201,78.7 Years (95% C.I. 75.4 - 82 Years),TELLER,"Census Tract 102.01, Teller County, Colorado",78.7,1.68,75.4,82,80.5
+702,08119010105,82.5 Years (95% C.I. 74.7 - 90.3 Years),TELLER,"Census Tract 101.05, Teller County, Colorado",82.5,3.99,74.7,90.3,80.5
+703,08119010104,77.7 Years (95% C.I. 73.6 - 81.8 Years),TELLER,"Census Tract 101.04, Teller County, Colorado",77.7,2.1,73.6,81.8,80.5
+704,08119010103,79 Years (95% C.I. 76.8 - 81.2 Years),TELLER,"Census Tract 101.03, Teller County, Colorado",79,1.13,76.8,81.2,80.5
+705,08119010106,84 Years (95% C.I. 76.7 - 91.3 Years),TELLER,"Census Tract 101.06, Teller County, Colorado",84,3.71,76.7,91.3,80.5
+706,08061960100,78.2 Years (95% C.I. 76.5 - 79.9 Years),KIOWA,"Census Tract 9601, Kiowa County, Colorado",78.2,0.89,76.5,79.9,80.5
+707,08031006804,81.8 Years (95% C.I. 74.8 - 88.8 Years),DENVER,"Census Tract 68.04, Denver County, Colorado",81.8,3.56,74.8,88.8,80.5
+708,08031006701,82.4 Years (95% C.I. 74.7 - 90.1 Years),DENVER,"Census Tract 67.01, Denver County, Colorado",82.4,3.93,74.7,90.1,80.5
+709,08031006809,81.3 Years (95% C.I. 78.3 - 84.3 Years),DENVER,"Census Tract 68.09, Denver County, Colorado",81.3,1.55,78.3,84.3,80.5
+710,08031006812,82.6 Years (95% C.I. 80.1 - 85.1 Years),DENVER,"Census Tract 68.12, Denver County, Colorado",82.6,1.28,80.1,85.1,80.5
+711,08031004004,84.5 Years (95% C.I. 81 - 88 Years),DENVER,"Census Tract 40.04, Denver County, Colorado",84.5,1.78,81,88,80.5
+712,08031004003,79.8 Years (95% C.I. 76.9 - 82.7 Years),DENVER,"Census Tract 40.03, Denver County, Colorado",79.8,1.47,76.9,82.7,80.5
+713,08031006901,73.8 Years (95% C.I. 71.4 - 76.2 Years),DENVER,"Census Tract 69.01, Denver County, Colorado",73.8,1.25,71.4,76.2,80.5
+714,08031002901,83.7 Years (95% C.I. 76.1 - 91.3 Years),DENVER,"Census Tract 29.01, Denver County, Colorado",83.7,3.87,76.1,91.3,80.5
+715,08031002802,77.1 Years (95% C.I. 71.5 - 82.7 Years),DENVER,"Census Tract 28.02, Denver County, Colorado",77.1,2.85,71.5,82.7,80.5
+716,08031002801,81.5 Years (95% C.I. 78 - 85 Years),DENVER,"Census Tract 28.01, Denver County, Colorado",81.5,1.79,78,85,80.5
+717,08031005503,76.4 Years (95% C.I. 74.1 - 78.7 Years),DENVER,"Census Tract 55.03, Denver County, Colorado",76.4,1.17,74.1,78.7,80.5
+718,08031005502,79.1 Years (95% C.I. 76.3 - 81.9 Years),DENVER,"Census Tract 55.02, Denver County, Colorado",79.1,1.4,76.3,81.9,80.5
+719,08031007013,79.2 Years (95% C.I. 76.7 - 81.7 Years),DENVER,"Census Tract 70.13, Denver County, Colorado",79.2,1.27,76.7,81.7,80.5
+720,08031005002,80 Years (95% C.I. 77.4 - 82.6 Years),DENVER,"Census Tract 50.02, Denver County, Colorado",80,1.31,77.4,82.6,80.5
+721,08031005001,75.2 Years (95% C.I. 72 - 78.4 Years),DENVER,"Census Tract 50.01, Denver County, Colorado",75.2,1.63,72,78.4,80.5
+722,08031005102,77.5 Years (95% C.I. 74.4 - 80.6 Years),DENVER,"Census Tract 51.02, Denver County, Colorado",77.5,1.57,74.4,80.6,80.5
+723,08031005300,74.7 Years (95% C.I. 67.7 - 81.7 Years),DENVER,"Census Tract 53, Denver County, Colorado",74.7,3.59,67.7,81.7,80.5
+724,08031004801,79.4 Years (95% C.I. 76.7 - 82.1 Years),DENVER,"Census Tract 48.01, Denver County, Colorado",79.4,1.39,76.7,82.1,80.5
+725,08031001402,77.4 Years (95% C.I. 75 - 79.8 Years),DENVER,"Census Tract 14.02, Denver County, Colorado",77.4,1.24,75,79.8,80.5
+726,08031001401,77.2 Years (95% C.I. 74.2 - 80.2 Years),DENVER,"Census Tract 14.01, Denver County, Colorado",77.2,1.52,74.2,80.2,80.5
+727,08031001302,78.7 Years (95% C.I. 73.9 - 83.5 Years),DENVER,"Census Tract 13.02, Denver County, Colorado",78.7,2.44,73.9,83.5,80.5
+728,08031001301,80.1 Years (95% C.I. 75.9 - 84.3 Years),DENVER,"Census Tract 13.01, Denver County, Colorado",80.1,2.13,75.9,84.3,80.5
+729,08031005104,71.7 Years (95% C.I. 69.1 - 74.3 Years),DENVER,"Census Tract 51.04, Denver County, Colorado",71.7,1.34,69.1,74.3,80.5
+730,08031004303,85.9 Years (95% C.I. 82.1 - 89.7 Years),DENVER,"Census Tract 43.03, Denver County, Colorado",85.9,1.94,82.1,89.7,80.5
+731,08031004002,83.5 Years (95% C.I. 80.6 - 86.4 Years),DENVER,"Census Tract 40.02, Denver County, Colorado",83.5,1.5,80.6,86.4,80.5
+732,08031004005,75.9 Years (95% C.I. 71.8 - 80 Years),DENVER,"Census Tract 40.05, Denver County, Colorado",75.9,2.11,71.8,80,80.5
+733,08031003902,84.1 Years (95% C.I. 80.8 - 87.4 Years),DENVER,"Census Tract 39.02, Denver County, Colorado",84.1,1.68,80.8,87.4,80.5
+734,08031003004,83.8 Years (95% C.I. 78.8 - 88.8 Years),DENVER,"Census Tract 30.04, Denver County, Colorado",83.8,2.57,78.8,88.8,80.5
+735,08031004603,78.3 Years (95% C.I. 75.1 - 81.5 Years),DENVER,"Census Tract 46.03, Denver County, Colorado",78.3,1.63,75.1,81.5,80.5
+736,08031004601,78.4 Years (95% C.I. 75.2 - 81.6 Years),DENVER,"Census Tract 46.01, Denver County, Colorado",78.4,1.61,75.2,81.6,80.5
+737,08031000903,77.5 Years (95% C.I. 74 - 81 Years),DENVER,"Census Tract 9.03, Denver County, Colorado",77.5,1.77,74,81,80.5
+738,08031006810,83.1 Years (95% C.I. 79.1 - 87.1 Years),DENVER,"Census Tract 68.10, Denver County, Colorado",83.1,2.06,79.1,87.1,80.5
+739,08031012001,81.3 Years (95% C.I. 78.2 - 84.4 Years),DENVER,"Census Tract 120.01, Denver County, Colorado",81.3,1.56,78.2,84.4,80.5
+740,08031012010,83.5 Years (95% C.I. 78.8 - 88.2 Years),DENVER,"Census Tract 120.10, Denver County, Colorado",83.5,2.41,78.8,88.2,80.5
+741,08031012014,79.8 Years (95% C.I. 76.6 - 83 Years),DENVER,"Census Tract 120.14, Denver County, Colorado",79.8,1.65,76.6,83,80.5
+742,08031004700,78.4 Years (95% C.I. 75.2 - 81.6 Years),DENVER,"Census Tract 47, Denver County, Colorado",78.4,1.63,75.2,81.6,80.5
+743,08031001000,72.2 Years (95% C.I. 68.6 - 75.8 Years),DENVER,"Census Tract 10, Denver County, Colorado",72.2,1.84,68.6,75.8,80.5
+744,08031011903,84.3 Years (95% C.I. 79.6 - 89 Years),DENVER,"Census Tract 119.03, Denver County, Colorado",84.3,2.42,79.6,89,80.5
+745,08031004404,77.6 Years (95% C.I. 72.5 - 82.7 Years),DENVER,"Census Tract 44.04, Denver County, Colorado",77.6,2.59,72.5,82.7,80.5
+746,08031004403,76.1 Years (95% C.I. 71.1 - 81.1 Years),DENVER,"Census Tract 44.03, Denver County, Colorado",76.1,2.54,71.1,81.1,80.5
+747,08031004304,81.6 Years (95% C.I. 77.8 - 85.4 Years),DENVER,"Census Tract 43.04, Denver County, Colorado",81.6,1.92,77.8,85.4,80.5
+748,08031004302,82.7 Years (95% C.I. 77.9 - 87.5 Years),DENVER,"Census Tract 43.02, Denver County, Colorado",82.7,2.43,77.9,87.5,80.5
+749,08031004202,82.1 Years (95% C.I. 78.5 - 85.7 Years),DENVER,"Census Tract 42.02, Denver County, Colorado",82.1,1.84,78.5,85.7,80.5
+750,08031004104,77 Years (95% C.I. 73.3 - 80.7 Years),DENVER,"Census Tract 41.04, Denver County, Colorado",77,1.89,73.3,80.7,80.5
+751,08031004301,76.9 Years (95% C.I. 73.8 - 80 Years),DENVER,"Census Tract 43.01, Denver County, Colorado",76.9,1.59,73.8,80,80.5
+752,08031004201,82 Years (95% C.I. 77.4 - 86.6 Years),DENVER,"Census Tract 42.01, Denver County, Colorado",82,2.36,77.4,86.6,80.5
+753,08031003703,78.4 Years (95% C.I. 73 - 83.8 Years),DENVER,"Census Tract 37.03, Denver County, Colorado",78.4,2.75,73,83.8,80.5
+754,08031003300,80.8 Years (95% C.I. 77 - 84.6 Years),DENVER,"Census Tract 33, Denver County, Colorado",80.8,1.94,77,84.6,80.5
+755,08031004103,80.5 Years (95% C.I. 76.6 - 84.4 Years),DENVER,"Census Tract 41.03, Denver County, Colorado",80.5,1.97,76.6,84.4,80.5
+756,08031003003,81.2 Years (95% C.I. 74.5 - 87.9 Years),DENVER,"Census Tract 30.03, Denver County, Colorado",81.2,3.43,74.5,87.9,80.5
+757,08031004102,77.1 Years (95% C.I. 73.1 - 81.1 Years),DENVER,"Census Tract 41.02, Denver County, Colorado",77.1,2.05,73.1,81.1,80.5
+758,08031004101,76.4 Years (95% C.I. 73.9 - 78.9 Years),DENVER,"Census Tract 41.01, Denver County, Colorado",76.4,1.26,73.9,78.9,80.5
+759,08031003202,77.4 Years (95% C.I. 74.4 - 80.4 Years),DENVER,"Census Tract 32.02, Denver County, Colorado",77.4,1.55,74.4,80.4,80.5
+760,08031003901,83.3 Years (95% C.I. 79.6 - 87 Years),DENVER,"Census Tract 39.01, Denver County, Colorado",83.3,1.87,79.6,87,80.5
+761,08031003800,82.3 Years (95% C.I. 79.6 - 85 Years),DENVER,"Census Tract 38, Denver County, Colorado",82.3,1.36,79.6,85,80.5
+762,08031003402,83.9 Years (95% C.I. 80.8 - 87 Years),DENVER,"Census Tract 34.02, Denver County, Colorado",83.9,1.6,80.8,87,80.5
+763,08031003401,85.6 Years (95% C.I. 80.2 - 91 Years),DENVER,"Census Tract 34.01, Denver County, Colorado",85.6,2.78,80.2,91,80.5
+764,08031002902,83.5 Years (95% C.I. 77.3 - 89.7 Years),DENVER,"Census Tract 29.02, Denver County, Colorado",83.5,3.15,77.3,89.7,80.5
+765,08031003701,73.9 Years (95% C.I. 70.8 - 77 Years),DENVER,"Census Tract 37.01, Denver County, Colorado",73.9,1.56,70.8,77,80.5
+766,08031003201,79.6 Years (95% C.I. 73.9 - 85.3 Years),DENVER,"Census Tract 32.01, Denver County, Colorado",79.6,2.92,73.9,85.3,80.5
+767,08031002703,70.5 Years (95% C.I. 65.6 - 75.4 Years),DENVER,"Census Tract 27.03, Denver County, Colorado",70.5,2.48,65.6,75.4,80.5
+768,08031003102,80 Years (95% C.I. 76.9 - 83.1 Years),DENVER,"Census Tract 31.02, Denver County, Colorado",80,1.59,76.9,83.1,80.5
+769,08031003101,70.9 Years (95% C.I. 65.3 - 76.5 Years),DENVER,"Census Tract 31.01, Denver County, Colorado",70.9,2.86,65.3,76.5,80.5
+770,08031002402,70.3 Years (95% C.I. 66.3 - 74.3 Years),DENVER,"Census Tract 24.02, Denver County, Colorado",70.3,2.05,66.3,74.3,80.5
+771,08031002602,71.4 Years (95% C.I. 65.5 - 77.3 Years),DENVER,"Census Tract 26.02, Denver County, Colorado",71.4,3.01,65.5,77.3,80.5
+772,08031003603,74.1 Years (95% C.I. 70.2 - 78 Years),DENVER,"Census Tract 36.03, Denver County, Colorado",74.1,1.99,70.2,78,80.5
+773,08031003002,78 Years (95% C.I. 74.5 - 81.5 Years),DENVER,"Census Tract 30.02, Denver County, Colorado",78,1.81,74.5,81.5,80.5
+774,08031003500,76.2 Years (95% C.I. 72.6 - 79.8 Years),DENVER,"Census Tract 35, Denver County, Colorado",76.2,1.82,72.6,79.8,80.5
+775,08031003602,77.1 Years (95% C.I. 74 - 80.2 Years),DENVER,"Census Tract 36.02, Denver County, Colorado",77.1,1.56,74,80.2,80.5
+776,08031002300,74.8 Years (95% C.I. 71 - 78.6 Years),DENVER,"Census Tract 23, Denver County, Colorado",74.8,1.95,71,78.6,80.5
+777,08031003601,75.1 Years (95% C.I. 71 - 79.2 Years),DENVER,"Census Tract 36.01, Denver County, Colorado",75.1,2.09,71,79.2,80.5
+778,08031002702,75.6 Years (95% C.I. 72.8 - 78.4 Years),DENVER,"Census Tract 27.02, Denver County, Colorado",75.6,1.45,72.8,78.4,80.5
+779,08031002601,78.6 Years (95% C.I. 73.5 - 83.7 Years),DENVER,"Census Tract 26.01, Denver County, Colorado",78.6,2.59,73.5,83.7,80.5
+780,08031002403,81 Years (95% C.I. 76.3 - 85.7 Years),DENVER,"Census Tract 24.03, Denver County, Colorado",81,2.41,76.3,85.7,80.5
+781,08031001800,74.2 Years (95% C.I. 69.8 - 78.6 Years),DENVER,"Census Tract 18, Denver County, Colorado",74.2,2.23,69.8,78.6,80.5
+782,08031001701,78.9 Years (95% C.I. 76.1 - 81.7 Years),DENVER,"Census Tract 17.01, Denver County, Colorado",78.9,1.41,76.1,81.7,80.5
+783,08031001600,74.5 Years (95% C.I. 68.6 - 80.4 Years),DENVER,"Census Tract 16, Denver County, Colorado",74.5,3.02,68.6,80.4,80.5
+784,08031008306,80.4 Years (95% C.I. 76.2 - 84.6 Years),DENVER,"Census Tract 83.06, Denver County, Colorado",80.4,2.15,76.2,84.6,80.5
+785,08031001500,72.8 Years (95% C.I. 68.9 - 76.7 Years),DENVER,"Census Tract 15, Denver County, Colorado",72.8,1.97,68.9,76.7,80.5
+786,08031001101,74.5 Years (95% C.I. 71.4 - 77.6 Years),DENVER,"Census Tract 11.01, Denver County, Colorado",74.5,1.56,71.4,77.6,80.5
+787,08031000402,74.6 Years (95% C.I. 71.3 - 77.9 Years),DENVER,"Census Tract 4.02, Denver County, Colorado",74.6,1.68,71.3,77.9,80.5
+788,08031000401,77.7 Years (95% C.I. 73.8 - 81.6 Years),DENVER,"Census Tract 4.01, Denver County, Colorado",77.7,1.98,73.8,81.6,80.5
+789,08031000800,75 Years (95% C.I. 68.9 - 81.1 Years),DENVER,"Census Tract 8, Denver County, Colorado",75,3.12,68.9,81.1,80.5
+790,08031000701,76.3 Years (95% C.I. 72.7 - 79.9 Years),DENVER,"Census Tract 7.01, Denver County, Colorado",76.3,1.82,72.7,79.9,80.5
+791,08031000502,78.5 Years (95% C.I. 75.3 - 81.7 Years),DENVER,"Census Tract 5.02, Denver County, Colorado",78.5,1.65,75.3,81.7,80.5
+792,08031000303,78.3 Years (95% C.I. 76.1 - 80.5 Years),DENVER,"Census Tract 3.03, Denver County, Colorado",78.3,1.12,76.1,80.5,80.5
+793,08031015500,73.6 Years (95% C.I. 68.3 - 78.9 Years),DENVER,"Census Tract 155, Denver County, Colorado",73.6,2.72,68.3,78.9,80.5
+794,08031000501,79.4 Years (95% C.I. 76.6 - 82.2 Years),DENVER,"Census Tract 5.01, Denver County, Colorado",79.4,1.42,76.6,82.2,80.5
+795,08031000302,80.3 Years (95% C.I. 75.6 - 85 Years),DENVER,"Census Tract 3.02, Denver County, Colorado",80.3,2.39,75.6,85,80.5
+796,08031000202,74.7 Years (95% C.I. 72.3 - 77.1 Years),DENVER,"Census Tract 2.02, Denver County, Colorado",74.7,1.21,72.3,77.1,80.5
+797,08031000102,78.5 Years (95% C.I. 74.6 - 82.4 Years),DENVER,"Census Tract 1.02, Denver County, Colorado",78.5,1.97,74.6,82.4,80.5
+798,08031000201,80.5 Years (95% C.I. 76.8 - 84.2 Years),DENVER,"Census Tract 2.01, Denver County, Colorado",80.5,1.89,76.8,84.2,80.5
+799,08031004405,79.4 Years (95% C.I. 76.4 - 82.4 Years),DENVER,"Census Tract 44.05, Denver County, Colorado",79.4,1.51,76.4,82.4,80.5
+800,08031004106,81.3 Years (95% C.I. 74.6 - 88 Years),DENVER,"Census Tract 41.06, Denver County, Colorado",81.3,3.41,74.6,88,80.5
+801,08031015600,74.9 Years (95% C.I. 71.6 - 78.2 Years),DENVER,"Census Tract 156, Denver County, Colorado",74.9,1.66,71.6,78.2,80.5
+802,08031015400,77.4 Years (95% C.I. 73.5 - 81.3 Years),DENVER,"Census Tract 154, Denver County, Colorado",77.4,2,73.5,81.3,80.5
+803,08031008390,77.9 Years (95% C.I. 73.4 - 82.4 Years),DENVER,"Census Tract 83.90, Denver County, Colorado",77.9,2.31,73.4,82.4,80.5
+804,08031008391,79.6 Years (95% C.I. 74.4 - 84.8 Years),DENVER,"Census Tract 83.91, Denver County, Colorado",79.6,2.64,74.4,84.8,80.5
+805,08031000301,79.8 Years (95% C.I. 76.3 - 83.3 Years),DENVER,"Census Tract 3.01, Denver County, Colorado",79.8,1.79,76.3,83.3,80.5
+806,08031000905,78.5 Years (95% C.I. 72.9 - 84.1 Years),DENVER,"Census Tract 9.05, Denver County, Colorado",78.5,2.87,72.9,84.1,80.5
+807,08031000702,75.9 Years (95% C.I. 70.8 - 81 Years),DENVER,"Census Tract 7.02, Denver County, Colorado",75.9,2.59,70.8,81,80.5
+808,08031008389,80.4 Years (95% C.I. 76.1 - 84.7 Years),DENVER,"Census Tract 83.89, Denver County, Colorado",80.4,2.2,76.1,84.7,80.5
+809,08031008386,76.2 Years (95% C.I. 71 - 81.4 Years),DENVER,"Census Tract 83.86, Denver County, Colorado",76.2,2.63,71,81.4,80.5
+810,08031015300,82.5 Years (95% C.I. 78 - 87 Years),DENVER,"Census Tract 153, Denver County, Colorado",82.5,2.28,78,87,80.5
+811,08031004306,84.2 Years (95% C.I. 81.2 - 87.2 Years),DENVER,"Census Tract 43.06, Denver County, Colorado",84.2,1.53,81.2,87.2,80.5
+812,08031004107,81.3 Years (95% C.I. 77 - 85.6 Years),DENVER,"Census Tract 41.07, Denver County, Colorado",81.3,2.17,77,85.6,80.5
+813,08031001102,78 Years (95% C.I. 73.9 - 82.1 Years),DENVER,"Census Tract 11.02, Denver County, Colorado",78,2.09,73.9,82.1,80.5
+814,08031000600,80.9 Years (95% C.I. 76.1 - 85.7 Years),DENVER,"Census Tract 6, Denver County, Colorado",80.9,2.45,76.1,85.7,80.5
+815,08031004602,73.7 Years (95% C.I. 71.2 - 76.2 Years),DENVER,"Census Tract 46.02, Denver County, Colorado",73.7,1.29,71.2,76.2,80.5
+816,08031001702,76 Years (95% C.I. 71.1 - 80.9 Years),DENVER,"Census Tract 17.02, Denver County, Colorado",76,2.5,71.1,80.9,80.5
+817,08031008387,76.8 Years (95% C.I. 74 - 79.6 Years),DENVER,"Census Tract 83.87, Denver County, Colorado",76.8,1.44,74,79.6,80.5
+818,08031008312,80.6 Years (95% C.I. 74.9 - 86.3 Years),DENVER,"Census Tract 83.12, Denver County, Colorado",80.6,2.93,74.9,86.3,80.5
+819,08031015700,73.8 Years (95% C.I. 71.2 - 76.4 Years),DENVER,"Census Tract 157, Denver County, Colorado",73.8,1.34,71.2,76.4,80.5
+820,08031004506,76.6 Years (95% C.I. 73.3 - 79.9 Years),DENVER,"Census Tract 45.06, Denver County, Colorado",76.6,1.67,73.3,79.9,80.5
+821,08031011902,78.8 Years (95% C.I. 75.6 - 82 Years),DENVER,"Census Tract 119.02, Denver County, Colorado",78.8,1.65,75.6,82,80.5
+822,08031005200,83 Years (95% C.I. 79 - 87 Years),DENVER,"Census Tract 52, Denver County, Colorado",83,2.02,79,87,80.5
+823,08031002100,80.9 Years (95% C.I. 74.5 - 87.3 Years),DENVER,"Census Tract 21, Denver County, Colorado",80.9,3.28,74.5,87.3,80.5
+824,08031000902,79.5 Years (95% C.I. 75.4 - 83.6 Years),DENVER,"Census Tract 9.02, Denver County, Colorado",79.5,2.07,75.4,83.6,80.5
+825,08031000904,76.2 Years (95% C.I. 74.1 - 78.3 Years),DENVER,"Census Tract 9.04, Denver County, Colorado",76.2,1.07,74.1,78.3,80.5
+826,08031008304,77.2 Years (95% C.I. 73.6 - 80.8 Years),DENVER,"Census Tract 83.04, Denver County, Colorado",77.2,1.84,73.6,80.8,80.5
+827,08031004505,77.9 Years (95% C.I. 70.8 - 85 Years),DENVER,"Census Tract 45.05, Denver County, Colorado",77.9,3.61,70.8,85,80.5
+828,08031004504,75.2 Years (95% C.I. 72.2 - 78.2 Years),DENVER,"Census Tract 45.04, Denver County, Colorado",75.2,1.53,72.2,78.2,80.5
+829,08031004503,71.7 Years (95% C.I. 68.4 - 75 Years),DENVER,"Census Tract 45.03, Denver County, Colorado",71.7,1.7,68.4,75,80.5
+830,08031004006,83.9 Years (95% C.I. 79.3 - 88.5 Years),DENVER,"Census Tract 40.06, Denver County, Colorado",83.9,2.37,79.3,88.5,80.5
+831,08031003001,84.4 Years (95% C.I. 78.7 - 90.1 Years),DENVER,"Census Tract 30.01, Denver County, Colorado",84.4,2.93,78.7,90.1,80.5
+832,08031001403,79.1 Years (95% C.I. 73.3 - 84.9 Years),DENVER,"Census Tract 14.03, Denver County, Colorado",79.1,2.97,73.3,84.9,80.5
+833,08031006813,78.1 Years (95% C.I. 75.3 - 80.9 Years),DENVER,"Census Tract 68.13, Denver County, Colorado",78.1,1.44,75.3,80.9,80.5
+834,08031006811,80.7 Years (95% C.I. 78 - 83.4 Years),DENVER,"Census Tract 68.11, Denver County, Colorado",80.7,1.37,78,83.4,80.5
+835,08031007037,76.8 Years (95% C.I. 71.6 - 82 Years),DENVER,"Census Tract 70.37, Denver County, Colorado",76.8,2.66,71.6,82,80.5
+836,08031007088,77.6 Years (95% C.I. 74.3 - 80.9 Years),DENVER,"Census Tract 70.88, Denver County, Colorado",77.6,1.69,74.3,80.9,80.5
+837,08005081800,75.9 Years (95% C.I. 73.8 - 78 Years),ARAPAHOE,"Census Tract 818, Arapahoe County, Colorado",75.9,1.08,73.8,78,80.5
+838,08005007500,78.2 Years (95% C.I. 74.4 - 82 Years),ARAPAHOE,"Census Tract 75, Arapahoe County, Colorado",78.2,1.94,74.4,82,80.5
+839,08005082300,76.7 Years (95% C.I. 72 - 81.4 Years),ARAPAHOE,"Census Tract 823, Arapahoe County, Colorado",76.7,2.41,72,81.4,80.5
+840,08005081600,77.7 Years (95% C.I. 74.9 - 80.5 Years),ARAPAHOE,"Census Tract 816, Arapahoe County, Colorado",77.7,1.4,74.9,80.5,80.5
+841,08005080700,78.7 Years (95% C.I. 76.5 - 80.9 Years),ARAPAHOE,"Census Tract 807, Arapahoe County, Colorado",78.7,1.15,76.5,80.9,80.5
+842,08005006808,83.2 Years (95% C.I. 79.6 - 86.8 Years),ARAPAHOE,"Census Tract 68.08, Arapahoe County, Colorado",83.2,1.83,79.6,86.8,80.5
+843,08005084600,79.4 Years (95% C.I. 75 - 83.8 Years),ARAPAHOE,"Census Tract 846, Arapahoe County, Colorado",79.4,2.27,75,83.8,80.5
+844,08005006711,81.3 Years (95% C.I. 78.2 - 84.4 Years),ARAPAHOE,"Census Tract 67.11, Arapahoe County, Colorado",81.3,1.6,78.2,84.4,80.5
+845,08005006815,80 Years (95% C.I. 76.6 - 83.4 Years),ARAPAHOE,"Census Tract 68.15, Arapahoe County, Colorado",80,1.76,76.6,83.4,80.5
+846,08005082600,75.4 Years (95% C.I. 71 - 79.8 Years),ARAPAHOE,"Census Tract 826, Arapahoe County, Colorado",75.4,2.24,71,79.8,80.5
+847,08005080200,82.4 Years (95% C.I. 76.8 - 88 Years),ARAPAHOE,"Census Tract 802, Arapahoe County, Colorado",82.4,2.87,76.8,88,80.5
+848,08041005111,79.7 Years (95% C.I. 71.9 - 87.5 Years),EL PASO,"Census Tract 51.11, El Paso County, Colorado",79.7,3.96,71.9,87.5,80.5
+849,08041007101,81.2 Years (95% C.I. 76.2 - 86.2 Years),EL PASO,"Census Tract 71.01, El Paso County, Colorado",81.2,2.57,76.2,86.2,80.5
+850,08041007201,81 Years (95% C.I. 77.8 - 84.2 Years),EL PASO,"Census Tract 72.01, El Paso County, Colorado",81,1.63,77.8,84.2,80.5
+851,08041006901,80.3 Years (95% C.I. 76.2 - 84.4 Years),EL PASO,"Census Tract 69.01, El Paso County, Colorado",80.3,2.09,76.2,84.4,80.5
+852,08041006302,76.5 Years (95% C.I. 69.1 - 83.9 Years),EL PASO,"Census Tract 63.02, El Paso County, Colorado",76.5,3.77,69.1,83.9,80.5
+853,08041005110,77.6 Years (95% C.I. 73.1 - 82.1 Years),EL PASO,"Census Tract 51.10, El Paso County, Colorado",77.6,2.31,73.1,82.1,80.5
+854,08041006801,79.5 Years (95% C.I. 77.2 - 81.8 Years),EL PASO,"Census Tract 68.01, El Paso County, Colorado",79.5,1.16,77.2,81.8,80.5
+855,08041006802,84.6 Years (95% C.I. 77.4 - 91.8 Years),EL PASO,"Census Tract 68.02, El Paso County, Colorado",84.6,3.67,77.4,91.8,80.5
+856,08041004511,77.2 Years (95% C.I. 74.8 - 79.6 Years),EL PASO,"Census Tract 45.11, El Paso County, Colorado",77.2,1.22,74.8,79.6,80.5
+857,08041004602,76.8 Years (95% C.I. 74.2 - 79.4 Years),EL PASO,"Census Tract 46.02, El Paso County, Colorado",76.8,1.35,74.2,79.4,80.5
+858,08041007601,81.4 Years (95% C.I. 77.8 - 85 Years),EL PASO,"Census Tract 76.01, El Paso County, Colorado",81.4,1.84,77.8,85,80.5
+859,08041007602,79.2 Years (95% C.I. 75.3 - 83.1 Years),EL PASO,"Census Tract 76.02, El Paso County, Colorado",79.2,1.98,75.3,83.1,80.5
+860,08041007202,85.7 Years (95% C.I. 80.3 - 91.1 Years),EL PASO,"Census Tract 72.02, El Paso County, Colorado",85.7,2.78,80.3,91.1,80.5
+861,08041003307,81.8 Years (95% C.I. 77.7 - 85.9 Years),EL PASO,"Census Tract 33.07, El Paso County, Colorado",81.8,2.11,77.7,85.9,80.5
+862,08041003400,82.3 Years (95% C.I. 77.9 - 86.7 Years),EL PASO,"Census Tract 34, El Paso County, Colorado",82.3,2.24,77.9,86.7,80.5
+863,08041006700,80.2 Years (95% C.I. 76.5 - 83.9 Years),EL PASO,"Census Tract 67, El Paso County, Colorado",80.2,1.87,76.5,83.9,80.5
+864,08041003701,84.8 Years (95% C.I. 80.1 - 89.5 Years),EL PASO,"Census Tract 37.01, El Paso County, Colorado",84.8,2.38,80.1,89.5,80.5
+865,08041004100,77.4 Years (95% C.I. 74.6 - 80.2 Years),EL PASO,"Census Tract 41, El Paso County, Colorado",77.4,1.42,74.6,80.2,80.5
+866,08041004508,77.4 Years (95% C.I. 71.6 - 83.2 Years),EL PASO,"Census Tract 45.08, El Paso County, Colorado",77.4,2.97,71.6,83.2,80.5
+867,08041004507,81.4 Years (95% C.I. 74.6 - 88.2 Years),EL PASO,"Census Tract 45.07, El Paso County, Colorado",81.4,3.48,74.6,88.2,80.5
+868,08041004506,76 Years (95% C.I. 73 - 79 Years),EL PASO,"Census Tract 45.06, El Paso County, Colorado",76,1.53,73,79,80.5
+869,08041004300,78.6 Years (95% C.I. 74.6 - 82.6 Years),EL PASO,"Census Tract 43, El Paso County, Colorado",78.6,2.07,74.6,82.6,80.5
+870,08041005000,74.6 Years (95% C.I. 71.1 - 78.1 Years),EL PASO,"Census Tract 50, El Paso County, Colorado",74.6,1.77,71.1,78.1,80.5
+871,08041006200,78 Years (95% C.I. 74.4 - 81.6 Years),EL PASO,"Census Tract 62, El Paso County, Colorado",78,1.84,74.4,81.6,80.5
+872,08041006100,75.8 Years (95% C.I. 69.5 - 82.1 Years),EL PASO,"Census Tract 61, El Paso County, Colorado",75.8,3.2,69.5,82.1,80.5
+873,08041006000,77.4 Years (95% C.I. 74.2 - 80.6 Years),EL PASO,"Census Tract 60, El Paso County, Colorado",77.4,1.65,74.2,80.6,80.5
+874,08041005900,77.4 Years (95% C.I. 75.1 - 79.7 Years),EL PASO,"Census Tract 59, El Paso County, Colorado",77.4,1.17,75.1,79.7,80.5
+875,08041005800,84.3 Years (95% C.I. 78.6 - 90 Years),EL PASO,"Census Tract 58, El Paso County, Colorado",84.3,2.91,78.6,90,80.5
+876,08041005700,82.2 Years (95% C.I. 77.8 - 86.6 Years),EL PASO,"Census Tract 57, El Paso County, Colorado",82.2,2.23,77.8,86.6,80.5
+877,08041005602,81.4 Years (95% C.I. 77.2 - 85.6 Years),EL PASO,"Census Tract 56.02, El Paso County, Colorado",81.4,2.16,77.2,85.6,80.5
+878,08041004703,81.1 Years (95% C.I. 77.1 - 85.1 Years),EL PASO,"Census Tract 47.03, El Paso County, Colorado",81.1,2.03,77.1,85.1,80.5
+879,08041005202,75.6 Years (95% C.I. 71.7 - 79.5 Years),EL PASO,"Census Tract 52.02, El Paso County, Colorado",75.6,1.97,71.7,79.5,80.5
+880,08041003905,77.8 Years (95% C.I. 74.7 - 80.9 Years),EL PASO,"Census Tract 39.05, El Paso County, Colorado",77.8,1.56,74.7,80.9,80.5
+881,08041003706,83.8 Years (95% C.I. 79.9 - 87.7 Years),EL PASO,"Census Tract 37.06, El Paso County, Colorado",83.8,2.02,79.9,87.7,80.5
+882,08041003705,81.2 Years (95% C.I. 77.6 - 84.8 Years),EL PASO,"Census Tract 37.05, El Paso County, Colorado",81.2,1.83,77.6,84.8,80.5
+883,08041003000,78.9 Years (95% C.I. 74.8 - 83 Years),EL PASO,"Census Tract 30, El Paso County, Colorado",78.9,2.08,74.8,83,80.5
+884,08041003303,76.3 Years (95% C.I. 74 - 78.6 Years),EL PASO,"Census Tract 33.03, El Paso County, Colorado",76.3,1.18,74,78.6,80.5
+885,08041004503,81.5 Years (95% C.I. 76.1 - 86.9 Years),EL PASO,"Census Tract 45.03, El Paso County, Colorado",81.5,2.76,76.1,86.9,80.5
+886,08041002900,72.9 Years (95% C.I. 70.4 - 75.4 Years),EL PASO,"Census Tract 29, El Paso County, Colorado",72.9,1.25,70.4,75.4,80.5
+887,08041002000,74.8 Years (95% C.I. 72.6 - 77 Years),EL PASO,"Census Tract 20, El Paso County, Colorado",74.8,1.1,72.6,77,80.5
+888,08041004502,81 Years (95% C.I. 75.9 - 86.1 Years),EL PASO,"Census Tract 45.02, El Paso County, Colorado",81,2.62,75.9,86.1,80.5
+889,08041001900,76.6 Years (95% C.I. 71.7 - 81.5 Years),EL PASO,"Census Tract 19, El Paso County, Colorado",76.6,2.5,71.7,81.5,80.5
+890,08041001800,79.4 Years (95% C.I. 76.4 - 82.4 Years),EL PASO,"Census Tract 18, El Paso County, Colorado",79.4,1.54,76.4,82.4,80.5
+891,08041001700,77.3 Years (95% C.I. 71.9 - 82.7 Years),EL PASO,"Census Tract 17, El Paso County, Colorado",77.3,2.77,71.9,82.7,80.5
+892,08041003906,86.2 Years (95% C.I. 80 - 92.4 Years),EL PASO,"Census Tract 39.06, El Paso County, Colorado",86.2,3.17,80,92.4,80.5
+893,08041001101,76.9 Years (95% C.I. 70 - 83.8 Years),EL PASO,"Census Tract 11.01, El Paso County, Colorado",76.9,3.5,70,83.8,80.5
+894,08041000900,80.6 Years (95% C.I. 77.9 - 83.3 Years),EL PASO,"Census Tract 9, El Paso County, Colorado",80.6,1.37,77.9,83.3,80.5
+895,08041005109,86 Years (95% C.I. 80.7 - 91.3 Years),EL PASO,"Census Tract 51.09, El Paso County, Colorado",86,2.68,80.7,91.3,80.5
+896,08041005105,78.1 Years (95% C.I. 73.7 - 82.5 Years),EL PASO,"Census Tract 51.05, El Paso County, Colorado",78.1,2.23,73.7,82.5,80.5
+897,08041005107,81.9 Years (95% C.I. 75.8 - 88 Years),EL PASO,"Census Tract 51.07, El Paso County, Colorado",81.9,3.09,75.8,88,80.5
+898,08041007102,83.6 Years (95% C.I. 78.8 - 88.4 Years),EL PASO,"Census Tract 71.02, El Paso County, Colorado",83.6,2.45,78.8,88.4,80.5
+899,08041004705,81.3 Years (95% C.I. 75.9 - 86.7 Years),EL PASO,"Census Tract 47.05, El Paso County, Colorado",81.3,2.73,75.9,86.7,80.5
+900,08041004706,81.9 Years (95% C.I. 76.8 - 87 Years),EL PASO,"Census Tract 47.06, El Paso County, Colorado",81.9,2.62,76.8,87,80.5
+901,08041006902,83.2 Years (95% C.I. 79.1 - 87.3 Years),EL PASO,"Census Tract 69.02, El Paso County, Colorado",83.2,2.11,79.1,87.3,80.5
+902,08041004603,77.8 Years (95% C.I. 74.4 - 81.2 Years),EL PASO,"Census Tract 46.03, El Paso County, Colorado",77.8,1.72,74.4,81.2,80.5
+903,08041005108,79.5 Years (95% C.I. 75.7 - 83.3 Years),EL PASO,"Census Tract 51.08, El Paso County, Colorado",79.5,1.94,75.7,83.3,80.5
+904,08041003308,77.5 Years (95% C.I. 73.3 - 81.7 Years),EL PASO,"Census Tract 33.08, El Paso County, Colorado",77.5,2.17,73.3,81.7,80.5
+905,08041003305,84.8 Years (95% C.I. 81.6 - 88 Years),EL PASO,"Census Tract 33.05, El Paso County, Colorado",84.8,1.64,81.6,88,80.5
+906,08041003306,80.7 Years (95% C.I. 76.5 - 84.9 Years),EL PASO,"Census Tract 33.06, El Paso County, Colorado",80.7,2.13,76.5,84.9,80.5
+907,08041005502,79.2 Years (95% C.I. 73.9 - 84.5 Years),EL PASO,"Census Tract 55.02, El Paso County, Colorado",79.2,2.7,73.9,84.5,80.5
+908,08041004702,75.3 Years (95% C.I. 69.9 - 80.7 Years),EL PASO,"Census Tract 47.02, El Paso County, Colorado",75.3,2.75,69.9,80.7,80.5
+909,08041000101,78.4 Years (95% C.I. 76.2 - 80.6 Years),EL PASO,"Census Tract 1.01, El Paso County, Colorado",78.4,1.15,76.2,80.6,80.5
+910,08041008000,76.1 Years (95% C.I. 73 - 79.2 Years),EL PASO,"Census Tract 80, El Paso County, Colorado",76.1,1.58,73,79.2,80.5
+911,08041003709,82.1 Years (95% C.I. 77.7 - 86.5 Years),EL PASO,"Census Tract 37.09, El Paso County, Colorado",82.1,2.25,77.7,86.5,80.5
+912,08041007400,83.9 Years (95% C.I. 80 - 87.8 Years),EL PASO,"Census Tract 74, El Paso County, Colorado",83.9,2.01,80,87.8,80.5
+913,08041003707,81.6 Years (95% C.I. 77.2 - 86 Years),EL PASO,"Census Tract 37.07, El Paso County, Colorado",81.6,2.26,77.2,86,80.5
+914,08041003708,85.8 Years (95% C.I. 79.4 - 92.2 Years),EL PASO,"Census Tract 37.08, El Paso County, Colorado",85.8,3.27,79.4,92.2,80.5
+915,08041006502,76.3 Years (95% C.I. 71.7 - 80.9 Years),EL PASO,"Census Tract 65.02, El Paso County, Colorado",76.3,2.35,71.7,80.9,80.5
+916,08041006600,77.5 Years (95% C.I. 74.2 - 80.8 Years),EL PASO,"Census Tract 66, El Paso County, Colorado",77.5,1.71,74.2,80.8,80.5
+917,08041006501,75.6 Years (95% C.I. 72.4 - 78.8 Years),EL PASO,"Census Tract 65.01, El Paso County, Colorado",75.6,1.63,72.4,78.8,80.5
+918,08041006400,78.7 Years (95% C.I. 72.6 - 84.8 Years),EL PASO,"Census Tract 64, El Paso County, Colorado",78.7,3.13,72.6,84.8,80.5
+919,08041005601,82.4 Years (95% C.I. 78 - 86.8 Years),EL PASO,"Census Tract 56.01, El Paso County, Colorado",82.4,2.25,78,86.8,80.5
+920,08041005400,72.2 Years (95% C.I. 69 - 75.4 Years),EL PASO,"Census Tract 54, El Paso County, Colorado",72.2,1.64,69,75.4,80.5
+921,08041005300,73.6 Years (95% C.I. 70.6 - 76.6 Years),EL PASO,"Census Tract 53, El Paso County, Colorado",73.6,1.52,70.6,76.6,80.5
+922,08041005201,73.9 Years (95% C.I. 71 - 76.8 Years),EL PASO,"Census Tract 52.01, El Paso County, Colorado",73.9,1.47,71,76.8,80.5
+923,08041004800,78.6 Years (95% C.I. 74.6 - 82.6 Years),EL PASO,"Census Tract 48, El Paso County, Colorado",78.6,2.05,74.6,82.6,80.5
+924,08041002700,71.1 Years (95% C.I. 66.7 - 75.5 Years),EL PASO,"Census Tract 27, El Paso County, Colorado",71.1,2.27,66.7,75.5,80.5
+925,08041002501,81.6 Years (95% C.I. 78.4 - 84.8 Years),EL PASO,"Census Tract 25.01, El Paso County, Colorado",81.6,1.64,78.4,84.8,80.5
+926,08041002502,81.1 Years (95% C.I. 77.8 - 84.4 Years),EL PASO,"Census Tract 25.02, El Paso County, Colorado",81.1,1.67,77.8,84.4,80.5
+927,08041002400,76 Years (95% C.I. 73.7 - 78.3 Years),EL PASO,"Census Tract 24, El Paso County, Colorado",76,1.16,73.7,78.3,80.5
+928,08041002200,70.8 Years (95% C.I. 67.7 - 73.9 Years),EL PASO,"Census Tract 22, El Paso County, Colorado",70.8,1.59,67.7,73.9,80.5
+929,08041002102,74.4 Years (95% C.I. 71.7 - 77.1 Years),EL PASO,"Census Tract 21.02, El Paso County, Colorado",74.4,1.38,71.7,77.1,80.5
+930,08041002101,69 Years (95% C.I. 66.1 - 71.9 Years),EL PASO,"Census Tract 21.01, El Paso County, Colorado",69,1.48,66.1,71.9,80.5
+931,08041001400,75.1 Years (95% C.I. 72.6 - 77.6 Years),EL PASO,"Census Tract 14, El Paso County, Colorado",75.1,1.29,72.6,77.6,80.5
+932,08041001302,76.4 Years (95% C.I. 74.1 - 78.7 Years),EL PASO,"Census Tract 13.02, El Paso County, Colorado",76.4,1.18,74.1,78.7,80.5
+933,08041001104,81.8 Years (95% C.I. 74.6 - 89 Years),EL PASO,"Census Tract 11.04, El Paso County, Colorado",81.8,3.68,74.6,89,80.5
+934,08041000800,82 Years (95% C.I. 76.1 - 87.9 Years),EL PASO,"Census Tract 8, El Paso County, Colorado",82,3.03,76.1,87.9,80.5
+935,08041000700,80.7 Years (95% C.I. 76.2 - 85.2 Years),EL PASO,"Census Tract 7, El Paso County, Colorado",80.7,2.31,76.2,85.2,80.5
+936,08041000600,80.3 Years (95% C.I. 77.3 - 83.3 Years),EL PASO,"Census Tract 6, El Paso County, Colorado",80.3,1.56,77.3,83.3,80.5
+937,08041000500,79.4 Years (95% C.I. 75.5 - 83.3 Years),EL PASO,"Census Tract 5, El Paso County, Colorado",79.4,1.99,75.5,83.3,80.5
+938,08041000400,79.4 Years (95% C.I. 76.6 - 82.2 Years),EL PASO,"Census Tract 4, El Paso County, Colorado",79.4,1.42,76.6,82.2,80.5
+939,08041007800,81.7 Years (95% C.I. 79.2 - 84.2 Years),EL PASO,"Census Tract 78, El Paso County, Colorado",81.7,1.28,79.2,84.2,80.5
+940,08041000302,77 Years (95% C.I. 75 - 79 Years),EL PASO,"Census Tract 3.02, El Paso County, Colorado",77,1.04,75,79,80.5
+941,08041007700,80.7 Years (95% C.I. 77.5 - 83.9 Years),EL PASO,"Census Tract 77, El Paso County, Colorado",80.7,1.63,77.5,83.9,80.5
+942,08005083500,79.3 Years (95% C.I. 74.9 - 83.7 Years),ARAPAHOE,"Census Tract 835, Arapahoe County, Colorado",79.3,2.25,74.9,83.7,80.5
+943,08005082400,77.9 Years (95% C.I. 74.7 - 81.1 Years),ARAPAHOE,"Census Tract 824, Arapahoe County, Colorado",77.9,1.64,74.7,81.1,80.5
+944,08005005630,82.1 Years (95% C.I. 78.4 - 85.8 Years),ARAPAHOE,"Census Tract 56.30, Arapahoe County, Colorado",82.1,1.87,78.4,85.8,80.5
+945,08005005631,80.6 Years (95% C.I. 77.3 - 83.9 Years),ARAPAHOE,"Census Tract 56.31, Arapahoe County, Colorado",80.6,1.68,77.3,83.9,80.5
+946,08005005628,81.3 Years (95% C.I. 78.7 - 83.9 Years),ARAPAHOE,"Census Tract 56.28, Arapahoe County, Colorado",81.3,1.31,78.7,83.9,80.5
+947,08005005632,85.6 Years (95% C.I. 79.7 - 91.5 Years),ARAPAHOE,"Census Tract 56.32, Arapahoe County, Colorado",85.6,3,79.7,91.5,80.5
+948,08005005629,84.6 Years (95% C.I. 79.3 - 89.9 Years),ARAPAHOE,"Census Tract 56.29, Arapahoe County, Colorado",84.6,2.72,79.3,89.9,80.5
+949,08005084400,79.2 Years (95% C.I. 74.4 - 84 Years),ARAPAHOE,"Census Tract 844, Arapahoe County, Colorado",79.2,2.44,74.4,84,80.5
+950,08055960900,81.4 Years (95% C.I. 77.5 - 85.3 Years),HUERFANO,"Census Tract 9609, Huerfano County, Colorado",81.4,2.01,77.5,85.3,80.5
+951,08005005624,82.5 Years (95% C.I. 78.6 - 86.4 Years),ARAPAHOE,"Census Tract 56.24, Arapahoe County, Colorado",82.5,2.01,78.6,86.4,80.5
+952,08005005627,82.2 Years (95% C.I. 79.3 - 85.1 Years),ARAPAHOE,"Census Tract 56.27, Arapahoe County, Colorado",82.2,1.46,79.3,85.1,80.5
+953,08005005614,79.7 Years (95% C.I. 76.5 - 82.9 Years),ARAPAHOE,"Census Tract 56.14, Arapahoe County, Colorado",79.7,1.62,76.5,82.9,80.5
+954,08005006707,81.1 Years (95% C.I. 78.5 - 83.7 Years),ARAPAHOE,"Census Tract 67.07, Arapahoe County, Colorado",81.1,1.32,78.5,83.7,80.5
+955,08005006708,82.5 Years (95% C.I. 79.8 - 85.2 Years),ARAPAHOE,"Census Tract 67.08, Arapahoe County, Colorado",82.5,1.36,79.8,85.2,80.5
+956,08005006604,78.1 Years (95% C.I. 75.2 - 81 Years),ARAPAHOE,"Census Tract 66.04, Arapahoe County, Colorado",78.1,1.48,75.2,81,80.5
+957,08005006603,80.8 Years (95% C.I. 77.9 - 83.7 Years),ARAPAHOE,"Census Tract 66.03, Arapahoe County, Colorado",80.8,1.5,77.9,83.7,80.5
+958,08005006601,74.7 Years (95% C.I. 71.7 - 77.7 Years),ARAPAHOE,"Census Tract 66.01, Arapahoe County, Colorado",74.7,1.51,71.7,77.7,80.5
+959,08005005621,82.2 Years (95% C.I. 79.7 - 84.7 Years),ARAPAHOE,"Census Tract 56.21, Arapahoe County, Colorado",82.2,1.28,79.7,84.7,80.5
+960,08005005625,79.7 Years (95% C.I. 74.9 - 84.5 Years),ARAPAHOE,"Census Tract 56.25, Arapahoe County, Colorado",79.7,2.44,74.9,84.5,80.5
+961,08005006704,81.9 Years (95% C.I. 79.9 - 83.9 Years),ARAPAHOE,"Census Tract 67.04, Arapahoe County, Colorado",81.9,1.04,79.9,83.9,80.5
+962,08005005620,84.7 Years (95% C.I. 80.8 - 88.6 Years),ARAPAHOE,"Census Tract 56.20, Arapahoe County, Colorado",84.7,1.98,80.8,88.6,80.5
+963,08005006709,85.4 Years (95% C.I. 80.8 - 90 Years),ARAPAHOE,"Census Tract 67.09, Arapahoe County, Colorado",85.4,2.33,80.8,90,80.5
+964,08005005619,81.1 Years (95% C.I. 78.9 - 83.3 Years),ARAPAHOE,"Census Tract 56.19, Arapahoe County, Colorado",81.1,1.12,78.9,83.3,80.5
+965,08005005633,87.8 Years (95% C.I. 80.6 - 95 Years),ARAPAHOE,"Census Tract 56.33, Arapahoe County, Colorado",87.8,3.69,80.6,95,80.5
+966,08005081700,83.6 Years (95% C.I. 77.1 - 90.1 Years),ARAPAHOE,"Census Tract 817, Arapahoe County, Colorado",83.6,3.32,77.1,90.1,80.5
+967,08005015100,79.2 Years (95% C.I. 76.4 - 82 Years),ARAPAHOE,"Census Tract 151, Arapahoe County, Colorado",79.2,1.43,76.4,82,80.5
+968,08005083900,80.7 Years (95% C.I. 75.7 - 85.7 Years),ARAPAHOE,"Census Tract 839, Arapahoe County, Colorado",80.7,2.57,75.7,85.7,80.5
+969,08005087300,81.4 Years (95% C.I. 77.4 - 85.4 Years),ARAPAHOE,"Census Tract 873, Arapahoe County, Colorado",81.4,2.06,77.4,85.4,80.5
+970,08005087100,75.6 Years (95% C.I. 72.1 - 79.1 Years),ARAPAHOE,"Census Tract 871, Arapahoe County, Colorado",75.6,1.78,72.1,79.1,80.5
+971,08005007301,75.7 Years (95% C.I. 69.9 - 81.5 Years),ARAPAHOE,"Census Tract 73.01, Arapahoe County, Colorado",75.7,2.96,69.9,81.5,80.5
+972,08005006100,73.2 Years (95% C.I. 70.4 - 76 Years),ARAPAHOE,"Census Tract 61, Arapahoe County, Colorado",73.2,1.42,70.4,76,80.5
+973,08005006300,76.6 Years (95% C.I. 73.3 - 79.9 Years),ARAPAHOE,"Census Tract 63, Arapahoe County, Colorado",76.6,1.67,73.3,79.9,80.5
+974,08005006706,86.3 Years (95% C.I. 81.2 - 91.4 Years),ARAPAHOE,"Census Tract 67.06, Arapahoe County, Colorado",86.3,2.59,81.2,91.4,80.5
+975,08005006200,75.6 Years (95% C.I. 73 - 78.2 Years),ARAPAHOE,"Census Tract 62, Arapahoe County, Colorado",75.6,1.35,73,78.2,80.5
+976,08005005952,83.9 Years (95% C.I. 79.7 - 88.1 Years),ARAPAHOE,"Census Tract 59.52, Arapahoe County, Colorado",83.9,2.15,79.7,88.1,80.5
+977,08005005951,77 Years (95% C.I. 75.1 - 78.9 Years),ARAPAHOE,"Census Tract 59.51, Arapahoe County, Colorado",77,0.98,75.1,78.9,80.5
+978,08005005800,78.3 Years (95% C.I. 75 - 81.6 Years),ARAPAHOE,"Census Tract 58, Arapahoe County, Colorado",78.3,1.66,75,81.6,80.5
+979,08005005612,80.8 Years (95% C.I. 77 - 84.6 Years),ARAPAHOE,"Census Tract 56.12, Arapahoe County, Colorado",80.8,1.92,77,84.6,80.5
+980,08005006400,79.6 Years (95% C.I. 74.5 - 84.7 Years),ARAPAHOE,"Census Tract 64, Arapahoe County, Colorado",79.6,2.62,74.5,84.7,80.5
+981,08005006000,76.1 Years (95% C.I. 71.9 - 80.3 Years),ARAPAHOE,"Census Tract 60, Arapahoe County, Colorado",76.1,2.16,71.9,80.3,80.5
+982,08041000301,73.7 Years (95% C.I. 70.5 - 76.9 Years),EL PASO,"Census Tract 3.01, El Paso County, Colorado",73.7,1.63,70.5,76.9,80.5
+983,08041000203,79.5 Years (95% C.I. 76.4 - 82.6 Years),EL PASO,"Census Tract 2.03, El Paso County, Colorado",79.5,1.57,76.4,82.6,80.5
+984,08005080500,81.9 Years (95% C.I. 77.7 - 86.1 Years),ARAPAHOE,"Census Tract 805, Arapahoe County, Colorado",81.9,2.16,77.7,86.1,80.5
+985,08005083000,81.3 Years (95% C.I. 76.1 - 86.5 Years),ARAPAHOE,"Census Tract 830, Arapahoe County, Colorado",81.3,2.63,76.1,86.5,80.5
+986,08005083200,80.9 Years (95% C.I. 74.5 - 87.3 Years),ARAPAHOE,"Census Tract 832, Arapahoe County, Colorado",80.9,3.27,74.5,87.3,80.5
+987,08005006855,81.9 Years (95% C.I. 80 - 83.8 Years),ARAPAHOE,"Census Tract 68.55, Arapahoe County, Colorado",81.9,0.97,80,83.8,80.5
+988,08005086700,79.6 Years (95% C.I. 74.1 - 85.1 Years),ARAPAHOE,"Census Tract 867, Arapahoe County, Colorado",79.6,2.81,74.1,85.1,80.5
+989,08005007103,81.8 Years (95% C.I. 74.4 - 89.2 Years),ARAPAHOE,"Census Tract 71.03, Arapahoe County, Colorado",81.8,3.79,74.4,89.2,80.5
+990,08005005700,75.2 Years (95% C.I. 67.7 - 82.7 Years),ARAPAHOE,"Census Tract 57, Arapahoe County, Colorado",75.2,3.81,67.7,82.7,80.5
+991,08005005622,85 Years (95% C.I. 80.5 - 89.5 Years),ARAPAHOE,"Census Tract 56.22, Arapahoe County, Colorado",85,2.31,80.5,89.5,80.5
+992,08005005611,81.3 Years (95% C.I. 77.7 - 84.9 Years),ARAPAHOE,"Census Tract 56.11, Arapahoe County, Colorado",81.3,1.86,77.7,84.9,80.5
+993,08005007400,75.9 Years (95% C.I. 73.8 - 78 Years),ARAPAHOE,"Census Tract 74, Arapahoe County, Colorado",75.9,1.08,73.8,78,80.5
+994,08005005553,79.3 Years (95% C.I. 75.1 - 83.5 Years),ARAPAHOE,"Census Tract 55.53, Arapahoe County, Colorado",79.3,2.16,75.1,83.5,80.5
+995,08005005626,81.2 Years (95% C.I. 78.5 - 83.9 Years),ARAPAHOE,"Census Tract 56.26, Arapahoe County, Colorado",81.2,1.39,78.5,83.9,80.5
+996,08005007600,77.8 Years (95% C.I. 72.7 - 82.9 Years),ARAPAHOE,"Census Tract 76, Arapahoe County, Colorado",77.8,2.59,72.7,82.9,80.5
+997,08041000202,79.1 Years (95% C.I. 76.8 - 81.4 Years),EL PASO,"Census Tract 2.02, El Paso County, Colorado",79.1,1.17,76.8,81.4,80.5
+998,08041007900,83.3 Years (95% C.I. 76.5 - 90.1 Years),EL PASO,"Census Tract 79, El Paso County, Colorado",83.3,3.46,76.5,90.1,80.5
+999,08041000102,79 Years (95% C.I. 75.5 - 82.5 Years),EL PASO,"Census Tract 1.02, El Paso County, Colorado",79,1.77,75.5,82.5,80.5
+1000,08041004701,77.9 Years (95% C.I. 75.8 - 80 Years),EL PASO,"Census Tract 47.01, El Paso County, Colorado",77.9,1.06,75.8,80,80.5
+1001,08041005501,79.8 Years (95% C.I. 76.8 - 82.8 Years),EL PASO,"Census Tract 55.01, El Paso County, Colorado",79.8,1.51,76.8,82.8,80.5
+1002,08041004902,82.1 Years (95% C.I. 79.4 - 84.8 Years),EL PASO,"Census Tract 49.02, El Paso County, Colorado",82.1,1.35,79.4,84.8,80.5
+1003,08041004501,71.7 Years (95% C.I. 68.7 - 74.7 Years),EL PASO,"Census Tract 45.01, El Paso County, Colorado",71.7,1.53,68.7,74.7,80.5
+1004,08041007000,84.3 Years (95% C.I. 78.9 - 89.7 Years),EL PASO,"Census Tract 70, El Paso County, Colorado",84.3,2.74,78.9,89.7,80.5
+1005,08041003702,82.4 Years (95% C.I. 79.2 - 85.6 Years),EL PASO,"Census Tract 37.02, El Paso County, Colorado",82.4,1.61,79.2,85.6,80.5
+1006,08041002800,73.1 Years (95% C.I. 69.9 - 76.3 Years),EL PASO,"Census Tract 28, El Paso County, Colorado",73.1,1.61,69.9,76.3,80.5
+1007,08041001301,73.4 Years (95% C.I. 69.1 - 77.7 Years),EL PASO,"Census Tract 13.01, El Paso County, Colorado",73.4,2.19,69.1,77.7,80.5
+1008,08041003902,81.8 Years (95% C.I. 77.6 - 86 Years),EL PASO,"Census Tract 39.02, El Paso County, Colorado",81.8,2.15,77.6,86,80.5
+1009,08041007300,82.4 Years (95% C.I. 78.7 - 86.1 Years),EL PASO,"Census Tract 73, El Paso County, Colorado",82.4,1.88,78.7,86.1,80.5
+1010,08005083700,79.7 Years (95% C.I. 77.6 - 81.8 Years),ARAPAHOE,"Census Tract 837, Arapahoe County, Colorado",79.7,1.08,77.6,81.8,80.5
+1011,08005085600,81.3 Years (95% C.I. 76 - 86.6 Years),ARAPAHOE,"Census Tract 856, Arapahoe County, Colorado",81.3,2.72,76,86.6,80.5
+1012,08005085500,83.9 Years (95% C.I. 78.5 - 89.3 Years),ARAPAHOE,"Census Tract 855, Arapahoe County, Colorado",83.9,2.74,78.5,89.3,80.5
+1013,08005086800,77.4 Years (95% C.I. 73.1 - 81.7 Years),ARAPAHOE,"Census Tract 868, Arapahoe County, Colorado",77.4,2.21,73.1,81.7,80.5
+1014,08005005551,71 Years (95% C.I. 67.2 - 74.8 Years),ARAPAHOE,"Census Tract 55.51, Arapahoe County, Colorado",71,1.96,67.2,74.8,80.5
+1015,08005007702,77.6 Years (95% C.I. 75.8 - 79.4 Years),ARAPAHOE,"Census Tract 77.02, Arapahoe County, Colorado",77.6,0.92,75.8,79.4,80.5
+1016,08005080100,76.3 Years (95% C.I. 73.9 - 78.7 Years),ARAPAHOE,"Census Tract 801, Arapahoe County, Colorado",76.3,1.22,73.9,78.7,80.5
+1017,08005084800,78.8 Years (95% C.I. 72.3 - 85.3 Years),ARAPAHOE,"Census Tract 848, Arapahoe County, Colorado",78.8,3.3,72.3,85.3,80.5
+1018,08005007101,82.6 Years (95% C.I. 78.1 - 87.1 Years),ARAPAHOE,"Census Tract 71.01, Arapahoe County, Colorado",82.6,2.27,78.1,87.1,80.5
+1019,08005081900,79.2 Years (95% C.I. 73.7 - 84.7 Years),ARAPAHOE,"Census Tract 819, Arapahoe County, Colorado",79.2,2.81,73.7,84.7,80.5
+1020,08005082000,76.2 Years (95% C.I. 72.1 - 80.3 Years),ARAPAHOE,"Census Tract 820, Arapahoe County, Colorado",76.2,2.11,72.1,80.3,80.5
+1021,08005081400,78.1 Years (95% C.I. 75.5 - 80.7 Years),ARAPAHOE,"Census Tract 814, Arapahoe County, Colorado",78.1,1.33,75.5,80.7,80.5
+1022,08005007202,73.6 Years (95% C.I. 70.7 - 76.5 Years),ARAPAHOE,"Census Tract 72.02, Arapahoe County, Colorado",73.6,1.5,70.7,76.5,80.5
+1023,08041007500,81.3 Years (95% C.I. 79.2 - 83.4 Years),EL PASO,"Census Tract 75, El Paso County, Colorado",81.3,1.07,79.2,83.4,80.5
+1024,08041003909,77 Years (95% C.I. 75.2 - 78.8 Years),EL PASO,"Census Tract 39.09, El Paso County, Colorado",77,0.93,75.2,78.8,80.5
+1025,08041002300,71.3 Years (95% C.I. 64.6 - 78 Years),EL PASO,"Census Tract 23, El Paso County, Colorado",71.3,3.44,64.6,78,80.5
+1026,08005087200,79.7 Years (95% C.I. 76.6 - 82.8 Years),ARAPAHOE,"Census Tract 872, Arapahoe County, Colorado",79.7,1.56,76.6,82.8,80.5
+1027,08005083800,77.2 Years (95% C.I. 73.9 - 80.5 Years),ARAPAHOE,"Census Tract 838, Arapahoe County, Colorado",77.2,1.71,73.9,80.5,80.5
+1028,08005007105,80.3 Years (95% C.I. 74.1 - 86.5 Years),ARAPAHOE,"Census Tract 71.05, Arapahoe County, Colorado",80.3,3.19,74.1,86.5,80.5
+1029,08005007104,81.4 Years (95% C.I. 73.8 - 89 Years),ARAPAHOE,"Census Tract 71.04, Arapahoe County, Colorado",81.4,3.89,73.8,89,80.5
+1030,08005080600,78.3 Years (95% C.I. 72.9 - 83.7 Years),ARAPAHOE,"Census Tract 806, Arapahoe County, Colorado",78.3,2.75,72.9,83.7,80.5
+1031,08005007302,74.6 Years (95% C.I. 70 - 79.2 Years),ARAPAHOE,"Census Tract 73.02, Arapahoe County, Colorado",74.6,2.33,70,79.2,80.5
+1032,08005080000,81.1 Years (95% C.I. 75.3 - 86.9 Years),ARAPAHOE,"Census Tract 800, Arapahoe County, Colorado",81.1,2.95,75.3,86.9,80.5
+1033,08005006854,78.7 Years (95% C.I. 75.3 - 82.1 Years),ARAPAHOE,"Census Tract 68.54, Arapahoe County, Colorado",78.7,1.76,75.3,82.1,80.5
+1034,08005007201,76.5 Years (95% C.I. 74.4 - 78.6 Years),ARAPAHOE,"Census Tract 72.01, Arapahoe County, Colorado",76.5,1.08,74.4,78.6,80.5
+1035,08005083600,79.7 Years (95% C.I. 74.8 - 84.6 Years),ARAPAHOE,"Census Tract 836, Arapahoe County, Colorado",79.7,2.51,74.8,84.6,80.5
+1036,08005085300,81.2 Years (95% C.I. 75 - 87.4 Years),ARAPAHOE,"Census Tract 853, Arapahoe County, Colorado",81.2,3.17,75,87.4,80.5
+1037,08005085200,85.3 Years (95% C.I. 79.2 - 91.4 Years),ARAPAHOE,"Census Tract 852, Arapahoe County, Colorado",85.3,3.12,79.2,91.4,80.5
+1038,08005086500,81.3 Years (95% C.I. 77.1 - 85.5 Years),ARAPAHOE,"Census Tract 865, Arapahoe County, Colorado",81.3,2.15,77.1,85.5,80.5
+1039,08005086300,82.7 Years (95% C.I. 75.9 - 89.5 Years),ARAPAHOE,"Census Tract 863, Arapahoe County, Colorado",82.7,3.45,75.9,89.5,80.5
+1040,08005006856,80.3 Years (95% C.I. 74.9 - 85.7 Years),ARAPAHOE,"Census Tract 68.56, Arapahoe County, Colorado",80.3,2.73,74.9,85.7,80.5
+1041,08005006857,84.2 Years (95% C.I. 79.1 - 89.3 Years),ARAPAHOE,"Census Tract 68.57, Arapahoe County, Colorado",84.2,2.62,79.1,89.3,80.5
+1042,08005006501,75.1 Years (95% C.I. 70.7 - 79.5 Years),ARAPAHOE,"Census Tract 65.01, Arapahoe County, Colorado",75.1,2.25,70.7,79.5,80.5
+1043,08005005623,80.9 Years (95% C.I. 78.5 - 83.3 Years),ARAPAHOE,"Census Tract 56.23, Arapahoe County, Colorado",80.9,1.21,78.5,83.3,80.5
+1044,08005006858,78.8 Years (95% C.I. 74.9 - 82.7 Years),ARAPAHOE,"Census Tract 68.58, Arapahoe County, Colorado",78.8,1.98,74.9,82.7,80.5
+1045,08005005635,83.3 Years (95% C.I. 80.9 - 85.7 Years),ARAPAHOE,"Census Tract 56.35, Arapahoe County, Colorado",83.3,1.23,80.9,85.7,80.5
+1046,08005006712,81.1 Years (95% C.I. 75.1 - 87.1 Years),ARAPAHOE,"Census Tract 67.12, Arapahoe County, Colorado",81.1,3.04,75.1,87.1,80.5
+1047,08005005636,81.7 Years (95% C.I. 78.6 - 84.8 Years),ARAPAHOE,"Census Tract 56.36, Arapahoe County, Colorado",81.7,1.58,78.6,84.8,80.5
+1048,08005004952,79.7 Years (95% C.I. 73.2 - 86.2 Years),ARAPAHOE,"Census Tract 49.52, Arapahoe County, Colorado",79.7,3.32,73.2,86.2,80.5
+1049,08005082700,79.6 Years (95% C.I. 75.1 - 84.1 Years),ARAPAHOE,"Census Tract 827, Arapahoe County, Colorado",79.6,2.3,75.1,84.1,80.5
+1050,08005082500,77 Years (95% C.I. 72.7 - 81.3 Years),ARAPAHOE,"Census Tract 825, Arapahoe County, Colorado",77,2.22,72.7,81.3,80.5
+1051,08005006502,77 Years (95% C.I. 73.4 - 80.6 Years),ARAPAHOE,"Census Tract 65.02, Arapahoe County, Colorado",77,1.81,73.4,80.6,80.5
+1052,08005005552,76.5 Years (95% C.I. 73 - 80 Years),ARAPAHOE,"Census Tract 55.52, Arapahoe County, Colorado",76.5,1.8,73,80,80.5
+1053,08005007704,79.1 Years (95% C.I. 74.6 - 83.6 Years),ARAPAHOE,"Census Tract 77.04, Arapahoe County, Colorado",79.1,2.27,74.6,83.6,80.5
+1054,08005084100,77.2 Years (95% C.I. 73.8 - 80.6 Years),ARAPAHOE,"Census Tract 841, Arapahoe County, Colorado",77.2,1.73,73.8,80.6,80.5
+1055,08005084500,77.8 Years (95% C.I. 73.8 - 81.8 Years),ARAPAHOE,"Census Tract 845, Arapahoe County, Colorado",77.8,2.06,73.8,81.8,80.5
+1056,08005005634,84.1 Years (95% C.I. 80.7 - 87.5 Years),ARAPAHOE,"Census Tract 56.34, Arapahoe County, Colorado",84.1,1.75,80.7,87.5,80.5
+1057,08005084900,81.2 Years (95% C.I. 77.8 - 84.6 Years),ARAPAHOE,"Census Tract 849, Arapahoe County, Colorado",81.2,1.74,77.8,84.6,80.5
+1058,08005081100,80.4 Years (95% C.I. 73.2 - 87.6 Years),ARAPAHOE,"Census Tract 811, Arapahoe County, Colorado",80.4,3.68,73.2,87.6,80.5
+1059,08005081200,77.9 Years (95% C.I. 73.4 - 82.4 Years),ARAPAHOE,"Census Tract 812, Arapahoe County, Colorado",77.9,2.29,73.4,82.4,80.5
+1060,08005084700,77.2 Years (95% C.I. 74.7 - 79.7 Years),ARAPAHOE,"Census Tract 847, Arapahoe County, Colorado",77.2,1.28,74.7,79.7,80.5
+1061,08005084200,77.8 Years (95% C.I. 72.1 - 83.5 Years),ARAPAHOE,"Census Tract 842, Arapahoe County, Colorado",77.8,2.89,72.1,83.5,80.5
+1062,08005084300,79.8 Years (95% C.I. 73.4 - 86.2 Years),ARAPAHOE,"Census Tract 843, Arapahoe County, Colorado",79.8,3.26,73.4,86.2,80.5
+1063,08005085800,78.6 Years (95% C.I. 75.4 - 81.8 Years),ARAPAHOE,"Census Tract 858, Arapahoe County, Colorado",78.6,1.61,75.4,81.8,80.5
+1064,08005081300,77 Years (95% C.I. 72.2 - 81.8 Years),ARAPAHOE,"Census Tract 813, Arapahoe County, Colorado",77,2.47,72.2,81.8,80.5
+1065,08005085400,80 Years (95% C.I. 73.8 - 86.2 Years),ARAPAHOE,"Census Tract 854, Arapahoe County, Colorado",80,3.14,73.8,86.2,80.5
+1066,08005086200,82.6 Years (95% C.I. 76.5 - 88.7 Years),ARAPAHOE,"Census Tract 862, Arapahoe County, Colorado",82.6,3.12,76.5,88.7,80.5
+1067,08005085700,78.1 Years (95% C.I. 72.8 - 83.4 Years),ARAPAHOE,"Census Tract 857, Arapahoe County, Colorado",78.1,2.69,72.8,83.4,80.5
+1068,08005083300,82.5 Years (95% C.I. 77.6 - 87.4 Years),ARAPAHOE,"Census Tract 833, Arapahoe County, Colorado",82.5,2.51,77.6,87.4,80.5
+1069,08005084000,78.2 Years (95% C.I. 73.6 - 82.8 Years),ARAPAHOE,"Census Tract 840, Arapahoe County, Colorado",78.2,2.33,73.6,82.8,80.5
+1070,08005007703,78.2 Years (95% C.I. 74.2 - 82.2 Years),ARAPAHOE,"Census Tract 77.03, Arapahoe County, Colorado",78.2,2.06,74.2,82.2,80.5
+1071,08005081000,76.5 Years (95% C.I. 73.5 - 79.5 Years),ARAPAHOE,"Census Tract 810, Arapahoe County, Colorado",76.5,1.53,73.5,79.5,80.5
+1072,08005080300,78.7 Years (95% C.I. 75.6 - 81.8 Years),ARAPAHOE,"Census Tract 803, Arapahoe County, Colorado",78.7,1.56,75.6,81.8,80.5
+1073,08005080400,81 Years (95% C.I. 76.5 - 85.5 Years),ARAPAHOE,"Census Tract 804, Arapahoe County, Colorado",81,2.32,76.5,85.5,80.5
+1074,08005080800,80 Years (95% C.I. 73.2 - 86.8 Years),ARAPAHOE,"Census Tract 808, Arapahoe County, Colorado",80,3.47,73.2,86.8,80.5
+1075,08005080900,80.3 Years (95% C.I. 75.8 - 84.8 Years),ARAPAHOE,"Census Tract 809, Arapahoe County, Colorado",80.3,2.31,75.8,84.8,80.5
+1076,08069002803,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 28.03, Larimer County, Colorado",,,,,80.5
+1077,08069002401,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 24.01, Larimer County, Colorado",,,,,80.5
+1078,08069002402,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 24.02, Larimer County, Colorado",,,,,80.5
+1079,08051963900,Estimate Not Available Due to Small Number of Deaths,GUNNISON,"Census Tract 9639, Gunnison County, Colorado",,,,,80.5
+1080,08037000703,Estimate Not Available Due to Small Number of Deaths,EAGLE,"Census Tract 7.03, Eagle County, Colorado",,,,,80.5
+1081,08037000702,Estimate Not Available Due to Small Number of Deaths,EAGLE,"Census Tract 7.02, Eagle County, Colorado",,,,,80.5
+1082,08037000402,Estimate Not Available Due to Small Number of Deaths,EAGLE,"Census Tract 4.02, Eagle County, Colorado",,,,,80.5
+1083,08037000501,Estimate Not Available Due to Small Number of Deaths,EAGLE,"Census Tract 5.01, Eagle County, Colorado",,,,,80.5
+1084,08037000502,Estimate Not Available Due to Small Number of Deaths,EAGLE,"Census Tract 5.02, Eagle County, Colorado",,,,,80.5
+1085,08037000302,Estimate Not Available Due to Small Number of Deaths,EAGLE,"Census Tract 3.02, Eagle County, Colorado",,,,,80.5
+1086,08037000701,Estimate Not Available Due to Small Number of Deaths,EAGLE,"Census Tract 7.01, Eagle County, Colorado",,,,,80.5
+1087,08037000401,Estimate Not Available Due to Small Number of Deaths,EAGLE,"Census Tract 4.01, Eagle County, Colorado",,,,,80.5
+1088,08037000100,Estimate Not Available Due to Small Number of Deaths,EAGLE,"Census Tract 1, Eagle County, Colorado",,,,,80.5
+1089,08037000600,Estimate Not Available Due to Small Number of Deaths,EAGLE,"Census Tract 6, Eagle County, Colorado",,,,,80.5
+1090,08045951802,Estimate Not Available Due to Small Number of Deaths,GARFIELD,"Census Tract 9518.02, Garfield County, Colorado",,,,,80.5
+1091,08117000402,Estimate Not Available Due to Small Number of Deaths,SUMMIT,"Census Tract 4.02, Summit County, Colorado",,,,,80.5
+1092,08117000100,Estimate Not Available Due to Small Number of Deaths,SUMMIT,"Census Tract 1, Summit County, Colorado",,,,,80.5
+1093,08117000300,Estimate Not Available Due to Small Number of Deaths,SUMMIT,"Census Tract 3, Summit County, Colorado",,,,,80.5
+1094,08065961900,Estimate Not Available Due to Small Number of Deaths,LAKE,"Census Tract 9619, Lake County, Colorado",,,,,80.5
+1095,08113968102,Estimate Not Available Due to Small Number of Deaths,SAN MIGUEL,"Census Tract 9681.02, San Miguel County, Colorado",,,,,80.5
+1096,08113968101,Estimate Not Available Due to Small Number of Deaths,SAN MIGUEL,"Census Tract 9681.01, San Miguel County, Colorado",,,,,80.5
+1097,08113968103,Estimate Not Available Due to Small Number of Deaths,SAN MIGUEL,"Census Tract 9681.03, San Miguel County, Colorado",,,,,80.5
+1098,08079973600,Estimate Not Available Due to Small Number of Deaths,MINERAL,"Census Tract 9736, Mineral County, Colorado",,,,,80.5
+1099,08077000500,Estimate Not Available Due to Small Number of Deaths,MESA,"Census Tract 5, Mesa County, Colorado",,,,,80.5
+1100,08077001404,Estimate Not Available Due to Small Number of Deaths,MESA,"Census Tract 14.04, Mesa County, Colorado",,,,,80.5
+1101,08015000402,Estimate Not Available Due to Small Number of Deaths,CHAFFEE,"Census Tract 4.02, Chaffee County, Colorado",,,,,80.5
+1102,08111972600,Estimate Not Available Due to Small Number of Deaths,SAN JUAN,"Census Tract 9726, San Juan County, Colorado",,,,,80.5
+1103,08093000500,Estimate Not Available Due to Small Number of Deaths,PARK,"Census Tract 5, Park County, Colorado",,,,,80.5
+1104,08093000400,Estimate Not Available Due to Small Number of Deaths,PARK,"Census Tract 4, Park County, Colorado",,,,,80.5
+1105,08093000300,Estimate Not Available Due to Small Number of Deaths,PARK,"Census Tract 3, Park County, Colorado",,,,,80.5
+1106,08001008526,Estimate Not Available Due to Small Number of Deaths,ADAMS,"Census Tract 85.26, Adams County, Colorado",,,,,80.5
+1107,08001008536,Estimate Not Available Due to Small Number of Deaths,ADAMS,"Census Tract 85.36, Adams County, Colorado",,,,,80.5
+1108,08001008548,Estimate Not Available Due to Small Number of Deaths,ADAMS,"Census Tract 85.48, Adams County, Colorado",,,,,80.5
+1109,08001060000,Estimate Not Available Due to Small Number of Deaths,ADAMS,"Census Tract 600, Adams County, Colorado",,,,,80.5
+1110,08001061200,Estimate Not Available Due to Small Number of Deaths,ADAMS,"Census Tract 612, Adams County, Colorado",,,,,80.5
+1111,08001008549,Estimate Not Available Due to Small Number of Deaths,ADAMS,"Census Tract 85.49, Adams County, Colorado",,,,,80.5
+1112,08001008551,Estimate Not Available Due to Small Number of Deaths,ADAMS,"Census Tract 85.51, Adams County, Colorado",,,,,80.5
+1113,08069001606,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 16.06, Larimer County, Colorado",,,,,80.5
+1114,08069000505,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 5.05, Larimer County, Colorado",,,,,80.5
+1115,08001988700,Estimate Not Available Due to Small Number of Deaths,ADAMS,"Census Tract 9887, Adams County, Colorado",,,,,80.5
+1116,08069000506,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 5.06, Larimer County, Colorado",,,,,80.5
+1117,08069000504,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 5.04, Larimer County, Colorado",,,,,80.5
+1118,08069000201,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 2.01, Larimer County, Colorado",,,,,80.5
+1119,08069001111,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 11.11, Larimer County, Colorado",,,,,80.5
+1120,08069000600,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 6, Larimer County, Colorado",,,,,80.5
+1121,08069000100,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 1, Larimer County, Colorado",,,,,80.5
+1122,08069001306,Estimate Not Available Due to Small Number of Deaths,LARIMER,"Census Tract 13.06, Larimer County, Colorado",,,,,80.5
+1123,08059010209,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 102.09, Jefferson County, Colorado",,,,,80.5
+1124,08059009831,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 98.31, Jefferson County, Colorado",,,,,80.5
+1125,08059009829,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 98.29, Jefferson County, Colorado",,,,,80.5
+1126,08059009839,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 98.39, Jefferson County, Colorado",,,,,80.5
+1127,08013012907,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 129.07, Boulder County, Colorado",,,,,80.5
+1128,08013012101,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 121.01, Boulder County, Colorado",,,,,80.5
+1129,08013013205,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 132.05, Boulder County, Colorado",,,,,80.5
+1130,08013012201,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 122.01, Boulder County, Colorado",,,,,80.5
+1131,08013013202,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 132.02, Boulder County, Colorado",,,,,80.5
+1132,08013012204,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 122.04, Boulder County, Colorado",,,,,80.5
+1133,08013013507,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 135.07, Boulder County, Colorado",,,,,80.5
+1134,08013061300,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 613, Boulder County, Colorado",,,,,80.5
+1135,08013061400,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 614, Boulder County, Colorado",,,,,80.5
+1136,08013012607,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 126.07, Boulder County, Colorado",,,,,80.5
+1137,08013012508,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 125.08, Boulder County, Colorado",,,,,80.5
+1138,08013012605,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 126.05, Boulder County, Colorado",,,,,80.5
+1139,08013012401,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 124.01, Boulder County, Colorado",,,,,80.5
+1140,08013012300,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 123, Boulder County, Colorado",,,,,80.5
+1141,08013012202,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 122.02, Boulder County, Colorado",,,,,80.5
+1142,08013012103,Estimate Not Available Due to Small Number of Deaths,BOULDER,"Census Tract 121.03, Boulder County, Colorado",,,,,80.5
+1143,08123002009,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 20.09, Weld County, Colorado",,,,,80.5
+1144,08123001906,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 19.06, Weld County, Colorado",,,,,80.5
+1145,08123002208,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 22.08, Weld County, Colorado",,,,,80.5
+1146,08123000200,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 2, Weld County, Colorado",,,,,80.5
+1147,08123000300,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 3, Weld County, Colorado",,,,,80.5
+1148,08123002012,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 20.12, Weld County, Colorado",,,,,80.5
+1149,08014980100,Estimate Not Available Due to Small Number of Deaths,BROOMFIELD,"Census Tract 9801, Broomfield County, Colorado",,,,,80.5
+1150,08123002006,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 20.06, Weld County, Colorado",,,,,80.5
+1151,08123002210,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 22.10, Weld County, Colorado",,,,,80.5
+1152,08014980300,Estimate Not Available Due to Small Number of Deaths,BROOMFIELD,"Census Tract 9803, Broomfield County, Colorado",,,,,80.5
+1153,08014030200,Estimate Not Available Due to Small Number of Deaths,BROOMFIELD,"Census Tract 302, Broomfield County, Colorado",,,,,80.5
+1154,08014031300,Estimate Not Available Due to Small Number of Deaths,BROOMFIELD,"Census Tract 313, Broomfield County, Colorado",,,,,80.5
+1155,08123002204,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 22.04, Weld County, Colorado",,,,,80.5
+1156,08123002017,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 20.17, Weld County, Colorado",,,,,80.5
+1157,08123002011,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 20.11, Weld County, Colorado",,,,,80.5
+1158,08123002015,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 20.15, Weld County, Colorado",,,,,80.5
+1159,08123002021,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 20.21, Weld County, Colorado",,,,,80.5
+1160,08014980200,Estimate Not Available Due to Small Number of Deaths,BROOMFIELD,"Census Tract 9802, Broomfield County, Colorado",,,,,80.5
+1161,08123002016,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 20.16, Weld County, Colorado",,,,,80.5
+1162,08123002005,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 20.05, Weld County, Colorado",,,,,80.5
+1163,08123000704,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 7.04, Weld County, Colorado",,,,,80.5
+1164,08123001411,Estimate Not Available Due to Small Number of Deaths,WELD,"Census Tract 14.11, Weld County, Colorado",,,,,80.5
+1165,08031980000,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 9800, Denver County, Colorado",,,,,80.5
+1166,08043980200,Estimate Not Available Due to Small Number of Deaths,FREMONT,"Census Tract 9802, Fremont County, Colorado",,,,,80.5
+1167,08043980300,Estimate Not Available Due to Small Number of Deaths,FREMONT,"Census Tract 9803, Fremont County, Colorado",,,,,80.5
+1168,08043980100,Estimate Not Available Due to Small Number of Deaths,FREMONT,"Census Tract 9801, Fremont County, Colorado",,,,,80.5
+1169,08059980400,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 9804, Jefferson County, Colorado",,,,,80.5
+1170,08059011732,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 117.32, Jefferson County, Colorado",,,,,80.5
+1171,08059012030,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 120.30, Jefferson County, Colorado",,,,,80.5
+1172,08059009900,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 99, Jefferson County, Colorado",,,,,80.5
+1173,08059009846,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 98.46, Jefferson County, Colorado",,,,,80.5
+1174,08059012048,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 120.48, Jefferson County, Colorado",,,,,80.5
+1175,08059009848,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 98.48, Jefferson County, Colorado",,,,,80.5
+1176,08059012058,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 120.58, Jefferson County, Colorado",,,,,80.5
+1177,08059011708,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 117.08, Jefferson County, Colorado",,,,,80.5
+1178,08059980000,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 9800, Jefferson County, Colorado",,,,,80.5
+1179,08059012034,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 120.34, Jefferson County, Colorado",,,,,80.5
+1180,08059012043,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 120.43, Jefferson County, Colorado",,,,,80.5
+1181,08059012044,Estimate Not Available Due to Small Number of Deaths,JEFFERSON,"Census Tract 120.44, Jefferson County, Colorado",,,,,80.5
+1182,08035014300,Estimate Not Available Due to Small Number of Deaths,DOUGLAS,"Census Tract 143, Douglas County, Colorado",,,,,80.5
+1183,08101980100,Estimate Not Available Due to Small Number of Deaths,PUEBLO,"Census Tract 9801, Pueblo County, Colorado",,,,,80.5
+1184,08101000903,Estimate Not Available Due to Small Number of Deaths,PUEBLO,"Census Tract 9.03, Pueblo County, Colorado",,,,,80.5
+1185,08101000300,Estimate Not Available Due to Small Number of Deaths,PUEBLO,"Census Tract 3, Pueblo County, Colorado",,,,,80.5
+1186,08101002807,Estimate Not Available Due to Small Number of Deaths,PUEBLO,"Census Tract 28.07, Pueblo County, Colorado",,,,,80.5
+1187,08035014130,Estimate Not Available Due to Small Number of Deaths,DOUGLAS,"Census Tract 141.30, Douglas County, Colorado",,,,,80.5
+1188,08035014128,Estimate Not Available Due to Small Number of Deaths,DOUGLAS,"Census Tract 141.28, Douglas County, Colorado",,,,,80.5
+1189,08035014129,Estimate Not Available Due to Small Number of Deaths,DOUGLAS,"Census Tract 141.29, Douglas County, Colorado",,,,,80.5
+1190,08035014138,Estimate Not Available Due to Small Number of Deaths,DOUGLAS,"Census Tract 141.38, Douglas County, Colorado",,,,,80.5
+1191,08035014139,Estimate Not Available Due to Small Number of Deaths,DOUGLAS,"Census Tract 141.39, Douglas County, Colorado",,,,,80.5
+1192,08035014506,Estimate Not Available Due to Small Number of Deaths,DOUGLAS,"Census Tract 145.06, Douglas County, Colorado",,,,,80.5
+1193,08035014604,Estimate Not Available Due to Small Number of Deaths,DOUGLAS,"Census Tract 146.04, Douglas County, Colorado",,,,,80.5
+1194,08035014008,Estimate Not Available Due to Small Number of Deaths,DOUGLAS,"Census Tract 140.08, Douglas County, Colorado",,,,,80.5
+1195,08035014009,Estimate Not Available Due to Small Number of Deaths,DOUGLAS,"Census Tract 140.09, Douglas County, Colorado",,,,,80.5
+1196,08119010202,Estimate Not Available Due to Small Number of Deaths,TELLER,"Census Tract 102.02, Teller County, Colorado",,,,,80.5
+1197,08031002803,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 28.03, Denver County, Colorado",,,,,80.5
+1198,08031003702,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 37.02, Denver County, Colorado",,,,,80.5
+1199,08031003203,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 32.03, Denver County, Colorado",,,,,80.5
+1200,08031002701,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 27.01, Denver County, Colorado",,,,,80.5
+1201,08031002000,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 20, Denver County, Colorado",,,,,80.5
+1202,08031980100,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 9801, Denver County, Colorado",,,,,80.5
+1203,08031001901,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 19.01, Denver County, Colorado",,,,,80.5
+1204,08031008388,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 83.88, Denver County, Colorado",,,,,80.5
+1205,08031001902,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 19.02, Denver County, Colorado",,,,,80.5
+1206,08031008305,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 83.05, Denver County, Colorado",,,,,80.5
+1207,08031007006,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 70.06, Denver County, Colorado",,,,,80.5
+1208,08031006814,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 68.14, Denver County, Colorado",,,,,80.5
+1209,08031007089,Estimate Not Available Due to Small Number of Deaths,DENVER,"Census Tract 70.89, Denver County, Colorado",,,,,80.5
+1210,08041003801,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 38.01, El Paso County, Colorado",,,,,80.5
+1211,08041006301,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 63.01, El Paso County, Colorado",,,,,80.5
+1212,08041004601,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 46.01, El Paso County, Colorado",,,,,80.5
+1213,08041003802,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 38.02, El Paso County, Colorado",,,,,80.5
+1214,08041004200,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 42, El Paso County, Colorado",,,,,80.5
+1215,08041004009,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 40.09, El Paso County, Colorado",,,,,80.5
+1216,08041001600,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 16, El Paso County, Colorado",,,,,80.5
+1217,08041001500,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 15, El Paso County, Colorado",,,,,80.5
+1218,08041001000,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 10, El Paso County, Colorado",,,,,80.5
+1219,08041005106,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 51.06, El Paso County, Colorado",,,,,80.5
+1220,08041004510,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 45.10, El Paso County, Colorado",,,,,80.5
+1221,08041004401,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 44.01, El Paso County, Colorado",,,,,80.5
+1222,08041004403,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 44.03, El Paso County, Colorado",,,,,80.5
+1223,08041004402,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 44.02, El Paso County, Colorado",,,,,80.5
+1224,08041005104,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 51.04, El Paso County, Colorado",,,,,80.5
+1225,08041003100,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 31, El Paso County, Colorado",,,,,80.5
+1226,08005082800,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 828, Arapahoe County, Colorado",,,,,80.5
+1227,08055960600,Estimate Not Available Due to Small Number of Deaths,HUERFANO,"Census Tract 9606, Huerfano County, Colorado",,,,,80.5
+1228,08005006705,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 67.05, Arapahoe County, Colorado",,,,,80.5
+1229,08005082900,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 829, Arapahoe County, Colorado",,,,,80.5
+1230,08005086900,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 869, Arapahoe County, Colorado",,,,,80.5
+1231,08005085900,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 859, Arapahoe County, Colorado",,,,,80.5
+1232,08005086400,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 864, Arapahoe County, Colorado",,,,,80.5
+1233,08041004901,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 49.01, El Paso County, Colorado",,,,,80.5
+1234,08041004008,Estimate Not Available Due to Small Number of Deaths,EL PASO,"Census Tract 40.08, El Paso County, Colorado",,,,,80.5
+1235,08005086100,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 861, Arapahoe County, Colorado",,,,,80.5
+1236,08005007107,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 71.07, Arapahoe County, Colorado",,,,,80.5
+1237,08005085100,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 851, Arapahoe County, Colorado",,,,,80.5
+1238,08005087000,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 870, Arapahoe County, Colorado",,,,,80.5
+1239,08005085000,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 850, Arapahoe County, Colorado",,,,,80.5
+1240,08005086000,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 860, Arapahoe County, Colorado",,,,,80.5
+1241,08005007106,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 71.06, Arapahoe County, Colorado",,,,,80.5
+1242,08005083100,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 831, Arapahoe County, Colorado",,,,,80.5
+1243,08005086600,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 866, Arapahoe County, Colorado",,,,,80.5
+1244,08005006713,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 67.13, Arapahoe County, Colorado",,,,,80.5
+1245,08005004951,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 49.51, Arapahoe County, Colorado",,,,,80.5
+1246,08005082200,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 822, Arapahoe County, Colorado",,,,,80.5
+1247,08005081500,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 815, Arapahoe County, Colorado",,,,,80.5
+1248,08005083400,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 834, Arapahoe County, Colorado",,,,,80.5
+1249,08005082100,Estimate Not Available Due to Small Number of Deaths,ARAPAHOE,"Census Tract 821, Arapahoe County, Colorado",,,,,80.5

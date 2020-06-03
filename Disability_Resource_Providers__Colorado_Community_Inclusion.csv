@@ -1,0 +1,831 @@
+﻿X,Y,OBJECTID,RESOURCE_NAME,ADDRESS,CITY,STATE,ZIP,PHONE,MAP_NAME,DATE_GEOCODED,LONGITUDE,LATITUDE,COUNTY,GEO_ACCURACY
+-104.882103,39.579256,1,ReMax Reality Offices,"9200 E. Panorama Circle, Suite 140",Englewood,CO,80112,303.832.2322,Amyotrophic Lateral Sclerosis (ALS)/Lou Gehrig's Disease Support Groups,August 2014,-104.882103,39.579256,ARAPAHOE COUNTY,MATCH
+-105.15891,39.975382,2,Christ the Servant Lutheran Church,506 W. Via Appia,Louisville,CO,80027,303.832.2322,Amyotrophic Lateral Sclerosis (ALS)/Lou Gehrig's Disease Support Groups,August 2014,-105.15891,39.975382,BOULDER COUNTY,MATCH
+-104.820009,38.836462,3,"First Presbyterian Church, Weber Street Center","219 E. Bijou St., Spruce Room",Colorado Springs,CO,80903,303.832.2322,Amyotrophic Lateral Sclerosis (ALS)/Lou Gehrig's Disease Support Groups,August 2014,-104.820009,38.836462,EL PASO COUNTY,MATCH
+-104.971319,40.40553,4,"Northern Colorado Rehabilitation Hospital, Longs Peak Day Room",4401 Union St.,Johnstown,CO,80534,303.832.2322,Amyotrophic Lateral Sclerosis (ALS)/Lou Gehrig's Disease Support Groups,August 2014,-104.971319,40.40553,LARIMER COUNTY,MATCH
+-108.570238,39.090744,5,The Egg & I,120 Park Drive,Grand Junction,CO,81505,303.832.2322,Amyotrophic Lateral Sclerosis (ALS)/Lou Gehrig's Disease Support Groups,August 2014,-108.570238,39.090744,MESA COUNTY,MATCH
+-105.863089,37.470262,6,South-Central Colorado Seniors Inc.,"1116 3rd St. , PO Box 639",Alamosa,CO,81101,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-105.863089,37.470262,ALAMOSA COUNTY,MATCH
+-107.009907,37.261768,7,San Juan Basin Area Agency on Aging - Pagosa Springs,"451 Hot Springs Blvd., PO Box 5456",Pagosa Springs,CO,81147,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-107.009907,37.261768,ARCHULETA COUNTY,MATCH
+-105.281893,40.037018,8,Boulder County Aging Services Division,3482 N. Broadway,Boulder,CO,80306,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-105.281893,40.037018,BOULDER COUNTY,MATCH
+-105.99306,38.534188,9,Upper Arkansas Area Agency on Aging - Southern Region,139 E. 3rd St.,Salida,CO,81201,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-105.99306,38.534188,CHAFFEE COUNTY,MATCH
+-104.987194,39.736661,10,DRCOG Area Agency on Aging,"1290 Broadway, Suite 700",Denver,CO,80203,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-104.987194,39.736661,DENVER COUNTY,MATCH
+-104.837065,38.833463,11,Pikes Peak Area Agency on Aging,15 S. 7th St.,Colorado Springs,CO,80905,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-104.837065,38.833463,EL PASO COUNTY,MATCH
+-107.327203,39.546607,12,Northwest Colorado Options for Long Term Care,"108 8th St. , Suite 300",Glenwood Springs,CO,81601,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-107.327203,39.546607,GARFIELD COUNTY,MATCH
+-102.604935,39.306431,13,East Central Council of Governments,"128 Colorado Ave., PO Box 28",Stratton,CO,80836,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-102.604935,39.306431,KIT CARSON COUNTY,MATCH
+-105.029967,40.56067,14,Larimer County Office on Aging - Larimer County Human Services,"2601 Midpoint, Suite 112",Fort Collins,CO,80524,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-105.029967,40.56067,LARIMER COUNTY,MATCH
+-108.50567,39.078821,15,Associated Governments of Northwest Colorado,"510 29 1/2 Rd., PO Box 2000",Grand Junction,CO,81502,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-108.50567,39.078821,MESA COUNTY,MATCH
+-107.87921,38.481979,16,Region 10 Area Agency on Aging,"300 N. Cascade Ave., Drawer 849",Montrose,CO,81402,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-107.87921,38.481979,MONTROSE COUNTY,MATCH
+-103.801687,40.24901,17,Northeastern Colorado Association of Local Governments,"231 Main St., Suite 211",Fort Morgan,CO,80701,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-103.801687,40.24901,MORGAN COUNTY,MATCH
+-103.543677,37.986099,18,Lower Arkansas Valley Area Agency on Aging,"13 W. 3rd St., PO Box 494",La Junta,CO,81050,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-103.543677,37.986099,OTERO COUNTY,MATCH
+-104.56296,38.272324,19,Pueblo Area Agency on Aging - Southern Region,2631 E. 4th Street,Pueblo,CO,81001,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-104.56296,38.272324,PUEBLO COUNTY,MATCH
+-106.076948,39.62827,20,Northwest Colorado Council of Governments - Alpine Agency on Aging,"249 Warren Ave., PO Box 2308",Silverthorne,CO,80498,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,August 2014,-106.076948,39.62827,SUMMIT COUNTY,MATCH
+-104.697213,40.43701,21,Weld County Area Agency on Aging,"315 C. N. 11th Ave., PO Box 1805",Greeley,CO,80631,844.265.2372 (Toll Free),Aging and Disability Resources for Colorado,September 2016,-104.697213,40.43701,WELD COUNTY,MATCH
+-107.878831,37.273485,22,San Juan Basin Area Agency on Aging,954 East 2nd Ave. (P.O. Box 3412),Durango,CO,81302,970-264-0501,Aging and Disability Resources for Colorado,March 2017,-107.878831,37.273485,LA PLATA COUNTY,MATCH
+-104.985204,39.723455,23,Alzheimer's Association,455 Sherman St. Suite 500,Denver,CO,80203,n/a,Alzheimer's Association - Colorado Chapter Offices,August 2014,-104.985204,39.723455,DENVER COUNTY,MATCH
+-104.864261,38.841296,24,Alzheimer's Association,2315 Bott Ave.,Colorado Springs,CO,80904,n/a,Alzheimer's Association - Colorado Chapter Offices,August 2014,-104.864261,38.841296,EL PASO COUNTY,MATCH
+-107.883895,37.272773,25,Alzheimer's Association,701 Camino Del Rio #321,Durango,CO,81301,n/a,Alzheimer's Association - Colorado Chapter Offices,August 2014,-107.883895,37.272773,LA PLATA COUNTY,MATCH
+-105.07211,40.582011,26,Alzheimer's Association,415 Peterson St.,Fort Collins,CO,80524,n/a,Alzheimer's Association - Colorado Chapter Offices,August 2014,-105.07211,40.582011,LARIMER COUNTY,MATCH
+-108.560853,39.087659,27,Alzheimer's Association,"2232 B, 7th Ave.  Suite B1",Grand Junction,CO,81501,n/a,Alzheimer's Association - Colorado Chapter Offices,August 2014,-108.560853,39.087659,MESA COUNTY,MATCH
+-104.626772,38.312064,28,Alzheimer's Association,4104 Outlook Blvd. Bldg. B,Pueblo,CO,81004,n/a,Alzheimer's Association - Colorado Chapter Offices,August 2014,-104.626772,38.312064,PUEBLO COUNTY,MATCH
+-104.690455,40.389121,29,Alzheimer's Association,3001 8th Ave. Suite 100,Evans,CO,80620,n/a,Alzheimer's Association - Colorado Chapter Offices,August 2014,-104.690455,40.389121,WELD COUNTY,MATCH
+-104.977923,39.89983,30,The Arc of Adams County,641 E. 112th Ave.,Northglenn,CO,80233,303.428.0310,Arc Offices,August 2014,-104.977923,39.89983,ADAMS COUNTY,MATCH
+-104.809596,39.692216,31,The Arc of Aurora,1342 S. Chambers Rd.,Aurora,CO,80017,720.213.1420,Arc Offices,August 2014,-104.809596,39.692216,ARAPAHOE COUNTY,MATCH
+-104.841023,39.598107,32,The Arc of Arapahoe & Douglas Counties,6838 S. Racine Circle,Centennial,CO,80111,303.220.9228,Arc Offices,August 2014,-104.841023,39.598107,ARAPAHOE COUNTY,CORRECTED
+-105.096749,40.164196,33,The Association for Community Living in Boulder County,309 Atwood St.,Longmont,CO,80501,303.527.0888,Arc Offices,August 2014,-105.096749,40.164196,BOULDER COUNTY,MATCH
+-104.985018,39.746389,34,Advocacy Denver,1905 Sherman St. Suite 300,Denver,CO,80203,303.831.7733,Arc Offices,August 2014,-104.985018,39.746389,DENVER COUNTY,MATCH
+-104.796386,38.833391,35,The Arc of the Pikes Peak Region,12 N. Meade Ave.,Colorado Springs,CO,80918,719.471.4800,Arc Offices,August 2014,-104.796386,38.833391,EL PASO COUNTY,MATCH
+-105.154519,39.738409,36,"The Arc of Jefferson, Clear Creek & Gilpin Counties","13949 W. Colfax Ave. Denver West Building 1, Suite 150",Lakewood,CO,80401,303.232.1338,Arc Offices,August 2014,-105.154519,39.738409,JEFFERSON COUNTY,MATCH
+-105.096653,40.567099,37,The Arc of Larimer County,1121 W. Prospect Rd.,Fort Collins,CO,80526,970.204.6991,Arc Offices,August 2014,-105.096653,40.567099,LARIMER COUNTY,MATCH
+-108.550650895,39.0638731616,38,The Arc of Mesa County,PO Box 2292,Grand Junction,CO,81502,970.245.5775,Arc Offices,August 2014,-108.550650895,39.0638731616,MESA COUNTY,CORRECTED
+-104.659689,38.219434,39,The Arc of Pueblo,2705 Vinewood Lane,Pueblo,CO,81005,719.545.5845,Arc Offices,August 2014,-104.659689,38.219434,PUEBLO COUNTY,MATCH
+-104.769803,40.422713,40,The Arc of Weld County,5312 W. 9th St. Drive  Suite 150,Greeley,CO,80634,970.353.5219,Arc Offices,August 2014,-104.769803,40.422713,WELD COUNTY,MATCH
+-105.863089,37.470262,41,South-Central Colorado Seniors Inc.,"1116 3rd St., PO Box 639",Alamosa,CO,81101,719.589.4511,Area Agencies on Aging,August 2014,-105.863089,37.470262,ALAMOSA COUNTY,MATCH
+-107.009907,37.261768,42,San Juan Basin Area Agency on Aging - Pagosa Springs,"451 Hot Springs Blvd., PO Box 5456",Pagosa Springs,CO,81147,970.264.0501,Area Agencies on Aging,August 2014,-107.009907,37.261768,ARCHULETA COUNTY,MATCH
+-105.281893,40.037018,43,Boulder County Aging Services Division,3482 N. Broadway,Boulder,CO,80306,303.441.3570,Area Agencies on Aging,August 2014,-105.281893,40.037018,BOULDER COUNTY,MATCH
+-105.99306,38.534188,44,Upper Arkansas Area Agency on Aging - Southern Region,139 E. 3rd St.,Salida,CO,81201,719.539.3341,Area Agencies on Aging,August 2014,-105.99306,38.534188,CHAFFEE COUNTY,MATCH
+-104.987194,39.736661,45,DRCOG Area Agency on Aging,"1290 Broadway, Suite 700",Denver,CO,80203,303.455.1000,Area Agencies on Aging,August 2014,-104.987194,39.736661,DENVER COUNTY,MATCH
+-104.837065,38.833463,46,Pikes Pieak Area Agency on Aging,15 S. 7th St.,Colorado Springs,CO,80905,719.471.2096,Area Agencies on Aging,August 2014,-104.837065,38.833463,EL PASO COUNTY,MATCH
+-102.604935,39.306431,47,East Central Council of Governments,"128 Colorado Ave., PO Box 28",Stratton,CO,80836,719.348.5562,Area Agencies on Aging,August 2014,-102.604935,39.306431,KIT CARSON COUNTY,MATCH
+-107.633109894,37.1150041619,48,Southern Ute Indian Tribe- Southern Ute Community Action Programs in Ignacio,PO Box 800,Ignacio,CO,81137,970.563.4561,Area Agencies on Aging,August 2014,-107.633109894,37.1150041619,LA PLATA COUNTY,CORRECTED
+-105.029967,40.56067,49,Larimer County Office on Aging - Larimer County Human Services,"2601 Midpoint, Suite 112",Fort Collins,CO,80524,970.498.7750,Area Agencies on Aging,August 2014,-105.029967,40.56067,LARIMER COUNTY,MATCH
+-104.487119,37.174252,50,Huerfano/Las Animas Area Council of Governments d/b/a South Central Council of Governments AAA,300 Bonaventure Ave.,Trinidad,CO,81082,719.845.1133,Area Agencies on Aging,August 2014,-104.487119,37.174252,LAS ANIMAS COUNTY,MATCH
+-108.50567,39.078821,51,Associated Governments of Northwest Colorado,"510 29 1/2 Rd., PO Box 2000-5035",Grand Junction,CO,81502,970.248.2717,Area Agencies on Aging,August 2014,-108.50567,39.078821,MESA COUNTY,MATCH
+-108.731235895,37.2044821612,52,Ute Mountain Ute Tribe of Indians - Title VI Senior Citizens Program in Towaoc,PO Box 189,Towaoc,CO,81334,970.564.0630,Area Agencies on Aging,August 2014,-108.731235895,37.2044821612,MONTEZUMA COUNTY,CORRECTED
+-107.87921,38.481979,53,Region 10 Area Agency on Aging,"300 N. Cascade Ave., Drawer 849",Montrose,CO,81402,970.249.2436,Area Agencies on Aging,August 2014,-107.87921,38.481979,MONTROSE COUNTY,MATCH
+-103.801687,40.24901,54,Northeastern Colorado Association of Local Governments,"231 Main St., Suite 211",Fort Morgan,CO,80701,970.867.9409,Area Agencies on Aging,August 2014,-103.801687,40.24901,MORGAN COUNTY,MATCH
+-103.543677,37.986099,55,Lower Arkansas Valley Area Agency on Aging,"13 W. 3rd St., Room 110, PO Box 494",La Junta,CO,81050,719.383.3166,Area Agencies on Aging,August 2014,-103.543677,37.986099,OTERO COUNTY,MATCH
+-104.56296,38.272324,56,Pueblo Area Agency on Aging - Southern Region,2631 E. 4th St.,Pueblo,CO,81001,719.583.6120,Area Agencies on Aging,August 2014,-104.56296,38.272324,PUEBLO COUNTY,MATCH
+-106.076948,39.62827,57,Northwest Colorado Council of Governments Alpine Agency on Aging,"249 Warren Ave., PO Box 2308",Silverthorne,CO,80498,970.468.0295,Area Agencies on Aging,August 2014,-106.076948,39.62827,SUMMIT COUNTY,MATCH
+-104.697213,40.43701,58,Weld County Area Agency on Aging,"315 C. N. 11th Ave., PO Box 1805",Greeley,CO,80631,970.346.6950,Area Agencies on Aging,September 2016,-104.697213,40.43701,WELD COUNTY,MATCH
+-107.878831,37.273485,59,San Juan Basin Area Agency on Aging,954 East 2nd Ave. (P.O. Box 3412),Durango,CO,81302,970-264-0501,Area Agencies on Aging,March 2017,-107.878831,37.273485,LA PLATA COUNTY,MATCH
+-105.037212895,39.8366581613001,60,Adams County BOCES,,Westminster,CO,80234,303.286.7294,Board of Cooperative Educational Services,August 2014,-105.037212895,39.8366581613,ADAMS COUNTY,CORRECTED
+-105.870018895,37.4694421617,61,San Luis Valley BOCES,,Alamosa,CO,81101,719.589.5851,Board of Cooperative Educational Services,August 2014,-105.870018895,37.4694421617,ALAMOSA COUNTY,CORRECTED
+-105.20166,40.014116,62,Front Range BOCES,"6500 Arapahoe Rd., c/o Boulder Valley School District",Boulder,CO,80303,720.561.5096,Board of Cooperative Educational Services,August 2014,-105.20166,40.014116,BOULDER COUNTY,MATCH
+-104.984706894,39.7391611619001,63,Espeditionary BOCES Learning School,,Denver,CO,80222,303.759.2076,Board of Cooperative Educational Services,August 2014,-104.984706894,39.7391611619,DENVER COUNTY,CORRECTED
+-104.821356895,38.8338781619,64,Pikes Peak BOCES,,Colorado Springs,CO,80906,719.570.7474,Board of Cooperative Educational Services,August 2014,-104.821356895,38.8338781619,EL PASO COUNTY,CORRECTED
+-104.917206895,38.8597081615,65,Ute Pass BOCES,,Manitou Springs,CO,80829,719.685.2640,Board of Cooperative Educational Services,August 2014,-104.917206895,38.8597081615,EL PASO COUNTY,CORRECTED
+-107.211171894,39.4022101618,66,Mountain BOCES,,Carbondale,CO,81623,970.963.3243,Board of Cooperative Educational Services,August 2014,-107.211171894,39.4022101618,GARFIELD COUNTY,CORRECTED
+-107.880069895,37.2752851618001,67,San Juan BOCES,,Durango,CO,81301,970.247.3261,Board of Cooperative Educational Services,August 2014,-107.880069895,37.2752851618,LA PLATA COUNTY,CORRECTED
+-106.292514895,39.2508211619001,68,Mountain BOCES,,Leadville,CO,80461,719.486.2603,Board of Cooperative Educational Services,August 2014,-106.292514895,39.2508211619,LAKE COUNTY,CORRECTED
+-103.686846,39.261903,69,East Central BOCES,"820 2nd St., PO Box 910",Limon,CO,80828,719.775.2342,Board of Cooperative Educational Services,August 2014,-103.686846,39.261903,LINCOLN COUNTY,MATCH
+-108.550650895,39.0638731616,70,Grand Valley BOCES,,Grand Junction,CO,81505,970.255.2700,Board of Cooperative Educational Services,August 2014,-108.550650895,39.0638731616,MESA COUNTY,CORRECTED
+-108.504543895,37.4738791613,71,San Juan BOCES,,Dolores,CO,81323,970.565.8411,Board of Cooperative Educational Services,August 2014,-108.504543895,37.4738791613,MONTEZUMA COUNTY,CORRECTED
+-103.799937895,40.2502621611001,72,Centennial BOCES,,Fort Morgan,CO,80701,970.867.8297,Board of Cooperative Educational Services,August 2014,-103.799937895,40.2502621611,MORGAN COUNTY,CORRECTED
+-103.543824895,37.9850071618001,73,Santa Fe Trail BOCES,,La Junta,CO,81050,719.383.2623,Board of Cooperative Educational Services,August 2014,-103.543824895,37.9850071618,OTERO COUNTY,CORRECTED
+-107.761728895,38.1527671612,74,Uncompahgre BOCES,,Ridgway,CO,81432,970.626.2977,Board of Cooperative Educational Services,August 2014,-107.761728895,38.1527671612,OURAY COUNTY,CORRECTED
+-105.474765894,39.4056661611,75,Mt. Evans BOCES,,Bailey,CO,80421,303.679.7441,Board of Cooperative Educational Services,August 2014,-105.474765894,39.4056661611,PARK COUNTY,CORRECTED
+-102.626859895,40.6411051616001,76,Northeast BOCES,,Haxtun,CO,80731,970.774.6152,Board of Cooperative Educational Services,August 2014,-102.626859895,40.6411051616,PHILLIPS COUNTY,CORRECTED
+-102.620748895,38.0872291615,77,Southeast BOCES,,Lamar,CO,81502,719.336.9046,Board of Cooperative Educational Services,August 2014,-102.620748895,38.0872291615,PROWERS COUNTY,CORRECTED
+-104.609136895,38.2544401617,78,South Central BOCES,,Pueblo,CO,81007,719.647.0023,Board of Cooperative Educational Services,August 2014,-104.609136895,38.2544401617,PUEBLO COUNTY,CORRECTED
+-108.804828895,40.0874791618001,79,Rio Blanco BOCES,,Rangely,CO,81648,970.675.2064,Board of Cooperative Educational Services,August 2014,-108.804828895,40.0874791618,RIO BLANCO COUNTY,CORRECTED
+-106.831713895,40.4849821619001,80,Northwest BOCES,,Steamboat Springs,CO,80477,970.879.0391,Board of Cooperative Educational Services,August 2014,-106.831713895,40.4849821619,ROUTT COUNTY,CORRECTED
+-104.709126894,40.4233051612999,81,Centennial BOCES,,Greeley,CO,80634,970.352.7404,Board of Cooperative Educational Services,August 2014,-104.709126894,40.4233051613,WELD COUNTY,CORRECTED
+-104.836397,39.741163,82,Children's Hospital Colorado - Support Group,13123 E. 16th Ave.,Aurora,CO,80045,720.777.5470,Brain Injury Resources,August 2014,-104.836397,39.741163,ADAMS COUNTY,MATCH
+-104.979482,39.850103,83,Vibra Hospital - Support Group,8451 Pearl St.,Thornton,CO,80229,720.540.4316,Brain Injury Resources,August 2014,-104.979482,39.850103,ADAMS COUNTY,MATCH
+-104.828139,39.731048,84,Spalding Rehabilitation Hospital - Support Group,900 Potomact St.,Aurora,CO,80011,303.363.5159,Brain Injury Resources,August 2014,-104.828139,39.731048,ARAPAHOE COUNTY,MATCH
+-104.977185,39.654416,85,"Craig Hospital, Craig Hospital Family Outpatient - Digby Room - Support Group",3427 S. Emerson St.,Englewood,CO,80113,720.327.7882,Brain Injury Resources,August 2014,-104.977185,39.654416,ARAPAHOE COUNTY,MATCH
+-104.980388,39.653276,86,Swedish Medical Center - Colorado Neurological Institute - Support Group,501 E. Hampden,Englewood,CO,80113,303.806.7417,Brain Injury Resources,August 2014,-104.980388,39.653276,ARAPAHOE COUNTY,MATCH
+-107.009907,37.261768,87,Silver Foxes Den Senior Center - Support Group,451 Hot Springs,Pagosa Springs,CO,81147,970.507.0252,Brain Injury Resources,August 2014,-107.009907,37.261768,ARCHULETA COUNTY,MATCH
+-105.230244,40.015788,88,Center for People with Disabilities - Support Group,1675 Range St.,Boulder,CO,80301,720.352.0465,Brain Injury Resources,August 2014,-105.230244,40.015788,BOULDER COUNTY,MATCH
+-105.270546894,40.0149841615001,89,Brain Buddy,265 Seminar Dr.,Boulder,CO,80303,303.204.6260,Brain Injury Resources,August 2014,-105.270546894,40.0149841615,BOULDER COUNTY,CORRECTED
+-105.131173,40.150135,90,Kaiser Permanente Medical Center - Support Group,2345 Bent Way,Longmont,CO,80503,970.351.1321,Brain Injury Resources,August 2014,-105.131173,40.150135,BOULDER COUNTY,MATCH
+-105.100122,40.165592,91,Longmont Public Library - Support Group,409 4th Ave.,Longmont,CO,80501,303.772.3337,Brain Injury Resources,August 2014,-105.100122,40.165592,BOULDER COUNTY,MATCH
+-105.072746,40.087255,92,Colorado Therapeutic Riding Center,11968 Mineral Rd.,Longmont,CO,80504,303.652.9131,Brain Injury Resources,August 2014,-105.072746,40.087255,BOULDER COUNTY,MATCH
+-104.868624,39.672468,93,Rocky Mountain Human Services - Support Group,10375 E. Harvard,Denver,CO,80231,303.636.5959,Brain Injury Resources,August 2014,-104.868624,39.672468,DENVER COUNTY,MATCH
+-104.94091,39.691417,94,Brain Injury Alliance of Colorado - Support Group,"1385 S. Colorado Blvd., Suite A606",Denver,CO,80206,303.355.9969,Brain Injury Resources,August 2014,-104.94091,39.691417,DENVER COUNTY,MATCH
+-104.960818,39.741225,95,Brain Injury Alliance of Colorado - Support Group,1580 Gaylord St.,Denver,CO,80206,720.327.7882,Brain Injury Resources,August 2014,-104.960818,39.741225,DENVER COUNTY,MATCH
+-104.993018,39.71495,96,"Bayaud Enterprises, Inc.",333 W. Bayaud Ave.,Denver,CO,80223,303.830.6885,Brain Injury Resources,August 2014,-104.993018,39.71495,DENVER COUNTY,MATCH
+-104.769844,39.549609,97,"Parker Adventist Hospital - Support Group, Hilltop Room",9395 Crown Crest Blvd.,Parker,CO,80138,720.203.8959,Brain Injury Resources,August 2014,-104.769844,39.549609,DOUGLAS COUNTY,MATCH
+-104.94899,39.351259,98,Begin Again Ranch,3316 Christy Ridge Rd.,Sedalia,CO,80135,909.489.9654,Brain Injury Resources,August 2014,-104.94899,39.351259,DOUGLAS COUNTY,MATCH
+-104.820292,38.86571,99,"Penrose Hospital - Support Group, Cancer Conference Rooms B&C",2222 N. Nevada Ave.,Colorado Springs,CO,80907,n/a,Brain Injury Resources,August 2014,-104.820292,38.86571,EL PASO COUNTY,MATCH
+-104.823854,38.824023,100,Independence Center - Support Group,729 S. Tejon St.,Colorado Springs,CO,80903,719.471.8181,Brain Injury Resources,August 2014,-104.823854,38.824023,EL PASO COUNTY,MATCH
+-104.774289,38.840022,101,Fargo's Pizza - Support Group,2910 E. Platte,Colorado Springs,CO,80909,719.548.9790,Brain Injury Resources,August 2014,-104.774289,38.840022,EL PASO COUNTY,MATCH
+-104.819734,38.833056,102,Military - Support Group,17 S. Weber,Colorado Springs,CO,80903,719.357.1300,Brain Injury Resources,August 2014,-104.819734,38.833056,EL PASO COUNTY,MATCH
+-104.799323,38.838928,103,Memorial Hospital - Support Group,1400 E. Boulder St.,Colorado Springs,CO,80909,719.365.9837,Brain Injury Resources,August 2014,-104.799323,38.838928,EL PASO COUNTY,MATCH
+-104.768599,38.900818,104,Carmel Community Living Corporation,"4740 Flintridge Dr., #220",Colorado Springs,CO,80918,719.477.9972,Brain Injury Resources,August 2014,-104.768599,38.900818,EL PASO COUNTY,MATCH
+-105.11771,38.389635,105,Wellness Therapy Center - Support Group,119 S. Pikes Peak,Florence,CO,81226,719.269.8266,Brain Injury Resources,August 2014,-105.11771,38.389635,FREMONT COUNTY,MATCH
+-107.324558,39.546557,106,"US Bank - Support Group, Conference Room",802 Grand Ave.,Glenwood Springs,CO,81601,970.379.5693,Brain Injury Resources,August 2014,-107.324558,39.546557,GARFIELD COUNTY,MATCH
+-106.924495,38.551344,107,Gunnison Valley Hospital - Support Group,711 N. Taylor St.,Gunnison,CO,81230,970.641.7248,Brain Injury Resources,August 2014,-106.924495,38.551344,GUNNISON COUNTY,MATCH
+-105.154519,39.738409,108,"The Arc of Jefferson, Clear Creek, & Gilpin Counties","13949 W. Colfax Ave., Denver West Building 1, Suite 150",Lakewood,CO,80401,303.232.1338,Brain Injury Resources,August 2014,-105.154519,39.738409,JEFFERSON COUNTY,MATCH
+-105.132524,39.74026,109,Accent on Independence,11949 W. Colfax Ave.,Lakewood,CO,80215,303.331.0818,Brain Injury Resources,August 2014,-105.132524,39.74026,JEFFERSON COUNTY,MATCH
+-105.075921,39.653366,110,Learning Services,7201 W. Hampden Ave.,Lakewood,CO,80227,303.989.6660,Brain Injury Resources,August 2014,-105.075921,39.653366,JEFFERSON COUNTY,MATCH
+-105.110635,39.579288,111,"Car-ynne 4 Kids, Inc.",7554 S. Mt. Marcy,Littleton,CO,80127,303.972.6216,Brain Injury Resources,August 2014,-105.110635,39.579288,JEFFERSON COUNTY,MATCH
+-107.869071,37.303683,112,Southwest Center for Independence - Support Group,"3473 N. Main Ave., #23",Durango,CO,81321,970.259.1672,Brain Injury Resources,August 2014,-107.869071,37.303683,LA PLATA COUNTY,MATCH
+-107.877148,37.241444,113,"Community Connections, Inc.","281 Sawyer Dr., Suite 200",Durango,CO,81303,970.259.2464,Brain Injury Resources,August 2014,-107.877148,37.241444,LA PLATA COUNTY,MATCH
+-107.880069895,37.2752851618001,114,Adaptive Sports Association,PO Box 1884,Durango,CO,81302,970.259.0374,Brain Injury Resources,August 2014,-107.880069895,37.2752851618,LA PLATA COUNTY,CORRECTED
+-105.059129,40.572844,115,Center for Neurorehabilitation Services - Support Group,1045 Robertson St.,Fort Collins,CO,80524,970.493.6667,Brain Injury Resources,August 2014,-105.059129,40.572844,LARIMER COUNTY,MATCH
+-108.558152,39.067183,116,Ratican Tower - Support Group,875 Main St.,Grand Junction,CO,81501,970.361.5495,Brain Injury Resources,August 2014,-108.558152,39.067183,MESA COUNTY,MATCH
+-108.550650895,39.0638731616,117,Colorado Discover Ability,PO Box 1924,Grand Junction,CO,81502,970.257.1222,Brain Injury Resources,August 2014,-108.550650895,39.0638731616,MESA COUNTY,CORRECTED
+-108.55394,37.356274,118,Southwest Center for Independence - Support Group,2409 E. Empire,Cortez,CO,81321,970.570.8001,Brain Injury Resources,August 2014,-108.55394,37.356274,MONTEZUMA COUNTY,MATCH
+-107.861531,38.477355,119,San Juan Living Center - Support Group,1043 Ridge St.,Montrose,CO,81401,970.596.1064,Brain Injury Resources,August 2014,-107.861531,38.477355,MONTROSE COUNTY,MATCH
+-103.649364,40.254535,120,East Morgan Community Hospital - Support Group,2400 Edison St.,Brush,CO,80723,970.842.4270,Brain Injury Resources,August 2014,-103.649364,40.254535,MORGAN COUNTY,MATCH
+-106.838436,39.191014,121,Aspen Valley Hospital,401 Castle Creek Rd.,Aspen,CO,81611,970.923.0578,Brain Injury Resources,August 2014,-106.838436,39.191014,PITKIN COUNTY,MATCH
+-106.937814894,39.2130391615,122,Challenge Aspen,,Snowmass Village,CO,81615,970.923.0578,Brain Injury Resources,August 2014,-106.937814894,39.2130391615,PITKIN COUNTY,CORRECTED
+-104.611983,38.282467,123,"Parkview Hospital, North Annex, Sierra Room - Support Group",400 W. 17th St.,Pueblo,CO,81003,719.520.1102,Brain Injury Resources,August 2014,-104.611983,38.282467,PUEBLO COUNTY,MATCH
+-104.726688,38.308202,124,Pueblo West Library - Support Group,298 S. Joe Martinez Blvd.,Pueblo West,CO,81007,719.569.9369,Brain Injury Resources,August 2014,-104.726688,38.308202,PUEBLO COUNTY,CORRECTED
+-106.04874,39.556813,125,"The Church at Agape Outpost, Youth Support Group",15404 Hwy 9,Breckenridge,CO,80424,970.668.6978,Brain Injury Resources,August 2014,-106.04874,39.556813,SUMMIT COUNTY,MATCH
+-106.038354895,39.4816621619,126,Breckenridge Outdoor Education Center,PO Box 697,Breckenridge,CO,80424,970.453.6422,Brain Injury Resources,August 2014,-106.038354895,39.4816621619,SUMMIT COUNTY,CORRECTED
+-106.079629,39.569162,127,"St. Anthonys Summit Medical Center, 1st Floor Classroom - Support Group",340 Peak One Dr.,Frisco,CO,80443,970.668.6978,Brain Injury Resources,August 2014,-106.079629,39.569162,SUMMIT COUNTY,MATCH
+-105.090294,39.057509,128,Colorado Lions Camp and Conference Center,28541 Hwy 67 North,Woodland Park,CO,80866,719.687.2087,Brain Injury Resources,August 2014,-105.090294,39.057509,TELLER COUNTY,MATCH
+-104.775286,40.407964,129,The Buzz Coffee & Gelato Shop - Support Group,"1923 59th Ave., #135",Greeley,CO,80634,970.330.5326,Brain Injury Resources,August 2014,-104.775286,40.407964,WELD COUNTY,MATCH
+-104.725267,40.395752,130,Greeley Center for Independence - Support Group,2774 Reservoir Rd.,Greeley,CO,80634,970.506.0008,Brain Injury Resources,August 2014,-104.725267,40.395752,WELD COUNTY,MATCH
+-104.770811,39.986991,131,Adams School District 27J Brighton,18551 E. 160th Ave.,Brighton,CO,80601,303.655.2924,Child Find,August 2014,-104.770811,39.986991,ADAMS COUNTY,MATCH
+-104.926587,39.805695,132,Adams School District 14 Commerce City,5291 E. 60th Ave.,Commerce City,CO,80022,720.322.8119,Child Find,August 2014,-104.926587,39.805695,ADAMS COUNTY,MATCH
+-104.996495,39.88191,133,Adams 12 Five Star Schools,10290 Huron,Denver,CO,80260,720.972.6004,Child Find,August 2014,-104.996495,39.88191,ADAMS COUNTY,MATCH
+-104.943897,39.861141,134,Adams School District 1 Mapleton,9150 Monroe St.,Thornton,CO,80229,720.972.6004,Child Find,August 2014,-104.943897,39.861141,ADAMS COUNTY,MATCH
+-105.029408,39.842589,135,Adams School District 50 Westminster,8030 Irving St.,Westminster,CO,80031,720.542.4520,Child Find,August 2014,-105.029408,39.842589,ADAMS COUNTY,MATCH
+-105.86682,37.449047,136,San Luis BOCES,2261 Enterprise Dr.,Alamosa,CO,81101,719.587.5428,Child Find,August 2014,-105.86682,37.449047,ALAMOSA COUNTY,MATCH
+-104.804364,39.719768,137,Adams-Arapahoe School District 28J Aurora,15701 E. 1st Ave.,Aurora,CO,80011,303.340.0510 ext. 28430,Child Find,August 2014,-104.804364,39.719768,ARAPAHOE COUNTY,MATCH
+-104.803653,39.579566,138,"Arapahoe School District 5 Cherry Creek, Red Hawk Ridge Elementary",16251 E. Geddes Ave.,Centennial,CO,80016,720.886.3207,Child Find,August 2014,-104.803653,39.579566,ARAPAHOE COUNTY,CORRECTED
+-105.034475,39.644207,139,Arapahoe School District 2 Sheridan,4000 S. Lowell Blvd.,Denver,CO,80236,720.833.6636,Child Find,August 2014,-105.034475,39.644207,ARAPAHOE COUNTY,MATCH
+-104.996167,39.645939,140,Arapahoe School District 1 Englewood,700 W. Mansfield Ave.,Englewood,CO,80110,303.806.2527,Child Find,August 2014,-104.996167,39.645939,ARAPAHOE COUNTY,MATCH
+-105.008981,39.611676,141,Arapahoe School District 6 Littleton,5776 S. Crocker St.,Littleton,CO,80120,303.347.3469,Child Find,August 2014,-105.008981,39.611676,ARAPAHOE COUNTY,MATCH
+-105.270546894,40.0149841615001,142,Boulder School District RE-2 Boulder Valley,PO Box 9011,Boulder,CO,80301,720.561.5078,Child Find,August 2014,-105.270546894,40.0149841615,BOULDER COUNTY,CORRECTED
+-105.113016,40.149636,143,Boulder School District RE-1J Vrain Valley,830 S. Lincoln St.,Longmont,CO,80501,303.772.7700,Child Find,August 2014,-105.113016,40.149636,BOULDER COUNTY,MATCH
+-106.131135895,38.8422121614001,144,Mountain BOCES Chaffee County R-31Buena Vista,PO Box 2017,Buena Vista,CO,81211,719.395.7029,Child Find,August 2014,-106.131135895,38.8422121614,CHAFFEE COUNTY,CORRECTED
+-105.992544,38.526831,145,Mountain BOCES Chaffee County R-32 (J) Salida,516 Teller St.,Salida,CO,81201,719.530.5375,Child Find,August 2014,-105.992544,38.526831,CHAFFEE COUNTY,MATCH
+-105.513609894,39.7424911616001,146,Mt. Evans BOCES School District Clear Creek RE-1,PO Box 3339,Idaho Springs,CO,80452,303.769.7515,Child Find,August 2014,-105.513609894,39.7424911616,CLEAR CREEK COUNTY,CORRECTED
+-108.061188,38.733619,147,Delta School District 50J Delta,1002 Hastings,Delta,CO,81416,970.874.7607,Child Find,August 2014,-108.061188,38.733619,DELTA COUNTY,MATCH
+-104.983415,39.730576,148,Denver School District 1 Denver,"900 Grant St., 2nd Floor",Denver,CO,80203,720.423.2073,Child Find,August 2014,-104.983415,39.730576,DENVER COUNTY,MATCH
+-104.85867,39.402317,149,Douglas School District RE-1 Castle Rock,3950 Trail Boxx Lane,Castle Rock,CO,80104,303.387.0803,Child Find,August 2014,-104.85867,39.402317,DOUGLAS COUNTY,MATCH
+-106.828653895,39.6552631618,150,Eagle County RE 50,PO Box 740,Eagle,CO,81631,970.328.3750,Child Find,August 2014,-106.828653895,39.6552631618,EAGLE COUNTY,CORRECTED
+-104.812302,38.848763,151,El Paso School District 11 Colorado Springs,1115 N. El Paso,Colorado Springs,CO,80903,719.328.3142,Child Find,August 2014,-104.812302,38.848763,EL PASO COUNTY,MATCH
+-104.849451,38.798814,152,El Paso School District 12 Cheyenne Mountain,1201 W. Cheyenne Rd.,Colorado Springs,CO,80906,719.475.6140 ext. 17,Child Find,August 2014,-104.849451,38.798814,EL PASO COUNTY,MATCH
+-104.750316,38.791713,153,El Paso School District 2 Harrison,2880 Ferber Dr.,Colorado Springs,CO,80916,n/a,Child Find,August 2014,-104.750316,38.791713,EL PASO COUNTY,MATCH
+-104.770067,38.979563,154,El Paso School District 20 Academy,110 Chapel Hills Dr.,Colorado Springs,CO,80920,719.234.1755,Child Find,August 2014,-104.770067,38.979563,EL PASO COUNTY,MATCH
+-104.745533,38.761176,155,El Paso School District 3 Widefield,209 Leta Dr.,Colorado Springs,CO,80911,719.391.3378,Child Find,August 2014,-104.745533,38.761176,EL PASO COUNTY,MATCH
+-104.663874,38.94168,156,El Paso School District 49 Falcon,7545 Mohawk Rd.,Colorado Springs,CO,80908,719.494.8751,Child Find,August 2014,-104.663874,38.94168,EL PASO COUNTY,MATCH
+-104.686092,38.675284,157,El Paso School District 8 Fountain,10665 Jimmy Camp Rd.,Colorado Springs,CO,80817,719.538.8888,Child Find,August 2014,-104.686092,38.675284,EL PASO COUNTY,CORRECTED
+-104.795001,38.795943,158,Pikes Peak BOCES,2883 S. Circle Dr.,Colorado Springs,CO,80906,719.570.7474,Child Find,August 2014,-104.795001,38.795943,EL PASO COUNTY,MATCH
+-104.914454,38.855948,159,Ute Pass BOCES,110 Pawnee Ave.,Manitou Springs,CO,80829,719.685.2166,Child Find,August 2014,-104.914454,38.855948,EL PASO COUNTY,MATCH
+-104.872755895,39.0916651617001,160,El Paso School District 38 Lewis Palmer,PO Box 40,Monument,CO,80132,719.757.1435 ext. 10610,Child Find,August 2014,-104.872755895,39.0916651617,EL PASO COUNTY,CORRECTED
+-104.596914894,39.3602701612,161,East Central BOCES,PO Box 610,Elizabeth,CO,80107,303.646.6716,Child Find,August 2014,-104.596914894,39.3602701612,ELBERT COUNTY,CORRECTED
+-105.215645,38.453643,162,"Canon City, RE1 & Fremont RE-2",490 N. Diamond,Canon City,CO,81212,719.276.6174,Child Find,August 2014,-105.215645,38.453643,FREMONT COUNTY,MATCH
+-107.325148,39.539334,163,Mountain BOCES School District Roaring Fork RE-1,1405 Grand Ave.,Glenwood Springs,CO,81601,970.384.6006,Child Find,August 2014,-107.325148,39.539334,GARFIELD COUNTY,MATCH
+-107.540191,39.571528,164,Mountain BOCES Garfield RE-2,804 W. Main,New Castle,CO,81647,970.665.6802,Child Find,August 2014,-107.540191,39.571528,GARFIELD COUNTY,MATCH
+-108.032549,39.4347728,165,Mountain BOCES Garfield 16,"460 Stone Quarry Rd., PO Box 68",Parachute,CO,81635,970.285.5702,Child Find,August 2014,-108.032549,39.4347728,GARFIELD COUNTY,CORRECTED
+-105.51903,39.832639,166,Mt. Evans BOCES Gilpin County RE-1,10595 Hwy 119,Black Hawk,CO,80403,303.582.3444 ext. 3139,Child Find,August 2014,-105.51903,39.832639,GILPIN COUNTY,MATCH
+-106.93327,38.552291,167,Gunnison Watershed RE1-J,800 North Blvd.,Gunnison,CO,81230,970.641.7770,Child Find,August 2014,-106.93327,38.552291,GUNNISON COUNTY,MATCH
+-105.123907,39.730386,168,Jefferson County R-1,"809 Quali St., Bldg. 1, Room 113",Lakewood,CO,80215,303.982.2938,Child Find,August 2014,-105.123907,39.730386,JEFFERSON COUNTY,MATCH
+-107.878527,37.276503,169,San Juan BOCES,201 E. 12th St.,Durango,CO,80301,970.247.3261 ext. 146,Child Find,August 2014,-107.878527,37.276503,LA PLATA COUNTY,MATCH
+-106.294268,39.243813,170,Mountain BOCES Lake County R-1,107 Spruce St.,Leadville,CO,80461,719.293.4613,Child Find,August 2014,-106.294268,39.243813,LAKE COUNTY,MATCH
+-105.49681,40.367756,171,Larimer School District R-3 Park/Estes Park,1505 Brodie Ave.,Estes Park,CO,80517,970.586.4439 ext. 3608,Child Find,August 2014,-105.49681,40.367756,LARIMER COUNTY,MATCH
+-105.122462,40.589209,172,Larimer School District R-1 Poudre/Ft. Collins,2407 LaPorte Ave.,Fort Collins,CO,80521,970.490.3040,Child Find,August 2014,-105.122462,40.589209,LARIMER COUNTY,MATCH
+-105.096878,40.383855,173,Larimer School District R-2J Thompson/Loveland,800 S. Taft Ave.,Loveland,CO,80537,970.613.5762,Child Find,August 2014,-105.096878,40.383855,LARIMER COUNTY,MATCH
+-103.686968,39.26197,174,East Central BOCES,"820 2nd St., PO Box 910",Limon,CO,80828,719.775.2342 ext. 150,Child Find,August 2014,-103.686968,39.26197,LINCOLN COUNTY,MATCH
+-103.196022,40.645475,175,"Logan School District RE-1 Valley/Sterling, Hagen Early Education Ctr",301 Hagen St.,Sterling,CO,80751,970.522.0432. ext. 2110,Child Find,August 2014,-103.196022,40.645475,LOGAN COUNTY,CORRECTED
+-108.56583,39.074599,176,"Mesa School District 51/Grand Junction Valley, Hawthorne Bldg",410 Hill Ave.,Grand Junction,CO,81501,970.245.5405,Child Find,August 2014,-108.56583,39.074599,MESA COUNTY,MATCH
+-107.547107,40.519275,177,Moffat School District RE-1 Craig,775 Yampa Ave.,Craig,CO,81625,970.826.4250,Child Find,August 2014,-107.547107,40.519275,MOFFAT COUNTY,MATCH
+-107.876173,38.478315,178,Montrose School District RE-1J Montrose,"PO Box 10, Special Services Center",Montrose,CO,81402,970.249.2405 ext. 5643,Child Find,August 2014,-107.876173,38.478315,MONTROSE COUNTY,CORRECTED
+-103.81129,40.254191,179,Centennial BOCES,821 W. Platte Ave.,Fort Morgan,CO,80701,970.867.8297 ext. 3120,Child Find,August 2014,-103.81129,40.254191,MORGAN COUNTY,MATCH
+-103.791899,40.250053,180,Morgan School District RE-3 Ft. Morgan,300 Sherman St.,Fort Morgan,CO,80701,970.867.2998 ext. 40301,Child Find,August 2014,-103.791899,40.250053,MORGAN COUNTY,MATCH
+-103.543824895,37.9850071618001,181,Santa Fe Trail BOCES,PO Box 980,La Junta,CO,81050,719.383.2623 ext. 218,Child Find,August 2014,-103.543824895,37.9850071618,OTERO COUNTY,CORRECTED
+-107.764751,38.152492,182,Uncompahgre BOCS,"1115 W. Clinton, PO Box 728",Ridgeway,CO,81432,970.626.2977,Child Find,August 2014,-107.764751,38.152492,OURAY COUNTY,MATCH
+-105.472845,39.456696,183,"Mt. Evan BOCES Park County, Platte Canyon 1",1737 Park County Rd. 43,Bailey,CO,80421,303.838.7666 ext. 1251,Child Find,August 2014,-105.472845,39.456696,PARK COUNTY,MATCH
+-105.998179,39.223666,184,Mountain BOCES Park County R-2,"640 Hathaway St., PO Box 189",Fairplay,CO,80440,719.836.4416,Child Find,August 2014,-105.998179,39.223666,PARK COUNTY,MATCH
+-102.630173,40.647135,185,Northeast Colorado BOCES,"301 W. Powell, PO Box 98",Haxtun,CO,80731,970.774.6152,Child Find,August 2014,-102.630173,40.647135,PHILLIPS COUNTY,MATCH
+-106.846282,39.192877,186,Mountain BOCES Pitkin County Aspen 1,235 High School Rd.,Aspen,CO,81611,970.925.3760 ext. 505,Child Find,August 2014,-106.846282,39.192877,PITKIN COUNTY,MATCH
+-102.61593,38.082947,187,Southeastern BOCES,"703 S. 3rd St., PO Box 1137",Lamar,CO,81052,719.336.9046 ext. 40 or ext. 25,Child Find,August 2014,-102.61593,38.082947,PROWERS COUNTY,MATCH
+-104.632748,38.30731,188,Pueblo School District 60 Pueblo (Urban),2003 Northmoor Terrace,Pueblo,CO,81008,719.253.6016,Child Find,August 2014,-104.632748,38.30731,PUEBLO COUNTY,MATCH
+-104.538353,38.2740638,189,Pueblo School District 70 Pueblo (Rural),24951 E. Hwy 50,Pueblo,CO,81006,719.542.1671,Child Find,August 2014,-104.538353,38.2740638,PUEBLO COUNTY,CORRECTED
+-104.706368,38.318638,190,South Central BOCES,323 S. Purcell Blvd.,Pueblo West,CO,81007,719.647.0023,Child Find,August 2014,-104.706368,38.318638,PUEBLO COUNTY,MATCH
+-108.808981,40.087673,191,Rio Blanco BOCES,"402 W. Main St., #135",Rangely,CO,81648,970.675.5738,Child Find,August 2014,-108.808981,40.087673,RIO BLANCO COUNTY,MATCH
+-106.831713895,40.4849821619001,192,Northwest Colorado BOCES,PO Box 773390,Steamboat Springs,CO,80477,970.879.0391,Child Find,August 2014,-106.831713895,40.4849821619,ROUTT COUNTY,CORRECTED
+-106.090558,39.582338,193,Mountain BOCES School District Summit RE-1,"150 School Rd., P.O. Box 7",Frisco,CO,80443,970.368.1022,Child Find,August 2014,-106.090558,39.582338,SUMMIT COUNTY,CORRECTED
+-105.178314895,38.7466591616001,194,Ute Pass BOCES Cripple Creek-Victor RE-1,PO Box 897,Cripple Creek,CO,80813,719.689.3420,Child Find,August 2014,-105.178314895,38.7466591616,TELLER COUNTY,CORRECTED
+-105.056931895,38.9938801615001,195,Ute Pass BOCES Woodland Park RE-2,PO Box 6790,Woodland Park,CO,80866,719.686-2028,Child Find,August 2014,-105.056931895,38.9938801615,TELLER COUNTY,CORRECTED
+-104.768144,40.40581,196,Centennial BOCES,2020 Clubhouse Dr. #230,Greeley,CO,80634,970.352.7404 ext. 1129,Child Find,August 2014,-104.768144,40.40581,WELD COUNTY,MATCH
+-104.70275,40.432198,197,"Weld School District 6 Greeley/Evans, Billie Martinez North",1460 2nd St.,Greeley,CO,80631,970.348.1885,Child Find,August 2014,-104.70275,40.432198,WELD COUNTY,CORRECTED
+-104.522392,40.111093,198,"Weld School District RE-3J Kennesburg, Weld RE-8",99 W. Broadway,Kennesburg,CO,80643,303.857.7492,Child Find,August 2014,-104.522392,40.111093,WELD COUNTY,MATCH
+-104.866782,40.329706,199,"Weld School District RE-5J Johnstown-Milliken, MES-Early Learning Center",100 Broad Street,Milliken,CO,80543,970.587.6250,Child Find,August 2014,-104.866782,40.329706,WELD COUNTY,CORRECTED
+-104.904492,40.474539,200,Weld School District RE-4 Windsor,501 Oak St.,Windsor,CO,80550,970.686.8008,Child Find,August 2014,-104.904492,40.474539,WELD COUNTY,MATCH
+-104.999529,39.922189,201,North Metro Community Services,1001 W. 124th Ave.,Westminster,CO,80234,303.252.7199,Community Centered Board (CCB) Offices,August 2014,-104.999529,39.922189,ADAMS COUNTY,MATCH
+-105.867314,37.469422,202,Blue Peaks Developmental Services,703 Fourth St.,Alamosa,CO,81101,"719,589.5135",Community Centered Board (CCB) Offices,August 2014,-105.867314,37.469422,ALAMOSA COUNTY,MATCH
+-105.092937,39.986386,203,Imagine!,"1400 Dixon Ave.,",Lafayette,CO,80026,303.665.7789,Community Centered Board (CCB) Offices,August 2014,-105.092937,39.986386,BOULDER COUNTY,MATCH
+-104.87152,39.674586,204,Rocky Mountain Human Services,9900 E. Iliff Ave.,Denver,CO,80231,303.636.5600,Community Centered Board (CCB) Offices,August 2014,-104.87152,39.674586,DENVER COUNTY,MATCH
+-104.858157,39.563768,205,Developmental Pathways,325 Inverness Dr. South,Englewood,CO,80112,303.360.6600,Community Centered Board (CCB) Offices,August 2014,-104.858157,39.563768,DOUGLAS COUNTY,MATCH
+-104.82039,38.827448,206,The Resource Exchange,418 S. Weber,Colorado Springs,CO,80903,719.380.1100,Community Centered Board (CCB) Offices,August 2014,-104.82039,38.827448,EL PASO COUNTY,MATCH
+-105.234561,38.436298,207,Starpoint,700 S. 8th St.,Canon City,CO,81215,719.275.1616,Community Centered Board (CCB) Offices,August 2014,-105.234561,38.436298,FREMONT COUNTY,MATCH
+-107.318131,39.509546,208,Mountain Valley Developmental Services,700 Mt. Sopris Dr.,Glenwood Springs,CO,81602,970.945.2306,Community Centered Board (CCB) Offices,August 2014,-107.318131,39.509546,GARFIELD COUNTY,MATCH
+-105.123116,39.729225,209,Developmental Disabilities Resource Center,11177 W. 8th Ave.,Lakewood,CO,80215,303.233.3363,Community Centered Board (CCB) Offices,August 2014,-105.123116,39.729225,JEFFERSON COUNTY,MATCH
+-107.877148,37.241444,210,Community Connections,"281 Sawyer Dr., #200",Durango,CO,81303,970.259.2464,Community Centered Board (CCB) Offices,August 2014,-107.877148,37.241444,LA PLATA COUNTY,MATCH
+-105.081813,40.502,211,Foothills Gateway,301 Skyway Dr.,Fort Collins,CO,80525,970.226.2345,Community Centered Board (CCB) Offices,August 2014,-105.081813,40.502,LARIMER COUNTY,MATCH
+-104.494644,37.192251,212,Southern Colorado Developmental Services,1205 Congress Dr.,Trinidad,CO,81082,719.846.4409,Community Centered Board (CCB) Offices,August 2014,-104.494644,37.192251,LAS ANIMAS COUNTY,MATCH
+-103.226746,40.619943,213,Eastern Colorado Services,617 S. 10th Ave.,Sterling,CO,80751,970.522.7121,Community Centered Board (CCB) Offices,August 2014,-103.226746,40.619943,LOGAN COUNTY,MATCH
+-108.556787,39.070444,214,Strive,950 Grand Ave.,Grand Junction,CO,81502,970.243.3702,Community Centered Board (CCB) Offices,August 2014,-108.556787,39.070444,MESA COUNTY,MATCH
+-107.868227,38.471576,215,Community Options,336 S. 10th St.,Montrose,CO,81402,970.249.1412,Community Centered Board (CCB) Offices,August 2014,-107.868227,38.471576,MONTROSE COUNTY,MATCH
+-103.532683,37.982047,216,Inspiration Field,612 Adams Ave.,La Junta,CO,81050,719.384.8741,Community Centered Board (CCB) Offices,August 2014,-103.532683,37.982047,OTERO COUNTY,MATCH
+-102.616915,38.078626,217,Southeastern Developmental Services,1111 S. fourth St.,Lamar,CO,81042,719.336.3244,Community Centered Board (CCB) Offices,August 2014,-102.616915,38.078626,PROWERS COUNTY,MATCH
+-104.607405,38.268923,218,Colorado Bluesky Enterprises,115 W. 2nd St.,Pueblo,CO,81003,719.546.0572,Community Centered Board (CCB) Offices,August 2014,-104.607405,38.268923,PUEBLO COUNTY,MATCH
+-106.829771,40.484457,219,Horizons Specialized Services,405 Oak,Steamboat Springs,CO,80477,970.879.4466,Community Centered Board (CCB) Offices,August 2014,-106.829771,40.484457,ROUTT COUNTY,MATCH
+-104.695584,40.377225,220,Envision,1050 37th St.,Evans,CO,80620,970.339.5360,Community Centered Board (CCB) Offices,August 2014,-104.695584,40.377225,WELD COUNTY,MATCH
+-103.631058,40.259502,221,Centennial Manor,612 Ray St.,Brush,CO,80723,970-847-2676,Congregate Meal Sites,March 2017,-103.631058,40.259502,MORGAN COUNTY,MATCH
+-103.791992,40.247482,222,Fort Morgan Senior Center,110 Sherman St.,Fort Morgan,CO,80701,970-867-6532,Congregate Meal Sites,March 2017,-103.791992,40.247482,MORGAN COUNTY,MATCH
+-103.78717,40.260365,223,Fort Morgan Housing Authority,1100 Linda St.,Fort Morgan,CO,80701,970-867-6532,Congregate Meal Sites,March 2017,-103.78717,40.260365,MORGAN COUNTY,MATCH
+-102.628113,40.646004,224,Haxtun Community Center,125 E. Wilson,Haxtun,CO,80731,970-774-7853,Congregate Meal Sites,March 2017,-102.628113,40.646004,PHILLIPS COUNTY,MATCH
+-102.305183,40.579662,225,Holyoke Senior Center,330 West Kellogg,Holyoke,CO,80734,970-867-9409 xt 231,Congregate Meal Sites,March 2017,-102.305183,40.579662,PHILLIPS COUNTY,MATCH
+-102.38781,40.959721,226,Ovid Senior Center,213 Main St.,Ovid,CO,80744,970-463-5355,Congregate Meal Sites,March 2017,-102.38781,40.959721,SEDGWICK COUNTY,MATCH
+-103.116867,40.961243,227,Peetz Plateau School,311 Coleman Ave,Peetz,CO,80747,970-334-2381,Congregate Meal Sites,March 2017,-103.116867,40.961243,LOGAN COUNTY,MATCH
+-103.597488,40.329811,228,Snyder Senior Center,29269 4th St.,Snyder,CO,80750,970-842-2130,Congregate Meal Sites,March 2017,-103.597488,40.329811,MORGAN COUNTY,MATCH
+-103.211929,40.633804,229,Logan County Heritage Center,821 North Division,Sterling,CO,80751,970-522-1237,Congregate Meal Sites,March 2017,-103.211929,40.633804,LOGAN COUNTY,MATCH
+-104.075935,40.232609,230,Out West Senior Center,109 Main St.,Wiggins,CO,80654,970-483-6246,Congregate Meal Sites,March 2017,-104.075935,40.232609,MORGAN COUNTY,MATCH
+-102.231148,40.075424,231,Wray Senior Center,741 W. 7th,Wray,CO,80758,970-332-5871,Congregate Meal Sites,March 2017,-102.231148,40.075424,YUMA COUNTY,MATCH
+-102.718987,40.124199,232,Yuma Senior Center,421 E. 2nd,Yuma,CO,80759,970-848-3082,Congregate Meal Sites,March 2017,-102.718987,40.124199,YUMA COUNTY,MATCH
+-104.823112,38.838173,233,Acacia Park Apartments,104 E. Platte Ave.,Colorado Springs,CO,80903,719-884-2332,Congregate Meal Sites,March 2017,-104.823112,38.838173,EL PASO COUNTY,MATCH
+-104.814667,38.835094,234,Centennial Plaza,516 E. Kiowa Street,Colorado Springs,CO,80903,719-884-2332,Congregate Meal Sites,March 2017,-104.814667,38.835094,EL PASO COUNTY,MATCH
+-104.760948,38.887779,235,Crestview Apartments,3880 Van Teylingen Drive,Colorado Springs,CO,80917,719-884-2332,Congregate Meal Sites,March 2017,-104.760948,38.887779,EL PASO COUNTY,MATCH
+-104.802727,38.854408,236,Colorado Springs Sr. Center,1514 N. Hancock Avenue,Colorado Springs,CO,80903,719-884-2332,Congregate Meal Sites,March 2017,-104.802727,38.854408,EL PASO COUNTY,MATCH
+-104.808311,38.8204,237,Hillside  Community Center,925 South Institue,Colorado Springs,CO,80903,719-884-2332,Congregate Meal Sites,March 2017,-104.808311,38.8204,EL PASO COUNTY,MATCH
+-104.811195,38.803185,238,Meadow Park Community Ctr.,1943 S. El Paso,Colorado Springs,CO,80906,719-884-2332,Congregate Meal Sites,March 2017,-104.811195,38.803185,EL PASO COUNTY,MATCH
+-104.790009,38.842735,239,Otis Park Community Center,731 North Iowa,Colorado Springs,CO,80909,719-884-2332,Congregate Meal Sites,March 2017,-104.790009,38.842735,EL PASO COUNTY,MATCH
+-104.792244,38.824215,240,Pikes Peak Towers,1912 Eastlake Blvd.,Colorado Springs,CO,80910,719-884-2332,Congregate Meal Sites,March 2017,-104.792244,38.824215,EL PASO COUNTY,MATCH
+-104.797516,38.820984,241,South View Plaza Apts.,1462  Fountain Blvd.,Colorado Springs,CO,80910,719-884-2332,Congregate Meal Sites,March 2017,-104.797516,38.820984,EL PASO COUNTY,MATCH
+-104.783279,38.843445,242,Villa at Sunny Vista,2480 E. Dale St.,Colorado Springs,CO,80909,719-884-2332,Congregate Meal Sites,March 2017,-104.783279,38.843445,EL PASO COUNTY,MATCH
+-104.797615,38.842922,243,Temple Shalom,1523 East Monument Street,Colorado Springs,CO,80909,719-884-2332,Congregate Meal Sites,March 2017,-104.797615,38.842922,EL PASO COUNTY,MATCH
+-104.817741,38.808289,244,Villa San Jose,1810 South Corona,Colorado Springs,CO,80906,719-884-2332,Congregate Meal Sites,March 2017,-104.817741,38.808289,EL PASO COUNTY,MATCH
+-104.818939,38.808609,245,Villa Santa Maria,405 St. Elmo,Colorado Springs,CO,80906,719-884-2332,Congregate Meal Sites,March 2017,-104.818939,38.808609,EL PASO COUNTY,MATCH
+-104.847992,38.842651,246,West Center,1628 W. Bijou St.,Colorado Springs,CO,80904,719-884-2332,Congregate Meal Sites,March 2017,-104.847992,38.842651,EL PASO COUNTY,MATCH
+-104.750496,38.809681,247,Silver Key at South Murray,1655 S Murray Blvd,Colorado Springs,CO,80916,719-884-2332,Congregate Meal Sites,March 2017,-104.750496,38.809681,EL PASO COUNTY,MATCH
+-104.743233,38.748501,248,El Paso Fountain Valley Sr. Center,5745 Southmoor Drive,Fountain,CO,80817,719-884-2332,Congregate Meal Sites,March 2017,-104.743233,38.748501,EL PASO COUNTY,MATCH
+-104.707817,38.691921,249,Grinde Manor,906 Grinde Drive,Fountain,CO,80817,719-884-2332,Congregate Meal Sites,March 2017,-104.707817,38.691921,EL PASO COUNTY,MATCH
+-104.916496,38.858013,250,St. Andrews Church,103 Canoe Ave,Manitou Springs,CO,80829,719-884-2332,Congregate Meal Sites,March 2017,-104.916496,38.858013,EL PASO COUNTY,MATCH
+-104.885811,39.103477,251,Mountain Community Mennonite Church,643 Hwy 105,Palmer Lake,CO,80133,719-884-2332,Congregate Meal Sites,March 2017,-104.885811,39.103477,EL PASO COUNTY,MATCH
+-105.054527,38.995724,252,Woodland Park Senior Center,312 N. Center St.,Woodland Park,CO,80863,719-884-2332,Congregate Meal Sites,March 2017,-105.054527,38.995724,TELLER COUNTY,MATCH
+-103.273422,39.286804,253,Arriba Senior Center,404 Lincoln Avenue,Arriba,CO,80804,719-768-3384,Congregate Meal Sites,March 2017,-103.273422,39.286804,LINCOLN COUNTY,MATCH
+-102.285294,39.3041,254,McArthur Senior Center,350 Hollowell,Burlington,CO,80807,719-346-7986,Congregate Meal Sites,March 2017,-102.285294,39.3041,KIT CARSON COUNTY,MATCH
+-102.346542,38.821022,255,Cheyenne Wells Senior Center,245 S 1 E,Cheyenne Wells,CO,80810,719-767-5445,Congregate Meal Sites,March 2017,-102.346542,38.821022,CHEYENNE COUNTY,MATCH
+-104.53688,39.219257,256,Project Smile Nutrition Site,24223 Eccles,Elbert,CO,80106,303-648-9894,Congregate Meal Sites,March 2017,-104.53688,39.219257,ELBERT COUNTY,MATCH
+-103.067482,39.291344,257,Creighton Senior Center,306 Main Street,Flagler,CO,80815,719-765-4516,Congregate Meal Sites,March 2017,-103.067482,39.291344,KIT CARSON COUNTY,MATCH
+-103.472975,39.1354335,258,Project Smile Nutrition Site,214 2nd Avenue,Hugo,CO,80821,719-743-2272,Congregate Meal Sites,March 2017,-103.472975,39.1354335,LINCOLN COUNTY,MATCH
+-104.464561,39.346512,259,Western Elbert County Senior Center,438 Comanche,Kiowa,CO,80117,303-621-2561,Congregate Meal Sites,March 2017,-104.464561,39.346512,ELBERT COUNTY,MATCH
+-102.791817,38.762718,260,Kit Carson Senior Center,107 Main Street,Kit Carson,CO,80825,719-962-3468,Congregate Meal Sites,March 2017,-102.791817,38.762718,KIT CARSON COUNTY,MATCH
+-103.687828,39.262062,261,Hub City Senior Center,220 E Avenue,Limon,CO,80828,719-775-2721,Congregate Meal Sites,March 2017,-103.687828,39.262062,LINCOLN COUNTY,MATCH
+-102.869606,39.3013,262,Project Smile Nutrition Site,100 Colorado Ave,Seibert,CO,80834,970-664-2325,Congregate Meal Sites,March 2017,-102.869606,39.3013,KIT CARSON COUNTY,MATCH
+-104.083771,39.141071,263,Simla Seniors,420 Pueblo,Simla,CO,80835,719-541-2525,Congregate Meal Sites,March 2017,-104.083771,39.141071,ELBERT COUNTY,MATCH
+-102.604828,39.306446,264,Stratton Senior Center,132 Colorado Avenue,Stratton,CO,80836,719-349-0150,Congregate Meal Sites,March 2017,-102.604828,39.306446,KIT CARSON COUNTY,MATCH
+-102.78183,38.479942,265,Eads Sage,1300 Maine Street,Eads,CO,81036,719-254-6018,Congregate Meal Sites,March 2017,-102.78183,38.479942,KIOWA COUNTY,MATCH
+-104.022446,38.130482,266,Fowler Sage,208 6th Ave,Fowler,CO,81039,719-254-6018,Congregate Meal Sites,March 2017,-104.022446,38.130482,OTERO COUNTY,MATCH
+-102.122719,38.051552,267,Holly Sage,208 S Main Street,Holly,CO,81047,719-254-6018,Congregate Meal Sites,March 2017,-102.122719,38.051552,PROWERS COUNTY,MATCH
+-103.541313,37.986938,268,La Junta Senior Center,102 E 2nd Street,La Junta,CO,81050,719-254-6018,Congregate Meal Sites,March 2017,-103.541313,37.986938,OTERO COUNTY,MATCH
+-103.538788,37.984035,269,La Junta Housing,315 E 5th Street,La Junta,CO,81050,719-254-6018,Congregate Meal Sites,March 2017,-103.538788,37.984035,OTERO COUNTY,MATCH
+-102.614647,38.088474,270,Lamar Sage,407 E Olive Street,Lamar,CO,81052,719-254-6018,Congregate Meal Sites,March 2017,-102.614647,38.088474,PROWERS COUNTY,MATCH
+-103.237259,38.065891,271,Las Animas Sage,701 Park Avenue,Las Animas,CO,81054,719-254-6018,Congregate Meal Sites,March 2017,-103.237259,38.065891,BENT COUNTY,MATCH
+-103.719452,38.055847,272,Rocky Ford Sage,503 9th Street,Rocky Ford,CO,81067,719-254-6018,Congregate Meal Sites,March 2017,-103.719452,38.055847,OTERO COUNTY,MATCH
+-102.615166,37.4058,273,Springfield Senior Center,824 Kansas Street,Springfield,CO,81073,719-254-6018,Congregate Meal Sites,March 2017,-102.615166,37.4058,BACA COUNTY,MATCH
+-102.622925,37.408154,274,Springfield West,680 West 6th Avenue,Springfield,CO,81073,719-254-6018,Congregate Meal Sites,March 2017,-102.622925,37.408154,BACA COUNTY,MATCH
+-104.350212,38.239349,275,Avondale Community Center,409 2nd Lane,Avondale,CO,81022,719-545-8900,Congregate Meal Sites,March 2017,-104.350212,38.239349,PUEBLO COUNTY,MATCH
+-104.989255,38.072966,276,Beulah Center,5903 Penn Ave,Beulah,CO,81023,719-545-8900,Congregate Meal Sites,March 2017,-104.989255,38.072966,PUEBLO COUNTY,MATCH
+-104.860161,37.948654,277,Colorado City Community Center,5445 Cuerno Verde,Colorado City,CO,81019,719-545-8900,Congregate Meal Sites,March 2017,-104.860161,37.948654,PUEBLO COUNTY,MATCH
+-104.61042,38.266819,278,JH Edwards Senior Center,230 N Union,Pueblo,CO,81003,719-545-8900,Congregate Meal Sites,March 2017,-104.61042,38.266819,PUEBLO COUNTY,MATCH
+-104.58532,38.23851,279,Fulton Heights Center,1331 Santa Rosa,Pueblo,CO,81006,719-545-8900,Congregate Meal Sites,March 2017,-104.58532,38.23851,PUEBLO COUNTY,MATCH
+-104.621727,38.262836,280,Mesa Towers,260 Lamar Ave,Pueblo,CO,81004,719-545-8900,Congregate Meal Sites,March 2017,-104.621727,38.262836,PUEBLO COUNTY,MATCH
+-104.607391,38.280922,281,Mineral Palace,1441 N Santa Fe Ave,Pueblo,CO,81003,719-545-8900,Congregate Meal Sites,March 2017,-104.607391,38.280922,PUEBLO COUNTY,MATCH
+-104.72966,38.306511,282,Pueblo West,230 E George Dr,Pueblo West,CO,81007,719-545-8900,Congregate Meal Sites,March 2017,-104.72966,38.306511,PUEBLO COUNTY,MATCH
+-105.864624,37.472713,283,Alamosa Senior Center,92 Colorado Avenue,Alamosa,CO,81101,719-587-0807,Congregate Meal Sites,March 2017,-105.864624,37.472713,ALAMOSA COUNTY,MATCH
+-106.00885,37.078121,284,Antonito Senior Center,701 Main Street,Antonito,CO,81120,719-376-2294,Congregate Meal Sites,March 2017,-106.00885,37.078121,CONEJOS COUNTY,MATCH
+-105.519753,37.436504,285,Blanca/Ft Garland Community Center,17591 Highway 160,Blanca,CO,81123,719-379-3450,Congregate Meal Sites,March 2017,-105.519753,37.436504,COSTILLA COUNTY,MATCH
+-106.108917,37.756409,286,Center Housing Authority,138 Worth Street,Center,CO,81125,719-754-2537,Congregate Meal Sites,March 2017,-106.108917,37.756409,RIO GRANDE COUNTY,MATCH
+-106.353363,37.677273,287,Pioneer United Church,630 Spruce Street,Del Norte,CO,81132,719-657-3375,Congregate Meal Sites,March 2017,-106.353363,37.677273,RIO GRANDE COUNTY,MATCH
+-105.960182,37.274986,288,Northerners Senior Center,413 Main Street,La Jara,CO,81140,719-274-4029,Congregate Meal Sites,March 2017,-105.960182,37.274986,CONEJOS COUNTY,MATCH
+-106.148148,37.577702,289,Tri-County Senior Citizens Center,311 Washington Street,Monte Vista,CO,81144,719-852-2687,Congregate Meal Sites,March 2017,-106.148148,37.577702,RIO GRANDE COUNTY,MATCH
+-106.139641,38.08559,290,Saguache Dept of Social Services,605 Christy Avenue,Saguache,CO,81149,719-966-2201,Congregate Meal Sites,March 2017,-106.139641,38.08559,SAGUACHE COUNTY,MATCH
+-105.419389,37.209459,291,Costilla Senior Citizen Center,1101 Salazar,San Luis,CO,81152,719-672-3376,Congregate Meal Sites,March 2017,-105.419389,37.209459,COSTILLA COUNTY,MATCH
+-107.63339,37.118385,292,Arboles Senior Center,,Arboles,CO,81121,970-563-3166,Congregate Meal Sites,March 2017,-107.63339,37.118385,ARCHULETA COUNTY,MATCH
+-107.601837,37.222862,293,Bayfield Senior Center,111 West South Street,Bayfield,CO,81122,970-247-9136,Congregate Meal Sites,March 2017,-107.601837,37.222862,LA PLATA COUNTY,MATCH
+-108.912803,37.772534,294,Dolores Senior Center,14018 Hwy 91,Cahone,CO,81320,970-562-4626,Congregate Meal Sites,March 2017,-108.912803,37.772534,DOLORES COUNTY,MATCH
+-108.586586,37.350456,295,Cortez Senior Center,115 North Chestnut,Cortez,CO,81321,970-565-4166,Congregate Meal Sites,March 2017,-108.586586,37.350456,MONTEZUMA COUNTY,MATCH
+-108.503578,37.472179,296,Dolores Meal Site,400 Riverside Ave,Dolores,CO,81323,970-565-4166,Congregate Meal Sites,March 2017,-108.503578,37.472179,MONTEZUMA COUNTY,MATCH
+-108.904015,37.764233,297,First Baptist Church,303 N Main St,Dove Creek,CO,81324,970-562-4626,Congregate Meal Sites,March 2017,-108.904015,37.764233,DOLORES COUNTY,MATCH
+-107.875008,37.290066,298,Durango Senior Center,2424 Main Street,Durango,CO,81301,970-247-9136,Congregate Meal Sites,March 2017,-107.875008,37.290066,LA PLATA COUNTY,MATCH
+-107.633148,37.119228,299,SUCAP Senior Center,115 N Goodard,Ignacio,CO,,970-563-3166,Congregate Meal Sites,March 2017,-107.633148,37.119228,LA PLATA COUNTY,MATCH
+-108.288292,37.342033,300,Mancos,141 E Montezuma,Mancos,CO,81328,970-565-4166,Congregate Meal Sites,March 2017,-108.288292,37.342033,MONTEZUMA COUNTY,MATCH
+-107.009804,37.26181,301,Archuleta Senior Center,451 Hot Springs Blvd.,Pagosa Springs,CO,81147,970-264-2167,Congregate Meal Sites,March 2017,-107.009804,37.26181,ARCHULETA COUNTY,MATCH
+-107.66497,37.811066,302,Brown Bear Caf‚,1129 Greene Street,Silverton,CO,81433,970-264-0501,Congregate Meal Sites,March 2017,-107.66497,37.811066,SAN JUAN COUNTY,MATCH
+-107.925041,38.901566,303,Cedaredge Community Center,140 NW 2nd Street,Cedaredge,CO,81413,970-835-2672,Congregate Meal Sites,March 2017,-107.925041,38.901566,DELTA COUNTY,MATCH
+-108.069565,38.743668,304,Delta Community Center,247 Meeker Street,Delta,CO,81416,970-835-2672,Congregate Meal Sites,March 2017,-108.069565,38.743668,DELTA COUNTY,MATCH
+-107.723862,38.79995,305,Hotchkiss Senior Citizen Center,278 W Main Street,Hotchkiss,CO,81419,970-835-2672,Congregate Meal Sites,March 2017,-107.723862,38.79995,DELTA COUNTY,MATCH
+-108.288773,38.129715,306,Norwood Community Center,1670 Naturita Street,Norwood,CO,81423,970-835-2672,Congregate Meal Sites,March 2017,-108.288773,38.129715,SAN MIGUEL COUNTY,MATCH
+-108.545937,38.270393,307,Nucla-West End Senior Center,386 Main Street,Nucla,CO,81425,970-835-2672,Congregate Meal Sites,March 2017,-108.545937,38.270393,MONTROSE COUNTY,MATCH
+-107.986542,38.606323,308,Olathe Community Center,105 Main Street,Olathe,CO,81425,970-835-2672,Congregate Meal Sites,March 2017,-107.986542,38.606323,MONTROSE COUNTY,MATCH
+-107.598717,38.868626,309,Paonia Senior Citizen Center,106 Third Street,Paonia,CO,81428,970-835-2672,Congregate Meal Sites,March 2017,-107.598717,38.868626,DELTA COUNTY,MATCH
+-107.219826,39.396893,310,Crystal Meadows Senior Housing,1250 Hendrick Drive,Carbondale,CO,81623,970-945-9191 xt 3061,Congregate Meal Sites,March 2017,-107.219826,39.396893,GARFIELD COUNTY,MATCH
+-108.449371,39.088581,311,Clifton Hall,126 2nd Street,Clifton,CO,81520,970-243-9844 xt 3,Congregate Meal Sites,March 2017,-108.449371,39.088581,MESA COUNTY,MATCH
+-107.962593,39.238796,312,Collbran Congregational Church,2003 High Street,Collbran,CO,81624,970-243-9844 xt 3,Congregate Meal Sites,March 2017,-107.962593,39.238796,MESA COUNTY,MATCH
+-108.738258,39.162998,313,Fruita Community Center,324 N Coulson,Fruita,CO,81521,970-243-9844 xt 3,Congregate Meal Sites,March 2017,-108.738258,39.162998,MESA COUNTY,MATCH
+-107.322693,39.53899,314,CMC Lucy Huntley Senior Center,1402 Blake Avenue,Glenwood Springs,CO,81601,970-945-9191 xt 3061,Congregate Meal Sites,March 2017,-107.322693,39.53899,GARFIELD COUNTY,MATCH
+-107.320633,39.531197,315,Sunnyside Retirement Center,601 21st Street,Glenwood Springs,CO,81601,970-945-9191 xt 3061,Congregate Meal Sites,March 2017,-107.320633,39.531197,GARFIELD COUNTY,MATCH
+-108.555321,39.088181,316,Monterey Park Apartments,999 Bookcliff,Grand Junction,CO,81501,970-243-9844 xt 3,Congregate Meal Sites,March 2017,-108.555321,39.088181,MESA COUNTY,MATCH
+-108.570984,39.081455,317,Grand View Apartments,1501 N 1st Street,Grand Junction,CO,81501,970-243-9844 xt 3,Congregate Meal Sites,March 2017,-108.570984,39.081455,MESA COUNTY,MATCH
+-108.558105,39.067265,318,Ratekin Towers Apartments,875 Main Street,Grand Junction,CO,81501,970-243-9844 xt 3,Congregate Meal Sites,March 2017,-108.558105,39.067265,MESA COUNTY,MATCH
+-108.563545,39.07143,319,Senior Recreation Center,550 Ouray Ave,Grand Junction,CO,81501,970-243-9844 xt 3,Congregate Meal Sites,March 2017,-108.563545,39.07143,MESA COUNTY,MATCH
+-107.263123,40.491875,320,Hayden Nutrition Site - American Legion,220 South Third,Hayden,CO,81639,970-879-0633,Congregate Meal Sites,March 2017,-107.263123,40.491875,ROUTT COUNTY,MATCH
+-107.908272,40.038361,321,Chuckwagon,200 Main Street,Meeker,CO,81641,970-878-4980,Congregate Meal Sites,March 2017,-107.908272,40.038361,RIO BLANCO COUNTY,MATCH
+-108.139297,39.164505,322,Mesa Community Center,48973 KE Road,Mesa,CO,81643,970-243-9844 xt 3,Congregate Meal Sites,March 2017,-108.139297,39.164505,MESA COUNTY,MATCH
+-107.535515,39.579659,323,Castle Valley Senior Housing,201 Castle Valley Blvd,New Castle,CO,81647,970-945-9191 xt 3061,Congregate Meal Sites,March 2017,-107.535515,39.579659,GARFIELD COUNTY,MATCH
+-106.954041,40.275002,324,South Routt Community Center,227 Dodge Avenue,Oak Creek,CO,80467,970-879-0633,Congregate Meal Sites,March 2017,-106.954041,40.275002,ROUTT COUNTY,MATCH
+-108.351212,39.106182,325,Community Center,120 W 8th Street,Palisade,CO,81526,970-243-9844 xt 3,Congregate Meal Sites,March 2017,-108.351212,39.106182,MESA COUNTY,MATCH
+-108.059219,39.456432,326,Parachute Valley Senior Center,540 N Parachute Avenue,Parachute,CO,81635,970-945-9191 xt 3061,Congregate Meal Sites,March 2017,-108.059219,39.456432,GARFIELD COUNTY,MATCH
+-108.804085,40.090515,327,Radino Senior Center,400 White Avenue,Rangely,CO,81648,970-878-4980,Congregate Meal Sites,March 2017,-108.804085,40.090515,RIO BLANCO COUNTY,MATCH
+-107.775909,39.529575,328,Rifle Senior Center,50 Ute Drive,Rifle,CO,81650,970-945-9191 xt 3061,Congregate Meal Sites,March 2017,-107.775909,39.529575,GARFIELD COUNTY,MATCH
+-107.661438,39.54697,329,Burning Mountain Fire Station,201 Main Street,Silt,CO,81652,970-945-9191 xt 3061,Congregate Meal Sites,March 2017,-107.661438,39.54697,GARFIELD COUNTY,MATCH
+-106.848724,40.493988,330,Steamboat Springs Community Center,1605 Lincoln Avenue,Steamboat Springs,CO,80487,970-879-0633,Congregate Meal Sites,March 2017,-106.848724,40.493988,ROUTT COUNTY,MATCH
+-106.839401,39.193214,331,Pitkin County Senior Center,275 Castle Creek Road,Aspen,CO,81611,970-920-5432,Congregate Meal Sites,March 2017,-106.839401,39.193214,PITKIN COUNTY,MATCH
+-106.827873,39.649612,332,Golden Eagle Senior Center,715 Broadway Street,Eagle,CO,81631,970-328-8896,Congregate Meal Sites,March 2017,-106.827873,39.649612,EAGLE COUNTY,MATCH
+-107.090682,39.392499,333,El Jebel Community Center,20 Eagle County Rd,El Jebel,CO,81623,970-328-7682,Congregate Meal Sites,March 2017,-107.090682,39.392499,EAGLE COUNTY,MATCH
+-105.937271,40.086388,334,Granby Community Senior Center,125 North 3rd Street,Granby,CO,80446,970-887-9903,Congregate Meal Sites,March 2017,-105.937271,40.086388,GRAND COUNTY,MATCH
+-106.38868,40.058723,335,Silver Spruce Apartments,106 S 6th Street,Kremmling,CO,80459,970-724-9730,Congregate Meal Sites,March 2017,-106.38868,40.058723,GRAND COUNTY,MATCH
+-106.412692,39.56398,336,Maloit Park Senior Wellness Center at Vail Ski and Snowboard Academy,1951 Hwy. 24,Vail,CO,81657,970-328-8896,Congregate Meal Sites,March 2017,-106.412692,39.56398,EAGLE COUNTY,MATCH
+-105.237694,38.441891,337,Golden Age Center,728 Main Street,Canon City,CO,81215,719-275-7146,Congregate Meal Sites,March 2017,-105.237694,38.441891,FREMONT COUNTY,MATCH
+-105.118271,38.388287,338,Florence Community Center,100 Railroad,Florence,CO,81226,719-784-6493,Congregate Meal Sites,March 2017,-105.118271,38.388287,FREMONT COUNTY,MATCH
+-106.297607,39.24741,339,Leadville Senior Center,419 W 6th,Leadville,CO,80461,719-486-1774,Congregate Meal Sites,March 2017,-106.297607,39.24741,LAKE COUNTY,MATCH
+-105.992798,38.533382,340,Episcopal Church of the Ascension,349 E Street,Salida,CO,81201,719-539-6447,Congregate Meal Sites,March 2017,-105.992798,38.533382,CHAFFEE COUNTY,MATCH
+-105.458237,38.135792,341,Custer County Senior Center,612 Main Street,Silver Cliff,CO,81249,719-783-9508,Congregate Meal Sites,March 2017,-105.458237,38.135792,CUSTER COUNTY,MATCH
+-104.657043,37.401146,342,Aguilar Community Center,146 W Main,Aguilar,CO,81020,719-941-4265,Congregate Meal Sites,March 2017,-104.657043,37.401146,LAS ANIMAS COUNTY,MATCH
+-104.715759,37.122414,343,Kennedy Senior Center,24295 CR 18.4,Segundo,CO,81082,719-846-9675,Congregate Meal Sites,March 2017,-104.715759,37.122414,LAS ANIMAS COUNTY,MATCH
+-104.507744,37.179333,344,HR Sayre Senior Center,1222 San Pedro,Trinidad,CO,81082,719-846-3336,Congregate Meal Sites,March 2017,-104.507744,37.179333,LAS ANIMAS COUNTY,MATCH
+-104.777596,37.621075,345,Huerfano Community Center,928 Russell,Walsenburg,CO,81089,719-738-2205,Congregate Meal Sites,March 2017,-104.777596,37.621075,HUERFANO COUNTY,MATCH
+-105.171539,40.628929,346,Bellvue Senior Center,2929 N. County Rd 23,Bellvue,CO,80512,970-472-9630,Congregate Meal Sites,March 2017,-105.171539,40.628929,LARIMER COUNTY,MATCH
+-105.096046,40.555553,347,Fort Collins Senior Center,1200 Raintree Drive,Fort Collins,CO,80526,970-472-9630,Congregate Meal Sites,March 2017,-105.096046,40.555553,LARIMER COUNTY,MATCH
+-105.075729,40.591946,348,Northside Aztlan Community Center,112 Willow Street,Fort Collins,CO,80524,970-472-9630,Congregate Meal Sites,March 2017,-105.075729,40.591946,LARIMER COUNTY,MATCH
+-105.069069,40.544556,349,Oakbrook I Apartments,3200 Stanford Road,Fort Collins,CO,80525,970-472-9630,Congregate Meal Sites,March 2017,-105.069069,40.544556,LARIMER COUNTY,MATCH
+-105.069481,40.543491,350,Oakbrook II Apartments,3300 Stanford Road,Fort Collins,CO,80525,970-472-9630,Congregate Meal Sites,March 2017,-105.069481,40.543491,LARIMER COUNTY,MATCH
+-105.067154,40.395325,351,Chilson Senior Center,700 E. 4th Street,Loveland,CO,80537,970-472-9630,Congregate Meal Sites,March 2017,-105.067154,40.395325,LARIMER COUNTY,MATCH
+-105.081284,40.430553,352,Silverleaf I Apartments,"375 W. 37th Street, #200",Loveland,CO,80538,970-472-9630,Congregate Meal Sites,March 2017,-105.081284,40.430553,LARIMER COUNTY,MATCH
+-105.081284,40.430553,353,Silverleaf II Apartments,375 W. 37th Street #200,Loveland,CO,80538,970-472-9630,Congregate Meal Sites,March 2017,-105.081284,40.430553,LARIMER COUNTY,MATCH
+-105.004715,40.709503,354,Wellington Senior Center,3800 Wilson Avenue,Wellington,CO,80549,970-472-9630,Congregate Meal Sites,March 2017,-105.004715,40.709503,LARIMER COUNTY,MATCH
+-105.049194,40.037601,355,Erie Recreation Center,450 Powers Street,Erie,CO,80516,303-926-2795,Congregate Meal Sites,March 2017,-105.049194,40.037601,WELD COUNTY,MATCH
+-104.696808,40.377316,356,Evans Community Center,1100 37th Street,Evans,CO,80620,970-475-1132,Congregate Meal Sites,March 2017,-104.696808,40.377316,WELD COUNTY,MATCH
+-104.931068,40.098671,357,Carbon Valley Recreation Center,701 5th Street,Frederick,CO,80550,303-833-7068,Congregate Meal Sites,March 2017,-104.931068,40.098671,WELD COUNTY,MATCH
+-104.806404,40.078911,358,Ft Lupton Rec/Community Center,203 S Harrison Ave,Ft. Lupton,CO,80621,303-857-4200 xt 166,Congregate Meal Sites,March 2017,-104.806404,40.078911,WELD COUNTY,MATCH
+-104.835281,40.028355,359,Wattenberg Community  Building,1917 Grace Ave,Ft. Lupton,CO,80621,303-854-8349,Congregate Meal Sites,March 2017,-104.835281,40.028355,WELD COUNTY,MATCH
+-104.726341,40.394028,360,Birchwood Apartment,2830 West 27th St Lane,Greeley,CO,80634,970-330-6206,Congregate Meal Sites,March 2017,-104.726341,40.394028,WELD COUNTY,MATCH
+-104.726929,40.425114,361,Broadview,2915 West 8th St,Greeley,CO,80634,970-352-9305,Congregate Meal Sites,March 2017,-104.726929,40.425114,WELD COUNTY,MATCH
+-104.69458,40.418369,362,Greeley Manor,1000 13 Street,Greeley,CO,80631,970-356-5489,Congregate Meal Sites,March 2017,-104.69458,40.418369,WELD COUNTY,MATCH
+-104.69487,40.427181,363,Greeley Senior Activitiy Center,1010 6th Strret,Greeley,CO,80631,970-350-9440,Congregate Meal Sites,March 2017,-104.69487,40.427181,WELD COUNTY,MATCH
+-104.707169,40.38839,364,Greeley Senior Housing,1717 30th Strret,Greeley,CO,80631,970-395-0822,Congregate Meal Sites,March 2017,-104.707169,40.38839,WELD COUNTY,MATCH
+-104.74765,40.364414,365,Hill N'Park,4205 Yosemite Drive,Greeley,CO,80634,970-330-8619,Congregate Meal Sites,March 2017,-104.74765,40.364414,WELD COUNTY,MATCH
+-104.693481,40.435005,366,Rodarte Center,920 A Street,Greeley,CO,80631,970-350-9430,Congregate Meal Sites,March 2017,-104.693481,40.435005,WELD COUNTY,MATCH
+-104.906288,40.336155,367,Johnstown Community Center,101 West Charlotte,Johnstown,CO,80534,970-587-5251,Congregate Meal Sites,March 2017,-104.906288,40.336155,WELD COUNTY,MATCH
+-104.564423,40.38662,368,Kersey Senior Center,415 1st Street,Kersey,CO,80644,970-352-8394,Congregate Meal Sites,March 2017,-104.564423,40.38662,WELD COUNTY,MATCH
+-104.701126,40.348492,369,LaSalle Commnity Center,101 Todd Ave,LaSalle,CO,80645,970-284-0900,Congregate Meal Sites,March 2017,-104.701126,40.348492,WELD COUNTY,MATCH
+-104.714088,40.002983,370,Lochbuie Senior Center,501 Willow Drive,Lochbuie,CO,80603,303-659-8262,Congregate Meal Sites,March 2017,-104.714088,40.002983,WELD COUNTY,MATCH
+-104.998734,40.236809,371,Mead Community Cener,441 3rd Street,Mead,CO,80542,970-535-4477,Congregate Meal Sites,March 2017,-104.998734,40.236809,WELD COUNTY,MATCH
+-104.855537,40.330208,372,Milliken Community Cener,1101 Broad Street,Milliken,CO,80543,970-660-5040,Congregate Meal Sites,March 2017,-104.855537,40.330208,WELD COUNTY,MATCH
+-104.782158,40.704697,373,Nunn Senior Center,775 3rd Street,Nunn,CO,80648,970-897-2459,Congregate Meal Sites,March 2017,-104.782158,40.704697,WELD COUNTY,MATCH
+-104.751732,40.635548,374,Pierce Senior Center,221 Main Avenue,Pierce,CO,80650,970-834-2655,Congregate Meal Sites,March 2017,-104.751732,40.635548,WELD COUNTY,MATCH
+-104.828148,40.220913,375,Platteville Community Rec Center,508 Reynolds,Platteville,CO,80651,970-785-2245 xt 1106,Congregate Meal Sites,March 2017,-104.828148,40.220913,WELD COUNTY,MATCH
+-104.917007,40.479458,376,Windsor Community Center,250 N 11th  Street,Windsor,CO,80550,970-674-3500,Congregate Meal Sites,March 2017,-104.917007,40.479458,WELD COUNTY,MATCH
+-105.081558,39.795933,377,Arvada / Mile High Vineyard,5445 Olde Wadsworth Blvd.,Arvada,CO,80002,720-300-3707,Congregate Meal Sites,March 2017,-105.081558,39.795933,JEFFERSON COUNTY,MATCH
+-104.850311,39.72578,378,Aurora Center for Active Adults,30 Del Mar Circle,Aurora,CO,80011,303-739-7949,Congregate Meal Sites,March 2017,-104.850311,39.72578,ARAPAHOE COUNTY,MATCH
+-105.482918,39.83905,379,Gilpin County Senior Services,2960 Dory Hill Road Suite # 100,Black Hawk,CO,80422,303-582-5444,Congregate Meal Sites,March 2017,-105.482918,39.83905,GILPIN COUNTY,MATCH
+-104.770859,39.969986,380,Eagle View Adult Center,1150 Prairie Center Parkway,Brighton,CO,80601,303-655-2075,Congregate Meal Sites,March 2017,-104.770859,39.969986,ADAMS COUNTY,MATCH
+-104.854164,39.396542,381,Castle Rock Senior Center,2323 N. Woodlands Blvd.,Castle Rock,CO,80104,303-688-9498,Congregate Meal Sites,March 2017,-104.854164,39.396542,DOUGLAS COUNTY,MATCH
+-105.028702,39.722427,382,Barnum Recreation Center,360 Hooker Street,Denver,CO,80219,303-937-4655,Congregate Meal Sites,March 2017,-105.028702,39.722427,DENVER COUNTY,MATCH
+-104.981155,39.741314,383,Cathedral Plaza,1575 Pennsylvania Street,Denver,CO,80203,303-837-1424,Congregate Meal Sites,March 2017,-104.981155,39.741314,DENVER COUNTY,MATCH
+-105.022789,39.671669,384,College View Center/Denver Inner City Parish,2525 S. Decatur Street,Denver,CO,80219,303-350-5565,Congregate Meal Sites,March 2017,-105.022789,39.671669,DENVER COUNTY,MATCH
+-105.002747,39.735489,385,Denver Inner City Parish,1212 Mariposa,Denver,CO,80204,303-629-0636 xt 230,Congregate Meal Sites,March 2017,-105.002747,39.735489,DENVER COUNTY,MATCH
+-104.931473,39.709949,386,Jewish Community Center,350 South Dahlia Street,Denver,CO,80246,303-316-6359,Congregate Meal Sites,March 2017,-104.931473,39.709949,DENVER COUNTY,MATCH
+-105.004326,39.733757,387,La Alma Recreation Center,1325 West 11th Avenue,Denver,CO,80204,303-572-4790,Congregate Meal Sites,March 2017,-105.004326,39.733757,DENVER COUNTY,MATCH
+-105.050865,39.741776,388,Maltese Cross Manor Apartments,1590 Yates Street,Denver,CO,80204,303-629-5138,Congregate Meal Sites,March 2017,-105.050865,39.741776,JEFFERSON COUNTY,MATCH
+-105.040581,39.740837,389,Metro Village Apartments,1523 Quitman Street,Denver,CO,80204,303-572-7716,Congregate Meal Sites,March 2017,-105.040581,39.740837,DENVER COUNTY,MATCH
+-104.806702,39.790234,390,Montbello Recreation Center,15555 East 53rd Avenue.,Denver,CO,80239,720-865-0580,Congregate Meal Sites,March 2017,-104.806702,39.790234,DENVER COUNTY,MATCH
+-104.834129,39.775986,391,Montbello Manor / VOA,4355 Carson Street,Denver,CO,80239,720-374-4955,Congregate Meal Sites,March 2017,-104.834129,39.775986,DENVER COUNTY,MATCH
+-105.034187,39.736515,392,Mulroy Senior Center,3550 W. 13th Avenue,Denver,CO,80204,303-892-1540,Congregate Meal Sites,March 2017,-105.034187,39.736515,DENVER COUNTY,MATCH
+-104.976501,39.744801,393,Senior Support Services,846 East 18th Avenue,Denver,CO,80218,303-832-1622,Congregate Meal Sites,March 2017,-104.976501,39.744801,DENVER COUNTY,MATCH
+-104.994293,39.751732,394,Sunset Park Senior Center/ VOA,1865 Larimer Street,Denver,CO,80202,303-297-0230,Congregate Meal Sites,March 2017,-104.994293,39.751732,DENVER COUNTY,MATCH
+-104.993561,39.752312,395,Sunset Towers / VOA,1925 Larimer Street,Denver,CO,80202,303-292-2065,Congregate Meal Sites,March 2017,-104.993561,39.752312,DENVER COUNTY,MATCH
+-104.978249,39.749413,396,Thomas Bean Towers,2350 Cleveland Place,Denver,CO,80205,720-956-3846,Congregate Meal Sites,March 2017,-104.978249,39.749413,DENVER COUNTY,MATCH
+-105.034378,39.698475,397,Westwood Community Center,1000 South Lowell,Denver,CO,80219,303-934-2181,Congregate Meal Sites,March 2017,-105.034378,39.698475,DENVER COUNTY,MATCH
+-104.928047,39.763832,398,Zion Senior Center,5151 East 33rd Avenue,Denver,CO,80207,303-333-5746,Congregate Meal Sites,March 2017,-104.928047,39.763832,DENVER COUNTY,MATCH
+-104.986305,39.655327,399,Englewood/Malley Senior Center,3380 South Lincoln Street,Englewood,CO,80113,303-762-2660,Congregate Meal Sites,March 2017,-104.986305,39.655327,ARAPAHOE COUNTY,MATCH
+-105.697845,39.706455,400,Georgetown Community Center,6th and Argentine Street,Georgetown,CO,80444,303-567-2382,Congregate Meal Sites,March 2017,-105.697845,39.706455,CLEAR CREEK COUNTY,MATCH
+-105.200005,39.742443,401,Golden/First Presbyterian,17707 West 16th Avenue,Golden,CO,80401,303-279-7450,Congregate Meal Sites,March 2017,-105.200005,39.742443,JEFFERSON COUNTY,MATCH
+-105.517967,39.74184,402,Idaho Springs/Project Support,1402 Miner Street,Idaho Springs,CO,80452,303-567-2382,Congregate Meal Sites,March 2017,-105.517967,39.74184,CLEAR CREEK COUNTY,MATCH
+-105.083633,39.741745,403,Clements Community Center,1580 Yarrow Street,Lakewood,CO,80214,303-987-4833,Congregate Meal Sites,March 2017,-105.083633,39.741745,JEFFERSON COUNTY,MATCH
+-105.027786,39.83445,404,Westminster Commons Apartments,3180 West 76th Ave.,Westminster,CO,80030,303-428-2786,Congregate Meal Sites,March 2017,-105.027786,39.83445,JEFFERSON COUNTY,MATCH
+-105.067192,39.769302,405,Highland South Apartments,6360 West 38th Avenue  Bldg. B,Wheat Ridge,CO,80033,303-940-2068,Congregate Meal Sites,March 2017,-105.067192,39.769302,JEFFERSON COUNTY,MATCH
+-105.509814,40.189397,406,Highlands Presbyterian Camp,,Allenspark,CO,80510,303-441-4995,Congregate Meal Sites,March 2017,-105.509814,40.189397,BOULDER COUNTY,MATCH
+-105.161285,39.974033,407,Louisville Senior Center - Brooks Caf‚,900 W Via Appia Way,Louisville,CO,80027,303-335-4903,Congregate Meal Sites,March 2017,-105.161285,39.974033,BOULDER COUNTY,MATCH
+-105.511604,39.964711,408,Nederland Community Center,750 Hwy 72 North,Nederland,CO,80466,303-258-0799,Congregate Meal Sites,March 2017,-105.511604,39.964711,BOULDER COUNTY,MATCH
+-105.282967,40.025654,409,Boulder Community Hospital,"1155 Alpine Ave., Medical Pavilion Bldg., Gene Wilson Conference Room B, Ground Level",Boulder,CO,80304,303.494.7515,Diabetes Resources,August 2014,-105.282967,40.025654,BOULDER COUNTY,MATCH
+-105.270547,40.014984,410,"Boulder County Area Agency on Aging, Diabetes Support Group",n/a,Boulder,CO,0,303.678.6115,Diabetes Resources,August 2014,-105.270547,40.014984,BOULDER COUNTY,CORRECTED
+-105.124772,40.181186,411,Longmont Clinic,1925 W. Mountain View Ave.,Longmont,CO,80501,720.494.3102,Diabetes Resources,August 2014,-105.124772,40.181186,BOULDER COUNTY,MATCH
+-105.961053,37.278508,412,Conejos County Hospital District,19021 US Hwy 285,La Jara,CO,81140,719.274.6068,Diabetes Resources,August 2014,-105.961053,37.278508,CONEJOS COUNTY,MATCH
+-104.966611,39.746222,413,Presbyterian/St. Luke's Medical Center,1719 E. 19th Ave.,Denver,CO,80218,303.869.2222,Diabetes Resources,August 2014,-104.966611,39.746222,DENVER COUNTY,MATCH
+-104.934561,39.731206,414,Rose Medical Center,"4545 E. 9th Ave., Suite 020",Denver,CO,80220,303.320.2490,Diabetes Resources,August 2014,-104.934561,39.731206,DENVER COUNTY,MATCH
+-104.984707,39.739161,415,Healthy Spirits at St. Joseph's Hospital,n/a,Denver,CO,0,303.797.4708,Diabetes Resources,August 2014,-104.984707,39.739161,DENVER COUNTY,CORRECTED
+-104.896363,39.536094,416,"Sky Ridge Medical Diabetes Support Group, CafΘ Conference Room, Garden Level",n/a,Lone Tree,CO,0,303.779.9355,Diabetes Resources,August 2014,-104.896363,39.536094,DOUGLAS COUNTY,CORRECTED
+-104.794736,38.829169,417,"Memorial Hospital, Printers Park Medical Plaza","175 S. Union St., Suite 300",Colorado Springs,CO,80910,719.365.5532,Diabetes Resources,August 2014,-104.794736,38.829169,EL PASO COUNTY,MATCH
+-104.782905,38.907235,418,Memorial Hospital HealthLink,"5460 N. Academy Blvd., Suite 220",Colorado Springs,CO,80909,719.444.2273,Diabetes Resources,August 2014,-104.782905,38.907235,EL PASO COUNTY,MATCH
+-104.797891,38.874335,419,Penrose Hospital,1644 Medical Center Point,Colorado Springs,CO,80907,719.776.4724,Diabetes Resources,August 2014,-104.797891,38.874335,EL PASO COUNTY,MATCH
+-104.794056,38.855889,420,Summit Medical Clinic,"1605 N. Union Blvd., #200",Colorado Springs,CO,80909,719.630.1006,Diabetes Resources,August 2014,-104.794056,38.855889,EL PASO COUNTY,MATCH
+-105.230202,38.45561,421,St. Thomas More Hospital,1338 Phay Ave.,Canon City,CO,81212,719.285.2712,Diabetes Resources,August 2014,-105.230202,38.45561,FREMONT COUNTY,MATCH
+-106.924495,38.551203,422,Gunnison Valley Health,711 N. Taylor St.,Gunnision,CO,81230,970.642.8420,Diabetes Resources,August 2014,-106.924495,38.551203,GUNNISON COUNTY,MATCH
+-105.09244,39.766392,423,Exempla Lutheran Medical Center Diabetes Program,"3555 Lutheran Parkway, Suite 180",Wheat Ridge,CO,80033,303.402.3604,Diabetes Resources,August 2014,-105.09244,39.766392,JEFFERSON COUNTY,MATCH
+-105.057679,40.5737,424,Poudre Valley Hospital,1024 S. Lemay Ave.,Fort Collins,CO,80524,970.495.8207,Diabetes Resources,August 2014,-105.057679,40.5737,LARIMER COUNTY,MATCH
+-105.05342,40.413627,425,McKee Medical Center,2000 N. Boise Ave.,Loveland,CO,80538,970.635.4001,Diabetes Resources,August 2014,-105.05342,40.413627,LARIMER COUNTY,MATCH
+-103.220161,40.613557,426,Sterling Regional Medical Center,615 Fairhurst,Sterling,CO,80751,970.521.3260,Diabetes Resources,August 2014,-103.220161,40.613557,LOGAN COUNTY,MATCH
+-107.545891,40.519439,427,Memorial Hospital,785 Russell,Craig,CO,81625,970.824.2273,Diabetes Resources,August 2014,-107.545891,40.519439,MOFFAT COUNTY,MATCH
+-103.649364,40.254535,428,East Morgan County Hospital,2400 W. Edison,Brush,CO,80723,970.842.6827,Diabetes Resources,August 2014,-103.649364,40.254535,MORGAN COUNTY,MATCH
+-103.548913,37.976854,429,Arkansas Valley Regional Medical Center,1100 Carson Ave.,La Junta,CO,81050,719.383.6113,Diabetes Resources,August 2014,-103.548913,37.976854,OTERO COUNTY,MATCH
+-104.612135,38.281541,430,Parkview Medical Center,400 W. 16th St.,Pueblo,CO,81003,719.584.4358,Diabetes Resources,August 2014,-104.612135,38.281541,PUEBLO COUNTY,MATCH
+-104.622934,38.233073,431,St. Mary-Corwin Medical Center,1008 Minnequa Ave.,Pueblo,CO,81004,719.560.5284,Diabetes Resources,August 2014,-104.622934,38.233073,PUEBLO COUNTY,MATCH
+-104.708469,40.413968,432,North Colorado Medical Center,1801 16th St.,Greeley,CO,80631,970.395.2672,Diabetes Resources,August 2014,-104.708469,40.413968,WELD COUNTY,MATCH
+-104.984917,39.913812,433,Division of Vocational Rehabilitation,"11990 Grant St., Suite 201",Northglenn,CO,80233,303.866.2110,Division of Vocational Rehabilitation,August 2014,-104.984917,39.913812,ADAMS COUNTY,MATCH
+-105.884822,37.476226,434,Division of Vocational Rehabilitation,"305 Murphy Dr., Unit B",Alamosa,CO,81101,719.589.5158,Division of Vocational Rehabilitation,August 2014,-105.884822,37.476226,ALAMOSA COUNTY,MATCH
+-104.841394,39.674711,435,Division of Vocational Rehabilitation,"12510 E. Illiff Ave., Suite 303",Aurora,CO,80014,303.337.4610,Division of Vocational Rehabilitation,August 2014,-104.841394,39.674711,ARAPAHOE COUNTY,MATCH
+-104.89487,39.607459,436,Division of Vocational Rehabilitation,"6000 Greenwood Plaza Blvd., Suite 105",Greenwood Village,CO,80111,303.221.2089,Division of Vocational Rehabilitation,August 2014,-104.89487,39.607459,ARAPAHOE COUNTY,MATCH
+-105.239382,40.021299,437,Division of Vocational Rehabilitation,"4875 Pearl East Circle, Suite 301",Boulder,CO,80301,303.444.2816,Division of Vocational Rehabilitation,August 2014,-105.239382,40.021299,BOULDER COUNTY,MATCH
+-105.104019,40.164941,438,Division of Vocational Rehabilitation,"351 Coffman St., Suite 216",Longmont,CO,80501,303.776.6878,Division of Vocational Rehabilitation,August 2014,-105.104019,40.164941,BOULDER COUNTY,MATCH
+-105.993045,38.534179,439,Division of Vocational Rehabilitation,141 E. 3rd St.,Salida,CO,81201,719.539.9670,Division of Vocational Rehabilitation,August 2014,-105.993045,38.534179,CHAFFEE COUNTY,MATCH
+-108.069625,38.747171,440,Division of Vocational Rehabilitation,206 Ute St.,Delta,CO,81416,970.874.5781,Division of Vocational Rehabilitation,August 2014,-108.069625,38.747171,DELTA COUNTY,MATCH
+-105.013621,39.678807,441,Division of Vocational Rehabilitation,2211 W. Evans,Denver,CO,80223,303.866.2500,Division of Vocational Rehabilitation,August 2014,-105.013621,39.678807,DENVER COUNTY,MATCH
+-106.595792,39.643704,442,Division of Vocational Rehabilitation,"105 Edwards Village Blvd., Suite G210",Edwards,CO,81632,970.926.1515,Division of Vocational Rehabilitation,August 2014,-106.595792,39.643704,EAGLE COUNTY,MATCH
+-104.852714,38.896342,443,Division of Vocational Rehabilitation,"1365 Garden of the Gods Rd., Suite 250",Colorado Springs,CO,80907,719.635.3585,Division of Vocational Rehabilitation,August 2014,-104.852714,38.896342,EL PASO COUNTY,MATCH
+-105.183039,38.445014,444,Division of Vocational Rehabilitation,172 Justice Center Rd.,Canon City,CO,81212,719.269.2076,Division of Vocational Rehabilitation,August 2014,-105.183039,38.445014,FREMONT COUNTY,MATCH
+-107.325535,39.527771,445,Division of Vocational Rehabilitation,"2425 S. Grand Ave., Suite 110",Glenwood Springs,CO,81601,970.945.1042,Division of Vocational Rehabilitation,August 2014,-107.325535,39.527771,GARFIELD COUNTY,MATCH
+-105.209788,39.733459,446,Division of Vocational Rehabilitation,"3500 Illinois St., Suite 1400",Golden,CO,80401,303.866.4121,Division of Vocational Rehabilitation,August 2014,-105.209788,39.733459,JEFFERSON COUNTY,MATCH
+-107.879734,37.272473,447,Division of Vocational Rehabilitation,"835 Second Av., Suite 425",Durango,CO,81301,970.247.3161,Division of Vocational Rehabilitation,August 2014,-107.879734,37.272473,LA PLATA COUNTY,MATCH
+-105.079629,40.547728,448,Division of Vocational Rehabilitation,"2850 McClelland Dr., Suite 2000",Fort Collins,CO,80525,970.223.9823,Division of Vocational Rehabilitation,August 2014,-105.079629,40.547728,LARIMER COUNTY,MATCH
+-104.505726,37.168846,449,Division of Vocational Rehabilitation,140 N. Commercial,Trinidad,CO,81082,719.846.7934,Division of Vocational Rehabilitation,August 2014,-104.505726,37.168846,LAS ANIMAS COUNTY,MATCH
+-103.686998,39.261694,450,Division of Vocational Rehabilitation,825 Second St.,Limon,CO,80828,719.775.8819,Division of Vocational Rehabilitation,August 2014,-103.686998,39.261694,LINCOLN COUNTY,MATCH
+-103.197379,40.636982,451,Division of Vocational Rehabilitation,"100 College Ave., Walker Hall, Room 1",Sterling,CO,80751,970.522.3737,Division of Vocational Rehabilitation,August 2014,-103.197379,40.636982,LOGAN COUNTY,MATCH
+-108.562544,39.065843,452,Division of Vocational Rehabilitation,"222 S. 6th St., Suite 215",Grand Junction,CO,81501,970.248.7103,Division of Vocational Rehabilitation,August 2014,-108.562544,39.065843,MESA COUNTY,MATCH
+-107.581318,40.509553,453,Division of Vocational Rehabilitation,50 College Dr.,Craig,CO,81625,970.824.9671,Division of Vocational Rehabilitation,August 2014,-107.581318,40.509553,MOFFAT COUNTY,MATCH
+-107.867676,38.471183,454,Division of Vocational Rehabilitation,"1010 S. Cascade Ave., Suite C",Montrose,CO,81401,970.249.4468,Division of Vocational Rehabilitation,August 2014,-107.867676,38.471183,MONTROSE COUNTY,MATCH
+-103.801673,40.251537,455,Division of Vocational Rehabilitation,"411 Main St., Suite 200",Fort Morgan,CO,80701,970.542.9376,Division of Vocational Rehabilitation,August 2014,-103.801673,40.251537,MORGAN COUNTY,MATCH
+-102.618764,38.079658,456,Division of Vocational Rehabilitation,1006 S. Main St.,Lamar,CO,81052,719.336.7712,Division of Vocational Rehabilitation,August 2014,-102.618764,38.079658,PROWERS COUNTY,MATCH
+-104.608456,38.273834,457,Division of Vocational Rehabilitation,720 N. Main Suite 320,Pueblo,CO,81003,719.544.1406,Division of Vocational Rehabilitation,August 2014,-104.608456,38.273834,PUEBLO COUNTY,MATCH
+-106.824018,40.467483,458,Division of Vocational Rehabilitation,"345 Anglers Dr., Bldg E, Suite C",Steamboat Springs,CO,80488,970.871.4853,Division of Vocational Rehabilitation,August 2014,-106.824018,40.467483,ROUTT COUNTY,MATCH
+-106.0942113,39.5775222,459,Division of Vocational Rehabilitation,602 Galena,Frisco,CO,80443,970.668.0234,Division of Vocational Rehabilitation,August 2014,-106.0942113,39.5775222,SUMMIT COUNTY,CORRECTED
+-104.691579,40.425704,460,Division of Vocational Rehabilitation,"822 7th St., Suite 350",Greeley,CO,80631,970.353.5409,Division of Vocational Rehabilitation,August 2014,-104.691579,40.425704,WELD COUNTY,MATCH
+-105.015208,39.858848,461,"The Senior Hub, Inc., Medical Equipment Lending Service",2360 W. 90th Ave.,Federal Heights,CO,80260,303.426.4408,Equipment Loan Programs,August 2014,-105.015208,39.858848,ADAMS COUNTY,MATCH
+-105.877951,37.460381,462,South Central HCP Regional Office Equipment Loan Program,1570 12th St.,Alamosa,CO,81101,719.587.3099,Equipment Loan Programs,August 2014,-105.877951,37.460381,ALAMOSA COUNTY,MATCH
+-104.940424,39.70355,463,"Muscular Dystrophy Association, Inc.","720 S. Colorado Blvd., #380-S",Denver,CO,80246,303.691.3331,Equipment Loan Programs,August 2014,-104.940424,39.70355,ARAPAHOE COUNTY,MATCH
+-105.52675,40.194255,464,"Allenspark Loan Closet, Allenspark Fire Hall",n/a,Allenspark,CO,80510,303.747.0138,Equipment Loan Programs,August 2014,-105.52675,40.194255,BOULDER COUNTY,CORRECTED
+-105.27544,40.06136,465,American Legion,4760 N. 28th,Boulder,CO,80301,303.442.9551,Equipment Loan Programs,August 2014,-105.27544,40.06136,BOULDER COUNTY,MATCH
+-105.258745,40.046831,466,Boulder Elks Lodge #566 Loan Closet,3975 28th,Boulder,CO,80301,303.442.5003,Equipment Loan Programs,August 2014,-105.258745,40.046831,BOULDER COUNTY,MATCH
+-105.28305,40.013368,467,Boulder Senior Services West Center Loan Closet,909 Arapahoe Ave.,Boulder,CO,80302,303.441.3148,Equipment Loan Programs,August 2014,-105.28305,40.013368,BOULDER COUNTY,MATCH
+-105.086952,39.998063,468,Lafayette Senior Center loan Closet for Medical Equipment,103 S. Iowa Ave.,Lafayette,CO,80026,303.665.9052,Equipment Loan Programs,August 2014,-105.086952,39.998063,BOULDER COUNTY,MATCH
+-105.11214,40.153843,469,American Legion Post No. 32 Auxillary Loan Closet,315 S. Bowen,Longmont,CO,80501,303.776.2034,Equipment Loan Programs,August 2014,-105.11214,40.153843,BOULDER COUNTY,MATCH
+-105.10366,40.164327,470,Longmont Elks Lodge No. 1055 Loan Closet,306 Coffman,Longmont,CO,80501,303.776.1055,Equipment Loan Programs,August 2014,-105.10366,40.164327,BOULDER COUNTY,MATCH
+-105.106876,40.197325,471,Longmont Moose Lodge Loan Closet,2200 Pratt,Longmont,CO,80501,303.776.4911,Equipment Loan Programs,August 2014,-105.106876,40.197325,BOULDER COUNTY,MATCH
+-105.102369,40.154344,472,Longmont VFW Loan Closet,206 S. Main,Longmont,CO,80501,303.776.8590,Equipment Loan Programs,August 2014,-105.102369,40.154344,BOULDER COUNTY,MATCH
+-105.161204,39.973967,473,Louisville Senior Services Loan Closet,900 Via Appia Way,Louisville,CO,80027,303.335.4919,Equipment Loan Programs,August 2014,-105.161204,39.973967,BOULDER COUNTY,MATCH
+-105.268384,40.22365,474,Lyons Golden Gang Loan Closet,"335 Railroad Ave., Suite B",Lyons,CO,80540,303.823.6771,Equipment Loan Programs,August 2014,-105.268384,40.22365,BOULDER COUNTY,MATCH
+-105.512213,39.964705,475,"Boulder County Aging Services Division, Nederland Area Loan Closet","750 Hwy 72 North, 2nd Floor, Room 129",Nederland,CO,80466,303.258.3068,Equipment Loan Programs,August 2014,-105.512213,39.964705,BOULDER COUNTY,CORRECTED
+-105.159262,40.106865,476,Niwot Loan Closet,7320 N. 83rd St.,Niwot,CO,80503,303.652.2249,Equipment Loan Programs,August 2014,-105.159262,40.106865,BOULDER COUNTY,MATCH
+-105.066554,39.919075,477,"Broomfield Senior Center, Loan Closet",280 Lamar St.,Broomfield,CO,80020,303.464.5526,Equipment Loan Programs,August 2014,-105.066554,39.919075,BROOMFIELD COUNTY,MATCH
+-104.958544,39.738565,478,Assistance League of Denver Hospital Equipment Lending Program (HELP),1400 Josephine St.,Denver,CO,80206,303.322.1688,Equipment Loan Programs,August 2014,-104.958544,39.738565,DENVER COUNTY,MATCH
+-105.022568,39.77677,479,Association for Senior Citizens Emergency Medical Equipment Program,2839 W. 44th Ave.,Denver,CO,80211,303.455.9642,Equipment Loan Programs,August 2014,-105.022568,39.77677,DENVER COUNTY,MATCH
+-104.992573,39.712887,480,Atlantis Community,201 S. Cherokee St.,Denver,CO,80223,303.733.9324,Equipment Loan Programs,August 2014,-104.992573,39.712887,DENVER COUNTY,MATCH
+-104.961154,39.753363,481,Dominican Sisters Home Health Agency Medical Equipment Loan Program,2501 Gaylord,Denver,CO,80205,303.322.1413,Equipment Loan Programs,August 2014,-104.961154,39.753363,DENVER COUNTY,MATCH
+-104.94091,39.692465,482,Parkinson's Association of the Rockies,"1325 S. Colorado Blvd., #204-B",Denver,CO,80222,303.830.1839,Equipment Loan Programs,August 2014,-104.94091,39.692465,DENVER COUNTY,MATCH
+-104.88185,39.649711,483,Volunteers in Action Orthopedic Bank,"9185 E. Kenyon Ave., Suite 130",Denver,CO,80237,303.713.9144,Equipment Loan Programs,August 2014,-104.88185,39.649711,DENVER COUNTY,MATCH
+-104.927834,39.67144,484,Colorado Spina Bifida Association Equipment Loan Program,PO Box 22994,Denver,CO,80222,303.797.7870,Equipment Loan Programs,August 2014,-104.927834,39.67144,DENVER COUNTY,CORRECTED
+-104.858157,39.563768,485,Developmental Pathways,325 Inverness Dr. South,Englewood,CO,80112,303.360.6600,Equipment Loan Programs,August 2014,-104.858157,39.563768,DOUGLAS COUNTY,MATCH
+-104.756836,38.866416,486,Amblicab,2377 N. Academy Blvd.,Colorado Springs,CO,80909,719.633.4601,Equipment Loan Programs,August 2014,-104.756836,38.866416,EL PASO COUNTY,MATCH
+-104.75761,38.851522,487,Cerbral Palsy Association of Colorado Springs,"1322 N. Academy Blvd., Suite 115",Colorado Springs,CO,80909,719.638.0808,Equipment Loan Programs,August 2014,-104.75761,38.851522,EL PASO COUNTY,MATCH
+-104.756836,38.866416,488,Pikes Peak Partnership Durable Medical Equipment Lending Closet Services,2377 N. Academy Blvd.,Colorado Springs,CO,80909,719.633.4601 ext.114,Equipment Loan Programs,August 2014,-104.756836,38.866416,EL PASO COUNTY,MATCH
+-104.862911,38.840959,489,Silver Key,2250 Bott Ave.,Colorado Springs,CO,80904,719.884.2360,Equipment Loan Programs,August 2014,-104.862911,38.840959,EL PASO COUNTY,MATCH
+-104.743129,38.748482,490,Fountain Valley Senior Center Equipment Loan Program,5745 Southmoor Dr.,Fountain,CO,80817,719.520.6471,Equipment Loan Programs,August 2014,-104.743129,38.748482,EL PASO COUNTY,MATCH
+-105.13658,39.716573,491,American Legion Equipment Loan Closet,"155 Van Gordon, #364",Lakewood,CO,80228,303.914.5585,Equipment Loan Programs,August 2014,-105.13658,39.716573,JEFFERSON COUNTY,MATCH
+-105.094672,39.738522,492,"Jeffco Action Center, Inc., Equipment Loan Program",8755 W. 14th Ave.,Lakewood,CO,80215,303.237.7704,Equipment Loan Programs,August 2014,-105.094672,39.738522,JEFFERSON COUNTY,MATCH
+-105.083527,39.741813,493,Lloyd G. Clements Community Center Loan Closet,1580 Yarrow St.,Lakewood,CO,80215,303.987.4820,Equipment Loan Programs,August 2014,-105.083527,39.741813,JEFFERSON COUNTY,MATCH
+-105.513874,40.372442,494,Quota Club of Estes Park Equipment Loan Program at Estes Park Medical Center,555 Prospect Ave.,Estes Park,CO,80517,970.586.2317,Equipment Loan Programs,August 2014,-105.513874,40.372442,LARIMER COUNTY,MATCH
+-105.059086,40.573648,495,Disabled Resource Services,1017 Robertson St.,Fort Collins,CO,80524,970.482.2700,Equipment Loan Programs,August 2014,-105.059086,40.573648,LARIMER COUNTY,MATCH
+-105.081813,40.502,496,Foothills Gateway Equipment Loan Program,301 Skyway Dr.,Fort Collins,CO,80525,970.226.2345ext.1415,Equipment Loan Programs,August 2014,-105.081813,40.502,LARIMER COUNTY,MATCH
+-105.069326,40.407076,497,Disabled Resource Services,"640 E. Eisenhower, Suite E",Loveland,CO,80537,970.667.0816,Equipment Loan Programs,August 2014,-105.069326,40.407076,LARIMER COUNTY,MATCH
+-105.07474,40.39461,498,Veterans of Foreign Wars Auxillary,305 Cleveland,Loveland,CO,80537,970.667.4722,Equipment Loan Programs,August 2014,-105.07474,40.39461,LARIMER COUNTY,MATCH
+-108.598621,39.111696,499,"Mercy Ministries Medical Equipment Bank, Canyon View Vineyard Church",736 24 1/2 Rd.,Grand Junction,CO,81505,970.242.7970,Equipment Loan Programs,August 2014,-108.598621,39.111696,MESA COUNTY,MATCH
+-104.930032,40.096328,500,Tri Town Senior Center,6615 Frederick Way,Frederick,CO,80530,303.833.2739,Equipment Loan Programs,August 2014,-104.930032,40.096328,WELD COUNTY,MATCH
+-104.69107,40.417927,501,Connections for Independent Living,1331 8th Ave.,Greeley,CO,80631,970.352.8682,Equipment Loan Programs,August 2014,-104.69107,40.417927,WELD COUNTY,MATCH
+-104.708469,40.413968,502,North Colorado Medical Center Equipment Loan Program,1801 16th St.,Greeley,CO,80631,970.350.6155,Equipment Loan Programs,August 2014,-104.708469,40.413968,WELD COUNTY,MATCH
+-105.230244,40.015788,503,Center for People with Disabilities,1675 Range St.,Boulder,CO,80301,303.442.8662,Independent Living Centers,August 2014,-105.230244,40.015788,BOULDER COUNTY,MATCH
+-104.992573,39.712887,504,Atlantis Community Inc.,201 S. Cherokee,Denver,CO,80223,303.733.9324,Independent Living Centers,August 2014,-104.992573,39.712887,DENVER COUNTY,MATCH
+-104.987662,39.741496,505,Mile High Independent Living Center,"110 16th St., #504",Denver,CO,80202,303.800.4700,Independent Living Centers,August 2014,-104.987662,39.741496,DENVER COUNTY,MATCH
+-104.824088,38.823256,506,The Independence Center,729 South Tejon,Colorado Springs,CO,80903,719.471.8181,Independent Living Centers,August 2014,-104.824088,38.823256,EL PASO COUNTY,CORRECTED
+-107.869071,37.303683,507,Southwest Center for Independence,3473 Main Ave. #23,Durango,CO,81301,970.259.1672,Independent Living Centers,August 2014,-107.869071,37.303683,LA PLATA COUNTY,MATCH
+-105.059086,40.573648,508,Disabled Resource Services,"1017 Robertson, #B",Fort Collins,CO,80524,970.482.2700,Independent Living Centers,August 2014,-105.059086,40.573648,LARIMER COUNTY,MATCH
+-108.559999,39.073539,509,Center for Independence,740 Gunnison,Grand Junction,CO,81501,970.241.0315,Independent Living Centers,August 2014,-108.559999,39.073539,MESA COUNTY,MATCH
+-104.627491,38.243987,510,Center for Disabilities,1304 Berkley Ave.,Pueblo,CO,81004,719.546.1271,Independent Living Centers,August 2014,-104.627491,38.243987,PUEBLO COUNTY,MATCH
+-106.840313,40.48968,511,Northwest Colorado Center for Independence,"1306 Lincoln Ave., Suite A",Steamboat Springs,CO,80487,970.871.4838,Independent Living Centers,August 2014,-106.840313,40.48968,ROUTT COUNTY,MATCH
+-104.69107,40.417927,512,Connections for Independent Living,1331 8th Ave.,Greeley,CO,80631,970.352.8682,Independent Living Centers,August 2014,-104.69107,40.417927,WELD COUNTY,MATCH
+-104.815778,39.985375,513,Brighton Senior Center,575 Bush St.,Brighton,CO,80601,303.659.0978,Meal Delivery Programs,August 2014,-104.815778,39.985375,ADAMS COUNTY,MATCH
+-105.015208,39.858848,514,Meals on Wheels Adams County,2360 W. 90th Ave.,Denver,CO,80260,202.426.4408,Meal Delivery Programs,August 2014,-105.015208,39.858848,ADAMS COUNTY,MATCH
+-104.971812,39.868295,515,Thornton Senior Center,9471 Dorothy Blvd.,Denver,CO,80229,303.255.7850,Meal Delivery Programs,August 2014,-104.971812,39.868295,ADAMS COUNTY,MATCH
+-105.015208,39.858848,516,The Senior Hub Meals on Wheels,2360 W. 90th Ave.,Federal Heights,CO,80260,303.426.4408,Meal Delivery Programs,August 2014,-105.015208,39.858848,ADAMS COUNTY,MATCH
+-105.863089,37.470262,517,South Central Colorado Seniors Inc.,1116 3rd St.,Alamosa,CO,81101,719.589.4511,Meal Delivery Programs,August 2014,-105.863089,37.470262,ALAMOSA COUNTY,MATCH
+-104.936232,39.585058,518,TLC Meals on Wheels,7300 S. Clermont Dr.,Centennial,CO,80122,303.798.7642,Meal Delivery Programs,August 2014,-104.936232,39.585058,ARAPAHOE COUNTY,MATCH
+-107.009907,37.261768,519,Archuleta County Senior Services/Silver Foxes Den,451 Hot Springs Blvd.,Pagosa Springs,CO,81147,970.264.2167,Meal Delivery Programs,August 2014,-107.009907,37.261768,ARCHULETA COUNTY,MATCH
+-105.108212,39.988212,520,Coal Creek Meals on Wheels,1255 Centaur Village Dr.,Boulder,CO,80026,303.665.0566,Meal Delivery Programs,August 2014,-105.108212,39.988212,BOULDER COUNTY,MATCH
+-105.246055,40.039985,521,"Jewish Family Services, L'Dor V'Dor Shabbot Meals",3800 Kalmia Ave.,Boulder,CO,80301,303.415.1025,Meal Delivery Programs,August 2014,-105.246055,40.039985,BOULDER COUNTY,MATCH
+-105.28305,40.013368,522,Meals on Wheels Boulder,"909 Arapahoe Ave., #121",Boulder,CO,80302,303.441.3908,Meal Delivery Programs,August 2014,-105.28305,40.013368,BOULDER COUNTY,MATCH
+-105.108212,39.988212,523,East Boulder County Meals on Wheels,1255 Centaur Village Dr.,Lafayette,CO,80026,303.665.0566,Meal Delivery Programs,August 2014,-105.108212,39.988212,BOULDER COUNTY,MATCH
+-105.106652,40.170808,524,Longmont Meals on Wheels,910 Longs Peak Ave.,Longmont,CO,80501,303.772.0540,Meal Delivery Programs,August 2014,-105.106652,40.170808,BOULDER COUNTY,MATCH
+-105.065425,39.920495,525,City and County of Broomfield Senior Services,280 Spader Way,Broomfield,CO,80020,303.464.5527,Meal Delivery Programs,August 2014,-105.065425,39.920495,BROOMFIELD COUNTY,CORRECTED
+-108.069667,38.743665,526,Senior Citizen Center Meals on Wheels,247 Meeker St.,Delta,CO,81416,970.874.7661,Meal Delivery Programs,August 2014,-108.069667,38.743665,DELTA COUNTY,MATCH
+-105.022568,39.77677,527,"Senior Assistance Center, Meals on Wheels Delivery",2839 W. 44th Ave.,Denver,CO,80211,303.455.9642,Meal Delivery Programs,August 2014,-105.022568,39.77677,DENVER COUNTY,MATCH
+-104.984503,39.759013,528,Volunteers of America's Meals on Wheels Program,2660 Larimer St.,Denver,CO,80205,303.294.0111,Meal Delivery Programs,August 2014,-104.984503,39.759013,DENVER COUNTY,MATCH
+-104.984503,39.759013,529,Volunteers of America's Meals on Wheels Program,2660 Larimer St.,Denver,CO,80205,970.472.9630,Meal Delivery Programs,August 2014,-104.984503,39.759013,DENVER COUNTY,MATCH
+-104.837065,38.833463,530,Pikes Peak Area Agency on Aging,15 S. 7th St.,Colorado Springs,CO,80905,719.471.7080,Meal Delivery Programs,August 2014,-104.837065,38.833463,EL PASO COUNTY,MATCH
+-104.862911,38.840959,531,Silver Key Senior Services Meals on Wheels,2250 Bott Ave.,Colorado Springs,CO,80904,719.884.2300,Meal Delivery Programs,August 2014,-104.862911,38.840959,EL PASO COUNTY,MATCH
+-104.743129,38.748482,532,Founatin Valley Senior Center,5745 Southmoor Dr.,Fountain,CO,80817,719.520.6470,Meal Delivery Programs,August 2014,-104.743129,38.748482,EL PASO COUNTY,MATCH
+-105.23908,38.443304,533,Meals on Wheels,702 Greenwood,Canon City,CO,81212,719.275.8548,Meal Delivery Programs,August 2014,-105.23908,38.443304,FREMONT COUNTY,MATCH
+-105.11827,38.38816,534,Meals on Wheels,100 Railroad,Florence,CO,81226,719.784.6493,Meal Delivery Programs,August 2014,-105.11827,38.38816,FREMONT COUNTY,MATCH
+-107.77183,39.52245,535,Meals on Wheels,501 Airport Rd.,Rifle,CO,81650,970.625.6423,Meal Delivery Programs,August 2014,-107.77183,39.52245,GARFIELD COUNTY,MATCH
+-105.323778,39.623162,536,Senior's Resource Center Mountain Service,5120 Hwy 73,Evergreen,CO,80439,303.674.2843,Meal Delivery Programs,August 2014,-105.323778,39.623162,JEFFERSON COUNTY,MATCH
+-105.081376,39.704709,537,Jefferson County Council on Aging,PO Box 280112,Lakewood,CO,80228,303.271.3487,Meal Delivery Programs,August 2014,-105.081376,39.704709,JEFFERSON COUNTY,CORRECTED
+-107.63311,37.115004,538,Southern Ute Indian tribe-Southern Ute Community Action Programs,PO Box 800,Ignacio,CO,81137,970.563.4561,Meal Delivery Programs,August 2014,-107.63311,37.115004,LA PLATA COUNTY,CORRECTED
+-106.297638,39.247316,539,Leadville Senior Center,419 W. 6th Street,Leadville,CO,80401,719.486.1774,Meal Delivery Programs,August 2014,-106.297638,39.247316,LAKE COUNTY,MATCH
+-105.504655,40.374433,540,Meals on Wheels,220 4th St.,Estes Park,CO,80517,970.586.2996,Meal Delivery Programs,August 2014,-105.504655,40.374433,LARIMER COUNTY,MATCH
+-105.09605,40.555634,541,Ft. Collins Senior Center,1200 Raintree Dr.,Fort Collins,CO,80526,970.221.6644,Meal Delivery Programs,August 2014,-105.09605,40.555634,LARIMER COUNTY,MATCH
+-105.056009,40.57408,542,Meals on Wheels,"1217 E. Elizabeth, Suite 11",Fort Collins,CO,80522,970.484.6325,Meal Delivery Programs,August 2014,-105.056009,40.57408,LARIMER COUNTY,MATCH
+-105.091633,40.561597,543,Senior Center,812 Shire Ct.,Fort Collins,CO,80526,970.407.9916,Meal Delivery Programs,August 2014,-105.091633,40.561597,LARIMER COUNTY,MATCH
+-105.029967,40.56067,544,Larimer County Office on Aging,"2601 Midpoint Dr., Suite 112",Fort Collins,CO,80525,970.498.7750,Meal Delivery Programs,August 2014,-105.029967,40.56067,LARIMER COUNTY,MATCH
+-105.078099,40.395934,545,Meals on Wheels,437 N. Garfield,Loveland,CO,80537,970.667.0311,Meal Delivery Programs,August 2014,-105.078099,40.395934,LARIMER COUNTY,MATCH
+-103.468544,39.131023,546,Hugo Senior Center,514 2nd Ave.,Hugo,CO,80821,719.743.2272,Meal Delivery Programs,August 2014,-103.468544,39.131023,LINCOLN COUNTY,MATCH
+-103.206184,40.6235,547,Meals on Wheels,109 N. Front St.,Sterling,CO,80751,970.522.1770,Meal Delivery Programs,August 2014,-103.206184,40.6235,LOGAN COUNTY,MATCH
+-108.50567,39.078821,548,Area Agency on Aging,"510 29 1/2 Rd., #1112",Grand Junction,CO,81504,970.248.2717,Meal Delivery Programs,August 2014,-108.50567,39.078821,MESA COUNTY,MATCH
+-108.563544,39.072229,549,Gray Gourmet,551 Chipeta,Grand Junction,CO,81501,970.234.9844,Meal Delivery Programs,August 2014,-108.563544,39.072229,MESA COUNTY,MATCH
+-108.58669,37.350311,550,Montezuma County Senior Program,107 N. Chestnut,Cortez,CO,81321,970.565.4166,Meal Delivery Programs,August 2014,-108.58669,37.350311,MONTEZUMA COUNTY,MATCH
+-108.585931,37.348878,551,San Juan Basin Area Agency on Aging - Cortez,PO Box 5456,Cortez,CO,81321,970.264.0501,Meal Delivery Programs,August 2014,-108.585931,37.348878,MONTEZUMA COUNTY,CORRECTED
+-108.731236,37.204482,552,Ute Mountain Ute Tribe of Indians - Title VI Senior Citizens Program,PO Box 189,Towaoc,CO,81334,970.564.0630,Meal Delivery Programs,August 2014,-108.731236,37.204482,MONTEZUMA COUNTY,CORRECTED
+-107.87921,38.481979,553,Area Agency on Aging Region 10,"300 N. Cascade Ave., #1",Montrose,CO,81401,970.249.2436,Meal Delivery Programs,August 2014,-107.87921,38.481979,MONTROSE COUNTY,MATCH
+-107.876173,38.478315,554,Meals on Wheels,n/a,Montrose,CO,81401,970.249.9423,Meal Delivery Programs,August 2014,-107.876173,38.478315,MONTROSE COUNTY,CORRECTED
+-103.801687,40.24901,555,Area Agency on Aging,"231 Main St., Suite 211",Fort Morgan,CO,80701,970.867.9409ext.235,Meal Delivery Programs,August 2014,-103.801687,40.24901,MORGAN COUNTY,MATCH
+-103.719506,38.055944,556,Sage Nutrition Services,503 N. 9th St.,Rocky Ford,CO,81067,719.254.7547,Meal Delivery Programs,August 2014,-103.719506,38.055944,OTERO COUNTY,MATCH
+-104.610393,38.266723,557,Meals on Wheels,230 N. Union Ave.,Pueblo,CO,81003,719.543.0100,Meal Delivery Programs,August 2014,-104.610393,38.266723,PUEBLO COUNTY,MATCH
+-104.56296,38.272324,558,Pueblo County Area Agency on Aging,2631 E. 4th St.,Pueblo,CO,81001,719.583.6120,Meal Delivery Programs,August 2014,-104.56296,38.272324,PUEBLO COUNTY,MATCH
+-108.804116,40.0804,559,"Meals on Wheels, Rangely District Hospital",511 S. White Ave.,Rangely,CO,81648,970.675.5011,Meal Delivery Programs,August 2014,-108.804116,40.0804,RIO BLANCO COUNTY,MATCH
+-106.148253,37.577649,560,Tri County Senior Center,311 Washington St.,Monte Vista,CO,81144,719.852.5778,Meal Delivery Programs,August 2014,-106.148253,37.577649,RIO GRANDE COUNTY,MATCH
+-105.050057,38.99137,561,Teller Senior Coalition,312 N. Center,Woodland Park,CO,80863,719.687.3330,Meal Delivery Programs,August 2014,-105.050057,38.99137,TELLER COUNTY,MATCH
+-104.810356,40.090868,562,Meals on Wheels,1190 Denver Ave.,Fort Lupton,CO,80621,303.857.6460,Meal Delivery Programs,August 2014,-104.810356,40.090868,WELD COUNTY,MATCH
+-104.71291,40.424196,563,Meals on Wheels,2131 9th St.,Greeley,CO,80631,970.353.9738,Meal Delivery Programs,August 2014,-104.71291,40.424196,WELD COUNTY,MATCH
+-104.689083,40.402332,564,Meals on Wheels of Greeley County,708 22nd St.,Greeley,CO,80631,970.353.9738,Meal Delivery Programs,August 2014,-104.689083,40.402332,WELD COUNTY,MATCH
+-104.940709,39.928174,565,"Thornton Self-Help Group, Good Shepherd United Methodist Church",3960 E. 128th Ave.,Thornton,CO,80241,303.438.1003,Multiple Sclerosis (MS) Support Groups,August 2014,-104.940709,39.928174,ADAMS COUNTY,MATCH
+-104.709056,39.685931,566,"70/Four70 MS Men's Group, Murphy Creek Tavern Golf Course - Conference Room",1700 S. Old Tom Morris Rd.,Aurora,CO,80018,70four70@weplan.com,Multiple Sclerosis (MS) Support Groups,August 2014,-104.709056,39.685931,ARAPAHOE COUNTY,MATCH
+-104.709029,39.6057,567,"70/Four70 Men's Group, McCabe's Bistro & Pub",6100 S. Main St.,Aurora,CO,80016,70four70@weplan.com,Multiple Sclerosis (MS) Support Groups,August 2014,-104.709029,39.6057,ARAPAHOE COUNTY,MATCH
+-104.78171,39.653274,568,"Aurora Support Group, New Hope Community Church",17699 E. Hampden Ave.,Aurora,CO,80013,303.366.1111,Multiple Sclerosis (MS) Support Groups,August 2014,-104.78171,39.653274,ARAPAHOE COUNTY,MATCH
+-104.933795,39.652901,569,"Downtown Denver Men's Support Group, Bethany Lutheran Church",4500 E. Hampden Ave.,Englewood,CO,80113,720.297.7538,Multiple Sclerosis (MS) Support Groups,August 2014,-104.933795,39.652901,ARAPAHOE COUNTY,MATCH
+-104.940435,39.705293,570,"Young Professionals Support Group, Panera Bread",640 S. Colorado Blvd.,Glendale,CO,80224,720.261.1125,Multiple Sclerosis (MS) Support Groups,August 2014,-104.940435,39.705293,ARAPAHOE COUNTY,MATCH
+-105.250469,40.040253,571,"Boulder Support Group, Calgary Bible Church",3245 Kalmia Ave.,Boulder,CO,80301,303.258.0383,Multiple Sclerosis (MS) Support Groups,August 2014,-105.250469,40.040253,BOULDER COUNTY,MATCH
+-105.106563,40.002968,572,"Lafayette Coffee Support Group, Sister Carmen Community Center",655 Aspen Ridge Drive,Lafayette,CO,80026,970.494.5988,Multiple Sclerosis (MS) Support Groups,August 2014,-105.106563,40.002968,BOULDER COUNTY,MATCH
+-105.102555,40.194739,573,Longmont Breakfast Social Perkins,2051 N. Main St.,Longmont,CO,80501,970.494.5988,Multiple Sclerosis (MS) Support Groups,August 2014,-105.102555,40.194739,BOULDER COUNTY,MATCH
+-105.106652,40.170808,574,"Longmont Self-Help Group, Longmont Senior Center",910 Longs Peak Ave.,Longmont,CO,80501,970.494.5988,Multiple Sclerosis (MS) Support Groups,August 2014,-105.106652,40.170808,BOULDER COUNTY,MATCH
+-105.066925,39.917515,575,Broomfield Community Center,180 Lamar St.,Broomfield,CO,80020,303.438.1003,Multiple Sclerosis (MS) Support Groups,August 2014,-105.066925,39.917515,BROOMFIELD COUNTY,MATCH
+-104.987205,39.699626,576,"Caregiver Support Group, National MS Society","900 S. Broadway, 2nd Floor",Denver,CO,80209,303.698.7455,Multiple Sclerosis (MS) Support Groups,August 2014,-104.987205,39.699626,DENVER COUNTY,MATCH
+-104.922497,39.771428,577,"Denver Park Hill Self-Help Group, Denver Police Department",3921 Holly St.,Denver,CO,80207,303.329.0619,Multiple Sclerosis (MS) Support Groups,August 2014,-104.922497,39.771428,DENVER COUNTY,MATCH
+-105.022256,39.791233,578,"Rocky Mountain MS Caregiver Support Group, King Adult Day Enrichment Program",2841 W. 52nd Ave.,Denver,CO,80221,303.433.6887,Multiple Sclerosis (MS) Support Groups,August 2014,-105.022256,39.791233,DENVER COUNTY,MATCH
+-105.022256,39.791233,579,King Adult Day Enrichment Program,2841 W. 52nd Ave.,Denver,CO,80221,303.433.6887,Multiple Sclerosis (MS) Support Groups,August 2014,-105.022256,39.791233,DENVER COUNTY,MATCH
+-104.949893,39.546254,580,"Highlands Ranch Self-Help Group, St. Andrew United Methodist Church",3350 White Bay Dr.,Highlands Ranch,CO,80126,303.598.1534,Multiple Sclerosis (MS) Support Groups,August 2014,-104.949893,39.546254,DOUGLAS COUNTY,MATCH
+-104.809129,39.539679,581,"Parker Pals Self-Help Group, Arapahoe Community College - Parker Campus",15653 Brookstone Dr.,Parker,CO,80134,720.842.0401,Multiple Sclerosis (MS) Support Groups,August 2014,-104.809129,39.539679,DOUGLAS COUNTY,MATCH
+-104.791493,38.82868,582,"Carefiver Support Group, HealthSouth Rehabilitation Hospital",325 Parkside Dr.,Colorado Springs,CO,80910,719.630.2371,Multiple Sclerosis (MS) Support Groups,August 2014,-104.791493,38.82868,EL PASO COUNTY,MATCH
+-104.738835,38.896742,583,"Caregivers Support Group, Rizuto's Ice Cream Shop",4785 Barnes Rd.,Colorado Springs,CO,80917,719.633.4603,Multiple Sclerosis (MS) Support Groups,August 2014,-104.738835,38.896742,EL PASO COUNTY,MATCH
+-104.819233,38.842565,584,"Colorado Springs Support Group, National MS Society","611 N. Weber, Suite 101",Colorado Springs,CO,80903,719.634.2984,Multiple Sclerosis (MS) Support Groups,August 2014,-104.819233,38.842565,EL PASO COUNTY,MATCH
+-104.75761,38.851522,585,"Men's Support Group, MS Alliance Office","1322 N. Academy Blvd., Suite 119",Colorado Springs,CO,80909,719.633.4603,Multiple Sclerosis (MS) Support Groups,August 2014,-104.75761,38.851522,EL PASO COUNTY,MATCH
+-104.77542,38.912896,586,"Southern Colorado Men's Support & Social Group, East Library - East Conference Room II",5550 N. Union Blvd.,Colorado Springs,CO,80918,719.229.2204,Multiple Sclerosis (MS) Support Groups,August 2014,-104.77542,38.912896,EL PASO COUNTY,MATCH
+-104.75761,38.851522,587,"Women's Support Group, MS Alliance Office","1322 N. Academy Blvd., Suite 119",Colorado Springs,CO,80909,719.633.4603,Multiple Sclerosis (MS) Support Groups,August 2014,-104.75761,38.851522,EL PASO COUNTY,MATCH
+-104.864516,39.093801,588,"Tri-Lakes/Glen Eagle Support Group, Village Inn",315 Colorado 105,Monument,CO,80132,719.633.4603,Multiple Sclerosis (MS) Support Groups,August 2014,-104.864516,39.093801,EL PASO COUNTY,MATCH
+-105.111798,38.388701,589,"MS Self-Assist & Social Group, Carl's Jr.",502 E. Main St.,Florence,CO,81226,719.671.9716,Multiple Sclerosis (MS) Support Groups,August 2014,-105.111798,38.388701,FREMONT COUNTY,MATCH
+-105.079086,39.841616,590,"Arvada MS Self-Help Group, Spirit of Christ Church",7400 W. 80th Ave.,Arvada,CO,80003,720.234.3757,Multiple Sclerosis (MS) Support Groups,August 2014,-105.079086,39.841616,JEFFERSON COUNTY,MATCH
+-105.0987,39.711154,591,"Lakewood Self-Help Group, Mile-Hi Church",9077 W. Alameda Ave.,Lakewood,CO,80226,951.751.6783,Multiple Sclerosis (MS) Support Groups,August 2014,-105.0987,39.711154,JEFFERSON COUNTY,MATCH
+-106.293731,39.253105,592,"MS Friends Leadville, Leadville Library",1115 Harrison,Leadville,CO,80461,719.486.0031,Multiple Sclerosis (MS) Support Groups,August 2014,-106.293731,39.253105,LAKE COUNTY,MATCH
+-105.116884,40.57489,593,"Ft. Collins Breakfast Social, The Farmer's Table",2140 W. Elizabeth St.,Fort Collins,CO,80521,970.494.5988,Multiple Sclerosis (MS) Support Groups,August 2014,-105.116884,40.57489,LARIMER COUNTY,MATCH
+-105.096246,40.553606,594,"Ft. Collins Men with MS Group, Raintree",2555 S. Shields St.,Fort Collins,CO,80526,970.494.5988,Multiple Sclerosis (MS) Support Groups,August 2014,-105.096246,40.553606,LARIMER COUNTY,MATCH
+-105.07337,40.59152,595,"Ft. Collins Self-Help Group, United Way",424 Pine St.,Fort Collins,CO,80524,970.494.5988,Multiple Sclerosis (MS) Support Groups,August 2014,-105.07337,40.59152,LARIMER COUNTY,MATCH
+-105.096246,40.553606,596,"Ft. Collins Support Partners Support Group, The Taintree Athletic Club CafΘ",2555 S. Shields St.,Fort Collins,CO,80526,970.494.5988,Multiple Sclerosis (MS) Support Groups,August 2014,-105.096246,40.553606,LARIMER COUNTY,MATCH
+-105.108272,40.40716,597,"Loveland Breakfast Social, Perkins",2222 W. Eisenhower Blvd.,Loveland,CO,80537,970.494.5988,Multiple Sclerosis (MS) Support Groups,August 2014,-105.108272,40.40716,LARIMER COUNTY,MATCH
+-103.210281,40.624221,598,"Northeastern Colorado MS Support Group, Christ United Methodist Church",104 S. 4th St.,Sterling,CO,80751,970.494.5988,Multiple Sclerosis (MS) Support Groups,August 2014,-103.210281,40.624221,LOGAN COUNTY,MATCH
+-108.571317,39.090755,599,"Grand Junction Breakfast Bunch, The Egg and I",120 W. Park Dr.,Grand Junction,CO,81501,970.773.6581,Multiple Sclerosis (MS) Support Groups,August 2014,-108.571317,39.090755,MESA COUNTY,MATCH
+-108.552165,39.09559,600,"MS & Men, Artful Cup",3090 N. 12th,Grand Junction,CO,81506,757.831.7109,Multiple Sclerosis (MS) Support Groups,August 2014,-108.552165,39.09559,MESA COUNTY,MATCH
+-108.587035,37.34981,601,"Cortez Self-Help Group, Cortez Health Department",106 W. North St.,Cortez,CO,81321,970.565.3056 ext.228,Multiple Sclerosis (MS) Support Groups,August 2014,-108.587035,37.34981,MONTEZUMA COUNTY,MATCH
+-107.865416,38.455882,602,"Montrose MS Friends Social Group, Denny's",1515 Venture Way,Montrose,CO,81401,970.249.6498,Multiple Sclerosis (MS) Support Groups,August 2014,-107.865416,38.455882,MONTROSE COUNTY,MATCH
+-107.037306,39.365862,603,"Roaring fork Valley MS Support Group, Basalt Library",14 Midland Ave.,Basalt,CO,81621,970.945.1095,Multiple Sclerosis (MS) Support Groups,August 2014,-107.037306,39.365862,PITKIN COUNTY,MATCH
+-104.662466,38.226371,604,"Pueblo Support Group, Lamb Branch Library",2525 S. Pueblo Blvd.,Pueblo,CO,81005,719.633.4603,Multiple Sclerosis (MS) Support Groups,August 2014,-104.662466,38.226371,PUEBLO COUNTY,MATCH
+-104.662536,38.238267,605,"Pueblo Lunch Support Group, Village Inn",1707 S. Pueblo Blvd.,Pueblo,CO,81004,719.634.2820,Multiple Sclerosis (MS) Support Groups,August 2014,-104.662536,38.238267,PUEBLO COUNTY,MATCH
+-104.69107,40.417927,606,"Greeley Self-Help Group, Connections for Independent Living",1331 8th Ave.,Greeley,CO,80631,970.494.5988,Multiple Sclerosis (MS) Support Groups,August 2014,-104.69107,40.417927,WELD COUNTY,MATCH
+-105.014156,39.609724,607,Colorado Center for the Blind,2233 W. Shepperd Ave.,Littleton,CO,80120,303.788.1130,Older Individuals Who Are Blind (OIB) Programs,August 2014,-105.014156,39.609724,ARAPAHOE COUNTY,MATCH
+-105.230244,40.015788,608,Center for People with Disabilities,1675 Range St.,Boulder,CO,80301,303.442.8662,Older Individuals Who Are Blind (OIB) Programs,August 2014,-105.230244,40.015788,BOULDER COUNTY,MATCH
+-104.823745,38.823599,609,The Independence Center,729 Tejon,Colorado Springs,CO,80903,719.471.8181,Older Individuals Who Are Blind (OIB) Programs,August 2014,-104.823745,38.823599,EL PASO COUNTY,CORRECTED
+-107.869071,37.303683,610,Southwest Center for Independence,3473 Main Ave. #23,Durango,CO,81301,970.259.1672,Older Individuals Who Are Blind (OIB) Programs,August 2014,-107.869071,37.303683,LA PLATA COUNTY,MATCH
+-105.059086,40.573648,611,Disabled Resource Services,"1017 Robertson, #B",Fort Collins,CO,80524,970.482.2700,Older Individuals Who Are Blind (OIB) Programs,August 2014,-105.059086,40.573648,LARIMER COUNTY,MATCH
+-108.559999,39.073539,612,Center for Independence,740 Gunnison Ave,Grand Junction,CO,81501,970.241.0315,Older Individuals Who Are Blind (OIB) Programs,August 2014,-108.559999,39.073539,MESA COUNTY,MATCH
+-104.627491,38.243987,613,Center for Disabilities,1304 Berkley Ave.,Pueblo,CO,81004,719.546.1271,Older Individuals Who Are Blind (OIB) Programs,August 2014,-104.627491,38.243987,PUEBLO COUNTY,MATCH
+-104.69107,40.417927,614,Connections for Independent Living,1331 8th Ave.,Greeley,CO,80631,970.352.8682,Older Individuals Who Are Blind (OIB) Programs,August 2014,-104.69107,40.417927,WELD COUNTY,MATCH
+-104.832163,39.663765,615,"Heather Gardens Clubhouse, Mountain View Room",2888 S. Heather Gardens Way,Aurora,CO,80014,303.755.2683,Parkinson's Disease Support Groups,August 2014,-104.832163,39.663765,ARAPAHOE COUNTY,MATCH
+-104.924535,39.598745,616,Holly Creek Fellowship Hall,5500 E. Peakview Ave.,Centennial,CO,80121,720.266.5915,Parkinson's Disease Support Groups,August 2014,-104.924535,39.598745,ARAPAHOE COUNTY,MATCH
+-104.933795,39.652901,617,"Bethany Lutheran Church, Room 315",4500 E. Hampden Ave.,Denver,CO,80113,hansenc21@hotmail.com,Parkinson's Disease Support Groups,August 2014,-104.933795,39.652901,ARAPAHOE COUNTY,MATCH
+-104.933795,39.652901,618,"Bethany Lutheran Church,  (Deep Brain Stimulation), Room 315",4500 E. Hampden Ave.,Denver,CO,80113,303.972.0692,Parkinson's Disease Support Groups,August 2014,-104.933795,39.652901,ARAPAHOE COUNTY,MATCH
+-104.974871,39.653917,619,"Englewood Meridian, 8th Floor",3455 S. Corona St.,Englewood,CO,80113,303.830.1839,Parkinson's Disease Support Groups,August 2014,-104.974871,39.653917,ARAPAHOE COUNTY,MATCH
+-104.976831,39.654146,620,"MSA/PSP Care Partner Support Group, Johnson Adult Day Center (Caregiver ONLY)",3444 S. Emerson St.,Englewood,CO,80113,303.789.9900,Parkinson's Disease Support Groups,August 2014,-104.976831,39.654146,ARAPAHOE COUNTY,MATCH
+-104.976831,39.654146,621,"Johnson Adult Day Center, (MSA/PSP/CBD)",3444 S. Emerson St.,Englewood,CO,80113,303.789.9900,Parkinson's Disease Support Groups,August 2014,-104.976831,39.654146,ARAPAHOE COUNTY,MATCH
+-105.219217,39.993034,622,East Boulder Senior Center,5660 Sioux Dr.,Boulder,CO,80303,303.494.4822,Parkinson's Disease Support Groups,August 2014,-105.219217,39.993034,BOULDER COUNTY,MATCH
+-105.263162,40.011139,623,"Homewatch Caregivers of Boulder (Caregiver ONLY), The Carillon at Boulder Creek",2525 Taft Dr.,Boulder,CO,80302,303.444.1133,Parkinson's Disease Support Groups,August 2014,-105.263162,40.011139,BOULDER COUNTY,MATCH
+-105.083146,39.970534,624,"Exempla Good Samaritan Medical Center, Conference Room D (PD/DBS)",200 Exempla Circle,Lafayette,CO,80026,303.689.5214,Parkinson's Disease Support Groups,August 2014,-105.083146,39.970534,BOULDER COUNTY,MATCH
+-105.106652,40.170808,625,Longmont Senior Center,910 Longs Peak Ave.,Longmont,CO,80501,303.678.7089,Parkinson's Disease Support Groups,August 2014,-105.106652,40.170808,BOULDER COUNTY,MATCH
+-105.134772,40.183641,626,Longs Peak United Methodist Church,1421 Elmhurst Dr.,Longmont,CO,80503,303.678.7089,Parkinson's Disease Support Groups,August 2014,-105.134772,40.183641,BOULDER COUNTY,MATCH
+-105.102555,40.194739,627,Perkins Restaurant (Caregiver ONLY),2051 Main St.,Longmont,CO,80501,303.678.7089,Parkinson's Disease Support Groups,August 2014,-105.102555,40.194739,BOULDER COUNTY,MATCH
+-105.123533,39.989443,628,"Balfour Retirement Community, Singer Room",1855 Plaza Dr.,Louisville,CO,80027,303.926.3848,Parkinson's Disease Support Groups,August 2014,-105.123533,39.989443,BOULDER COUNTY,MATCH
+-105.065147,39.920454,629,Broomfield Community Center,280 Spader Way,Broomfield,CO,0,303.466.0843,Parkinson's Disease Support Groups,August 2014,-105.065147,39.920454,BROOMFIELD COUNTY,CORRECTED
+-105.065147,39.920454,630,Broomfield Community Center (Caregiver ONLY),280 Spader Way,Broomfield,CO,0,303.466.0843,Parkinson's Disease Support Groups,August 2014,-105.065147,39.920454,BROOMFIELD COUNTY,CORRECTED
+-104.874615,39.760215,631,Central Park Recreation Center,9651 E. Martin Luther King Jr. Blvd.,Denver,CO,80238,720.298.5760,Parkinson's Disease Support Groups,August 2014,-104.874615,39.760215,DENVER COUNTY,MATCH
+-104.959272,39.663711,632,"Christ Episcopal Church, Banes Hall, (L.E.A.P.)",2950 S. University Blvd.,Denver,CO,80210,303.590.5881,Parkinson's Disease Support Groups,August 2014,-104.959272,39.663711,DENVER COUNTY,MATCH
+-104.959272,39.663711,633,"Christ Episcopal Church, Banes Hall, (Recently Diagnosed)",2950 S. University Blvd.,Denver,CO,80210,303.420.4945,Parkinson's Disease Support Groups,August 2014,-104.959272,39.663711,DENVER COUNTY,MATCH
+-105.051455,39.780339,634,"Parkinson's Care Partner Support Group (Caregiver ONLY), Scheitler Recreation Center",5031 W. 46th Ave.,Denver,CO,80212,303.568.1163,Parkinson's Disease Support Groups,August 2014,-105.051455,39.780339,DENVER COUNTY,MATCH
+-104.996167,39.547113,635,Highlands Ranch Library,9292 Ridgeline Blvd.,Highlands Ranch,CO,80129,303.795.0401,Parkinson's Disease Support Groups,August 2014,-104.996167,39.547113,DOUGLAS COUNTY,MATCH
+-105.033598,39.55852,636,Wind Crest Community,3235 Mill Vista Rd.,Highlands Ranch,CO,80129,303.876.8245,Parkinson's Disease Support Groups,August 2014,-105.033598,39.55852,DOUGLAS COUNTY,MATCH
+-106.593703,39.641687,637,Trinity Church,90 Lariat Loop,Edwards,CO,81632,970.328.8067,Parkinson's Disease Support Groups,August 2014,-106.593703,39.641687,EAGLE COUNTY,MATCH
+-107.090822,39.392489,638,"Roaring Fork Valley Support Group, El Jebel Community Center",20 Eagle County Dr.,El Jebel,CO,81623,970.927.1141,Parkinson's Disease Support Groups,August 2014,-107.090822,39.392489,EAGLE COUNTY,CORRECTED
+-104.712964,38.868879,639,"Eastside Caregivers (Caregiver ONLY), Care and Share Food Bank for Southern Colorado Building",2605 Preamble Pt.,Colorado Springs,CO,80915,joanfoutz09@q.com,Parkinson's Disease Support Groups,August 2014,-104.712964,38.868879,EL PASO COUNTY,MATCH
+-104.819598,38.835665,640,First Presbyterian Church,105 N. Weber St.,Colorado Springs,CO,80903,719.495.1853,Parkinson's Disease Support Groups,August 2014,-104.819598,38.835665,EL PASO COUNTY,MATCH
+-105.081145,39.820852,641,Community Recreation Center of Apex,6842 Wadsworth Blvd.,Arvada,CO,80003,720.291.5200,Parkinson's Disease Support Groups,August 2014,-105.081145,39.820852,JEFFERSON COUNTY,MATCH
+-105.318391,39.633384,642,Evergreen Support Group,n/a,Evergreen,CO,0,303.674.7520,Parkinson's Disease Support Groups,August 2014,-105.318391,39.633384,JEFFERSON COUNTY,CORRECTED
+-105.072633,39.706629,643,Atria Inn at Lakewood,555 South Pierce Street,Lakewood,CO,80226,303.408.3949,Parkinson's Disease Support Groups,August 2014,-105.072633,39.706629,JEFFERSON COUNTY,CORRECTED
+-105.109701,39.618882,644,Morning Star Senior Living,5344 S.Kipling Pkwy,Littleton,CO,80127,303.238.0107,Parkinson's Disease Support Groups,August 2014,-105.109701,39.618882,JEFFERSON COUNTY,MATCH
+-105.109701,39.618882,645,Morning Star Senior Living,5344 S. Kipling Parkway,Littleton,CO,80127,303.238.0107,Parkinson's Disease Support Groups,August 2014,-105.109701,39.618882,JEFFERSON COUNTY,MATCH
+-105.109701,39.618882,646,Morning Star Senior Living,5344 S. Kipling Pkway,Littleton,CO,80127,303.238.0107,Parkinson's Disease Support Groups,August 2014,-105.109701,39.618882,JEFFERSON COUNTY,MATCH
+-105.086047,39.861908,647,Covenant Village Retirement Community,"9153 Yarrow St., Evergreen Room",Westminster,CO,80021,kneu@westmont.edu,Parkinson's Disease Support Groups,August 2014,-105.086047,39.861908,JEFFERSON COUNTY,MATCH
+-105.124814,39.761778,648,Applewood Baptist Church,11200 W. 32nd Ave.,Wheat Ridge,CO,80033,303.271.9628,Parkinson's Disease Support Groups,August 2014,-105.124814,39.761778,JEFFERSON COUNTY,MATCH
+-107.861176,37.293552,649,First United Methodist Church,2917 Aspen Dr.,Durango,CO,81301,970.247.4213,Parkinson's Disease Support Groups,August 2014,-107.861176,37.293552,LA PLATA COUNTY,MATCH
+-105.518867,40.377464,650,"US Bank Bldg., George Hix Room",353 E. Elkhorn Ave.,Estes Park,CO,80517,970.586.9633,Parkinson's Disease Support Groups,August 2014,-105.518867,40.377464,LARIMER COUNTY,MATCH
+-105.09605,40.555634,651,Fort Collins Senior Center,1200 Raintree Dr.,Fort Collins,CO,80526,877.426.3855,Parkinson's Disease Support Groups,August 2014,-105.09605,40.555634,LARIMER COUNTY,MATCH
+-105.09605,40.555634,652,Fort Collins Senior Center (Early Onset),1200 Raintree Dr.,Fort Collins,CO,80526,877.426.3855,Parkinson's Disease Support Groups,August 2014,-105.09605,40.555634,LARIMER COUNTY,MATCH
+-104.971319,40.40553,653,Northern Colorado Rehabilitation Hospital (MSA/PSP/CBD),4401 Union St.,Loveland,CO,80534,970.532.2681,Parkinson's Disease Support Groups,August 2014,-104.971319,40.40553,LARIMER COUNTY,MATCH
+-108.570707,39.0795,654,First Christian Church,1326 N. 1st St.,Grand Junction,CO,81501,970.201.6952,Parkinson's Disease Support Groups,August 2014,-108.570707,39.0795,MESA COUNTY,MATCH
+-108.554368,37.350619,655,Trinity Lutheran Church,208 N. Dolores Rd.,Cortez,CO,81321,970.565.9508,Parkinson's Disease Support Groups,August 2014,-108.554368,37.350619,MONTEZUMA COUNTY,MATCH
+-107.869425,38.480251,656,"Montrose Memorial Hospital, Acute Rehab Unit",800 S. 3rd St.,Montrose,CO,81401,970.252.2996,Parkinson's Disease Support Groups,August 2014,-107.869425,38.480251,MONTROSE COUNTY,MATCH
+-103.641524,40.253054,657,Eben Ezer Lutheran Care Center,122 Hospital Rd.,Brush,CO,80723,970.842.2861 ext.251,Parkinson's Disease Support Groups,August 2014,-103.641524,40.253054,MORGAN COUNTY,MATCH
+-104.65782,38.305406,658,YMCA Campus,3200 E. Spaulding Ave.,Pueblo,CO,81008,719.584.4677,Parkinson's Disease Support Groups,August 2014,-104.65782,38.305406,PUEBLO COUNTY,MATCH
+-106.81875,40.472897,659,Caregiver Support Group,804 Mill Run Ct.,Steamboat Springs,CO,80487,970.879.0518,Parkinson's Disease Support Groups,August 2014,-106.81875,40.472897,ROUTT COUNTY,MATCH
+-106.816757,40.46205,660,"Yampa Valley Medical Center, Conference Room",1024 Central Park Dr.,Steamboat Springs,CO,80487,970.875.1088,Parkinson's Disease Support Groups,August 2014,-106.816757,40.46205,ROUTT COUNTY,MATCH
+-106.833775,40.486985,661,United Methodist Church,Oak & 8th St.,Steamboat Springs,CO,80487,970.875.1088,Parkinson's Disease Support Groups,August 2014,-106.833775,40.486985,ROUTT COUNTY,MATCH
+-104.725242,40.39284,662,Hope Pool & Physical Therapy Center,2780 28th Ave.,Greeley,CO,80634,970.352.8796,Parkinson's Disease Support Groups,August 2014,-104.725242,40.39284,WELD COUNTY,MATCH
+,,663,Young Onset Group,n/a,n/a,CO,0,tonia@denvercliffs.com,Parkinson's Disease Support Groups,August 2014,,,,NO LOCATION
+-104.979482,39.850103,664,Vibra Hospital,8451 Pearl St.,Thornton,CO,80229,303.453.9552,Post-Polio Support Groups,August 2014,-104.979482,39.850103,ADAMS COUNTY,MATCH
+-104.78171,39.653274,665,New Hope Community Church,17699 E. Hampden Ave.,Aurora,CO,80013,720.535.4913,Post-Polio Support Groups,August 2014,-104.78171,39.653274,ARAPAHOE COUNTY,MATCH
+-108.064769,38.769291,666,Delta Christian Church Library,795 1600 Rd.,Delta,CO,81416,970.874.5448,Post-Polio Support Groups,August 2014,-108.064769,38.769291,DELTA COUNTY,MATCH
+-104.751944,38.811656,667,Sand Creek Police Dept. Meeting Room,4125 Center Park Dr.,Colorado Springs,CO,80916,719.633.1497,Post-Polio Support Groups,August 2014,-104.751944,38.811656,EL PASO COUNTY,MATCH
+-105.082929,39.710767,668,Atlanta Bread Company,7740 W. Alameda Ave.,Lakewood,CO,80226,303.689.7669,Post-Polio Support Groups,August 2014,-105.082929,39.710767,JEFFERSON COUNTY,MATCH
+-105.073739,40.56331,669,Trinity Lutheran Church,301 E. Stuart,Fort Collins,CO,80525,970.219.1301,Post-Polio Support Groups,August 2014,-105.073739,40.56331,LARIMER COUNTY,MATCH
+-104.580683,38.313368,670,Walking Stick Restaurant,4301 Walking Stick Blvd.,Pueblo,CO,81001,719.269.3204,Post-Polio Support Groups,August 2014,-104.580683,38.313368,PUEBLO COUNTY,MATCH
+-105.875167,37.446161,671,Alamosa County Public Health Dept.,8900-B Independence Way,Alamosa,CO,81101,719.589.6639,Single Entry Points,August 2014,-105.875167,37.446161,ALAMOSA COUNTY,MATCH
+-104.857319,39.662159,672,Access Long Term Support Solutions,"3033 S. Parker Rd., 10th Floor",Denver,CO,80210,1.877.710.9993,Single Entry Points,August 2014,-104.857319,39.662159,ARAPAHOE COUNTY,MATCH
+-103.237367,38.06583,673,Bent County Nursing Services,701 Park Ave.,Las Animas,CO,81054,719.456.0517,Single Entry Points,August 2014,-103.237367,38.06583,BENT COUNTY,MATCH
+-105.093631,39.985944,674,"Adult Care Management, Inc.","1455 Dixon Ave., Suite 200",Lafayette,CO,80026,303.439.7011,Single Entry Points,August 2014,-105.093631,39.985944,BOULDER COUNTY,MATCH
+-105.965076,37.263821,675,Conejos County Nursing Services,1902 State Hwy 285 South,La Jara,CO,81140,719.274.4307,Single Entry Points,August 2014,-105.965076,37.263821,CONEJOS COUNTY,CORRECTED
+-108.073346,38.739579,676,Delta County Dept. of Health & Human Services,560 Dodge St.,Delta,CO,81416,970.872.1201,Single Entry Points,August 2014,-108.073346,38.739579,DELTA COUNTY,MATCH
+-104.775556,38.835884,677,Rocky Mountain Options for Long-Term Care (OLTC),2812 E. Bijou St.,Colorado Springs,CO,80909,"719,457.0660",Single Entry Points,August 2014,-104.775556,38.835884,EL PASO COUNTY,MATCH
+-105.183039,38.445014,678,Central Mountain Options for Long-Term Care (OLTC),172 Justice Center Rd.,Canon City,CO,81212,719.269.2041,Single Entry Points,August 2014,-105.183039,38.445014,FREMONT COUNTY,MATCH
+-107.327203,39.546607,679,Northwest Options fro Long-Term Care (OLTC),"108 8th St., Suite 300",Glenwood Springs,CO,81601,970.963.1639,Single Entry Points,August 2014,-107.327203,39.546607,GARFIELD COUNTY,MATCH
+-105.208241,39.73135,680,Jefferson County Dept. of Health & Human Services,"900 Jefferson County Pkwy, Suite 110",Golden,CO,80401,303.271.4216,Single Entry Points,August 2014,-105.208241,39.73135,JEFFERSON COUNTY,MATCH
+-102.267815,39.299244,681,Kit Carson County Public Health,252 S. 14th St.,Burlington,CO,80807,719.346.7158,Single Entry Points,August 2014,-102.267815,39.299244,KIT CARSON COUNTY,MATCH
+-107.877148,37.241444,682,San Juan Basin Health Dept.,281 Sawyer Dr.,Durango,CO,81302,970.247.5702,Single Entry Points,August 2014,-107.877148,37.241444,LA PLATA COUNTY,MATCH
+-105.071916,40.607447,683,Larimer County Dept. of Human Services,1501 Blue Spruce Dr.,Fort Collins,CO,80524,970.498.6821,Single Entry Points,August 2014,-105.071916,40.607447,LARIMER COUNTY,MATCH
+-105.074249,40.397707,684,Larimer County Options for Long-Term Care (OLTC),205 E. 6th St.,Loveland,CO,80537,970.498.6821,Single Entry Points,August 2014,-105.074249,40.397707,LARIMER COUNTY,MATCH
+-104.502596,37.168723,685,Las Animas County Dept. of Human Services,204 S. Chestnut,Trinidad,CO,81082,719.846.2276,Single Entry Points,August 2014,-104.502596,37.168723,LAS ANIMAS COUNTY,MATCH
+-108.50567,39.078821,686,Mesa County Dept. of Human Services,510 29 1/2 Rd.,Grand Junction,CO,81502,970.248.2888,Single Entry Points,August 2014,-108.50567,39.078821,MESA COUNTY,MATCH
+-108.587035,37.34981,687,Montezuma County Health Dept.,106 W. North St.,Cortez,CO,81321,970.565.3056 ext. 250,Single Entry Points,August 2014,-108.587035,37.34981,MONTEZUMA COUNTY,MATCH
+-107.866147,38.466403,688,Montrose County Dept. of Health & Human Services,1845 S. Twonsend Ave.,Montrose,CO,81401,970.252.5092,Single Entry Points,August 2014,-107.866147,38.466403,MONTROSE COUNTY,MATCH
+-103.80166,40.249725,689,Northeast CO Area Agency on Aging,"231 Main St., Suite 211",Fort Morgan,CO,80701,970.867.9409,Single Entry Points,August 2014,-103.80166,40.249725,MORGAN COUNTY,CORRECTED
+-103.543545,37.986464,690,Otero County Dept. of Human Services,"Courthouse, 13 W. 3rd",La Junta,CO,81050,719.383.3167,Single Entry Points,August 2014,-103.543545,37.986464,OTERO COUNTY,CORRECTED
+-102.618292,38.079717,691,Prowers County Public Health Nursing Services,1001 S. Main St.,Lamar,CO,81052,719.668.0458,Single Entry Points,August 2014,-102.618292,38.079717,PROWERS COUNTY,MATCH
+-104.609387,38.277879,692,"Pueblo County Dept. of Social Services, Options for Long-Term Care (OLTC)",212 W. 12th St.,Pueblo,CO,81003,719.583.6862,Single Entry Points,August 2014,-104.609387,38.277879,PUEBLO COUNTY,MATCH
+-106.348925,37.677068,693,Rio Grande County Dept. of Social Services,1015 6th St.,Del Norte,CO,81132,719.5657.4208,Single Entry Points,August 2014,-106.348925,37.677068,RIO GRANDE COUNTY,MATCH
+-106.349749,37.677129,694,Rio Grand Options for Long-Term Care (OLTC),925 6th St.,Del Norte,CO,81132,719.657.4208,Single Entry Points,August 2014,-106.349749,37.677129,RIO GRANDE COUNTY,MATCH
+-104.697213,40.43701,695,Weld County Area Agency on Aging,"315 C. N. 11th Ave., PO Box 1805",Greeley,CO,80632,970.346.6950,Single Entry Points,September 2016,-104.697213,40.43701,WELD COUNTY,MATCH
+-104.819348,39.981538,696,Rose Interpreting,334 S. 3rd Ave.,Brighton,CO,80601,720.232.8370,Sign Language Interpreters,August 2014,-104.819348,39.981538,ADAMS COUNTY,MATCH
+-104.981147,39.896182,697,"Professional Sign Language Interpreting, Inc. (PSLI)",,Northglenn,CO,80233,303.920.7330,Sign Language Interpreters,August 2014,-104.981147,39.896182,ADAMS COUNTY,CORRECTED
+-104.894269,39.941528,698,Soaring Hands Interpreting Services,13560 Uinta St.,Thornton,CO,80602,720.432.4804,Sign Language Interpreters,August 2014,-104.894269,39.941528,ADAMS COUNTY,MATCH
+-104.786016,39.690456,699,Visible Voices,1452 S Pitkin Cir,Aurora,CO,80017,720.838.3737,Computer Assisted Real-Time Translation,August 2014,-104.786016,39.690456,ARAPAHOE COUNTY,MATCH
+-105.04727,39.778901,700,Pika Sign Language Interpreters,4524 Winona Court,Denver,CO,80212,720.383.7452,Sign Language Interpreters,August 2014,-105.04727,39.778901,DENVER COUNTY,MATCH
+-104.988968,39.740797,701,Denver Office of Sign Language Services & Resources,"201 W. Colfax Ave., Dept. 1102, 2nd Floor",Denver,CO,80202,720.913.8487,Sign Language Interpreters,August 2014,-104.988968,39.740797,DENVER COUNTY,MATCH
+-104.988968,39.740797,702,Denver Office of Sign Language Services,"201 W. Colfax Ave., Dept. 1102",Denver,CO,80202,720.913.8487,Sign Language Interpreters,August 2014,-104.988968,39.740797,DENVER COUNTY,MATCH
+-104.9977,39.738277,703,Purple Language Services,"1391 Speer Blvd., #200",Denver,CO,80246,303.321.6772,Sign Language Interpreters,August 2014,-104.9977,39.738277,DENVER COUNTY,MATCH
+-104.846828,38.814804,704,Colorado Sign Language Services,727 Beacon Ridge Dr.,Colorado Springs,CO,80906,719.337.3310,Sign Language Interpreters,August 2014,-104.846828,38.814804,EL PASO COUNTY,MATCH
+-104.846828,38.814804,705,Connections for Independent Living,727 Beacon Ridge Dr.,Colorado Springs,CO,80906,719.337.3310,Sign Language Interpreters,August 2014,-104.846828,38.814804,EL PASO COUNTY,MATCH
+-104.76,38.81,706,"Access to Sign Language, Inc.",,Colorado Springs,CO,80935,719.302.5869,Sign Language Interpreters,August 2014,-104.76,38.81,EL PASO COUNTY,CORRECTED
+-104.664612,38.90175,707,"Sign Language Network, Inc. (SLN)",,Colorado Springs,CO,80938,719.599.4517,Sign Language Interpreters,August 2014,-104.664612,38.90175,EL PASO COUNTY,CORRECTED
+-104.872764,39.091656,708,Caption First,,Monument,CO,80132,800-825-5234,Computer Assisted Real-Time Translation,August 2014,-104.872764,39.091656,EL PASO COUNTY,CORRECTED
+-105.08,39.85,709,The Interpreting Agency,,Arvada,CO,80006,303.357.0928,Sign Language Interpreters,August 2014,-105.08,39.85,JEFFERSON COUNTY,CORRECTED
+-105.098539,40.592404,710,Deaf Communication Services,1221 Cherry St,Fort Collins,CO,80521,970.430.6878,Sign Language Interpreters,August 2014,-105.098539,40.592404,LARIMER COUNTY,CORRECTED
+-105.098539,40.592404,711,Deaf Communication Services,1222 Cherry St,Fort Collins,CO,80521,970.430.6878,Sign Language Interpreters,August 2014,-105.098539,40.592404,LARIMER COUNTY,CORRECTED
+-105.098539,40.592404,712,Deaf Communication Services,1223 Cherry St,Fort Collins,CO,80521,970.430.6878,Sign Language Interpreters,August 2014,-105.098539,40.592404,LARIMER COUNTY,CORRECTED
+-105.098539,40.592404,713,Deaf Communication Services,1224 Cherry St,Fort Collins,CO,80521,970.430.6878,Sign Language Interpreters,August 2014,-105.098539,40.592404,LARIMER COUNTY,CORRECTED
+-108.547354,39.065634,714,Center for Independence,"1600 Ute Ave., #100",Grand Junction,CO,81501,970.241.0315,Sign Language Interpreters,August 2014,-108.547354,39.065634,MESA COUNTY,MATCH
+-104.775332,40.524144,715,24 Hour Sign Language Services,14885 WCR 74,Eaton,CO,80615,888.811.2424,Sign Language Interpreters,August 2014,-104.775332,40.524144,WELD COUNTY,MATCH
+-104.692458,40.42214,716,Connections for Independent Living,"1024 9th Ave., Suite E",Greeley,CO,80634,970.352.8682,Sign Language Interpreters,August 2014,-104.692458,40.42214,WELD COUNTY,MATCH
+-104.692458,40.42214,717,Colorado Sign Language Services,"1024 9th Ave., Suite E",Greeley,CO,80634,970.352.8682,Sign Language Interpreters,August 2014,-104.692458,40.42214,WELD COUNTY,MATCH
+-104.923838,40.476643,718,Townsend Interpreting Services,402 14th St.,Windsor,CO,80550,970.460.6085,Sign Language Interpreters,August 2014,-104.923838,40.476643,WELD COUNTY,MATCH
+,,719,"Educational & Medical Sign Language Services (ESLI, LLC)",Statewide Reach,n/a,CO,0,,Sign Language Interpreters,August 2014,,,,NO ADDRESS
+-104.842457,39.743341,720,"Anschutz Outpatient Pavilion, University of Colorado Hospital","12634 E. 17th Ave., Room AOP 200",Aurora,CO,80045,720.848.4467,Stroke Support Groups,August 2014,-104.842457,39.743341,ADAMS COUNTY,MATCH
+-104.763004,39.746835,721,"Parent Support Group, University Physicians Inc. Building, Lilly Marks Boardroom",31399 E. Montview Blvd.,Aurora,CO,80045,303.724.2677,Stroke Support Groups,August 2014,-104.763004,39.746835,ADAMS COUNTY,CORRECTED
+-104.770746,39.965488,722,Platte Valley Medical Center,"1600 Prairie Center Pkwy, Conference Room A",Brighton,CO,80601,303.498.1840,Stroke Support Groups,August 2014,-104.770746,39.965488,ADAMS COUNTY,MATCH
+-105.020638,39.876293,723,Federal Heights Heights Stroke Support Group,2710 W. 98th Dr.,Federal Heights,CO,80260,303.466.4830,Stroke Support Groups,August 2014,-105.020638,39.876293,ADAMS COUNTY,MATCH
+-104.979482,39.850103,724,Vibra Hospital - Head Injury/Stroke Support Group,8451 Pearl St.,Thornton,CO,80229,303.355.9969,Stroke Support Groups,August 2014,-104.979482,39.850103,ADAMS COUNTY,MATCH
+-104.979482,39.850103,725,"YESS Group (ages 20-50), Total Long Term Care, Pinnacle Center Conference Room",8451 Pearl St.,Thornton,CO,80229,303.730.8800,Stroke Support Groups,August 2014,-104.979482,39.850103,ADAMS COUNTY,MATCH
+-105.018558,39.849144,726,St. Anthony's North Hospital,2551 W. 84th Ave.,Westminster,CO,80031,303.695.2836,Stroke Support Groups,August 2014,-105.018558,39.849144,ADAMS COUNTY,MATCH
+-104.80965,39.676394,727,"Colorado Community Church, Green Bldg., Room East",2220 S. Chambers Rd.,Aurora,CO,80014,303.357.5449,Stroke Support Groups,August 2014,-104.80965,39.676394,ARAPAHOE COUNTY,MATCH
+-104.831326,39.689644,728,"Medical Center of Aurora, Classroom 1",1501 S. Potomac,Aurora,CO,80012,303.918.9489,Stroke Support Groups,August 2014,-104.831326,39.689644,ARAPAHOE COUNTY,MATCH
+-104.97923,39.653271,729,"Colorado Neurological Institute, Conference Room","701 E. Hampden, #415",Englewood,CO,80113,303.357.5444,Stroke Support Groups,August 2014,-104.97923,39.653271,ARAPAHOE COUNTY,MATCH
+-104.97923,39.653271,730,"Long Term Stroke Survivors Group,  Colorado Neurological Institute, Conference Room","701 E. Hampden, #415",Englewood,CO,80113,303.357.5444,Stroke Support Groups,August 2014,-104.97923,39.653271,ARAPAHOE COUNTY,MATCH
+-104.97923,39.653271,731,"Newly Diagnosed Stroke Survivors Group, Colorado Neurological Institute, Conference Room","701 E. Hampden, #415",Englewood,CO,80113,303.357.5444,Stroke Support Groups,August 2014,-104.97923,39.653271,ARAPAHOE COUNTY,MATCH
+-104.988301,39.57728,732,"Aphasia Support Group, Littleton Adventist Hospital",7700 S. Broadway,Littleton,CO,80122,303.734.8694,Stroke Support Groups,August 2014,-104.988301,39.57728,ARAPAHOE COUNTY,MATCH
+-104.988301,39.57728,733,"Colorado Brain Aneurysm Foundation Support Group, Littleton Adventist Hospital Conference Rooms 3&4",7700 S. Broadway,Littleton,CO,80122,303.734.8694,Stroke Support Groups,August 2014,-104.988301,39.57728,ARAPAHOE COUNTY,MATCH
+-105.001008,39.573723,734,"HealthSouth Rehab Hospital, Large Day Room",1001 W. Mineral Ave.,Littleton,CO,80120,303.334.1134,Stroke Support Groups,August 2014,-105.001008,39.573723,ARAPAHOE COUNTY,MATCH
+-104.990212,39.613912,735,"YESS Group (ages 20-50), Rocky Mountain Stroke Center",5666 S. Bannock St.,Littleton,CO,80120,303.734.8694,Stroke Support Groups,August 2014,-104.990212,39.613912,ARAPAHOE COUNTY,MATCH
+-105.282967,40.025654,736,"Boulder Community Hospital Medical Pavilion, Homer Ball Conference Room (Basement)",1155 Alpine,Boulder,CO,80304,303.938.5382,Stroke Support Groups,August 2014,-105.282967,40.025654,BOULDER COUNTY,MATCH
+-105.293897,40.020763,737,Mapleton Center,311 Mapleton Ave.,Boulder,CO,80301,303.441.2361,Stroke Support Groups,August 2014,-105.293897,40.020763,BOULDER COUNTY,MATCH
+-105.083146,39.970534,738,Good Samaritan Medical Center Conference Center,200 Exempla Cir.,Lafayette,CO,80026,303.689.4028,Stroke Support Groups,August 2014,-105.083146,39.970534,BOULDER COUNTY,MATCH
+-105.125171,40.18146,739,Longmont United Hospital,1950 Mountain View,Longmont,CO,80501,303.485.4163,Stroke Support Groups,August 2014,-105.125171,40.18146,BOULDER COUNTY,MATCH
+-105.086659,39.920547,740,Broomfield Stroke Support Group,,Broomfield,CO,80038,303.730.8800,Stroke Support Groups,August 2014,-105.086659,39.920547,BROOMFIELD COUNTY,CORRECTED
+-104.979447,39.70174,741,"Aphasia Support Group, Washington St. Community Center",809 S. Washington,Denver,CO,80210,303.759.9989,Stroke Support Groups,August 2014,-104.979447,39.70174,DENVER COUNTY,MATCH
+-104.930251,39.667615,742,"Caregiver Support Group, Grace United Methodist Church Parlor Room",4905 E. Yale Ave.,Denver,CO,80222,303.756.2472,Stroke Support Groups,August 2014,-104.930251,39.667615,DENVER COUNTY,MATCH
+-104.880872,39.706811,743,Windsor Gardens,"9155 E. Center Ave., #1-C",Denver,CO,80247,303.761.7889,Stroke Support Groups,August 2014,-104.880872,39.706811,DENVER COUNTY,MATCH
+-104.803552,39.388662,744,Sky Cliff Stroke Center,4600 Hwy 86,Castle Rock,CO,80104,303.730.8800,Stroke Support Groups,August 2014,-104.803552,39.388662,DOUGLAS COUNTY,MATCH
+-104.761363,39.518598,745,Seniors Helping Seniors - South Metro Denver,,Parker,CO,80134,303.990.4561,Stroke Support Groups,August 2014,-104.761363,39.518598,DOUGLAS COUNTY,CORRECTED
+-106.827978,39.64961,746,Golden Eagle Senior Center,715 Broadway,Eagle,CO,81631,970.328.8896,Stroke Support Groups,August 2014,-106.827978,39.64961,EAGLE COUNTY,MATCH
+-106.951711,39.64692,747,Eagle/Gypsum Stroke Club,,Gypsum,CO,81637,970.524.9325,Stroke Support Groups,August 2014,-106.951711,39.64692,EAGLE COUNTY,CORRECTED
+-104.802835,38.854413,748,Colorado Springs Senior Center,1514 N. Hancock Ave.,Colorado Springs,CO,80915,719.630.2308,Stroke Support Groups,August 2014,-104.802835,38.854413,EL PASO COUNTY,MATCH
+-104.757184,38.828433,749,Easter Seals Southern Colorado,225 S. Academy Blvd. #104,Colorado Springs,CO,80910,719.473.9839,Stroke Support Groups,August 2014,-104.757184,38.828433,EL PASO COUNTY,MATCH
+-104.791493,38.82868,750,HealthSouth Rehab Hospital,325 Parkside Dr.,Colorado Springs,CO,80910,719.630.8000,Stroke Support Groups,August 2014,-104.791493,38.82868,EL PASO COUNTY,MATCH
+-105.189352,38.446848,751,"Fremont County Stroke Survivors & Caregivers Group, Seventh Day Adventist Church",3180 E. Main St.,Canon City,CO,81212,719.276.1406,Stroke Support Groups,August 2014,-105.189352,38.446848,FREMONT COUNTY,MATCH
+-106.924495,38.551203,752,"Gunnison Valley Hospital, Foundation House",711 N. Taylor St.,Gunnison,CO,81230,970.641.7248,Stroke Support Groups,August 2014,-106.924495,38.551203,GUNNISON COUNTY,MATCH
+-105.090688,39.818515,753,"Aphasia Support Group, Arvada Methodist Church",6750 Carr St.,Arvada,CO,80004,303.730.8800,Stroke Support Groups,August 2014,-105.090688,39.818515,JEFFERSON COUNTY,MATCH
+-105.12767,39.717818,754,St. Anthony's Medical Center,11600 W. 2nd Place,Lakewood,CO,80228,720.203.8959,Stroke Support Groups,August 2014,-105.12767,39.717818,JEFFERSON COUNTY,MATCH
+-105.49448,40.380881,755,Healing Waters Foundation,1632-B Big Thomson Ave.,Estes Park,CO,80517,970.586.9205,Stroke Support Groups,August 2014,-105.49448,40.380881,LARIMER COUNTY,MATCH
+-105.059129,40.572844,756,Center for Neurorehabilitation Services Conference Room,1045 Robertson,Fort Collins,CO,80524,970.493.6667 ext. 366,Stroke Support Groups,August 2014,-105.059129,40.572844,LARIMER COUNTY,MATCH
+-105.063574,40.567206,757,"Life After Stroke Support Group, First Baptist Church",900 E. Prospect Rd.,Fort Collins,CO,80524,970.493.6667 ext. 336,Stroke Support Groups,August 2014,-105.063574,40.567206,LARIMER COUNTY,MATCH
+-104.971319,40.40553,758,"Climbing Higher Stroke Group, Northern Colorado Rehab Hospital",4401 Union St.,Johnstown,CO,80534,970.619.3442,Stroke Support Groups,August 2014,-104.971319,40.40553,LARIMER COUNTY,MATCH
+-104.971319,40.40553,759,Northern Colorado Rehab Hospital,4401 Union St.,Johnstown,CO,80534,970.619.3442,Stroke Support Groups,August 2014,-104.971319,40.40553,LARIMER COUNTY,MATCH
+-103.220161,40.613557,760,"Sterling Regional Medical Center, Rehab Conference Room",615 Fairhurst St.,Sterling,CO,80751,970.522.0402,Stroke Support Groups,August 2014,-103.220161,40.613557,LOGAN COUNTY,MATCH
+-108.542861,39.091957,761,"St. Mary's Life Center, 2nd Floor Grand Mesa Room","2686 Patterson Rd., Entrance 40",Grand Junction,CO,81502,970.298.1929,Stroke Support Groups,August 2014,-108.542861,39.091957,MESA COUNTY,MATCH
+-107.869425,38.480251,762,Montrose Memorial Hospital Conference Room B,800 S. 3rd St.,Montrose,CO,81401,970.252.2588,Stroke Support Groups,August 2014,-107.869425,38.480251,MONTROSE COUNTY,MATCH
+-104.65782,38.305406,763,"Parkview Strok Survivor Support Group, YMCA Campus",3200 E. Spaulding Ave.,Pueblo,CO,81008,719.584.4677,Stroke Support Groups,August 2014,-104.65782,38.305406,PUEBLO COUNTY,MATCH
+-104.609137,38.25444,764,Stroke Survivors Support Groups of Pueblo,,Pueblo,CO,81008,719.583.8498,Stroke Support Groups,August 2014,-104.609137,38.25444,PUEBLO COUNTY,CORRECTED
+-104.854611,37.953441,765,Colorado City Rec Center,5000 Cuerno Verde,Pueblo,CO,81004,719.676.2310,Stroke Support Groups,August 2014,-104.854611,37.953441,PUEBLO COUNTY,CORRECTED
+-104.939825,39.826625,766,Veteran Service Office,7190 Colorado Blvd.,Commerce City,CO,80022,303.227.2107,Veteran Service Offices,August 2014,-104.939825,39.826625,ADAMS COUNTY,MATCH
+-105.875167,37.446161,767,Veteran Service Office,"8900 Independence Way, PO Box 178",Alamosa,CO,81101,719.589.1108 x 1149,Veteran Service Offices,August 2014,-105.875167,37.446161,ALAMOSA COUNTY,MATCH
+-105.008293,39.613045,768,Veteran Service Office - Arapahoe County Plaza,"1690 W. Littleton Blvd., Suite 103",Littleton,CO,80120,303.738.8045,Veteran Service Offices,August 2014,-105.008293,39.613045,ARAPAHOE COUNTY,MATCH
+-107.009907,37.261768,769,Veteran Service Office,"451 Hot Springs Blvd., PO Box 1507",Pagosa Springs,CO,81147,970.264.4013,Veteran Service Offices,August 2014,-107.009907,37.261768,ARCHULETA COUNTY,MATCH
+-102.614368,37.408341,770,Veteran Service Office,2550 Hwy 160,Springfield,CO,81073,719.563.0976,Veteran Service Offices,August 2014,-102.614368,37.408341,BACA COUNTY,CORRECTED
+-103.222714,38.066673,771,Veteran Service Office - Bent County Courthouse,US Hwy 50 & CO 101,Las Animas,CO,81054,719.456.1600,Veteran Service Offices,August 2014,-103.222714,38.066673,BENT COUNTY,CORRECTED
+-105.23689,40.021387,772,Veteran Service Office,"4999 Pearl East Circle, Suite 106",Boulder,CO,80501,303.441.3890,Veteran Service Offices,August 2014,-105.23689,40.021387,BOULDER COUNTY,MATCH
+-105.11852,40.14747,773,"Veteran Service Office - Kansas Ave. Office Park, Workforce Boulder County","1500 Kansas Ave., Bldg 4D",Longmont,CO,80501,303.776.8502,Veteran Service Offices,August 2014,-105.11852,40.14747,BOULDER COUNTY,MATCH
+-105.08869,39.922543,774,Veteran Service Office,6 Garden Center,Broomfield,CO,80020,720.887.2263,Veteran Service Offices,August 2014,-105.08869,39.922543,BROOMFIELD COUNTY,MATCH
+-105.987807,38.534031,775,Veteran Service Office - Touber Building,"448 E. 1st St., Suite 216",Salida,CO,81201,719.539.3803,Veteran Service Offices,August 2014,-105.987807,38.534031,CHAFFEE COUNTY,MATCH
+-102.353250895,38.8213951619001,776,Veteran Service Office,PO Box 824,Cheyenne Wells,CO,80810,719.767.5808,Veteran Service Offices,August 2014,-102.353250895,38.8213951619,CHEYENNE COUNTY,CORRECTED
+-105.51666,39.742577,777,Veteran Service Office - Clear Creek Resource Center,"1531 Colorado Blvd., PO Box 3669",Idaho Springs,CO,80452,303.670.7543,Veteran Service Offices,August 2014,-105.51666,39.742577,CLEAR CREEK COUNTY,MATCH
+-106.020778,37.091559,778,Veteran Service Office -Social Services/County Veterans Affairs Bldg.,"12987 DR 6, PO Box 196",Conejos,CO,81129,719.376.7625,Veteran Service Offices,August 2014,-106.020778,37.091559,CONEJOS COUNTY,CORRECTED
+-105.423897895,37.2008461617,779,Veteran Service Office,PO Box 97,San Luis,CO,81152,719.672.3004,Veteran Service Offices,August 2014,-105.423897895,37.2008461617,COSTILLA COUNTY,CORRECTED
+-103.756847,38.222075,780,Veteran Service Office - Crowley County Dept. of Human Services,"631 Main St., Stuite 100",Ordway,CO,81063,719.267.5251,Veteran Service Offices,August 2014,-103.756847,38.222075,CROWLEY COUNTY,MATCH
+-105.461497,38.136042,781,Veteran Service Office,511 Main St.,Westcliffe,CO,81252,719.783.9470,Veteran Service Offices,August 2014,-105.461497,38.136042,CUSTER COUNTY,MATCH
+-108.072327,38.740594,782,Veteran Service Office - Delta County Courthouse,501 Palmer St.,Delta,CO,81428,970.874.2082,Veteran Service Offices,August 2014,-108.072327,38.740594,DELTA COUNTY,MATCH
+-105.024998,39.735545,783,"Veteran Service Office - Castr Bldg., Denver Human Services",1200 Federal,Denver,CO,80204,,Veteran Service Offices,August 2014,-105.024998,39.735545,DENVER COUNTY,MATCH
+-104.973155,39.760035,784,"Veteran Service Office - Matthews Center Gldg., Community Resource & Referral Center",3030 Downing St.,Denver,CO,80205,720.944.3501,Veteran Service Offices,August 2014,-104.973155,39.760035,DENVER COUNTY,MATCH
+-108.905943894,37.7661001617001,785,Veteran Service Office - VFW Hall,PO Box 668,Dove Creek,CO,81324,970.570.6847,Veteran Service Offices,August 2014,-108.905943894,37.7661001617,DOLORES COUNTY,CORRECTED
+-104.860129,39.372382,786,Veteran Service Office - Wilcox Bldg,301 Wilcox St.,Castle Rock,CO,80109,303.814.5359,Veteran Service Offices,August 2014,-104.860129,39.372382,DOUGLAS COUNTY,MATCH
+-106.82805,39.652119,787,Veteran Service Office - Health & Human Services Bldg.,"551 Broadway, PO Box 660",Eagle,CO,81631,970.390.4686,Veteran Service Offices,August 2014,-106.82805,39.652119,EAGLE COUNTY,MATCH
+-104.715643,38.892591,788,Veteran Service Office,"5850 Championship View, Suite 130",Colorado Springs,CO,80922,719.520.7750,Veteran Service Offices,August 2014,-104.715643,38.892591,EL PASO COUNTY,MATCH
+-104.538306895,39.2191321619,789,Veteran Service Office,PO Box 131,Elbert,CO,80106,303.520.6088,Veteran Service Offices,August 2014,-104.538306895,39.2191321619,ELBERT COUNTY,CORRECTED
+-105.239827,38.442209,790,Veteran Service Office - Fremont County Admin Bldg.,"615 Macon Ave., Suite LL-8",Canon City,CO,81212,719.276.7400,Veteran Service Offices,August 2014,-105.239827,38.442209,FREMONT COUNTY,MATCH
+-107.784998,39.531695,791,Veteran Service Office - c/o Farmer Insurance,"216 W. 3rd St., Rose Plaza, Suite 103",Rifle,CO,81650,970.625.9484,Veteran Service Offices,August 2014,-107.784998,39.531695,GARFIELD COUNTY,MATCH
+-105.482813,39.839119,792,"Veteran Service Office - Gilpin County Justice Center, Dept. of Human Services","2960 Dory Hill Rd., Suite 100",Blackhawk,CO,80422,303.582.5444 x 1103,Veteran Service Offices,August 2014,-105.482813,39.839119,GILPIN COUNTY,MATCH
+-106.102795,40.073043,793,Veteran Service Office - Grand County Courthouse,PO Box 264,Hot Sulpher Springs,CO,80451,970.725.3122,Veteran Service Offices,August 2014,-106.102795,40.073043,GRAND COUNTY,CORRECTED
+-106.930333,38.547818,794,Veteran Service Office,316 W. Ohio,Gunnison,CO,81230,970.641.6147,Veteran Service Offices,August 2014,-106.930333,38.547818,GUNNISON COUNTY,MATCH
+-107.3048034,38.0319374,795,Veteran Service Office,"896 Wildflower Rd., PO Box 865",Lake City,CO,81235,970.944.5014,Veteran Service Offices,August 2014,-107.3048034,38.0319374,HINSDALE COUNTY,CORRECTED
+-104.78109,37.623431,796,Veteran Service Office- Huerfano County Dept. of Social Services,121 W. 6th St.,Walsenburg,CO,81089,719.738.2810 x34,Veteran Service Offices,August 2014,-104.78109,37.623431,HUERFANO COUNTY,MATCH
+-106.283640895,40.7316451613001,797,Veteran Service Office,PO Box 1019,Walden,CO,80480,970.723.4660,Veteran Service Offices,August 2014,-106.283640895,40.7316451613,JACKSON COUNTY,CORRECTED
+-105.209788,39.733459,798,Veteran Service Office - Jefferson County Laramie Bldg.,"3500 Illinois St., Suite 1600",Golden,CO,80401,303.271.4205,Veteran Service Offices,August 2014,-105.209788,39.733459,JEFFERSON COUNTY,MATCH
+-102.730509,38.462194,799,Veteran Service Office - Kiowa County Courthouse,13344 Hwy 287,Eads,CO,81036,719.438.5421,Veteran Service Offices,August 2014,-102.730509,38.462194,KIOWA COUNTY,MATCH
+-102.604937,39.306389,800,Veteran Service Office,140 Colorado Ave.,Stratton,CO,80836,719.440.4589,Veteran Service Offices,August 2014,-102.604937,39.306389,KIT CARSON COUNTY,MATCH
+-107.874299,37.28405,801,Veteran Service Office - Riverside Professional Bldg.,"1970 E. 3rd Ave., Ste. 102",Durango,CO,81301,970.382.6150,Veteran Service Offices,August 2014,-107.874299,37.28405,LA PLATA COUNTY,MATCH
+-107.633109894,37.1150041619,802,Veteran Service Office,PO Box 737,Ignacio,CO,81137,970.563.0100,Veteran Service Offices,August 2014,-107.633109894,37.1150041619,LA PLATA COUNTY,CORRECTED
+-106.302601,39.23998,803,Veteran Service Office - New Discovery Bldg.,"901 S. Hwy 24, PO Box 964",Leadville,CO,80461,719.221.3245,Veteran Service Offices,August 2014,-106.302601,39.23998,LAKE COUNTY,MATCH
+-105.079137,40.585768,804,Veteran Service Office - Larimer County Courthouse,"200 W. Oak St., Ste 5000, PO Box 1190",Fort Collins,CO,80522,970.498.7391,Veteran Service Offices,August 2014,-105.079137,40.585768,LARIMER COUNTY,MATCH
+-104.50363,37.168387,805,Veteran Service Office - Las Animas County Courthouse,"200 E. First St., Room 101",Trinidad,CO,81082,719.846.3940,Veteran Service Offices,August 2014,-104.50363,37.168387,LAS ANIMAS COUNTY,MATCH
+-103.467117,39.133587,806,Veteran Service Office,"513 4th St., PO Box 398",Hugo,CO,80821,719.743.2448,Veteran Service Offices,August 2014,-103.467117,39.133587,LINCOLN COUNTY,MATCH
+-108.505668,39.079346,807,Veteran Service Office - Mesa County Workforce Center,512 29 1/2 Rd.,Grand Junction,CO,81504,970.248.2733,Veteran Service Offices,August 2014,-108.505668,39.079346,MESA COUNTY,MATCH
+-106.926429894,37.8491701614001,808,Veteran Service Office,PO Box 70,Creede,CO,81130,719.658.2416 x404,Veteran Service Offices,August 2014,-106.926429894,37.8491701614,MINERAL COUNTY,CORRECTED
+-107.551028,40.513442,809,Veteran Service Office,480 Barclay St.,Craig,CO,81625,970.824.3246 x10,Veteran Service Offices,August 2014,-107.551028,40.513442,MOFFAT COUNTY,MATCH
+-108.58669,37.350311,810,Veteran Service Office,"107 N. Chestnut, Suite #3",Cortez,CO,81321,970.564.2779,Veteran Service Offices,August 2014,-108.58669,37.350311,MONTEZUMA COUNTY,MATCH
+-107.866147,38.466403,811,Veteran Service Office - Dept. of Health & Human Services Bldg.,1845 S. Townsend Ave.,Montrose,CO,81401,970.249.2115,Veteran Service Offices,August 2014,-107.866147,38.466403,MONTROSE COUNTY,MATCH
+-103.630161,40.259542,812,Veteran Service Office,611 Lincoln St.,Brush,CO,80723,970.768.2389,Veteran Service Offices,August 2014,-103.630161,40.259542,MORGAN COUNTY,MATCH
+-103.543677,37.986099,813,Veteran Service Office - Otero County Courthouse,"13 W. 3rd St., Room 110, PO Box 494",La Junta,CO,81050,719.383.3148,Veteran Service Offices,August 2014,-103.543677,37.986099,OTERO COUNTY,MATCH
+-105.995075,39.224746,814,Veteran Service Office - Park County Human Services,"825 Clark St., PO Box 968",Fairplay,CO,80440,719.836.4132,Veteran Service Offices,August 2014,-105.995075,39.224746,PARK COUNTY,MATCH
+-102.643292,40.656744,815,Veteran Service Office,3813 County Road 32,Haxtun,CO,80731,970.774.6534,Veteran Service Offices,August 2014,-102.643292,40.656744,PHILLIPS COUNTY,MATCH
+-102.618292,38.079717,816,Veteran Service Office,"1001 S. Main, Room 119, PO Box 336",Lamar,CO,81052,719.583.6113,Veteran Service Offices,August 2014,-102.618292,38.079717,PROWERS COUNTY,MATCH
+-104.567866,38.271873,817,Veteran Service Office - Housing and Human Services Bldg.,2361 E. 4th St.,Pueblo,CO,81001,719.583.6113,Veteran Service Offices,August 2014,-104.567866,38.271873,PUEBLO COUNTY,MATCH
+-107.913135895,40.0374751617001,818,Veteran Service Office - County Administration Bldg.,PO Box 599,Meeker,CO,81641,970.878.9690,Veteran Service Offices,August 2014,-107.913135895,40.0374751617,RIO BLANCO COUNTY,CORRECTED
+-106.095683,37.574531,819,Veteran Service Office - Colorado State Veterans Center,PO Box 97,Homelake,CO,81135,719.852.5118,Veteran Service Offices,August 2014,-106.095683,37.574531,RIO GRANDE COUNTY,CORRECTED
+-106.823151,40.467339,820,"Veteran Service Office - County Workforce Office, Sundance Plaza at Fish Creek","425 Anglers Drive, PO Box 771790",Steamboat Springs,CO,80477,970.879.5489,Veteran Service Offices,August 2014,-106.823151,40.467339,ROUTT COUNTY,MATCH
+-106.137072,38.087486,821,Veteran Service Office,"405 Denver Ave., PO Box 325",Saguache,CO,81149,719.655.2680,Veteran Service Offices,August 2014,-106.137072,38.087486,SAGUACHE COUNTY,MATCH
+-107.6688207,37.8090607,822,Veteran Service Office,953 Snowden St.,Silverton,CO,81433,970.387.5705,Veteran Service Offices,August 2014,-107.6688207,37.8090607,SAN JUAN COUNTY,CORRECTED
+-107.812281895,37.9374961615001,823,Veteran Service Office,PO Box 1014,Telluride,CO,81435,970.728.4501,Veteran Service Offices,August 2014,-107.812281895,37.9374961615,SAN MIGUEL COUNTY,CORRECTED
+-102.262342,40.986734,824,Veteran Service Office,"116 Cedar St., Box 2",Julesburg,CO,80737,970.474.2575,Veteran Service Offices,August 2014,-102.262342,40.986734,SEDGWICK COUNTY,MATCH
+-106.0942113,39.5775222,825,Veteran Service Office - Colorado Workforce Center,"602 Galena St., PO Box 679",Frisco,CO,80443,214.287.6812,Veteran Service Offices,August 2014,-106.0942113,39.5775222,SUMMIT COUNTY,CORRECTED
+-105.0465228,38.9883177,826,Veteran Service Office - Woodland Park Dept. of Social Services,"740 Hwy 24, PO Box 9033",Woodland Park,CO,80866,719.686.5526,Veteran Service Offices,August 2014,-105.0465228,38.9883177,TELLER COUNTY,CORRECTED
+-103.2114173,40.1596549,827,Veteran Service Office - Washington County Courthouse,"150 Ash Ave., 230 Gum Ave.",Akron,CO,80720,970.345.6685,Veteran Service Offices,August 2014,-103.2114173,40.1596549,WASHINGTON COUNTY,CORRECTED
+-102.935581,40.351376,828,Veteran Service Office,39125 CR 54,Otis,CO,80743,970.520.5876,Veteran Service Offices,August 2014,-102.935581,40.351376,WASHINGTON COUNTY,MATCH
+-104.694914,40.423798,829,Veteran Service Office,1008 9th St.,Greeley,CO,80631,970.304.6595,Veteran Service Offices,August 2014,-104.694914,40.423798,WELD COUNTY,MATCH
+-102.713521,40.133688,830,Veteran Service Office,214 Homestead Trail,Yuma,CO,80759,970.848.2273,Veteran Service Offices,August 2014,-102.713521,40.133688,YUMA COUNTY,MATCH
