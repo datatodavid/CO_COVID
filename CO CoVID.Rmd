@@ -10,7 +10,7 @@ runtime: shiny
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 
-
+setwd("C:/Users/gottl/Dropbox/Data Science/NYCDSA/Projects/Project 1 Shiny App/COVID")
 
 Zscores2020RWJ = read.csv("2020 County Health Rankings Colorado Data Life Expectancy By County.csv", stringsAsFactors = F, header = T)
 names(Zscores2020RWJ) = gsub("Socio.Economic..Factors.Rank", "Socio.Economic.Factors.Rank", names(Zscores2020RWJ))
@@ -20,17 +20,80 @@ Zscores2020RWJ = Zscores2020RWJ %>% select(., -ï..FIPS, -X, -State) %>% mutate_
 # unique(Zscores2020RWJ$COUNTY)
 
 COdataRWJ2020 = read.csv("2020 County Health Rankings Colorado Data Life Measures CLEANED 2 col header.csv", stringsAsFactors = F, header = T)
-names(COdataRWJ2020) <- paste(names(COdataRWJ2020), COdataRWJ2020[1, ], sep = "_")
-names(COdataRWJ2020) = gsub(" ", ".", names(COdataRWJ2020))
-names(COdataRWJ2020) = gsub("-", "_", names(COdataRWJ2020))
-#MetricsCO = unique(colnames(COdataRWJ2020))
-COdataRWJ2020 = COdataRWJ2020[-1,]
-COdataRWJ2020 = COdataRWJ2020[,-1]
-COdataRWJ2020 = COdataRWJ2020[,-1]
-names(COdataRWJ2020) = gsub("X.1_County", "COUNTY", names(COdataRWJ2020))
-#unique(colnames(COdataRWJ2020))
-COdataRWJ2020 = COdataRWJ2020 %>% mutate_at(., "COUNTY", toupper)
-COdataRWJ2020 = COdataRWJ2020 %>% mutate_if(., !str_detect(colnames(.), "COUNTY"), as.numeric)
+names(COdataRWJ2020) = COdataRWJ2020[1, ]
+COdataRWJ2020 = COdataRWJ2020[-1, ]
+names(COdataRWJ2020) = gsub("(", "", names(COdataRWJ2020), fixed=T)
+names(COdataRWJ2020) = gsub(")", "", names(COdataRWJ2020), fixed=T)
+names(COdataRWJ2020) = make.names(names(COdataRWJ2020))
+names(COdataRWJ2020) = gsub("...", ".", names(COdataRWJ2020), fixed=T)
+names(COdataRWJ2020) = gsub("..", ".", names(COdataRWJ2020), fixed=T)
+
+CORWJnames = names(COdataRWJ2020)
+
+for (i in c(44,50,63,91,95,97,104,112,122,135,144,147,169,171,184)) {
+CORWJnames[i+1] = paste(CORWJnames[i], CORWJnames[i+1], sep=".")  }
+
+for (j in c(173,205,227,231,250)) {
+  for (i in c(j+1, j+2)) {
+    CORWJnames[i] = paste(CORWJnames[j], CORWJnames[i], sep=".")  }}
+
+for (j in c(5,24,28,32,36,40,46,52,58,65,85,116,124,139,150,186)) {
+  for (i in c(j+1, j+2, j+3)) {
+  CORWJnames[i] = paste(CORWJnames[j], CORWJnames[i], sep=".")  }}
+
+for (i in c(176:185)) {
+CORWJnames[i] = paste("Perc", CORWJnames[i], sep=".")  }
+
+for (i in c(114:116)) {
+CORWJnames[i] = paste(CORWJnames[i], "Age.25.to.44", sep=".")  }
+
+CORWJnames = gsub("95Perc.CI.Low", "95LCI", CORWJnames)
+CORWJnames = gsub("95Perc.CI.High", "95HCI", CORWJnames)
+CORWJnames = gsub("X95LCI", "95LCI", CORWJnames)
+CORWJnames = gsub(".X95HCI", ".95HCI", CORWJnames, fixed=T)
+
+CORWJnames = gsub("Num.Associations", "Num..Social.Associations", CORWJnames, fixed=T)
+CORWJnames = gsub("Years.of.P", "YPLL.Years.of.P", CORWJnames, fixed=T)
+CORWJnames = gsub(".Hosp.", ".Hospitalization.", CORWJnames, fixed=T)
+CORWJnames = gsub("Median.Household", "Household", CORWJnames, fixed=T)
+CORWJnames = gsub("Household.In", "Median.Household.In", CORWJnames, fixed=T)
+CORWJnames = gsub("X20th.Percentile.Income", "Income.20th.Percentile" , CORWJnames, fixed=T)
+CORWJnames = gsub("X80th.Percentile.Income", "Income.80th.Percentile" , CORWJnames, fixed=T)
+CORWJnames = gsub("American.Indian", "AIAN.American.Indian" , CORWJnames, fixed=T)
+#CORWJnames
+names(COdataRWJ2020) = CORWJnames
+
+
+names(COdataRWJ2020) = gsub("County", "COUNTY", names(COdataRWJ2020))
+COdataRWJ2020 = COdataRWJ2020[,-231:-233]
+COdataRWJ2020 = COdataRWJ2020 %>% select(., -State) %>% mutate_at(., "COUNTY", toupper)
+
+library(magrittr)
+COdataRWJ2020$Presence.of.Water.Violation %<>%
+  gsub("No", 0, .) %>% 
+  gsub("Yes", 1, .)
+unique(COdataRWJ2020$Presence.of.Water.Violation)
+COdataRWJ2020 = COdataRWJ2020 %>% mutate_if(., !str_detect(names(.), "COUNTY"), as.numeric)
+warnings()
+# ZscoreClean = function(x) {
+#   gsub("Z.Score.*", paste0(COdataRWJ2020names[i-1], ".Z.Score"), x)
+# }
+# COdataRWJ2020names = names(COdataRWJ2020)
+# ZscoreClean(COdataRWJ2020names)
+# ZscoreClean(names(COdataRWJ2020))
+COdataRWJ2020simp = COdataRWJ2020 %>% select(.,  -contains("95"), -contains("Num."), -FIPS, -matches("(Perc.*Score)"), -matches("(Rate.*Score)"))
+names(COdataRWJ2020simp)
+
+COdataRWJ2020_Zscores = COdataRWJ2020 %>% select(., COUNTY, contains("Z.Score"))
+
+COdataRWJ2020race = COdataRWJ2020simp %>% select(., COUNTY, contains("YPLL"), contains("Teen."), contains("Precentable.H"), contains("Vaccinated"), contains("in.Poverty"), contains("Injury.Death"), contains("Drive.Alone"), contains("Household.Income"), contains("AIAN"), contains("Asian"), contains("Black"), contains("Hispanic"), contains("White"), contains("Native"))
+
+# 
+# #MetricsCO = unique(colnames(COdataRWJ2020))
+# COdataRWJ2020 = COdataRWJ2020[-1,]
+# COdataRWJ2020 = COdataRWJ2020[,-1]
+# COdataRWJ2020 = COdataRWJ2020[,-1]
+
 #lapply(COdataRWJ2020,class)
 CO_COUNTY = left_join(COdataRWJ2020, Zscores2020RWJ, by = ("COUNTY"))
 
