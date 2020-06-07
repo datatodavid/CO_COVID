@@ -22,6 +22,7 @@ Zscores2020RWJ = Zscores2020RWJ %>% select(., -ï..FIPS, -X, -State) %>% mutate_
 COdataRWJ2020 = read.csv("2020 County Health Rankings Colorado Data Life Measures CLEANED 2 col header.csv", stringsAsFactors = F, header = T)
 names(COdataRWJ2020) = COdataRWJ2020[1, ]
 COdataRWJ2020 = COdataRWJ2020[-1, ]
+names(COdataRWJ2020)
 names(COdataRWJ2020) = gsub("(", "", names(COdataRWJ2020), fixed=T)
 names(COdataRWJ2020) = gsub(")", "", names(COdataRWJ2020), fixed=T)
 names(COdataRWJ2020) = make.names(names(COdataRWJ2020))
@@ -52,7 +53,7 @@ CORWJnames = gsub("95Perc.CI.High", "95HCI", CORWJnames)
 CORWJnames = gsub("X95LCI", "95LCI", CORWJnames)
 CORWJnames = gsub(".X95HCI", ".95HCI", CORWJnames, fixed=T)
 
-CORWJnames = gsub("Num.Associations", "Num..Social.Associations", CORWJnames, fixed=T)
+CORWJnames = gsub("Num.Associations", "Num.Social.Associations", CORWJnames, fixed=T)
 CORWJnames = gsub("Years.of.P", "YPLL.Years.of.P", CORWJnames, fixed=T)
 CORWJnames = gsub(".Hosp.", ".Hospitalization.", CORWJnames, fixed=T)
 CORWJnames = gsub("Median.Household", "Household", CORWJnames, fixed=T)
@@ -69,43 +70,187 @@ COdataRWJ2020 = COdataRWJ2020[,-231:-233]
 COdataRWJ2020 = COdataRWJ2020 %>% select(., -State) %>% mutate_at(., "COUNTY", toupper)
 
 library(magrittr)
-COdataRWJ2020$Presence.of.Water.Violation %<>%
-  gsub("No", 0, .) %>% 
-  gsub("Yes", 1, .)
-unique(COdataRWJ2020$Presence.of.Water.Violation)
-COdataRWJ2020 = COdataRWJ2020 %>% mutate_if(., !str_detect(names(.), "COUNTY"), as.numeric)
-warnings()
+# COdataRWJ2020$Presence.of.Water.Violation %<>%
+#   gsub("No", 0, .) %>% 
+#   gsub("Yes", 1, .)
+# unique(COdataRWJ2020$Presence.of.Water.Violation)
+# COdataRWJ2020 = COdataRWJ2020 %>% mutate_if(., !str_detect(names(.), "COUNTY"), as.numeric)
+# warnings()
+
+COdataRWJ2020[ ,-c(2,170)] = lapply(COdataRWJ2020[ ,-c(2,170)], as.numeric)
+#names(COdataRWJ2020)
+#lapply(COdataRWJ2020, class)
+
 # ZscoreClean = function(x) {
 #   gsub("Z.Score.*", paste0(COdataRWJ2020names[i-1], ".Z.Score"), x)
 # }
 # COdataRWJ2020names = names(COdataRWJ2020)
 # ZscoreClean(COdataRWJ2020names)
 # ZscoreClean(names(COdataRWJ2020))
-COdataRWJ2020simp = COdataRWJ2020 %>% select(.,  -contains("95"), -contains("Num."), -FIPS, -matches("(Perc.*Score)"), -matches("(Rate.*Score)"))
+COdataRWJ2020simp = COdataRWJ2020 %>% select(., -contains("95"), -contains("Num."), -FIPS, -matches("(Perc.*Score)"), -matches("(Rate.*Score)"))
 names(COdataRWJ2020simp)
+
+COdataRWJ2020simp_no_demo = COdataRWJ2020 %>% select(.,  -contains("95"), -contains("Num."), -FIPS, -matches("(Perc.*Score)"), -matches("(Rate.*Score)"), -contains("e.AIAN"), -contains("e.Asian"), -contains("e.Black"), -contains("e.Hispanic"), -contains("e.White"), -contains("d.AIAN"), -contains("d.Asian"), -contains("d.Black"), -contains("d.Hispanic"), -contains("d.White"), -contains("y.AIAN"), -contains("y.Asian"), -contains("y.Black"), -contains("y.Hispanic"), -contains("y.White"), -contains("Rank"))
+names(COdataRWJ2020simp_no_demo)
 
 COdataRWJ2020_Zscores = COdataRWJ2020 %>% select(., COUNTY, contains("Z.Score"))
 
-COdataRWJ2020race = COdataRWJ2020simp %>% select(., COUNTY, contains("YPLL"), contains("Teen."), contains("Precentable.H"), contains("Vaccinated"), contains("in.Poverty"), contains("Injury.Death"), contains("Drive.Alone"), contains("Household.Income"), contains("AIAN"), contains("Asian"), contains("Black"), contains("Hispanic"), contains("White"), contains("Native"))
 
-# 
-# #MetricsCO = unique(colnames(COdataRWJ2020))
-# COdataRWJ2020 = COdataRWJ2020[-1,]
-# COdataRWJ2020 = COdataRWJ2020[,-1]
-# COdataRWJ2020 = COdataRWJ2020[,-1]
 
+
+COdataRWJ2020raceFULL = COdataRWJ2020 %>% select(., COUNTY, contains("YPLL"), contains("Teen."), contains("Preventable.H"), contains("Vaccinated"), contains("in.Poverty"), contains("Injury.Death"), contains("Drive.Alone"), contains("Household.Income"), contains("AIAN"), contains("Asian"), contains("Black"), contains("Hispanic"), contains("White"), contains("Native"))
+
+names(COdataRWJ2020raceFULL)
+
+#### TRY 1 ####
+names(COdataRWJ2020raceFULL) %<>% 
+  gsub(".AIAN", "_AIAN", ., fixed=T) %>% 
+  gsub(".Asian", "_Asian", ., fixed=T) %>% 
+  gsub(".Black", "_Black", ., fixed=T) %>% 
+  gsub(".Hispanic", "_Hispanic", ., fixed=T) %>% 
+  gsub(".White", "_White", ., fixed=T) %>% 
+  gsub(".Native", "_Native", ., fixed=T) %>% 
+  gsub("_Hispanic_White", ".Hispanic_White", ., fixed=T) %>% 
+  
+  # gsub(".95LCI", "_95LCI", ., fixed=T) %>% 
+  # gsub(".95HCI", "_95HCI", ., fixed=T) %>% 
+  # gsub(".Z.Score", "_Z.Score", ., fixed=T) %>% 
+  gsub("AIAN.American.Indian.Alaska_Native", "AIAN", ., fixed=T) %>% 
+  gsub("Native.Hawaiian.Other.Pacific.Islander", "NHPI", ., fixed=T) %>% 
+  gsub("YPLL.Years.of.Potential.Life.Lost.", "YPLL.", ., fixed=T) %>%
+  gsub("Alone.to.Work", "Alone", ., fixed=T) %>% 
+  gsub("Rate.95LCI", "Rate_ALL.95LCI", ., fixed=T) %>%
+  gsub("Rate.95HCI", "Rate_ALL.95HCI", ., fixed=T) %>% 
+  gsub("Rate.Z.Score", "Rate_ALL.Z.Score", ., fixed=T) %>% 
+  gsub("ated.Z.Score", "ated_ALL.Z.Score", ., fixed=T) %>% 
+  gsub("Poverty.95LCI", "Poverty_ALL.95LCI", ., fixed=T) %>%
+  gsub("Poverty.95HCI", "Poverty_ALL.95HCI", ., fixed=T) %>% 
+  gsub("Poverty.Z.Score", "Poverty_ALL.Z.Score", ., fixed=T) %>% 
+  gsub("Alone.95LCI", "Alone_ALL.95LCI", ., fixed=T) %>%
+  gsub("Alone.95HCI", "Alone_ALL.95HCI", ., fixed=T) %>% 
+  gsub("Alone.Z.Score", "Alone_ALL.Z.Score", ., fixed=T) %>% 
+  gsub("Income.95LCI", "Income_ALL.95LCI", ., fixed=T) %>%
+  gsub("Income.95HCI", "Income_ALL.95HCI", ., fixed=T) %>% 
+  gsub("Income.Z.Score", "Income_ALL.Z.Score", ., fixed=T)
+
+for (i in c(2,21,40,47,54,64,83,102)) {
+  colnames(COdataRWJ2020raceFULL)[i] = paste(colnames(COdataRWJ2020raceFULL)[i], "ALL", sep="_") }
+
+COdataRWJ2020raceFULL[,-1] = lapply(COdataRWJ2020raceFULL[,-1], as.numeric)
+
+#### TRY 2 ####
+names(COdataRWJ2020raceFULL) %<>% 
+  gsub(".95LCI", "_95LCI", ., fixed=T) %>%
+  gsub(".95HCI", "_95HCI", ., fixed=T) %>%
+  gsub(".Z.Score", "_Z.Score", ., fixed=T) %>%
+  gsub("AIAN.American.Indian.Alaska.Native", "AIAN", ., fixed=T) %>% 
+  gsub("Native.Hawaiian.Other.Pacific.Islander", "NHPI", ., fixed=T) %>% 
+  gsub("YPLL.Years.of.Potential.Life.Lost.", "YPLL.", ., fixed=T) %>%
+  gsub("Alone.to.Work", "Alone", ., fixed=T) %>% 
+  gsub("Rate_95LCI", "Rate.ALL_95LCI", ., fixed=T) %>%
+  gsub("Rate_95HCI", "Rate.ALL_95HCI", ., fixed=T) %>% 
+  gsub("Rate_Z.Score", "Rate.ALL_Z.Score", ., fixed=T) %>% 
+  gsub("ated_Z.Score", "ated.ALL_Z.Score", ., fixed=T) %>% 
+  gsub("Poverty_95LCI", "Poverty.ALL_95LCI", ., fixed=T) %>%
+  gsub("Poverty_95HCI", "Poverty.ALL_95HCI", ., fixed=T) %>% 
+  gsub("Poverty_Z.Score", "Poverty.ALL_Z.Score", ., fixed=T) %>% 
+  gsub("Alone_95LCI", "Alone.ALL_95LCI", ., fixed=T) %>%
+  gsub("Alone_95HCI", "Alone.ALL_95HCI", ., fixed=T) %>% 
+  gsub("Alone_Z.Score", "Alone.ALL_Z.Score", ., fixed=T) %>% 
+  gsub("Income_95LCI", "Income.ALL_95LCI", ., fixed=T) %>%
+  gsub("Income_95HCI", "Income.ALL_95HCI", ., fixed=T) %>% 
+  gsub("Income_Z.Score", "Income.ALL_Z.Score", ., fixed=T)
+
+for (i in c(2,21,40,47,54,64,83,102)) {
+  colnames(COdataRWJ2020raceFULL)[i] = paste(colnames(COdataRWJ2020raceFULL)[i], "ALL", sep=".") }
+
+
+for (i in c(2,6,9,12,15,18,21,25,28,31,34,37,40, 42:47, 49:54, 58:64,
+            68,71,74,77,80,83,87,90,93,96,99,102,105,108,111,114,117, 120:131)) {
+  colnames(COdataRWJ2020raceFULL)[i] = paste(colnames(COdataRWJ2020raceFULL)[i], "Measure", sep="_") }
+
+for (i in 120:131) {
+  colnames(COdataRWJ2020raceFULL)[i] = paste("Demographics", colnames(COdataRWJ2020raceFULL)[i], sep=".") }
+
+COdataRWJ2020raceFULL[,-1] = lapply(COdataRWJ2020raceFULL[,-1], as.numeric)
+#names(COdataRWJ2020raceFULL) 
+
+COdataRWJ2020race_no_num = 
+  COdataRWJ2020raceFULL %>%   select(., -contains("Num."))
+#names(COdataRWJ2020race_no_num)
+#lapply(COdataRWJ2020raceFULL, class)
+
+COdataRWJ2020racePivot_und = COdataRWJ2020race_no_num %>%
+  pivot_longer(
+   cols = contains("_"), 
+    names_to = c("Category", "Test.Type"),
+    names_sep = "_",
+    values_to = "Value",
+    values_drop_na = TRUE  )
+
+
+COdataRWJ2020racePivot_und$Category %<>%    
+  gsub(".ALL", "_ALL", ., fixed=T) %>% 
+  gsub(".AIAN", "_AIAN", ., fixed=T) %>% 
+  gsub(".Asian", "_Asian", ., fixed=T) %>% 
+  gsub(".Black", "_Black", ., fixed=T) %>% 
+  gsub(".Hispanic", "_Hispanic", ., fixed=T) %>% 
+  gsub(".White", "_White", ., fixed=T) %>% 
+  gsub(".NHPI", "_NHPI", ., fixed=T) %>% 
+  gsub(".Non_Hispanic_White", "_White", ., fixed=T) 
+  
+
+COdataRWJ2020raceP2 = COdataRWJ2020racePivot_und %>% separate(., Category, c("Category", "Demographic"), "_", remove = T)
+
+COdataRWJ2020raceP3 = COdataRWJ2020raceP2 %>%
+  pivot_wider(
+   names_from = Test.Type, 
+    values_from = Value)
+#write.csv(COdataRWJ2020raceP3, "CO_Demographic_Race_Data_by_County.csv", row.names = F)
+
+unique(COVID19_PER$COUNTY)
+CO_Race_Measures_COVID19 = left_join(COdataRWJ2020raceP3, COVID19_PER, by="COUNTY")
+
+
+
+COdataRWJ2020race = COdataRWJ2020simp %>% select(., COUNTY, contains("YPLL"), contains("Teen."), contains("Preventable.H"), contains("Vaccinated"), contains("in.Poverty"), contains("Injury.Death"), contains("Drive.Alone"), contains("Household.Income"), contains("AIAN"), contains("Asian"), contains("Black"), contains("Hispanic"), contains("White"), contains("Native"))
+names(COdataRWJ2020race)
+
+?tryCatch
 #lapply(COdataRWJ2020,class)
-CO_COUNTY = left_join(COdataRWJ2020, Zscores2020RWJ, by = ("COUNTY"))
+#CO_COUNTY = left_join(COdataRWJ2020, Zscores2020RWJ, by = ("COUNTY"))
+library(Hmisc)
 
 Health_Outcomes_Master =     
   read.csv("CDPHE_Composite_Selected_Health_Outcome_Dataset_(County).csv",
            stringsAsFactors = F, header=T)
-names(Health_Outcomes_Master) = gsub("COUNTY_NAME", "COUNTY", names(Health_Outcomes_Master))
 
-#unique(colnames(Health_Outcomes_Master))
+names(Health_Outcomes_Master) %<>%  
+  gsub("_", ".", .) %>% 
+  tolower(.) %>% 
+  capitalize(.) %>% 
+  gsub("County.name", "COUNTY", .) %>% 
+  gsub("l95ci", "95LCI", .) %>% 
+  gsub("u95ci", "95HCI", .) %>% 
+  gsub("adjrate", "Rate", .) %>% 
+  gsub(".s", ".S", ., fixed=T) %>% 
+  gsub(".d", ".D", ., fixed=T) %>% 
+  gsub("Asthma.", "Asthma.Hospitalizations.", ., fixed=T) %>% 
+  gsub("Diabetes.", "Diabetes.Hospitalizations.", ., fixed=T) %>% 
+  gsub("Influenza.", "Influenza.Hospitalizations.", ., fixed=T) %>% 
+  gsub("Hd.", "Heart.Disease.Mortality.", ., fixed=T) %>%
+  gsub("Suicide.", "Suicide.Mortality.", ., fixed=T) %>%
+  gsub("Lwb.", "Low.Weight.Birth.", ., fixed=T) %>% 
+  gsub("Tf.", "Teen.Fertility.", ., fixed=T) %>% 
+  gsub("Mva.", "Motor.Vehicle.Accident.Mortality.", ., fixed=T) %>% 
+  gsub("Pod.", "Opioid.or.Heroin.Mortality.", ., fixed=T)
 
-CO_COUNTY = left_join(CO_COUNTY, Health_Outcomes_Master, by = ("COUNTY"))
+Health_Outcomes_Master = Health_Outcomes_Master[ ,-1]
+names(Health_Outcomes_Master)
+# lapply(Health_Outcomes_Master, class)
 
+CO_COUNTY = left_join(COdataRWJ2020, Health_Outcomes_Master, by = ("COUNTY"))
+names(CO_COUNTY)
 
 #Non-Hospitalization Health Rates
 
@@ -129,7 +274,7 @@ Asthma_Rates$Asthma_Rate_CIL95 = as.numeric(Asthma_Rates$Asthma_Rate_CIL95)
 Asthma_Rates$Asthma_Rate_CIH95 = gsub(".*- ", "", Asthma_Rates$Asthma_Rate_CIH95)
 Asthma_Rates$Asthma_Rate_CIH95 = gsub(")", "", Asthma_Rates$Asthma_Rate_CIH95)
 Asthma_Rates$Asthma_Rate_CIH95 = as.numeric(Asthma_Rates$Asthma_Rate_CIH95)
-#unique(colnames(Asthma_Rates))
+#names(Asthma_Rates)
 #head(Asthma_Rates)
 ####
 #### Cig Rates ####
@@ -153,7 +298,7 @@ Cig_Rates$Cig_Rate_CIL95 = as.numeric(Cig_Rates$Cig_Rate_CIL95)
 Cig_Rates$Cig_Rate_CIH95 = gsub(".*- ", "", Cig_Rates$Cig_Rate_CIH95)
 Cig_Rates$Cig_Rate_CIH95 = gsub(")", "", Cig_Rates$Cig_Rate_CIH95)
 Cig_Rates$Cig_Rate_CIH95 = as.numeric(Cig_Rates$Cig_Rate_CIH95)
-head(Cig_Rates)
+#head(Cig_Rates)
 ####
 #### Diabetes Rates ####
 Diabetes_Rates = read.csv(
@@ -357,21 +502,45 @@ Non_Hospitalization_Health =left_join(Life_Expectancy2015,
                             Health_Facilities_Sum,
 by="COUNTY"), by="COUNTY"), by="COUNTY"), by="COUNTY"), by="COUNTY")
 , by="COUNTY"), by="COUNTY"), by="COUNTY"), by="COUNTY"), by="COUNTY")
-#unique(colnames(Health_Facilities))
+
+names(Non_Hospitalization_Health) %<>%  
+  gsub("_", ".", ., fixed=T) %>% 
+  gsub("CIL95", "95LCI", .) %>% 
+  gsub("CIH95", "95HCI", .) %>% 
+  gsub("Colorado", "State", .) %>% 
+  gsub("L95CI", "95LCI", .) %>% 
+  gsub("U95CI", "95HCI", .) %>% 
+  gsub("LE.", "Life.Expectancy.", ., fixed=T) %>% 
+  gsub("STATE", "State", .) %>% 
+  gsub("VARIANCE", "Variance", .) %>% 
+  gsub("MJ.", "Marijuana.", ., fixed=T) %>% 
+  gsub("Cig.", "Cigarette.", ., fixed=T)
+
+names(Non_Hospitalization_Health)
+
 
 # colnames(CO_COUNTY)
 #### ADDING NON-HOSPITALIZATION HEALTH ####
 
-CO_COUNTY = left_join(CO_COUNTY, Non_Hospitalization_Health, by = "COUNTY")
-CO_COUNTY = CO_COUNTY %>% 
-  mutate(., Per_100000_Total_Dis_Providers = 100000*Total_Dis_Providers/Population_Total,
-Per_100000_Available_Beds = 100000*Available_Beds/Population_Total,
-Per_100000_Total_Beds = 100000*Total_Beds/Population_Total,
-Per_100000_Assisted_Living_Facs = 100000*Assisted_Living_Facs/Population_Total,
-Per_100000_Total_Health_Facilities = 100000*Total_Health_Facilities/Population_Total)
+CO_COUNTY_ALL = left_join(CO_COUNTY, Non_Hospitalization_Health, by = "COUNTY")
 
 
-CO_COUNTY_PER = CO_COUNTY %>% select(., COUNTY, contains("Per", ignore.case = T), contains("Rate", ignore.case = T), LE_20102015, LE_STATE, -contains("95"), -contains("Z_score", ignore.case = T))
+CO_COUNTY_ALL = CO_COUNTY_ALL %>% 
+  mutate(., Perc.100000.Total.Dis.Providers = 100000*Total.Dis.Providers/Population.Total,
+Perc.100000.Available.Beds = 100000*Available.Beds/Population.Total,
+Perc.100000.Total.Beds = 100000*Total.Beds/Population.Total,
+Perc.100000.Assisted.Living.Facs = 100000*Assisted.Living.Facs/Population.Total,
+Perc.100000.Total.Health.Facilities = 100000*Total.Health.Facilities/Population.Total)
+
+names(CO_COUNTY_ALL)
+
+CO_COUNTY_COVID_ALL = left_join(COVID19CountyANALYSIS, CO_COUNTY_ALL, by="COUNTY")
+CO_COUNTY_COVID_ALL = CO_COUNTY_COVID_ALL %>% arrange(., COUNTY)
+names(CO_COUNTY_COVID_ALL) %<>% gsub("Perc.Vaccinated", "Perc.Flu.Vaccinated", ., fixed=T) 
+
+write.csv(CO_COUNTY_COVID_ALL, "CO_COUNTY_COVID_ALL.csv", row.names = F) 
+
+CO_COUNTY_PER = CO_COUNTY_ALL %>% select(., COUNTY, contains("Perc", ignore.case = T), contains("Rate", ignore.case = T), LE.20102015, LE.STATE, -contains("95"), -contains("Z_score", ignore.case = T))
 
 
 
@@ -397,32 +566,41 @@ COVID19County = COVID19County %>% arrange(COUNTY, Date)
 COVID19County$Date = as.Date(COVID19County$Date, format="%m/%d/%Y")
 
 COVID19Positive = read.csv("Colorado_COVID-19_Positive_Cases_and_Rates_of_Infection_by_County_of_Identification_05_25.csv", header=T, stringsAsFactors = F)
+names(COVID19Positive) %<>% gsub("__", "_", ., fixed=T) 
 COVID19Positive = COVID19Positive %>% 
   select(., COUNTY, County_Population, State_Population, County_Pos_Cases,
- COVID_County_Pos_Case_Rate_Per_100000 = County_Rate_Per_100_000, COVID_County_Total_Deaths = County_Deaths, State_Deaths, State_Number_Hospitalizations, State_Number_Tested) %>% 
+ COVID_County_Pos_Case_Rate_Per_100000 = County_Rate_Per_100_000, COVID_County_Total_Deaths = County_Deaths, State_Deaths, State_Number_Hospitalizations, State_Number_Tested, Shape_Area, Shape_Length) %>% 
   mutate(., COVID_County_Pos_Case_Rate_Per_100000 = 100000*County_Pos_Cases
 /County_Population,
          COVID_County_Death_Rate_Per_100000 = 100000*COVID_County_Total_Deaths/County_Population, COVID_State_Death_Rate_Per_100000 = 100000*State_Deaths/State_Population, COVID_State_HOSP_Rate_Per_100000 = 100000*State_Number_Hospitalizations/State_Population, COVID_State_Testing_Rate_Per_100000 = 100000*State_Number_Tested/State_Population, 
   )
-unique(colnames(COVID19County))
+#unique(colnames(COVID19County))
 
 COVID19CountyANALYSIS = COVID19County %>% group_by(., COUNTY) %>% 
   summarise (COVID_First_Case_Date = min(Date), 
 COVID_Num_Days_Since_First_Case = as.numeric(as.Date("2020-05-17") - COVID_First_Case_Date), COVID_Cases_May25 = max(Cases),
-COVID_Max_Testing_Rates_Per_100000 = max(Testing.Rates.Per.100000, na.rm = TRUE), COVID_Mean_Case_Rates_Per_100000 = mean(Case.Rates.Per.100000, na.rm = TRUE), COVID_Mean_Cases_per_Day = COVID_Cases_May25/COVID_Num_Days_Since_First_Case, COVID_Max_Case_Rates_Per_100000 = max(Case.Rates.Per.100000, na.rm = TRUE),
-COVID_Perc_Days_with_Cases = COVID_Num_Days_Since_First_Case/(as.numeric(as.Date("2020-05-17")) - as.numeric(as.Date("2020-03-17"))))
+COVID_Max_Testing_Rates_Per_100000 = max(Testing.Rates.Per.100000, na.rm = TRUE), COVID_Mean_Testing_Rates_Per_100000 = mean(Testing.Rates.Per.100000, na.rm = TRUE), COVID_Mean_Case_Rates_Per_100000 = mean(Case.Rates.Per.100000, na.rm = TRUE), COVID_Mean_Cases_per_Day = COVID_Cases_May25/COVID_Num_Days_Since_First_Case, COVID_Max_Case_Rates_Per_100000 = max(Case.Rates.Per.100000, na.rm = TRUE),
+COVID_Perc_Days_with_Cases = 100*COVID_Num_Days_Since_First_Case/(as.numeric(as.Date("2020-05-17")) - as.numeric(as.Date("2020-03-17"))))
 
 COVID19CountyANALYSIS = left_join(COVID19Positive, COVID19CountyANALYSIS, by="COUNTY")
 COVID19CountyANALYSIS$COVID_Max_Case_Rates_Per_100000[COVID19CountyANALYSIS$COVID_Max_Case_Rates_Per_100000=="-Inf"]=0
 COVID19CountyANALYSIS$COVID_Mean_Case_Rates_Per_100000[COVID19CountyANALYSIS$COVID_Mean_Case_Rates_Per_100000=="NaN"]=0
 
-which(COVID19CountyANALYSIS$COVID_Mean_Case_Rates_Per_100000<100)
- 
-lapply(COVID19CountyANALYSIS, class)
-#unique(colnames(COVID19CountyANALYSIS))
-COVID19_PER = COVID19CountyANALYSIS %>% select(., COUNTY, COVID_Max_Testing_Rates_Per_100000, COVID_County_Pos_Case_Rate_Per_100000, COVID_County_Death_Rate_Per_100000, COVID_Perc_Days_with_Cases) %>% 
+COVID19CountyANALYSIS = COVID19CountyANALYSIS %>% 
   mutate(.,
-COVID_Death_Rate_if_Pos_Case = COVID_County_Death_Rate_Per_100000/COVID_County_Pos_Case_Rate_Per_100000)
+COVID_Death_Rate_if_Pos_Case_Perc = 100*COVID_County_Death_Rate_Per_100000/COVID_County_Pos_Case_Rate_Per_100000)
+
+
+
+# which(COVID19CountyANALYSIS$COVID_Mean_Case_Rates_Per_100000<100)
+#  
+# lapply(COVID19CountyANALYSIS, class)
+#unique(colnames(COVID19CountyANALYSIS))
+COVID19_PER = COVID19CountyANALYSIS %>% select(., COUNTY, COVID_Mean_Testing_Rates_Per_100000, COVID_Max_Testing_Rates_Per_100000, COVID_County_Pos_Case_Rate_Per_100000, COVID_Perc_Days_with_Cases, COVID_Mean_Cases_per_Day, COVID_County_Death_Rate_Per_100000,
+COVID_Death_Rate_if_Pos_Case_Perc)
+
+
+#### COMBINING EVERYTHING ####
 
 CO_ALL_PER = inner_join(COVID19_PER, CO_COUNTY_PER, by="COUNTY")
 lapply(CO_ALL_PER, class)
@@ -436,24 +614,6 @@ CO_ALL_PER$COVID_Perc_Days_with_Cases
 # Adult.smoking_Perc.Smokers #                  NADA
 ggplot(CO_ALL_PER, aes(x=Adult.smoking_Perc.Smokers
 , y=COVID_County_Pos_Case_Rate_Per_100000)) + geom_point(aes(alpha=COVID_County_Death_Rate_Per_100000)) 
-
-
-# Uninsured.1_Perc.Uninsured # 
-### doesn't affect case rate, but does affect death rate! ###
-ggplot(CO_ALL_PER, aes(x=Uninsured.1_Perc.Uninsured, y=COVID_County_Pos_Case_Rate_Per_100000)) + geom_point(aes(alpha=COVID_County_Death_Rate_Per_100000)) 
-
-
-# Flu.vaccinations #
-### doesn't affect case rate, but does affect death rate! ###
-ggplot(CO_ALL_PER, aes(x=Flu.vaccinations_Perc.Vaccinated, y=COVID_County_Pos_Case_Rate_Per_100000)) + geom_point(aes(alpha=COVID_County_Death_Rate_Per_100000)) 
-
-# Demographics.2_Perc.65.and.over #                  NADA
-ggplot(CO_ALL_PER, aes(x=Demographics.2_Perc.65.and.over, y=COVID_County_Pos_Case_Rate_Per_100000)) + geom_point(aes(alpha=COVID_County_Death_Rate_Per_100000)) 
-
-# Demographics.4_Perc.Black #                  NADA
-ggplot(CO_ALL_PER, aes(x=Demographics.4_Perc.Black
-, y=COVID_County_Pos_Case_Rate_Per_100000)) + geom_point(aes(alpha=COVID_County_Death_Rate_Per_100000)) 
-
 
 
 library(DataExplorer)
@@ -486,6 +646,9 @@ CO_COUNTY_COVID_ALL = CO_COUNTY_COVID_ALL %>% mutate(., COVID_Death_Rate_per_100
 
 write.csv(CO_COUNTY_COVID_ALL, "CO_COUNTY_COVID_ALL.csv", row.names = F)
 
+
+
+#### OLDER STUFF ####
 install.packages("Hmisc")
 install.packages("psych")
 install.packages("pastecs")
