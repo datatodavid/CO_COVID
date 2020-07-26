@@ -654,6 +654,11 @@ Perc.100000.Total.Beds = 100000*Total.Beds/Population.Total,
 Perc.100000.Assisted.Living.Facs = 100000*Assisted.Living.Facs/Population.Total,
 Perc.100000.Total.Health.Facilities = 100000*Total.Health.Facilities/Population.Total)
 
+#### Politics ####
+# Affiliation = read.csv("2018GeneralResults.csv", stringsAsFactors = F)
+# Affiliation$COUNTY %<>% gsub("TOTAL", "COLORADO")
+# Affiliation = Affiliation %>% 
+#   select(COUNTY, everything()) 
 
 ##### COVID ######
 ## COVID DATASET #1 ##
@@ -670,7 +675,14 @@ names(COVID19County) %<>%
   gsub("ï..COUNTY", "COUNTY", ., fixed=T)
 COVID19County = COVID19County %>% 
   mutate(., Number = (Value + Rate)) %>% 
-  filter(., Metric !="Some cases may still be under investigation and county not assigned yet." & Metric != "Rates are not shown for counties with fewer than 5 cases." & Metric != "Individuals with serology-positive tests are not included in daily case counts until they are confirmed to have had COVID-like symptoms." & Metric != "Includes only tests from labs that participate in electronic lab reporting." & Metric != "County rates per 100,000 are calculated using 2018 population estimates from the Demography Section, Colorado Division of Local Government." & Metric != "Caution should be used when interpreting rates in counties with small populations." & Metric != "Percent of tests by Serology" & Metric != "Percent of tests by PCR" & COUNTY != "Note")
+  filter(., Metric !="Some cases may still be under investigation and county not assigned yet." & 
+           Metric != "Rates are not shown for counties with fewer than 5 cases." & 
+           Metric != "Individuals with serology-positive tests are not included in daily case counts until they are confirmed to have had COVID-like symptoms." & 
+           Metric != "Includes only tests from labs that participate in electronic lab reporting." & 
+           Metric != "County rates per 100,000 are calculated using 2018 population estimates from the Demography Section, Colorado Division of Local Government." & 
+           Metric != "Caution should be used when interpreting rates in counties with small populations." & 
+           Metric != "Percent of tests by Serology" & Metric != "Percent of tests by PCR" 
+         & COUNTY != "Note")
 #unique(COVID19County$Desc_)
 
 #names(COVID19County)
@@ -723,6 +735,8 @@ COVID19Positive = COVID19Positive %>%
 #### COMBINING COVID 1 and 2 DATASETS ####
 #names(COVID19County)
 #COVID19County$Testing.Rates.Per.100000
+# colnames(COVID19County)
+
 COVID19CountySummarise = COVID19County %>% 
   filter(., COUNTY != "Unknown Or Pending County" & 
            COUNTY != "Out Of State County" &
@@ -747,18 +761,27 @@ COVID19CountySummarise = COVID19County %>%
                COVID_Cases_Max/
                as.numeric(COVID_Num_Days_Since_First_Case),
              COVID_Max_Case_Rates_Per_100000 =
-               max(Case.Rates.Per.100000, na.rm = TRUE))
+               max(Case.Rates.Per.100000, na.rm = TRUE),
+            COVID_Tests_Max = max(Total.COVID.19.Tests.Performed.in.Colorado.by.County, na.rm=T))
 
 COVID19CountyANALYSIS = left_join(COVID19CountySummarise, 
                                   COVID19Positive, by="COUNTY")
 COVID19CountyANALYSIS$COVID_Max_Case_Rates_Per_100000[COVID19CountyANALYSIS$COVID_Max_Case_Rates_Per_100000=="-Inf"]=0
 COVID19CountyANALYSIS$COVID_Mean_Case_Rates_Per_100000[COVID19CountyANALYSIS$COVID_Mean_Case_Rates_Per_100000=="NaN"]=0
 
+# colnames(COVID19CountyANALYSIS)
 COVID19CountyANALYSIS = COVID19CountyANALYSIS %>% 
   mutate(.,
+         COVID.Positivity.Perc = ifelse(COVID_Tests_Max!=0, 
+                                        100*COVID_Cases_Max/COVID_Tests_Max, NA),
          COVID_Death_Rate_if_Pos_Case_Perc = 
-           100*COVID_County_Death_Rate_Per_100000/
-           COVID_County_Pos_Case_Rate_Per_100000)
+           ifelse(COVID_County_Pos_Case_Rate_Per_100000!=0,
+                  100*COVID_County_Death_Rate_Per_100000/
+           COVID_County_Pos_Case_Rate_Per_100000, NA)
+         )
+
+
+  
 
 #### COVID DATASET #3 STATE & COUNTY DAILY DATA  ####
 COVID19StateData = read.csv("CDPHE_COVID19_Daily_State_Statistics.csv", header=T, stringsAsFactors = F)
@@ -769,14 +792,16 @@ COVID19StateData = COVID19StateData %>%
   filter(., COUNTY != "Note") %>% 
   mutate(., COVID.Tests.Per.100000 = 100000*Tested/POP,
             COVID.Deaths.Per.100000 = 100000*Deaths/POP,
-            COVID.Mortality.Perc = 100*COVID.Deaths.Per.100000/COVID.Cases.Per.100000,
+            COVID.Positivity.Perc = ifelse(Tested!=0, 100*Cases/Tested, NA),
+            COVID.Mortality.Perc = ifelse(Cases!=0, 100*Deaths/Cases, NA),
             # County.Avg.COVID.Cases.Per.100000 = COVID.Cases.Per.100000/Counties,
             # County.Avg.COVID.Tests.Per.100000 = COVID.Deaths.Per.100000/Counties,
             # County.Avg.COVID.Deaths.Per.100000 = COVID.Deaths.Per.100000/Counties,
             # County.Avg.COVID.Mortality.Perc = COVID.Mortality.Perc/Counties
          )
 COVID19State_MERGE = COVID19StateData %>% 
-  select(., COUNTY, Date, POP, Total.Tests = Tested, Total.Cases = Cases, Total.Deaths = Deaths, COVID.Tests.Per.100000, COVID.Cases.Per.100000, COVID.Deaths.Per.100000, COVID.Mortality.Perc)
+  select(., COUNTY, Date, POP, Total.Tests = Tested, Total.Cases = Cases, Total.Deaths = Deaths, COVID.Tests.Per.100000, 
+         COVID.Cases.Per.100000, COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc)
 # colnames(COVID19County)
 # COVID19StateData$Tested
 # COVID19County$Testing.Rates.Per.100000
@@ -784,17 +809,24 @@ COVID19State_MERGE = COVID19StateData %>%
 # COVID19County_MERGE$COVID.Mortality.Perc
 COVID19County_MERGE = COVID19County %>% 
   mutate(., COVID.Deaths.Per.100000 = 100000*Number.of.Deaths.by.County/POP,
-         COVID.Mortality.Perc = 100*COVID.Deaths.Per.100000/Case.Rates.Per.100000) %>% 
+         COVID.Positivity.Perc = ifelse(Total.COVID.19.Tests.Performed.in.Colorado.by.County!=0,
+                                        100*Colorado.Case.Counts.by.County/
+           Total.COVID.19.Tests.Performed.in.Colorado.by.County, NA),
+         COVID.Mortality.Perc = ifelse(Colorado.Case.Counts.by.County!=0,
+                                       100*Number.of.Deaths.by.County/Colorado.Case.Counts.by.County,
+                                       NA)) %>% 
   select(., COUNTY, Date, POP, 
          Total.Tests = Total.COVID.19.Tests.Performed.in.Colorado.by.County, 
          Total.Cases = Colorado.Case.Counts.by.County, 
          Total.Deaths = Number.of.Deaths.by.County, 
          COVID.Tests.Per.100000 = Testing.Rates.Per.100000, 
          COVID.Cases.Per.100000 = Case.Rates.Per.100000, 
-         COVID.Deaths.Per.100000, COVID.Mortality.Perc)
+         COVID.Deaths.Per.100000, 
+         COVID.Positivity.Perc, 
+         COVID.Mortality.Perc)
 
 
-
+###########  RELOAD FROM HERE  ###################
 # RELOAD FROM HERE #
 COVID19ALL_MERGE = union_all(COVID19State_MERGE, COVID19County_MERGE)
 COVID19County_YESTERDAY = COVID19ALL_MERGE %>% 
@@ -805,6 +837,7 @@ COVID19County_YESTERDAY = COVID19ALL_MERGE %>%
          YEST.COVID.Tests.Per.100000=COVID.Tests.Per.100000,
          YEST.COVID.Cases.Per.100000=COVID.Cases.Per.100000,
          YEST.COVID.Deaths.Per.100000=COVID.Deaths.Per.100000,
+         YEST.COVID.Positivity.Perc=COVID.Positivity.Perc,
          YEST.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
   mutate(Yest = Date+1) %>% 
   select(., -Date)
@@ -816,6 +849,7 @@ COVID19County_TWODAY = COVID19ALL_MERGE %>%
          TWODAY.COVID.Tests.Per.100000=COVID.Tests.Per.100000,
          TWODAY.COVID.Cases.Per.100000=COVID.Cases.Per.100000,
          TWODAY.COVID.Deaths.Per.100000=COVID.Deaths.Per.100000,
+         TWODAY.COVID.Positivity.Perc=COVID.Positivity.Perc,
          TWODAY.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
   mutate(TwoDay = Date+2) %>% 
   select(., -Date)
@@ -827,6 +861,7 @@ COVID19County_TOM = COVID19ALL_MERGE %>%
          TOM.COVID.Tests.Per.100000=COVID.Tests.Per.100000,
          TOM.COVID.Cases.Per.100000=COVID.Cases.Per.100000,
          TOM.COVID.Deaths.Per.100000=COVID.Deaths.Per.100000,
+         TOM.COVID.Positivity.Perc=COVID.Positivity.Perc,
          TOM.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
   mutate(Tom = Date-1) %>% 
   select(., -Date)
@@ -838,10 +873,22 @@ COVID19County_AFTERNEXT = COVID19ALL_MERGE %>%
          AFTERNEXT.COVID.Tests.Per.100000=COVID.Tests.Per.100000,
          AFTERNEXT.COVID.Cases.Per.100000=COVID.Cases.Per.100000,
          AFTERNEXT.COVID.Deaths.Per.100000=COVID.Deaths.Per.100000,
+         AFTERNEXT.COVID.Positivity.Perc=COVID.Positivity.Perc,
          AFTERNEXT.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
   mutate(AfterNext = Date-2) %>% 
   select(., -Date)
-
+COVID19County_LASTWEEK = COVID19ALL_MERGE %>% 
+  select(COUNTY, Date, 
+         LASTWEEK.Total.Tests = Total.Tests,
+         LASTWEEK.Total.Cases = Total.Cases,
+         LASTWEEK.Total.Deaths = Total.Deaths,
+         LASTWEEK.COVID.Tests.Per.100000=COVID.Tests.Per.100000,
+         LASTWEEK.COVID.Cases.Per.100000=COVID.Cases.Per.100000,
+         LASTWEEK.COVID.Deaths.Per.100000=COVID.Deaths.Per.100000,
+         LASTWEEK.COVID.Positivity.Perc=COVID.Positivity.Perc,
+         LASTWEEK.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
+  mutate(LastWeek = Date+7) %>% 
+  select(., -Date)
 
 COVID19ALL_MERGE =
   left_join(COVID19ALL_MERGE,COVID19County_TWODAY,
@@ -855,7 +902,9 @@ COVID19ALL_MERGE =
 COVID19ALL_MERGE =
   left_join(COVID19ALL_MERGE,COVID19County_AFTERNEXT,
             by=c("COUNTY"="COUNTY", "Date"="AfterNext"))
-
+COVID19ALL_MERGE =
+  left_join(COVID19ALL_MERGE,COVID19County_LASTWEEK,
+            by=c("COUNTY"="COUNTY", "Date"="LastWeek"))
 
 
 COVID19ALL_MERGE = COVID19ALL_MERGE %>% 
@@ -863,6 +912,9 @@ COVID19ALL_MERGE = COVID19ALL_MERGE %>%
          New.Tests = Total.Tests - YEST.Total.Tests,
          New.Cases = Total.Cases - YEST.Total.Cases,
          New.Deaths = Total.Deaths - YEST.Total.Deaths,
+         New.Tests.Last.Week = Total.Tests - LASTWEEK.Total.Tests,
+         New.Cases.Last.Week = Total.Cases - LASTWEEK.Total.Cases,
+         New.Deaths.Last.Week = Total.Deaths - LASTWEEK.Total.Deaths,
          Change.in.Tests.Per.100000=
            COVID.Tests.Per.100000-YEST.COVID.Tests.Per.100000,
          Change.in.Cases.Per.100000=
@@ -878,6 +930,7 @@ COVID19County_THREEDAY2 = COVID19ALL_MERGE %>%
          THREEDAY.Change.in.Tests.Per.100000=Change.in.Tests.Per.100000,
          THREEDAY.Change.in.Cases.Per.100000=Change.in.Cases.Per.100000,
          THREEDAY.Change.in.Deaths.Per.100000=Change.in.Deaths.Per.100000,
+         THREEDAY.COVID.Positivity.Perc=COVID.Positivity.Perc,
          THREEDAY.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
   mutate(ThreeDay = Date+3) %>% 
   select(., -Date)       
@@ -940,61 +993,61 @@ COVID19ALL_MERGE =
 
 COVID19ALL_MERGE = COVID19ALL_MERGE %>% 
   mutate(., 
-         Perc.Total.Positive.Tests = 
-           ifelse(Total.Tests!=0, 100*Total.Cases/Total.Tests, NA),
-         Perc.Positive.Tests = 
-           ifelse(New.Tests!=0, 100*New.Cases/New.Tests, NA),
-         Perc.Change.in.Tests =
-           ifelse(YEST.New.Tests!=0, 100*(New.Tests-YEST.New.Tests)/YEST.New.Tests, NA),
-         Perc.Change.in.Cases =
-           ifelse(YEST.New.Cases!=0, 100*(New.Cases-YEST.New.Cases)/YEST.New.Cases, NA),
-         Perc.Change.in.Deaths =
-           ifelse(YEST.New.Deaths!=0, 100*(New.Deaths-YEST.New.Deaths)/YEST.New.Deaths, NA),
-         Perc.Change.in.Tests.Per.100000 =
-           ifelse(YEST.Change.in.Tests.Per.100000!=0, 100*(Change.in.Tests.Per.100000-YEST.Change.in.Tests.Per.100000)/YEST.Change.in.Tests.Per.100000, NA),
-         Perc.Change.in.Cases.Per.100000 =
-           ifelse(YEST.Change.in.Cases.Per.100000!=0, 100*(Change.in.Cases.Per.100000-YEST.Change.in.Cases.Per.100000)/YEST.Change.in.Cases.Per.100000, NA),
-         Perc.Change.in.Deaths.Per.100000 =
-           ifelse(YEST.Change.in.Deaths.Per.100000!=0, 100*(Change.in.Deaths.Per.100000-YEST.Change.in.Deaths.Per.100000)/YEST.Change.in.Deaths.Per.100000, NA),
+         
+         # Perc.Positive.Tests = 
+         #   ifelse(New.Tests!=0, 100*New.Cases/New.Tests, NA),
+         # Perc.Change.in.Tests =
+         #   ifelse(YEST.New.Tests!=0, 100*(New.Tests-YEST.New.Tests)/YEST.New.Tests, NA),
+         # Perc.Change.in.Cases =
+         #   ifelse(YEST.New.Cases!=0, 100*(New.Cases-YEST.New.Cases)/YEST.New.Cases, NA),
+         # Perc.Change.in.Deaths =
+         #   ifelse(YEST.New.Deaths!=0, 100*(New.Deaths-YEST.New.Deaths)/YEST.New.Deaths, NA),
+         # Perc.Change.in.Tests.Per.100000 =
+         #   ifelse(YEST.Change.in.Tests.Per.100000!=0, 100*(Change.in.Tests.Per.100000-YEST.Change.in.Tests.Per.100000)/YEST.Change.in.Tests.Per.100000, NA),
+         # Perc.Change.in.Cases.Per.100000 =
+         #   ifelse(YEST.Change.in.Cases.Per.100000!=0, 100*(Change.in.Cases.Per.100000-YEST.Change.in.Cases.Per.100000)/YEST.Change.in.Cases.Per.100000, NA),
+         # Perc.Change.in.Deaths.Per.100000 =
+         #   ifelse(YEST.Change.in.Deaths.Per.100000!=0, 100*(Change.in.Deaths.Per.100000-YEST.Change.in.Deaths.Per.100000)/YEST.Change.in.Deaths.Per.100000, NA),
          
          
          New.Tests.5.Day.Avg = rowMeans(select(., TWODAY.New.Tests,YEST.New.Tests, New.Tests, TOM.New.Tests, AFTERNEXT.New.Tests)),
          New.Cases.5.Day.Avg = rowMeans(select(., TWODAY.New.Cases,YEST.New.Cases, New.Cases, TOM.New.Cases, AFTERNEXT.New.Cases)),
          New.Deaths.5.Day.Avg = rowMeans(select(., TWODAY.New.Deaths,YEST.New.Deaths, New.Deaths, TOM.New.Deaths, AFTERNEXT.New.Deaths)),
-         YEST.New.Tests.5.Day.Avg = rowMeans(select(., TWODAY.New.Tests,YEST.New.Tests, New.Tests, TOM.New.Tests, THREEDAY.New.Tests)),
-         YEST.New.Cases.5.Day.Avg = rowMeans(select(., TWODAY.New.Cases,YEST.New.Cases, New.Cases, TOM.New.Cases, THREEDAY.New.Cases)),
-         YEST.New.Deaths.5.Day.Avg = rowMeans(select(., TWODAY.New.Deaths,YEST.New.Deaths, New.Deaths, TOM.New.Deaths, THREEDAY.New.Deaths)),
-         Perc.Positive.Tests.5.Day.Avg = 
-           ifelse(New.Tests.5.Day.Avg!=0, 
-100*New.Cases.5.Day.Avg/New.Tests.5.Day.Avg, NA),
-         Perc.Change.in.Tests.5.Day.Avg =
-           ifelse(YEST.New.Tests.5.Day.Avg!=0, 100*(New.Tests.5.Day.Avg-YEST.New.Tests.5.Day.Avg)/YEST.New.Tests.5.Day.Avg, NA),
-         Perc.Change.in.Cases.5.Day.Avg =
-           ifelse(YEST.New.Cases.5.Day.Avg!=0, 100*(New.Cases.5.Day.Avg-YEST.New.Cases.5.Day.Avg)/YEST.New.Cases.5.Day.Avg, NA),
-         Perc.Change.in.Deaths.5.Day.Avg =
-           ifelse(YEST.New.Deaths.5.Day.Avg!=0, 100*(New.Deaths.5.Day.Avg-YEST.New.Deaths.5.Day.Avg)/YEST.New.Deaths.5.Day.Avg, NA),
+         # YEST.New.Tests.5.Day.Avg = rowMeans(select(., TWODAY.New.Tests,YEST.New.Tests, New.Tests, TOM.New.Tests, THREEDAY.New.Tests)),
+         # YEST.New.Cases.5.Day.Avg = rowMeans(select(., TWODAY.New.Cases,YEST.New.Cases, New.Cases, TOM.New.Cases, THREEDAY.New.Cases)),
+         # YEST.New.Deaths.5.Day.Avg = rowMeans(select(., TWODAY.New.Deaths,YEST.New.Deaths, New.Deaths, TOM.New.Deaths, THREEDAY.New.Deaths)),
+        
+         # Perc.Change.in.Tests.5.Day.Avg =
+         #   ifelse(YEST.New.Tests.5.Day.Avg!=0, 100*(New.Tests.5.Day.Avg-YEST.New.Tests.5.Day.Avg)/YEST.New.Tests.5.Day.Avg, NA),
+         # Perc.Change.in.Cases.5.Day.Avg =
+         #   ifelse(YEST.New.Cases.5.Day.Avg!=0, 100*(New.Cases.5.Day.Avg-YEST.New.Cases.5.Day.Avg)/YEST.New.Cases.5.Day.Avg, NA),
+         # Perc.Change.in.Deaths.5.Day.Avg =
+         #   ifelse(YEST.New.Deaths.5.Day.Avg!=0, 100*(New.Deaths.5.Day.Avg-YEST.New.Deaths.5.Day.Avg)/YEST.New.Deaths.5.Day.Avg, NA),
 
-         Change.in.Tests.Per.100000.5.Day.Avg = rowMeans(select(., TWODAY.Change.in.Tests.Per.100000,YEST.Change.in.Tests.Per.100000, Change.in.Tests.Per.100000, TOM.Change.in.Tests.Per.100000, AFTERNEXT.Change.in.Tests.Per.100000)),
-         Change.in.Cases.Per.100000.5.Day.Avg = 
-  rowMeans(select(., TWODAY.Change.in.Cases.Per.100000,YEST.Change.in.Cases.Per.100000, Change.in.Cases.Per.100000, TOM.Change.in.Cases.Per.100000, AFTERNEXT.Change.in.Cases.Per.100000)),
-         Change.in.Deaths.Per.100000.5.Day.Avg = rowMeans(select(., TWODAY.Change.in.Deaths.Per.100000,YEST.Change.in.Deaths.Per.100000, Change.in.Deaths.Per.100000, TOM.Change.in.Deaths.Per.100000, AFTERNEXT.Change.in.Deaths.Per.100000)),
-         YEST.Change.in.Tests.Per.100000.5.Day.Avg = rowMeans(select(., TWODAY.Change.in.Tests.Per.100000,YEST.Change.in.Tests.Per.100000, Change.in.Tests.Per.100000, TOM.Change.in.Tests.Per.100000, THREEDAY.Change.in.Tests.Per.100000)),
-         YEST.Change.in.Cases.Per.100000.5.Day.Avg = rowMeans(select(., TWODAY.Change.in.Cases.Per.100000,YEST.Change.in.Cases.Per.100000, Change.in.Cases.Per.100000, TOM.Change.in.Cases.Per.100000, THREEDAY.Change.in.Cases.Per.100000)),
-         YEST.Change.in.Deaths.Per.100000.5.Day.Avg = rowMeans(select(., TWODAY.Change.in.Deaths.Per.100000,YEST.Change.in.Deaths.Per.100000, Change.in.Deaths.Per.100000, TOM.Change.in.Deaths.Per.100000, THREEDAY.Change.in.Deaths.Per.100000)),
+  #        Change.in.Tests.Per.100000.5.Day.Avg = rowMeans(select(., TWODAY.Change.in.Tests.Per.100000,YEST.Change.in.Tests.Per.100000, Change.in.Tests.Per.100000, TOM.Change.in.Tests.Per.100000, AFTERNEXT.Change.in.Tests.Per.100000)),
+  #        Change.in.Cases.Per.100000.5.Day.Avg = 
+  # rowMeans(select(., TWODAY.Change.in.Cases.Per.100000,YEST.Change.in.Cases.Per.100000, Change.in.Cases.Per.100000, TOM.Change.in.Cases.Per.100000, AFTERNEXT.Change.in.Cases.Per.100000)),
+  #        Change.in.Deaths.Per.100000.5.Day.Avg = rowMeans(select(., TWODAY.Change.in.Deaths.Per.100000,YEST.Change.in.Deaths.Per.100000, Change.in.Deaths.Per.100000, TOM.Change.in.Deaths.Per.100000, AFTERNEXT.Change.in.Deaths.Per.100000)),
+         # YEST.Change.in.Tests.Per.100000.5.Day.Avg = rowMeans(select(., TWODAY.Change.in.Tests.Per.100000,YEST.Change.in.Tests.Per.100000, Change.in.Tests.Per.100000, TOM.Change.in.Tests.Per.100000, THREEDAY.Change.in.Tests.Per.100000)),
+         # YEST.Change.in.Cases.Per.100000.5.Day.Avg = rowMeans(select(., TWODAY.Change.in.Cases.Per.100000,YEST.Change.in.Cases.Per.100000, Change.in.Cases.Per.100000, TOM.Change.in.Cases.Per.100000, THREEDAY.Change.in.Cases.Per.100000)),
+         # YEST.Change.in.Deaths.Per.100000.5.Day.Avg = rowMeans(select(., TWODAY.Change.in.Deaths.Per.100000,YEST.Change.in.Deaths.Per.100000, Change.in.Deaths.Per.100000, TOM.Change.in.Deaths.Per.100000, THREEDAY.Change.in.Deaths.Per.100000)),
 
-          Perc.Change.in.Tests.Per.100000.5.Day.Avg =
-           ifelse(YEST.Change.in.Tests.Per.100000.5.Day.Avg!=0, 100*(Change.in.Tests.Per.100000.5.Day.Avg-YEST.Change.in.Tests.Per.100000.5.Day.Avg)/YEST.Change.in.Tests.Per.100000.5.Day.Avg, NA),
-         Perc.Change.in.Cases.Per.100000.5.Day.Avg =
-           ifelse(YEST.Change.in.Cases.Per.100000.5.Day.Avg!=0, 100*(Change.in.Cases.Per.100000.5.Day.Avg-YEST.Change.in.Cases.Per.100000.5.Day.Avg)/YEST.Change.in.Cases.Per.100000.5.Day.Avg, NA),
-         Perc.Change.in.Deaths.Per.100000.5.Day.Avg =
-           ifelse(YEST.Change.in.Deaths.Per.100000.5.Day.Avg!=0, 100*(Change.in.Deaths.Per.100000.5.Day.Avg-YEST.Change.in.Deaths.Per.100000.5.Day.Avg)/YEST.Change.in.Deaths.Per.100000.5.Day.Avg, NA),
-      
-        COVID.Mortality.Perc.5.Day.Avg = rowMeans(select(., TWODAY.COVID.Mortality.Perc,YEST.COVID.Mortality.Perc, COVID.Mortality.Perc, TOM.COVID.Mortality.Perc, AFTERNEXT.COVID.Mortality.Perc)),
-         YEST.COVID.Mortality.Perc.5.Day.Avg = rowMeans(select(., TWODAY.COVID.Mortality.Perc,YEST.COVID.Mortality.Perc, COVID.Mortality.Perc, TOM.COVID.Mortality.Perc, THREEDAY.COVID.Mortality.Perc)),
-Perc.Change.in.Mortality =
-           COVID.Mortality.Perc-YEST.COVID.Mortality.Perc,
-         Perc.Change.in.Mortality.5.Day.Avg =
-           COVID.Mortality.Perc.5.Day.Avg-YEST.COVID.Mortality.Perc.5.Day.Avg)
+         #  Perc.Change.in.Tests.Per.100000.5.Day.Avg =
+         #   ifelse(YEST.Change.in.Tests.Per.100000.5.Day.Avg!=0, 100*(Change.in.Tests.Per.100000.5.Day.Avg-YEST.Change.in.Tests.Per.100000.5.Day.Avg)/YEST.Change.in.Tests.Per.100000.5.Day.Avg, NA),
+         # Perc.Change.in.Cases.Per.100000.5.Day.Avg =
+         #   ifelse(YEST.Change.in.Cases.Per.100000.5.Day.Avg!=0, 100*(Change.in.Cases.Per.100000.5.Day.Avg-YEST.Change.in.Cases.Per.100000.5.Day.Avg)/YEST.Change.in.Cases.Per.100000.5.Day.Avg, NA),
+         # Perc.Change.in.Deaths.Per.100000.5.Day.Avg =
+           # ifelse(YEST.Change.in.Deaths.Per.100000.5.Day.Avg!=0, 100*(Change.in.Deaths.Per.100000.5.Day.Avg-YEST.Change.in.Deaths.Per.100000.5.Day.Avg)/YEST.Change.in.Deaths.Per.100000.5.Day.Avg, NA),
+
+      COVID.Positivity.Perc.5.Day.Avg = rowMeans(select(., TWODAY.COVID.Positivity.Perc,YEST.COVID.Positivity.Perc, COVID.Positivity.Perc, TOM.COVID.Positivity.Perc, AFTERNEXT.COVID.Positivity.Perc)),
+        COVID.Mortality.Perc.5.Day.Avg = rowMeans(select(., TWODAY.COVID.Mortality.Perc,YEST.COVID.Mortality.Perc, COVID.Mortality.Perc, TOM.COVID.Mortality.Perc, AFTERNEXT.COVID.Mortality.Perc))
+  # ,
+#          YEST.COVID.Mortality.Perc.5.Day.Avg = rowMeans(select(., TWODAY.COVID.Mortality.Perc,YEST.COVID.Mortality.Perc, COVID.Mortality.Perc, TOM.COVID.Mortality.Perc, THREEDAY.COVID.Mortality.Perc)),
+# Perc.Change.in.Mortality =
+#            COVID.Mortality.Perc-YEST.COVID.Mortality.Perc,
+#          Perc.Change.in.Mortality.5.Day.Avg =
+#            COVID.Mortality.Perc.5.Day.Avg-YEST.COVID.Mortality.Perc.5.Day.Avg
+)
          # 
 # ,
          # Perc.Change.in.Mortality =
@@ -1002,16 +1055,32 @@ Perc.Change.in.Mortality =
 # COVID19ALL_MERGE$Change.in.Tests.Per.100000
 
 COVID19ALL_MERGE$COUNTY %<>% gsub("Colorado", "COLORADO", .)
+colnames(COVID19ALL_MERGE) %<>% 
+  gsub("COVID.", "", ., fixed=T) 
+# COVID19ALL_MERGE$New.Tests.Last.Week %<>% gsub(NA, 0, .)
+# COVID19ALL_MERGE$New.Cases.Last.Week %<>% gsub(NA, 0, .)
+# COVID19ALL_MERGE$New.Deaths.Last.Week %<>% gsub(NA, 0, .)
 COVID19ALL_MERGE = COVID19ALL_MERGE %>% 
+  select(., -starts_with("YEST"), -starts_with("TOM"), -starts_with("TWO"),
+         -starts_with("THREE"), -starts_with("AFTER"), -starts_with("LASTWEEK"), 
+         -starts_with("Change")) %>% 
   filter(., COUNTY != "Unknown Or Pending County" & 
            COUNTY != "Out Of State County" &
            COUNTY != "International") 
+
+COVID19DATA = COVID19ALL_MERGE %>% 
+  select(., COUNTY, Date, POP, starts_with("Total"), 
+         New.Tests, New.Cases, New.Deaths, 
+         contains("Last"),contains("Perc"), 
+         contains("100"), contains("5.Day")
+         )
+
 COVID19ALL_MERGE = COVID19ALL_MERGE %>% 
-  select(., -starts_with("YEST"), -starts_with("TOM"), -starts_with("TWO"),
-         -starts_with("THREE"), -starts_with("AFTER"))
-colnames(COVID19ALL_MERGE) %<>% 
-  gsub("COVID.", "", ., fixed=T) %>% 
-  gsub("Mortality.Perc", "Perc.Mortality", .)
+  select(., -Positivity.Perc, -Mortality.Perc, -New.Tests, -New.Cases, -New.Deaths, 
+         COUNTY, Date, POP, contains("5.Day"), contains("100"), 
+         starts_with("Total"))
+         
+         
 
 #unique(COVID19ALL_MERGE$COUNTY)
 COVID19ALL_MERGE = COVID19ALL_MERGE %>% 
@@ -1109,8 +1178,9 @@ names(CO_Race_Measures_COVID19) %<>%
 ## All Data Join ##
 CO_COUNTY_COVID_ALL = 
   left_join(COVID19CountyANALYSIS, CO_COUNTY_ALL, by="COUNTY")
+## What is this for?? ##
 CO_COUNTY_COVID_ALL = CO_COUNTY_COVID_ALL  %>% 
-  arrange(., COUNTY) %>% 
+  group_by(., COUNTY) %>%
   add_row(., )
 
 colnames(CO_COUNTY_COVID_ALL) %<>%  
@@ -1122,7 +1192,7 @@ colnames(CO_COUNTY_COVID_ALL) %<>%
 CO_COUNTY_NAMES = names(CO_COUNTY_COVID_ALL)
 write.csv(CO_COUNTY_NAMES, "CO_COUNTY_NAMES.csv", row.names = T)
 
-names(CO_COUNTY_COVID_ALL)
+# names(CO_COUNTY_COVID_ALL)
 CO_COUNTY_COVID_FILTER = CO_COUNTY_COVID_ALL %>% 
   filter(., !is.na(COUNTY)) %>% 
   select(., COUNTY, Population = County_Population, starts_with("COVID"), starts_with("Per"), contains("Perc", ignore.case = T), contains("Rate", ignore.case = T), Life.Expectancy.20102015, Life.Expectancy.State, starts_with("Median.Household.Income"), contains(".State.", ignore.case = T), contains("Score"), -matches("(Perc.*Score)"), -matches("(Rate.*Score)"), -matches("(Ratio.*Score)"), -matches("(Water.*Score)"), -ends_with("Rank"), -ends_with("Unhealthy.Days"), Nonwhite.v.White.Segregation.Index, Black.v.White.Segregation.Index)
@@ -1200,7 +1270,7 @@ write.csv(CO_COUNTY_COVID_FILTER, "CO_COUNTY_COVID_FILTER.csv", row.names = F)
 CO_MORTALITY_MORBIDITY = CO_COUNTY_COVID_SIMPLEST %>% 
   select(., COUNTY, 
          COVID.Tests.Per.100000, COVID.Cases.Per.100000,
-         COVID.Deaths.Per.100000, COVID.Mortality.Perc,
+         COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
          starts_with("Life.Expectancy.2010"), contains("Life.Lost"),
          contains("Hospitalizations"),
          contains("Mortality"), Violent.Crime.Rate,
@@ -1211,7 +1281,7 @@ CO_MORTALITY_MORBIDITY = CO_COUNTY_COVID_SIMPLEST %>%
 CO_PRIOR_MEDICAL = CO_COUNTY_COVID_SIMPLEST  %>% 
   select(., COUNTY, 
          COVID.Tests.Per.100000, COVID.Cases.Per.100000,
-         COVID.Deaths.Per.100000, COVID.Mortality.Perc,
+         COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
 #Perc.Adults.Asthma, Perc.Adults.Diabetes, Perc.Adults.Heart.Disease,  
         contains("Asthma"), contains("Diabetes"), 
         contains("Heart.Disease"),
@@ -1222,7 +1292,7 @@ CO_PRIOR_MEDICAL = CO_COUNTY_COVID_SIMPLEST  %>%
   
 CO_HEALTHCARE_ACCESS = CO_COUNTY_COVID_SIMPLEST  %>% select(., COUNTY, 
   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc, 
+  COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc, 
   starts_with("Perc.Uninsured"), starts_with("Perc.Flu.Vaccinated"), 
   #Perc.Adults.Delayed.Care, Perc.Adults.No.Reg.Care.12mos,
   starts_with("Perc.Adults.with.Obesity"), 
@@ -1234,7 +1304,7 @@ CO_HEALTHCARE_ACCESS = CO_COUNTY_COVID_SIMPLEST  %>% select(., COUNTY,
                                            
 CO_LIFESTYLE = CO_COUNTY_COVID_SIMPLEST  %>% select(., COUNTY, 
   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
+  COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
   starts_with("Perc.Fair.or.Poor.Health"),
   contains("Unhealthy"), Food.Environment.Index.Z.Score,
   starts_with("Perc.Physically.Inactive"), 
@@ -1247,7 +1317,7 @@ CO_LIFESTYLE = CO_COUNTY_COVID_SIMPLEST  %>% select(., COUNTY,
 
 CO_INCOME_EDUCATION = CO_COUNTY_COVID_SIMPLEST  %>% select(., COUNTY, 
   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
+  COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
   High.School.Graduation.Rate, starts_with("Perc.Some.College"), 
   starts_with("Median.Household"), 
   Income.80th.Percentile, Income.20th.Percentile, starts_with("Perc.Unemployed"), starts_with("Perc.Children.in.Poverty"), 
@@ -1257,7 +1327,7 @@ CO_INCOME_EDUCATION = CO_COUNTY_COVID_SIMPLEST  %>% select(., COUNTY,
                                            
 CO_DEMOGRAPHICS = CO_COUNTY_COVID_SIMPLEST  %>% select(., COUNTY, 
   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
+  COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
   Perc.less.than.18.years.of.age, Perc.65.and.over, Perc.Female, Perc.Hispanic, 
   Perc.Non.Hispanic.White, Perc.Black, Perc.Asian, 
   Perc.AIAN.American.Indian.Alaska.Native, 
@@ -1267,7 +1337,7 @@ CO_DEMOGRAPHICS = CO_COUNTY_COVID_SIMPLEST  %>% select(., COUNTY,
   
 CO_HOME = CO_COUNTY_COVID_SIMPLEST  %>% select(., COUNTY, 
   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
+  COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
   starts_with("Perc.Homeowners"), starts_with("Perc.Single.Parent.Households"), 
   starts_with("Perc.Severe.Housing"), 
   starts_with("Perc.Housing.Overcrowding"), 
@@ -1277,7 +1347,7 @@ CO_HOME = CO_COUNTY_COVID_SIMPLEST  %>% select(., COUNTY,
 
 CO_SUMMARY_SCORES = CO_COUNTY_COVID_SIMPLEST  %>% select(., COUNTY, 
   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
+  COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
   Years.of.Potential.Life.Lost.Rate, Life.Expectancy.2010.2015.Rate,
   ends_with("Z.Score"), -contains("Unhealthy"), -contains("Air"))
 #names(CO_SUMMARY_SCORES)
@@ -1289,212 +1359,214 @@ NAMES_CO_COMPLETE_SUBLISTS =
 #NAMES_CO_COMPLETE_SUBLISTS
 
 CO_COMPLETE_SUBLISTS = 
-  c("ALL LISTS", names(CO_MORTALITY_MORBIDITY)[1:5], "", "",
-    "CO_MORTALITY_MORBIDITY", names(CO_MORTALITY_MORBIDITY)[-1:-5], "", "",
-    "CO_PRIOR_MEDICAL", names(CO_PRIOR_MEDICAL)[-1:-5], "", "",
-    "CO_HEALTHCARE_ACCESS", names(CO_HEALTHCARE_ACCESS)[-1:-5], "", "",
-    "CO_LIFESTYLE", names(CO_LIFESTYLE)[-1:-5], "", "",
-    "CO_INCOME_EDUCATION", names(CO_INCOME_EDUCATION)[-1:-5], "", "",
-    "CO_DEMOGRAPHICS", names(CO_DEMOGRAPHICS)[-1:-5], "", "",
-    "CO_HOME", names(CO_HOME)[-1:-5], "", "",
-    "CO_SUMMARY_SCORES", names(CO_SUMMARY_SCORES)[-1:-5]
+  c("ALL LISTS", names(CO_MORTALITY_MORBIDITY)[1:6], "", "",
+    "CO_MORTALITY_MORBIDITY", names(CO_MORTALITY_MORBIDITY)[-1:-6], "", "",
+    "CO_PRIOR_MEDICAL", names(CO_PRIOR_MEDICAL)[-1:-6], "", "",
+    "CO_HEALTHCARE_ACCESS", names(CO_HEALTHCARE_ACCESS)[-1:-6], "", "",
+    "CO_LIFESTYLE", names(CO_LIFESTYLE)[-1:-6], "", "",
+    "CO_INCOME_EDUCATION", names(CO_INCOME_EDUCATION)[-1:-6], "", "",
+    "CO_DEMOGRAPHICS", names(CO_DEMOGRAPHICS)[-1:-6], "", "",
+    "CO_HOME", names(CO_HOME)[-1:-6], "", "",
+    "CO_SUMMARY_SCORES", names(CO_SUMMARY_SCORES)[-1:-6]
 )
 #CO_COMPLETE_SUBLISTS
 write.csv(CO_COMPLETE_SUBLISTS, "CO_COMPLETE_SUBLISTS.csv", row.names = F)
 
+COVID19DATA_NAMES = names(COVID19DATA) 
+write.csv(COVID19DATA_NAMES, "COVID19DATA_NAMES.csv", row.names = F)
 #### SUBTABLE BREAKDOWNS -- FILTER ####
 #colnames(CO_COUNTY_COVID_FILTER)
-CO_MORTALITY_MORBIDITY_FULL = CO_COUNTY_COVID_FILTER %>% select(., COUNTY, 
-   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-   COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-   starts_with("Life.Expectancy.2010"), contains("Life.Lost"), contains("Hospitalizations"),
-   contains("Mortality"), Violent.Crime.Rate, starts_with("Injury.Death.Rate"), 
-   starts_with("Perc.Driving.Deaths"))
-#names(CO_MORTALITY_MORBIDITY_FULL)  
+# CO_MORTALITY_MORBIDITY_FULL = CO_COUNTY_COVID_FILTER %>% select(., COUNTY, 
+#    COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#    COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#    starts_with("Life.Expectancy.2010"), contains("Life.Lost"), contains("Hospitalizations"),
+#    contains("Mortality"), Violent.Crime.Rate, starts_with("Injury.Death.Rate"), 
+#    starts_with("Perc.Driving.Deaths"))
+# #names(CO_MORTALITY_MORBIDITY_FULL)  
+# 
+# CO_PRIOR_MEDICAL_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
+#   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#   COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#   #Perc.Adults.Asthma, Perc.Adults.Diabetes, Perc.Adults.Heart.Disease, 
+#   contains("Asthma"), contains("Diabetes"), contains("Heart.Disease"),
+#   Perc.Disability, Perc.Indp.Living.Disability.Over.17, 
+#   Perc.Self.Care.Disability, starts_with("Low.Weight.Birth"), 
+#   -contains("Hospitalizations"), -contains("Mortality"))
+# #names(CO_PRIOR_MEDICAL_FULL)
+# 
+# CO_HEALTHCARE_ACCESS_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
+#   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#   COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#   starts_with("Perc.Uninsured"), starts_with("Perc.Flu.Vaccinated"), 
+#   #Perc.Adults.Delayed.Care, Perc.Adults.No.Reg.Care.12mos,
+#   starts_with("Perc.Adults.with.Obesity"), 
+#   contains("Delayed.Care"), contains("No.Reg.Care"),
+#   starts_with("Preventable.Hospitalization"),
+#   Primary.Care.Patients.per.Physician, Mental.Health.Patients.per.Provider,
+#   starts_with("Per.100000"))
+# #names(CO_HEALTHCARE_ACCESS_FULL)
+# 
+# CO_LIFESTYLE_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
+#   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#   COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#   starts_with("Perc.Fair.or.Poor.Health"),
+#   contains("Unhealthy"), Food.Environment.Index.Z.Score,
+#   starts_with("Perc.Physically.Inactive"), 
+#   Perc.With.Access.to.Exercise.Opportunities, Social.Orgs.Association.Rate,
+#   starts_with("Perc.Excessive.Drinking"), 
+#   starts_with("Perc.Smokers"), contains("Marijuana"), Perc.Adults.Cig, 
+#   contains("Cigarette"), Chlamydia.Rate,
+#   starts_with("Teen.Fertility"), starts_with("Teen.Birth.Rate"))
+# #names(CO_LIFESTYLE_FULL)
+# 
+# CO_INCOME_EDUCATION_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
+#   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#   COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#   High.School.Graduation.Rate, starts_with("Perc.Some.College"), 
+#   starts_with("Median.Household"), 
+#   Income.80th.Percentile, Income.20th.Percentile, starts_with("Perc.Unemployed"), starts_with("Perc.Children.in.Poverty"), 
+#   contains("Poverty"), Perc.Enrolled.in.Free.or.Reduced.Lunch,
+#   starts_with("Perc.Drive.Alone"))
+# #names(CO_INCOME_EDUCATION_FULL)
+# 
+# CO_DEMOGRAPHICS_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
+#   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#   COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#   Perc.less.than.18.years.of.age, Perc.65.and.over, Perc.Female, Perc.Hispanic, 
+#   Perc.Non.Hispanic.White, Perc.Black, Perc.Asian, 
+#   Perc.AIAN.American.Indian.Alaska.Native, 
+#   Perc.Native.Hawaiian.Other.Pacific.Islander, Perc.Not.Proficient.in.English, 
+#   contains("Segregation"))           
+# #names(CO_DEMOGRAPHICS_FULL)
+# 
+# CO_HOME_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
+#   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#   COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#   starts_with("Perc.Homeowners"), starts_with("Perc.Single.Parent.Households"), 
+#   starts_with("Perc.Severe.Housing"), 
+#   starts_with("Perc.Housing.Overcrowding"), 
+#   starts_with("Perc.Inadequate"), Average.Daily.Air.Pollution.Z.Score, 
+#   Perc.Rural)
+# #names(CO_HOME_FULL)
+# 
+# CO_SUMMARY_SCORES_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
+#   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#   COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#   Years.of.Potential.Life.Lost.Rate, Life.Expectancy.2010.2015.Rate,
+#   ends_with("Z.Score"), -contains("Unhealthy"), -contains("Air"))
+# #names(CO_SUMMARY_SCORES_FULL)
+# 
+# CO_COMPLETE_SUBLISTS_FULL = 
+#   c("ALL LISTS", names(CO_MORTALITY_MORBIDITY_FULL)[1:6], "", "",
+#     "CO_MORTALITY_MORBIDITY_FULL", names(CO_MORTALITY_MORBIDITY_FULL)[-1:-6], "", "",
+#     "CO_PRIOR_MEDICAL_FULL", names(CO_PRIOR_MEDICAL_FULL)[-1:-6], "", "",
+#     "CO_HEALTHCARE_ACCESS_FULL", names(CO_HEALTHCARE_ACCESS_FULL)[-1:-6], "", "",
+#     "CO_LIFESTYLE_FULL", names(CO_LIFESTYLE_FULL)[-1:-6], "", "",
+#     "CO_INCOME_EDUCATION_FULL", names(CO_INCOME_EDUCATION_FULL)[-1:-6], "", "",
+#     "CO_DEMOGRAPHICS_FULL", names(CO_DEMOGRAPHICS_FULL)[-1:-6], "", "",
+#     "CO_HOME_FULL", names(CO_HOME_FULL)[-1:-6], "", "",
+#     "CO_SUMMARY_SCORES_FULL", names(CO_SUMMARY_SCORES_FULL)[-1:-6]
+#   )
+# #CO_COMPLETE_SUBLISTS_FULL
+# write.csv(CO_COMPLETE_SUBLISTS_FULL, "CO_COMPLETE_SUBLISTS_FULL.csv", 
+#           row.names = F)
 
-CO_PRIOR_MEDICAL_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
-  COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-  #Perc.Adults.Asthma, Perc.Adults.Diabetes, Perc.Adults.Heart.Disease, 
-  contains("Asthma"), contains("Diabetes"), contains("Heart.Disease"),
-  Perc.Disability, Perc.Indp.Living.Disability.Over.17, 
-  Perc.Self.Care.Disability, starts_with("Low.Weight.Birth"), 
-  -contains("Hospitalizations"), -contains("Mortality"))
-#names(CO_PRIOR_MEDICAL_FULL)
-
-CO_HEALTHCARE_ACCESS_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
-  COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-  starts_with("Perc.Uninsured"), starts_with("Perc.Flu.Vaccinated"), 
-  #Perc.Adults.Delayed.Care, Perc.Adults.No.Reg.Care.12mos,
-  starts_with("Perc.Adults.with.Obesity"), 
-  contains("Delayed.Care"), contains("No.Reg.Care"),
-  starts_with("Preventable.Hospitalization"),
-  Primary.Care.Patients.per.Physician, Mental.Health.Patients.per.Provider,
-  starts_with("Per.100000"))
-#names(CO_HEALTHCARE_ACCESS_FULL)
-
-CO_LIFESTYLE_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
-  COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-  starts_with("Perc.Fair.or.Poor.Health"),
-  contains("Unhealthy"), Food.Environment.Index.Z.Score,
-  starts_with("Perc.Physically.Inactive"), 
-  Perc.With.Access.to.Exercise.Opportunities, Social.Orgs.Association.Rate,
-  starts_with("Perc.Excessive.Drinking"), 
-  starts_with("Perc.Smokers"), contains("Marijuana"), Perc.Adults.Cig, 
-  contains("Cigarette"), Chlamydia.Rate,
-  starts_with("Teen.Fertility"), starts_with("Teen.Birth.Rate"))
-#names(CO_LIFESTYLE_FULL)
-
-CO_INCOME_EDUCATION_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
-  COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-  High.School.Graduation.Rate, starts_with("Perc.Some.College"), 
-  starts_with("Median.Household"), 
-  Income.80th.Percentile, Income.20th.Percentile, starts_with("Perc.Unemployed"), starts_with("Perc.Children.in.Poverty"), 
-  contains("Poverty"), Perc.Enrolled.in.Free.or.Reduced.Lunch,
-  starts_with("Perc.Drive.Alone"))
-#names(CO_INCOME_EDUCATION_FULL)
-
-CO_DEMOGRAPHICS_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
-  COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-  Perc.less.than.18.years.of.age, Perc.65.and.over, Perc.Female, Perc.Hispanic, 
-  Perc.Non.Hispanic.White, Perc.Black, Perc.Asian, 
-  Perc.AIAN.American.Indian.Alaska.Native, 
-  Perc.Native.Hawaiian.Other.Pacific.Islander, Perc.Not.Proficient.in.English, 
-  contains("Segregation"))           
-#names(CO_DEMOGRAPHICS_FULL)
-
-CO_HOME_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
-  COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-  starts_with("Perc.Homeowners"), starts_with("Perc.Single.Parent.Households"), 
-  starts_with("Perc.Severe.Housing"), 
-  starts_with("Perc.Housing.Overcrowding"), 
-  starts_with("Perc.Inadequate"), Average.Daily.Air.Pollution.Z.Score, 
-  Perc.Rural)
-#names(CO_HOME_FULL)
-
-CO_SUMMARY_SCORES_FULL = CO_COUNTY_COVID_FILTER  %>% select(., COUNTY, 
-  COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-  Years.of.Potential.Life.Lost.Rate, Life.Expectancy.2010.2015.Rate,
-  ends_with("Z.Score"), -contains("Unhealthy"), -contains("Air"))
-#names(CO_SUMMARY_SCORES_FULL)
-
-CO_COMPLETE_SUBLISTS_FULL = 
-  c("ALL LISTS", names(CO_MORTALITY_MORBIDITY_FULL)[1:5], "", "",
-    "CO_MORTALITY_MORBIDITY_FULL", names(CO_MORTALITY_MORBIDITY_FULL)[-1:-5], "", "",
-    "CO_PRIOR_MEDICAL_FULL", names(CO_PRIOR_MEDICAL_FULL)[-1:-5], "", "",
-    "CO_HEALTHCARE_ACCESS_FULL", names(CO_HEALTHCARE_ACCESS_FULL)[-1:-5], "", "",
-    "CO_LIFESTYLE_FULL", names(CO_LIFESTYLE_FULL)[-1:-5], "", "",
-    "CO_INCOME_EDUCATION_FULL", names(CO_INCOME_EDUCATION_FULL)[-1:-5], "", "",
-    "CO_DEMOGRAPHICS_FULL", names(CO_DEMOGRAPHICS_FULL)[-1:-5], "", "",
-    "CO_HOME_FULL", names(CO_HOME_FULL)[-1:-5], "", "",
-    "CO_SUMMARY_SCORES_FULL", names(CO_SUMMARY_SCORES_FULL)[-1:-5]
-  )
-#CO_COMPLETE_SUBLISTS_FULL
-write.csv(CO_COMPLETE_SUBLISTS_FULL, "CO_COMPLETE_SUBLISTS_FULL.csv", 
-          row.names = F)
-
-#### SUBTABLE BREAKDOWNS -- NO DEMO ####
-#colnames(CO_COUNTY_COVID_RATES_NO_DEMO)
-CO_MORTALITY_MORBIDITY_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO %>% select(., COUNTY, 
-    COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-    COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-    starts_with("Life.Expectancy.2010"), contains("Life.Lost"), contains("Hospitalizations"),
-    contains("Mortality"), Violent.Crime.Rate, starts_with("Injury.Death.Rate"), 
-    starts_with("Perc.Driving.Deaths"))
-#names(CO_MORTALITY_MORBIDITY_NO_DEMO)  
-
-CO_PRIOR_MEDICAL_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
-   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-   COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-   #Perc.Adults.Asthma, Perc.Adults.Diabetes, Perc.Adults.Heart.Disease, 
-   contains("Asthma"), contains("Diabetes"), contains("Heart.Disease"),
-   Perc.Disability, Perc.Indp.Living.Disability.Over.17, 
-   Perc.Self.Care.Disability, starts_with("Low.Weight.Birth"), 
-   -contains("Hospitalizations"), -contains("Mortality"))
-#names(CO_PRIOR_MEDICAL_NO_DEMO)
-
-CO_HEALTHCARE_ACCESS_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
-   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-   COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-   starts_with("Perc.Uninsured"), starts_with("Perc.Flu.Vaccinated"), 
-   #Perc.Adults.Delayed.Care, Perc.Adults.No.Reg.Care.12mos,
-   starts_with("Perc.Adults.with.Obesity"), 
-   contains("Delayed.Care"), contains("No.Reg.Care"),
-   starts_with("Preventable.Hospitalization"),
-   Primary.Care.Patients.per.Physician, Mental.Health.Patients.per.Provider,
-   starts_with("Per.100000"))
-#names(CO_HEALTHCARE_ACCESS_NO_DEMO)
-
-CO_LIFESTYLE_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
-   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-   COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-   starts_with("Perc.Fair.or.Poor.Health"),
-   contains("Unhealthy"), Food.Environment.Index.Z.Score,
-   starts_with("Perc.Physically.Inactive"), 
-   Perc.With.Access.to.Exercise.Opportunities, Social.Orgs.Association.Rate,
-   starts_with("Perc.Excessive.Drinking"), 
-   starts_with("Perc.Smokers"), contains("Marijuana"), Perc.Adults.Cig, 
-   contains("Cigarette"), Chlamydia.Rate,
-   starts_with("Teen.Fertility"), starts_with("Teen.Birth.Rate"))
-#names(CO_LIFESTYLE_NO_DEMO)
-
-CO_INCOME_EDUCATION_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
-  COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-  High.School.Graduation.Rate, starts_with("Perc.Some.College"), 
-  starts_with("Median.Household"), 
-  Income.80th.Percentile, Income.20th.Percentile, starts_with("Perc.Unemployed"), starts_with("Perc.Children.in.Poverty"), 
-  contains("Poverty"), Perc.Enrolled.in.Free.or.Reduced.Lunch,
-  starts_with("Perc.Drive.Alone"))
-#names(CO_INCOME_EDUCATION_NO_DEMO)
-
-CO_DEMOGRAPHICS_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
-  COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-  Perc.less.than.18.years.of.age, Perc.65.and.over, Perc.Female, Perc.Hispanic, 
-  Perc.Non.Hispanic.White, Perc.Black, Perc.Asian, 
-  Perc.AIAN.American.Indian.Alaska.Native, 
-  Perc.Native.Hawaiian.Other.Pacific.Islander, Perc.Not.Proficient.in.English, 
-  contains("Segregation"))           
-#names(CO_DEMOGRAPHICS_NO_DEMO)
-
-CO_HOME_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
-  COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-  starts_with("Perc.Homeowners"), starts_with("Perc.Single.Parent.Households"), 
-  starts_with("Perc.Severe.Housing"), 
-  starts_with("Perc.Housing.Overcrowding"), 
-  starts_with("Perc.Inadequate"), Average.Daily.Air.Pollution.Z.Score, 
-  Perc.Rural)
-#names(CO_HOME_NO_DEMO)
-
-CO_SUMMARY_SCORES_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
-  COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
-  COVID.Deaths.Per.100000, COVID.Mortality.Perc,
-  Years.of.Potential.Life.Lost.Rate, Life.Expectancy.2010.2015.Rate,
-  ends_with("Z.Score"), -contains("Unhealthy"), -contains("Air"))
-#names(CO_SUMMARY_SCORES_NO_DEMO)
-
-CO_COMPLETE_SUBLISTS_NO_DEMO = 
-  c("ALL LISTS", names(CO_MORTALITY_MORBIDITY_NO_DEMO)[1:5], "", "",
-    "CO_MORTALITY_MORBIDITY_NO_DEMO", names(CO_MORTALITY_MORBIDITY_NO_DEMO)[-1:-5], "", "",
-    "CO_PRIOR_MEDICAL_NO_DEMO", names(CO_PRIOR_MEDICAL_NO_DEMO)[-1:-5], "", "",
-    "CO_HEALTHCARE_ACCESS_NO_DEMO", names(CO_HEALTHCARE_ACCESS_NO_DEMO)[-1:-5], "", "",
-    "CO_LIFESTYLE_NO_DEMO", names(CO_LIFESTYLE_NO_DEMO)[-1:-5], "", "",
-    "CO_INCOME_EDUCATION_NO_DEMO", names(CO_INCOME_EDUCATION_NO_DEMO)[-1:-5], "", "",
-    "CO_DEMOGRAPHICS_NO_DEMO", names(CO_DEMOGRAPHICS_NO_DEMO)[-1:-5], "", "",
-    "CO_HOME_NO_DEMO", names(CO_HOME_NO_DEMO)[-1:-5], "", "",
-    "CO_SUMMARY_SCORES_NO_DEMO", names(CO_SUMMARY_SCORES_NO_DEMO)[-1:-5]
-  )
-#CO_COMPLETE_SUBLISTS_NO_DEMO
-write.csv(CO_COMPLETE_SUBLISTS_NO_DEMO, "CO_COMPLETE_SUBLISTS_NO_DEMO.csv", 
-          row.names = F)
+# #### SUBTABLE BREAKDOWNS -- NO DEMO ####
+# #colnames(CO_COUNTY_COVID_RATES_NO_DEMO)
+# CO_MORTALITY_MORBIDITY_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO %>% select(., COUNTY, 
+#     COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#     COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#     starts_with("Life.Expectancy.2010"), contains("Life.Lost"), contains("Hospitalizations"),
+#     contains("Mortality"), Violent.Crime.Rate, starts_with("Injury.Death.Rate"), 
+#     starts_with("Perc.Driving.Deaths"))
+# #names(CO_MORTALITY_MORBIDITY_NO_DEMO)  
+# 
+# CO_PRIOR_MEDICAL_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
+#    COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#    COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#    #Perc.Adults.Asthma, Perc.Adults.Diabetes, Perc.Adults.Heart.Disease, 
+#    contains("Asthma"), contains("Diabetes"), contains("Heart.Disease"),
+#    Perc.Disability, Perc.Indp.Living.Disability.Over.17, 
+#    Perc.Self.Care.Disability, starts_with("Low.Weight.Birth"), 
+#    -contains("Hospitalizations"), -contains("Mortality"))
+# #names(CO_PRIOR_MEDICAL_NO_DEMO)
+# 
+# CO_HEALTHCARE_ACCESS_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
+#    COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#    COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#    starts_with("Perc.Uninsured"), starts_with("Perc.Flu.Vaccinated"), 
+#    #Perc.Adults.Delayed.Care, Perc.Adults.No.Reg.Care.12mos,
+#    starts_with("Perc.Adults.with.Obesity"), 
+#    contains("Delayed.Care"), contains("No.Reg.Care"),
+#    starts_with("Preventable.Hospitalization"),
+#    Primary.Care.Patients.per.Physician, Mental.Health.Patients.per.Provider,
+#    starts_with("Per.100000"))
+# #names(CO_HEALTHCARE_ACCESS_NO_DEMO)
+# 
+# CO_LIFESTYLE_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
+#    COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#    COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#    starts_with("Perc.Fair.or.Poor.Health"),
+#    contains("Unhealthy"), Food.Environment.Index.Z.Score,
+#    starts_with("Perc.Physically.Inactive"), 
+#    Perc.With.Access.to.Exercise.Opportunities, Social.Orgs.Association.Rate,
+#    starts_with("Perc.Excessive.Drinking"), 
+#    starts_with("Perc.Smokers"), contains("Marijuana"), Perc.Adults.Cig, 
+#    contains("Cigarette"), Chlamydia.Rate,
+#    starts_with("Teen.Fertility"), starts_with("Teen.Birth.Rate"))
+# #names(CO_LIFESTYLE_NO_DEMO)
+# 
+# CO_INCOME_EDUCATION_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
+#   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#   COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#   High.School.Graduation.Rate, starts_with("Perc.Some.College"), 
+#   starts_with("Median.Household"), 
+#   Income.80th.Percentile, Income.20th.Percentile, starts_with("Perc.Unemployed"), starts_with("Perc.Children.in.Poverty"), 
+#   contains("Poverty"), Perc.Enrolled.in.Free.or.Reduced.Lunch,
+#   starts_with("Perc.Drive.Alone"))
+# #names(CO_INCOME_EDUCATION_NO_DEMO)
+# 
+# CO_DEMOGRAPHICS_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
+#   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#   COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#   Perc.less.than.18.years.of.age, Perc.65.and.over, Perc.Female, Perc.Hispanic, 
+#   Perc.Non.Hispanic.White, Perc.Black, Perc.Asian, 
+#   Perc.AIAN.American.Indian.Alaska.Native, 
+#   Perc.Native.Hawaiian.Other.Pacific.Islander, Perc.Not.Proficient.in.English, 
+#   contains("Segregation"))           
+# #names(CO_DEMOGRAPHICS_NO_DEMO)
+# 
+# CO_HOME_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
+#   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#   COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#   starts_with("Perc.Homeowners"), starts_with("Perc.Single.Parent.Households"), 
+#   starts_with("Perc.Severe.Housing"), 
+#   starts_with("Perc.Housing.Overcrowding"), 
+#   starts_with("Perc.Inadequate"), Average.Daily.Air.Pollution.Z.Score, 
+#   Perc.Rural)
+# #names(CO_HOME_NO_DEMO)
+# 
+# CO_SUMMARY_SCORES_NO_DEMO = CO_COUNTY_COVID_RATES_NO_DEMO  %>% select(., COUNTY, 
+#   COVID.Tests.Per.100000, COVID.Cases.Per.100000,  
+#   COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc,
+#   Years.of.Potential.Life.Lost.Rate, Life.Expectancy.2010.2015.Rate,
+#   ends_with("Z.Score"), -contains("Unhealthy"), -contains("Air"))
+# #names(CO_SUMMARY_SCORES_NO_DEMO)
+# 
+# CO_COMPLETE_SUBLISTS_NO_DEMO = 
+#   c("ALL LISTS", names(CO_MORTALITY_MORBIDITY_NO_DEMO)[1:6], "", "",
+#     "CO_MORTALITY_MORBIDITY_NO_DEMO", names(CO_MORTALITY_MORBIDITY_NO_DEMO)[-1:-6], "", "",
+#     "CO_PRIOR_MEDICAL_NO_DEMO", names(CO_PRIOR_MEDICAL_NO_DEMO)[-1:-6], "", "",
+#     "CO_HEALTHCARE_ACCESS_NO_DEMO", names(CO_HEALTHCARE_ACCESS_NO_DEMO)[-1:-6], "", "",
+#     "CO_LIFESTYLE_NO_DEMO", names(CO_LIFESTYLE_NO_DEMO)[-1:-6], "", "",
+#     "CO_INCOME_EDUCATION_NO_DEMO", names(CO_INCOME_EDUCATION_NO_DEMO)[-1:-6], "", "",
+#     "CO_DEMOGRAPHICS_NO_DEMO", names(CO_DEMOGRAPHICS_NO_DEMO)[-1:-6], "", "",
+#     "CO_HOME_NO_DEMO", names(CO_HOME_NO_DEMO)[-1:-6], "", "",
+#     "CO_SUMMARY_SCORES_NO_DEMO", names(CO_SUMMARY_SCORES_NO_DEMO)[-1:-6]
+#   )
+# #CO_COMPLETE_SUBLISTS_NO_DEMO
+# write.csv(CO_COMPLETE_SUBLISTS_NO_DEMO, "CO_COMPLETE_SUBLISTS_NO_DEMO.csv", 
+#           row.names = F)
 
 #### MAP PREWORK ####
 CO_county_map = map_data('county', 'colorado')
@@ -1503,10 +1575,10 @@ names(CO_county_map) = gsub("subregion", "COUNTY",
                             names(CO_county_map))
 #head(CO_county_map)
 
-CO_COUNTY_COVID_FILTER$COVID.Deaths.Per.100000[is.na(CO_COUNTY_COVID_FILTER$COVID.Deaths.Per.100000)] <- 0
-CO_COUNTY_COVID_FILTER$COVID.Cases.Max[is.na(CO_COUNTY_COVID_FILTER$COVID.Cases.Max)] <- 0
-CO_COUNTY_COVID_FILTER$COVID.Mortality.Perc[is.na(CO_COUNTY_COVID_FILTER$COVID.Mortality.Perc)] <- 0
-
+# CO_COUNTY_COVID_FILTER$COVID.Deaths.Per.100000[is.na(CO_COUNTY_COVID_FILTER$COVID.Deaths.Per.100000)] <- 0
+# CO_COUNTY_COVID_FILTER$COVID.Cases.Max[is.na(CO_COUNTY_COVID_FILTER$COVID.Cases.Max)] <- 0
+# CO_COUNTY_COVID_FILTER$COVID.Mortality.Perc[is.na(CO_COUNTY_COVID_FILTER$COVID.Mortality.Perc)] <- 0
+# CO_COUNTY_COVID_FILTER$COVID.Positivity.Perc[is.na(CO_COUNTY_COVID_FILTER$COVID.Positivity.Perc)] <- 0
 CO_MAP_COVID = merge(CO_county_map, CO_COUNTY_COVID_FILTER, 
                      by="COUNTY")
 
@@ -1624,7 +1696,8 @@ weekly <- function(x) {
   sort(c(monthly, monthly + days(7), monthly + days(14), monthly + days(21)))
 }
 #### Archived --- SUBSET COMBINED TABLES EVERYTHING ####
-# COVID19_PER = COVID19CountyANALYSIS %>% 
+# COVID19_PER = COVID.Tests.Per.100000, COVID.Cases.Per.100000,
+         # COVID.Deaths.Per.100000, COVID.Mortality.Perc, %>% 
 #   select(., COUNTY, COVID_Mean_Testing_Rates_Per_100000, 
 #          COVID_Max_Testing_Rates_Per_100000, 
 #          COVID_County_Pos_Case_Rate_Per_100000, 

@@ -31,8 +31,8 @@ shinyServer(function(input, output, session){
     observe({
         Demochoices = get(input$catbuttons)
         updateSelectizeInput(session, "DemoData", 
-                             choices = colnames(Demochoices)[-1:-5],
-                             selected = colnames(Demochoices)[6])
+                             choices = colnames(Demochoices)[-1:-6],
+                             selected = colnames(Demochoices)[7])
     }) 
     output$value <- renderText({ input$state })
     covidrange = reactive({seq(min(x), max(x), 
@@ -98,7 +98,7 @@ shinyServer(function(input, output, session){
     output$corr_explorer <- renderGirafe({
         explorer = correlate(get(input$catbuttons)[-1], method=input$corr_type) %>% 
             focus(COVID.Tests.Per.100000, COVID.Cases.Per.100000, 
-                  COVID.Deaths.Per.100000, COVID.Mortality.Perc) %>% 
+                  COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc) %>% 
             mutate(rowname = reorder(rowname, get(input$COVIDbuttons))) %>%
             ggplot(aes(rowname, get(input$COVIDbuttons), fill=get(input$COVIDbuttons))) +
             scale_fill_gradient2(low="red", mid="grey80", high="blue") +
@@ -142,7 +142,7 @@ shinyServer(function(input, output, session){
         corrdata = get(input$catbuttons) %>% 
             select(-starts_with("COVID"), everything(), starts_with("COVID")) %>% 
             arrange(COUNTY)
-        corrdata[-1:-6]=round(corrdata[-1:-6], 2)
+        corrdata[-1:-7]=round(corrdata[-1:-7], 2)
         # corrdata = formatRound(corrdata, columns=c(-1:-6), digits=2)
         datatable(corrdata, rownames=F,
                   filter = list(position = 'top', clear = FALSE),
@@ -481,7 +481,7 @@ shinyServer(function(input, output, session){
                 ) %>% 
                 select(., COUNTY, COVID.Tests.Per.100000, 
                        COVID.Cases.Per.100000,  COVID.Deaths.Per.100000, 
-                       COVID.Mortality.Perc, input$DemoData
+                       COVID.Positivity.Perc, COVID.Mortality.Perc, input$DemoData
                 ) %>% 
                 summarise(., Measure = xlab_clean(),
                           Counties = n(),
@@ -510,7 +510,7 @@ shinyServer(function(input, output, session){
                 ) %>% 
                 select(., COUNTY, COVID.Tests.Per.100000, 
                        COVID.Cases.Per.100000,  COVID.Deaths.Per.100000, 
-                       COVID.Mortality.Perc, input$DemoData
+                       COVID.Positivity.Perc, COVID.Mortality.Perc, input$DemoData
                 ) %>% 
                 summarise(., Measure = ylab_clean(),
                              Counties = n(),
@@ -738,7 +738,10 @@ shinyServer(function(input, output, session){
             CO_MAP_COVID1$bi_class %<>%
                 gsub("NA-1", NA, .) %>%
                 gsub("NA-2", NA, .) %>%
-                gsub("NA-3", NA, .)
+                gsub("NA-3", NA, .) %>% 
+                gsub("1-NA", NA, .) %>% 
+                gsub("2-NA", NA, .) %>% 
+                gsub("3-NA", NA, .)
             # CO_MAP_COVID1$demo_var %<>%
             #     gsub(1, paste0("Low ",xlab_perc()), .) %>%
             #     gsub(2, paste0("Med ",xlab_perc()), .) %>%
@@ -814,7 +817,10 @@ shinyServer(function(input, output, session){
                CO_COUNTY_BI_SLIDERS$bi_class %<>% 
                    gsub("NA-1", NA, .) %>% 
                    gsub("NA-2", NA, .) %>% 
-                   gsub("NA-3", NA, .)
+                   gsub("NA-3", NA, .) %>% 
+                   gsub("1-NA", NA, .) %>% 
+                   gsub("2-NA", NA, .) %>% 
+                   gsub("3-NA", NA, .)
                
                
                #ALL COUNTIES
@@ -967,7 +973,7 @@ shinyServer(function(input, output, session){
                    xlab("County Category") +
                    ylab("Percent of Counties with Correlation") +
                    scale_y_continuous(labels = scales::percent) +
-                   labs(title="Balancing Factors of Counties \nwith Strong Correlation", 
+                   labs(title="Counties with Influencing Factors showing \nStrong Positive or Negative Correlation", 
                         subtitle = paste0(ylab_short(), " vs. ", xlab_long_perc()),
                         caption = "Hover over any bar to see County Type statistics") +
                    theme(panel.grid.major.y = element_blank(),
@@ -1018,7 +1024,10 @@ shinyServer(function(input, output, session){
                CO_COUNTY_BI_CLASS$bi_class %<>% 
                    gsub("NA-1", NA, .) %>% 
                    gsub("NA-2", NA, .) %>% 
-                   gsub("NA-3", NA, .)
+                   gsub("NA-3", NA, .) %>% 
+                   gsub("1-NA", NA, .) %>% 
+                   gsub("2-NA", NA, .) %>% 
+                   gsub("3-NA", NA, .)
                #TRYING TO make a Matrix
                bi_var_table = CO_COUNTY_BI_CLASS %>% 
                    group_by(bi_class) %>% 
@@ -1065,7 +1074,10 @@ shinyServer(function(input, output, session){
                CO_COUNTY_BI_CLASS$bi_class %<>% 
                    gsub("NA-1", NA, .) %>% 
                    gsub("NA-2", NA, .) %>% 
-                   gsub("NA-3", NA, .)
+                   gsub("NA-3", NA, .) %>% 
+                   gsub("1-NA", NA, .) %>% 
+                   gsub("2-NA", NA, .) %>% 
+                   gsub("3-NA", NA, .)
              #TRYING TO make a Matrix
                # bi_var_table = CO_COUNTY_BI_CLASS %>% 
                #     group_by(bi_class) %>% 
@@ -1374,7 +1386,7 @@ shinyServer(function(input, output, session){
            })
            
            output$ind_data = renderDataTable({
-              inddata = COVID19ALL_MERGE %>% 
+              inddata = COVID19DATA %>% 
                    # filter(., 
                    #        # (COUNTY == input$single | COUNTY == input$state)
                    #                   # & 
@@ -1403,9 +1415,140 @@ shinyServer(function(input, output, session){
                           )
                       )
             ) %>%
-                          formatRound(columns = -c(1:6), digits=2)
+                          formatRound(columns = c(4:13), digits=2)
             
            })
+           output$DaysSince <- renderValueBox({
+               DaysCOVID = COVID19CountyANALYSIS %>% 
+                   select(COUNTY, COVID_Num_Days_Since_First_Case) %>% 
+                   filter(COUNTY == input$single)
+               Days = DaysCOVID$COVID_Num_Days_Since_First_Case
+               valueBox(
+                   paste0(Days, " Days"),
+                   paste0("since 1st case in ", stri_trans_totitle(countyname())),
+                   # icon = icon("calendar"),
+                   color = "purple"
+               )
+           })
+           output$caseranking <- renderValueBox({
+               RankCOVID = COVID19DATA %>% 
+                   filter(., Date == max(Date)) %>% 
+                   mutate(minrank = min_rank(desc(Positivity.Perc))) %>% 
+                   filter(COUNTY == input$single)
+               Rank = RankCOVID$minrank
+               Pos = RankCOVID$Positivity.Perc
+               valueBox(
+                   paste0("#",Rank," (", round(Pos,1), "%)"), "of 64 Counties in COVID Positivity",
+                   # icon = icon("rank"),
+                   color = "purple"
+               )
+           })
+           output$lastweekcases <- renderValueBox({
+               lastwk = COVID19DATA %>%
+                   select(COUNTY, Date, New.Cases.Last.Week) %>%
+                   filter(COUNTY == input$single & Date == max(Date))
+               
+               # lastwk = COVID19DATA %>% 
+               #     select(COUNTY, Date, New.Cases.Last.Week) %>% 
+               #     filter(COUNTY == input$single) %>% 
+               #     arrange
+               lastwkcase = lastwk$New.Cases.Last.Week
+               valueBox(
+                   paste0(lastwkcase, " Cases"), 
+                   paste0("last week in ", stri_trans_totitle(countyname())), 
+                   # icon = icon("list-alt"),
+                       color = "blue"
+                   )
+               })
+           # output$lastweekdeaths <- renderValueBox({
+           #     lastwk = COVID19DATA %>%
+           #         select(COUNTY, Date, New.Deaths.Last.Week) %>%
+           #         filter(COUNTY == input$single & Date == max(Date))
+           #     
+           #     # lastwk = COVID19DATA %>% 
+           #     #     select(COUNTY, Date, New.Cases.Last.Week) %>% 
+           #     #     filter(COUNTY == input$single) %>% 
+           #     #     arrange
+           #     lastwkdeath = lastwk$New.Deaths.Last.Week
+           #     valueBox(
+           #         paste0(lastwkdeath, " Deaths"), 
+           #         paste0("last week in ", stri_trans_totitle(countyname()))
+           #         , icon = icon("list"),
+           #         color = "red"
+           #     )
+           # })
+           output$diff <- renderValueBox({
+               twowk = COVID19DATA %>%
+                   select(COUNTY, Date, New.Cases.Last.Week) %>%
+                   filter(COUNTY == input$single & 
+                              Date == max(Date)-9)
+               lastwk = COVID19DATA %>%
+                   select(COUNTY, Date, New.Cases.Last.Week) %>%
+                   filter(COUNTY == input$single & 
+                              Date == max(Date)-2)
+               twowkcase = twowk$New.Cases.Last.Week
+               lastwkcase = lastwk$New.Cases.Last.Week
+               difference = ifelse(twowkcase!=0, 
+                                   round(100*(lastwkcase-twowkcase)/twowkcase,0), 0)
+               absdiff = abs(difference)
+                   valueBox(
+                       ifelse(difference >=0,
+                   paste0(absdiff, "% Increase"), 
+                    paste0(absdiff, "% Decrease")),
+                   "in Cases from a week before", 
+                   # icon = icon("bar-chart-o"),
+                   color = "red"
+               )
+           })
+           # output$Rank <- renderValueBox({
+           #     RankCOVID = COVID19CountyANALYSIS %>% 
+           #         select(COUNTY, COVID_Num_Days_Since_First_Case) %>% 
+           #         filter(COUNTY == input$single)
+           #     valueBox(
+           #         , "Progress", icon = icon("list"),
+           #         color = "red"
+           #     )
+           # })
+           # 
+           # output$indmap = renderGirafe({
+           #     CO_county_filter = CO_county_map %>%
+           #         filter(., COUNTY == input$single)
+           #     ind_map = 
+           #         ggplot(CO_county_map,
+           #            aes(x=long, y=lat,
+           #                group=group)) +
+           #         # ggtitle(stri_trans_totitle(get(input$single))) +
+           #         # labs(title = paste(ylab_clean(), str_wrap(xlab_long_perc(),30), sep="\nvs. ")
+           #              # ,x = "Bivariate Analysis")
+           #         
+           #         # theme(plot.title = element_text(hjust=1),
+           #               #plot.margin=unit(c(2,2,0,0),"cm")
+           #         # ) +
+           #         guides(fill=FALSE, x.axis=FALSE, y.axis=FALSE) +
+           #         #theme(title)
+           #         theme_void() + coord_map("mercator") +
+           #         xlim(-109.25, -101.75) + ylim(36.75, 41.25) +
+           #         xlab(NULL) + ylab(NULL) +
+           #         #coord_map("polyconic" ) #+
+           #         
+           #         geom_polygon_interactive(aes(tooltip =  
+           #                                          paste0(stri_trans_totitle(COUNTY), " County"),
+           #                                      data_id = COUNTY
+           #                                  # , onclick = WIKI
+           #         ),color="black")
+           #     ind_map = ind_map + geom_polygon_interactive(CO_county_filter, 
+           #                                                  aes(x=long, y=lat,
+           #                                                      group=group, fill = "red"))
+           #     # ggiraph(code = print(map2))
+           #     girafe(ggobj = ind_map, options = list(
+           #         opts_sizing(rescale = TRUE, width = .7),
+           #         opts_hover(css = "opacity:0.8;"),
+           #         opts_tooltip(offx = 20, offy = -55),
+           #         opts_selection(type = "none"
+           #                        , only_shiny = FALSE
+           #         )
+           #     ))
+           # })
 })
 
  

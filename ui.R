@@ -31,6 +31,8 @@ shinyUI(
                                          "COVID.Cases.Per.100000",
                                      "Deaths Per 100000" = 
                                          "COVID.Deaths.Per.100000",
+                                     "Positivity Percentage" = 
+                                         "COVID.Positivity.Perc",
                                      "Mortality Percentage" = 
                                          "COVID.Mortality.Perc"),
                          selected = "COVID.Cases.Per.100000"),
@@ -53,13 +55,13 @@ shinyUI(
                          selected = "CO_HEALTHCARE_ACCESS"),
             selectizeInput(inputId = "DemoData",
                            label = "Demographic Measure:",
-                           choices = colnames("catbuttons")[-1:-5]),
+                           choices = colnames("catbuttons")[-1:-6]),
             
             menuItem("Source code", icon = icon("file-code-o"), 
                      href = "https://github.com/rstudio/shinydashboard/"),
             menuItem("CDPHE CO COVID Data", icon = icon("list-alt"), 
                      href = "https://data-cdphe.opendata.arcgis.com/search?collection=Dataset&q=covid19&sort=name"),
-            menuItem("CDPHE Community Level Data", icon = icon("list-alt"), 
+            menuItem("CDPHE Community Data", icon = icon("list-alt"), 
                      href = "https://data-cdphe.opendata.arcgis.com/search?collection=Dataset&q=cdphe%20community%20level%20estimates%20(county)%20"),
             menuItem("BRFSS County Data", icon = icon("list-alt"), 
                      href = "https://data-cdphe.opendata.arcgis.com/search?collection=Dataset&q=BRFSS%202014-2017%20County%20Datasets&sort=name"),
@@ -122,7 +124,7 @@ shinyUI(
                     tabPanel("Statewide Data", 
                              #box(plotOutput("top20"), width=9, height = 420),
                              box(status="primary",ggiraphOutput("top20"), width=9),
-                             box(title ="Balancing Filters",status="warning",solidHeader = T,
+                             box(title ="Selection Filters",status="warning",solidHeader = T,
                                  # "Selecting these will filter map & data output for this page only",
                                  sliderInput("covidrange", 
                                              "Total COVID Cases in County:", 
@@ -149,29 +151,47 @@ shinyUI(
                               # box(plotOutput("bi_map_legend"), height=120, width=5),
                               box(status="warning",
                                   solidHeader = T, title = "Bivariate Color Legend with number of Counties in each section",
-                                  plotOutput("bi_analysis"), height = 520, width=6),
+                                  "These maps visualize correlations using a (3-tile) color grid for one or both measures. Each individual measure is split into even groups of Low, Med, or High.", 
+
+                                  # br(), "However, when the two measures are overlapped (as happens to the right), the distribution of counties is not evenly grouped.",
+                                  plotOutput("bi_analysis"),
+                                  "The three left-most purple colors correspond to the selected COVID Measure", 
+                                  br(), "The three bottom teal colors correspond to the selected Demographic Measure.",
+                                  height = 540,
+                                  width=6),
                               box(status="primary", 
                                   solidHeader=T, title = "Bivariate Interactive Colorado Map",
-                                  "This map visualizes correlations using a Low-Med-High (3-tile) color grid for both measures.", 
-                                  br(),"Hover over any County to see its data and click to visit its Wikipedia page.",
-                                  girafeOutput("bi_map"), height = 520, width=6),
+                                  "Hover over any County to see its data. Click to visit its Wikipedia page.",
+                                  girafeOutput("bi_map"), 
+                                  height = 540,
+                                  width=6),
                               box(status="primary",
-                                  ggiraphOutput("covid_map"), height = 400, width=6),
+                                  ggiraphOutput("covid_map"), 
+                                  # height = 400, 
+                                  width=6),
                               box(status="primary",
-                                  ggiraphOutput("demo_map"), height = 400, width=6)
+                                  ggiraphOutput("demo_map"), 
+                                  # height = 400, 
+                                  width=6)
                               )
                     ,tabPanel("Correlation Measures",
-                              box(status="primary",ggiraphOutput("scatterplot"), height=420, width=6),
-                              box(status="primary",ggiraphOutput("bi_cor"), height=420, width=6),
+                              box(status="primary",ggiraphOutput("scatterplot"), 
+                                  # height=420, 
+                                  width=6),
+                              box(status="primary",ggiraphOutput("bi_cor"), 
+                                  # height=420, 
+                                  width=6),
                               # box(plotOutput("density"), height=320, width=6),
-                              box(title ="Select a Balancing Measure for the Scatterplot & Map",status="warning",solidHeader = T,
+                              box(title ="Select a Filter Measure for the Scatterplot & Map",status="warning",solidHeader = T,
                                   radioButtons(inputId = "balancebuttons",
                                            label = NULL,
                                            choices = c("COVID Groups" = "COVID.Groups",
                                                        "Income Groups" = "Income.Groups",
                                                        "Rural Groups" = "Rural.Groups"),
                                            selected = "Rural.Groups"), width=3),
-                              box(status="primary",girafeOutput("corr_map"), height = 500, width=9)
+                              box(status="primary",girafeOutput("corr_map"), 
+                                  # height = 500, 
+                                  width=9)
                     )
                    # ,tabPanel("Stats",
                               
@@ -202,7 +222,11 @@ shinyUI(
                                  width=12)
                     )
                     ,tabPanel("County COVID Data",
-                              
+                              valueBoxOutput("DaysSince", width=3), 
+                              valueBoxOutput("lastweekcases", width=3),
+                              # valueBoxOutput("lastweekdeaths"),
+                              valueBoxOutput("diff", width=3),
+                              valueBoxOutput("caseranking", width=3),
                               box(status="warning", solidHeader = T, title="Selections for this page are found here:",
                                   selectizeInput(inputId = "single",
                                                  label = "Select a County:",
@@ -214,15 +238,15 @@ shinyUI(
                               selectizeInput(inputId = "COVIDselect",
                                              label = "Select a COVID Measure:",
                                              choices = colnames(COVID19ALL_MERGE)[-1:-3],
-                                             selected = "Total.Cases"),
+                                             selected = "New.Cases.5.Day.Avg"),
                               br(),
                               # width=4),
                               # box(status="warning", 
                               sliderInput("daterange", 
                                           "Select a Date Range:", 
                                           min = as.Date("2020-03-17"), 
-                                          max = as.Date("2020-07-17"), 
-                                          value = c(as.Date("2020-03-17"), as.Date("2020-07-17"))
+                                          max = as.Date(Sys.Date()), 
+                                          value = c(as.Date("2020-03-17"), as.Date(Sys.Date()))
                                           # ,step=1,
                                           ,timeFormat="%B %d"
                               ),
@@ -235,7 +259,8 @@ shinyUI(
                               # box(status="warning", 
                                   
                               ,width=4),
-                              box(status="primary",ggiraphOutput("indcounty"), width=8),
+                              # box(status="primary",girafeOutput("indmap"), width=4),
+                              box(status="primary",girafeOutput("indcounty"), width=8),
                               box(title = "Complete Colorado COVID Data by County",status="primary",
                                   solidHeader = T, "Export either all returned data or a selection using the buttons below. Click on the boxes below the Column names to filter results by column.",
                                   dataTableOutput("ind_data"), width=12)
