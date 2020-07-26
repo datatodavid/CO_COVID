@@ -11,8 +11,8 @@ knitr::opts_chunk$set(echo = TRUE)
 library(Hmisc)
 library(tidyverse)
 library(magrittr)
-
-
+library(rsconnect)
+devtools::install_version("mnormt", version = "1.5-7", repos = "http://cran.us.r-project.org")
 
 setwd("C:/Users/gottl/Dropbox/Data Science/NYCDSA/Projects/Project 1 Shiny App/CO_COVID")
 
@@ -1178,10 +1178,6 @@ names(CO_Race_Measures_COVID19) %<>%
 ## All Data Join ##
 CO_COUNTY_COVID_ALL = 
   left_join(COVID19CountyANALYSIS, CO_COUNTY_ALL, by="COUNTY")
-## What is this for?? ##
-CO_COUNTY_COVID_ALL = CO_COUNTY_COVID_ALL  %>% 
-  group_by(., COUNTY) %>%
-  add_row(., )
 
 colnames(CO_COUNTY_COVID_ALL) %<>%  
   gsub("Perc.100000", "Per.100000", .) %>% 
@@ -1235,30 +1231,30 @@ colnames(CO_COUNTY_COVID_FILTER) %<>%
   gsub("Years.of.Potential.Life.Lost.Years.of.Potential.Life.Lost", "Years.of.Potential.Life.Lost", .) %>% 
   gsub("_", ".", .)
 #names(CO_COUNTY_COVID_FILTER)
-
-CO_COUNTY_COVID_RATES_NO_95 = CO_COUNTY_COVID_FILTER %>% select(., -contains("95")) 
-#colnames(CO_COUNTY_COVID_RATES_NO_95)
-
-CO_COUNTY_COVID_RATES_NO_STATE = CO_COUNTY_COVID_FILTER %>% select(., -contains("State", ignore.case = T))
-#colnames(CO_COUNTY_COVID_RATES_NO_STATE)
-
-CO_COUNTY_COVID_RATES_NO_DEMO = CO_COUNTY_COVID_FILTER %>% select(., -contains("e.AIAN"), -contains("e.Asian"), -contains("e.Black"), -contains("e.Hispanic"), -contains("e.White"), -contains("d.AIAN"), -contains("d.Asian"), -contains("d.Black"), -contains("d.Hispanic"), -contains("d.White"), -contains("y.AIAN"), -contains("y.Asian"), -contains("y.Black"), -contains("y.Hispanic"), -contains("y.White")) 
-#colnames(CO_COUNTY_COVID_RATES_NO_DEMO)
-
-CO_COUNTY_COVID_RATES_NO_STATE_NO_DEMO = CO_COUNTY_COVID_FILTER %>% select(., -contains("State", ignore.case = T), -contains("e.AIAN"), -contains("e.Asian"), -contains("e.Black"), -contains("e.Hispanic"), -contains("e.White"), -contains("d.AIAN"), -contains("d.Asian"), -contains("d.Black"), -contains("d.Hispanic"), -contains("d.White"), -contains("y.AIAN"), -contains("y.Asian"), -contains("y.Black"), -contains("y.Hispanic"), -contains("y.White"))  
-#colnames(CO_COUNTY_COVID_RATES_NO_STATE_NO_DEMO)
-
-CO_COUNTY_COVID_RATES_NO_95_NO_DEMO = CO_COUNTY_COVID_FILTER %>% select(., -contains("95"), -contains("e.AIAN"), -contains("e.Asian"), -contains("e.Black"), -contains("e.Hispanic"), -contains("e.White"), -contains("d.AIAN"), -contains("d.Asian"), -contains("d.Black"), -contains("d.Hispanic"), -contains("d.White"), -contains("y.AIAN"), -contains("y.Asian"), -contains("y.Black"), -contains("y.Hispanic"), -contains("y.White"))  
-#colnames(CO_COUNTY_COVID_RATES_NO_95_NO_DEMO)
-
-CO_COUNTY_COVID_RATES_NO_STATE_NO_95 = CO_COUNTY_COVID_FILTER %>% select(., -contains("State", ignore.case = T), -contains("95")) 
-#colnames(CO_COUNTY_COVID_RATES_NO_STATE_NO_95)
-
+# 
+# CO_COUNTY_COVID_RATES_NO_95 = CO_COUNTY_COVID_FILTER %>% select(., -contains("95")) 
+# #colnames(CO_COUNTY_COVID_RATES_NO_95)
+# 
+# CO_COUNTY_COVID_RATES_NO_STATE = CO_COUNTY_COVID_FILTER %>% select(., -contains("State", ignore.case = T))
+# #colnames(CO_COUNTY_COVID_RATES_NO_STATE)
+# 
+# CO_COUNTY_COVID_RATES_NO_DEMO = CO_COUNTY_COVID_FILTER %>% select(., -contains("e.AIAN"), -contains("e.Asian"), -contains("e.Black"), -contains("e.Hispanic"), -contains("e.White"), -contains("d.AIAN"), -contains("d.Asian"), -contains("d.Black"), -contains("d.Hispanic"), -contains("d.White"), -contains("y.AIAN"), -contains("y.Asian"), -contains("y.Black"), -contains("y.Hispanic"), -contains("y.White")) 
+# #colnames(CO_COUNTY_COVID_RATES_NO_DEMO)
+# 
+# CO_COUNTY_COVID_RATES_NO_STATE_NO_DEMO = CO_COUNTY_COVID_FILTER %>% select(., -contains("State", ignore.case = T), -contains("e.AIAN"), -contains("e.Asian"), -contains("e.Black"), -contains("e.Hispanic"), -contains("e.White"), -contains("d.AIAN"), -contains("d.Asian"), -contains("d.Black"), -contains("d.Hispanic"), -contains("d.White"), -contains("y.AIAN"), -contains("y.Asian"), -contains("y.Black"), -contains("y.Hispanic"), -contains("y.White"))  
+# #colnames(CO_COUNTY_COVID_RATES_NO_STATE_NO_DEMO)
+# 
+# CO_COUNTY_COVID_RATES_NO_95_NO_DEMO = CO_COUNTY_COVID_FILTER %>% select(., -contains("95"), -contains("e.AIAN"), -contains("e.Asian"), -contains("e.Black"), -contains("e.Hispanic"), -contains("e.White"), -contains("d.AIAN"), -contains("d.Asian"), -contains("d.Black"), -contains("d.Hispanic"), -contains("d.White"), -contains("y.AIAN"), -contains("y.Asian"), -contains("y.Black"), -contains("y.Hispanic"), -contains("y.White"))  
+# #colnames(CO_COUNTY_COVID_RATES_NO_95_NO_DEMO)
+# 
+# CO_COUNTY_COVID_RATES_NO_STATE_NO_95 = CO_COUNTY_COVID_FILTER %>% select(., -contains("State", ignore.case = T), -contains("95")) 
+# #colnames(CO_COUNTY_COVID_RATES_NO_STATE_NO_95)
+# 
 CO_COUNTY_COVID_SIMPLEST = CO_COUNTY_COVID_FILTER %>% select(.,
--contains("95"), -contains("State", ignore.case = T), 
+-contains("95"), -contains("State", ignore.case = T),
 -contains("e.AIAN"), -contains("e.Asian"), -contains("e.Black"), -contains("e.Hispanic"), -contains("e.White"), -contains("d.AIAN"), -contains("d.Asian"), -contains("d.Black"), -contains("d.Hispanic"), -contains("d.White"), -contains("y.AIAN"), -contains("y.Asian"), -contains("y.Black"), -contains("y.Hispanic"), -contains("y.White"))
-
-#names(CO_COUNTY_COVID_SIMPLEST)
+# 
+# #names(CO_COUNTY_COVID_SIMPLEST)
 
 #### write.csv FILES ####
 
@@ -1582,9 +1578,6 @@ names(CO_county_map) = gsub("subregion", "COUNTY",
 CO_MAP_COVID = merge(CO_county_map, CO_COUNTY_COVID_FILTER, 
                      by="COUNTY")
 
-CO_MAP_COVID$WIKI <- sprintf("window.open(\"%s%s\")",
-  "http://en.wikipedia.org/wiki/", paste0(as.character(to_underscore(stri_trans_totitle(CO_MAP_COVID$COUNTY))), "_County,_Colorado"))
-
 
 CO_COUNTY_JUST_RURAL = CO_COUNTY_COVID_FILTER %>% 
   select(., COUNTY, Perc.Rural)
@@ -1632,8 +1625,6 @@ CO_MAP_COVID_BAL$COVID.Groups =
   factor(CO_MAP_COVID_BAL$COVID.Groups, 
          levels = c("High COVID", "Med COVID", "Low COVID")) 
 
-CO_MAP_COVID_BAL$WIKI <- sprintf("window.open(\"%s%s\")",
-  "http://en.wikipedia.org/wiki/", paste0(as.character(to_underscore(stri_trans_totitle(CO_MAP_COVID_BAL$COUNTY))), "_County,_Colorado"))
 
 #names(CO_MAP_COVID)
 bi_colors = c("#be64ac","#dfb0d6","#e8e8e8","#8c62aa","#a5add3","#ace4e4",
@@ -1695,6 +1686,16 @@ weekly <- function(x) {
   
   sort(c(monthly, monthly + days(7), monthly + days(14), monthly + days(21)))
 }
+rotate <- function(x) {
+  t(apply(x, 2, rev))
+}
+CO_MAP_COVID_BAL$WIKI <- sprintf("window.open(\"%s%s\")",
+                                 "http://en.wikipedia.org/wiki/", paste0(as.character(to_underscore(stri_trans_totitle(CO_MAP_COVID_BAL$COUNTY))), "_County,_Colorado"))
+CO_MAP_COVID$WIKI <- sprintf("window.open(\"%s%s\")",
+                             "http://en.wikipedia.org/wiki/", paste0(as.character(to_underscore(stri_trans_totitle(CO_MAP_COVID$COUNTY))), "_County,_Colorado"))
+
+
+
 #### Archived --- SUBSET COMBINED TABLES EVERYTHING ####
 # COVID19_PER = COVID.Tests.Per.100000, COVID.Cases.Per.100000,
          # COVID.Deaths.Per.100000, COVID.Mortality.Perc, %>% 
@@ -1810,51 +1811,51 @@ weekly <- function(x) {
 # ?select_if
 # ?cor
 ```
-
-This R Markdown document is made interactive using Shiny. Unlike the more traditional workflow of creating static reports, you can now create documents that allow your readers to change the assumptions underlying your analysis and see the results immediately. 
-
-To learn more, see [Interactive Documents](http://rmarkdown.rstudio.com/authoring_shiny.html).
-
-## Inputs and Outputs
-
-You can embed Shiny inputs and outputs in your document. Outputs are automatically updated whenever inputs change.  This demonstrates how a standard R plot can be made interactive by wrapping it in the Shiny `renderPlot` function. The `selectInput` and `sliderInput` functions create the input widgets used to drive the plot.
-
-```{r eruptions, echo=FALSE}
-inputPanel(
-  selectInput("n_breaks", label = "Number of bins:",
-              choices = c(10, 20, 35, 50), selected = 20),
-  
-  sliderInput("bw_adjust", label = "Bandwidth adjustment:",
-              min = 0.2, max = 2, value = 1, step = 0.2)
-)
-
-renderPlot({
-  hist(faithful$eruptions, probability = TRUE, breaks = as.numeric(input$n_breaks),
-       xlab = "Duration (minutes)", main = "Geyser eruption duration")
-  
-  dens <- density(faithful$eruptions, adjust = input$bw_adjust)
-  lines(dens, col = "blue")
-})
-```
-
-## Embedded Application
-
-It's also possible to embed an entire Shiny application within an R Markdown document using the `shinyAppDir` function. This example embeds a Shiny application located in another directory:
-
-```{r tabsets, echo=FALSE}
-shinyAppDir(
-  system.file("examples/06_tabsets", package = "shiny"),
-  options = list(
-    width = "100%", height = 550
-  )
-)
-```
-
-Note the use of the `height` parameter to determine how much vertical space the embedded application should occupy.
-
-You can also use the `shinyApp` function to define an application inline rather then in an external directory.
-
-In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
-
-
-
+# 
+# This R Markdown document is made interactive using Shiny. Unlike the more traditional workflow of creating static reports, you can now create documents that allow your readers to change the assumptions underlying your analysis and see the results immediately. 
+# 
+# To learn more, see [Interactive Documents](http://rmarkdown.rstudio.com/authoring_shiny.html).
+# 
+# ## Inputs and Outputs
+# 
+# You can embed Shiny inputs and outputs in your document. Outputs are automatically updated whenever inputs change.  This demonstrates how a standard R plot can be made interactive by wrapping it in the Shiny `renderPlot` function. The `selectInput` and `sliderInput` functions create the input widgets used to drive the plot.
+# 
+# ```{r eruptions, echo=FALSE}
+# inputPanel(
+#   selectInput("n_breaks", label = "Number of bins:",
+#               choices = c(10, 20, 35, 50), selected = 20),
+#   
+#   sliderInput("bw_adjust", label = "Bandwidth adjustment:",
+#               min = 0.2, max = 2, value = 1, step = 0.2)
+# )
+# 
+# renderPlot({
+#   hist(faithful$eruptions, probability = TRUE, breaks = as.numeric(input$n_breaks),
+#        xlab = "Duration (minutes)", main = "Geyser eruption duration")
+#   
+#   dens <- density(faithful$eruptions, adjust = input$bw_adjust)
+#   lines(dens, col = "blue")
+# })
+# ```
+# 
+# ## Embedded Application
+# 
+# It's also possible to embed an entire Shiny application within an R Markdown document using the `shinyAppDir` function. This example embeds a Shiny application located in another directory:
+# 
+# ```{r tabsets, echo=FALSE}
+# shinyAppDir(
+#   system.file("examples/06_tabsets", package = "shiny"),
+#   options = list(
+#     width = "100%", height = 550
+#   )
+# )
+# ```
+# 
+# Note the use of the `height` parameter to determine how much vertical space the embedded application should occupy.
+# 
+# You can also use the `shinyApp` function to define an application inline rather then in an external directory.
+# 
+# In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
+# 
+# 
+# 
