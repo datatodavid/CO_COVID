@@ -788,20 +788,24 @@ COVID19StateData = read.csv("CDPHE_COVID19_Daily_State_Statistics.csv", header=T
 COVID19StateData$Date = as.Date(COVID19StateData$Date, format="%m/%d/%Y")
 #colnames(COVID19StateData)
 COVID19StateData = COVID19StateData %>% 
-  select(., COUNTY = ï..Name, POP = Population, Date, Tested, Cases, Deaths, Hosp, Outbreaks, Counties, COVID.Cases.Per.100000=Rate) %>% 
+  select(., COUNTY = ï..Name, POP = Population, Date, Tested, Cases, Deaths, 
+         Total.State.Hospitalizations = Hosp, Outbreaks, Counties, COVID.Cases.Per.100000=Rate) %>% 
   filter(., COUNTY != "Note") %>% 
   mutate(., COVID.Tests.Per.100000 = 100000*Tested/POP,
             COVID.Deaths.Per.100000 = 100000*Deaths/POP,
             COVID.Positive.Tests.Perc = ifelse(Tested!=0, 100*Cases/Tested, NA),
             COVID.Mortality.Perc = ifelse(Cases!=0, 100*Deaths/Cases, NA),
+         State.Hospitalizations.Per.100000 = 100000*Total.State.Hospitalizations/POP
             # County.Avg.COVID.Cases.Per.100000 = COVID.Cases.Per.100000/Counties,
             # County.Avg.COVID.Tests.Per.100000 = COVID.Deaths.Per.100000/Counties,
             # County.Avg.COVID.Deaths.Per.100000 = COVID.Deaths.Per.100000/Counties,
             # County.Avg.COVID.Mortality.Perc = COVID.Mortality.Perc/Counties
          )
 COVID19State_MERGE = COVID19StateData %>% 
-  select(., COUNTY, Date, POP, Total.Tests = Tested, Total.Cases = Cases, Total.Deaths = Deaths, COVID.Tests.Per.100000, 
-         COVID.Cases.Per.100000, COVID.Deaths.Per.100000, COVID.Positive.Tests.Perc, COVID.Mortality.Perc)
+  select(., COUNTY, Date, POP, Total.Tests = Tested, Total.Cases = Cases, 
+         Total.Deaths = Deaths, Total.State.Hospitalizations, COVID.Tests.Per.100000, 
+         COVID.Cases.Per.100000, COVID.Deaths.Per.100000, COVID.Positive.Tests.Perc, COVID.Mortality.Perc,
+         State.Hospitalizations.Per.100000)
 # colnames(COVID19County)
 # COVID19StateData$Tested
 # COVID19County$Testing.Rates.Per.100000
@@ -814,16 +818,19 @@ COVID19County_MERGE = COVID19County %>%
            Total.COVID.19.Tests.Performed.in.Colorado.by.County, NA),
          COVID.Mortality.Perc = ifelse(Colorado.Case.Counts.by.County!=0,
                                        100*Number.of.Deaths.by.County/Colorado.Case.Counts.by.County,
-                                       NA)) %>% 
+                                       NA),
+         Total.State.Hospitalizations = NA, State.Hospitalizations.Per.100000 = NA) %>% 
   select(., COUNTY, Date, POP, 
          Total.Tests = Total.COVID.19.Tests.Performed.in.Colorado.by.County, 
          Total.Cases = Colorado.Case.Counts.by.County, 
          Total.Deaths = Number.of.Deaths.by.County, 
+         Total.State.Hospitalizations,
          COVID.Tests.Per.100000 = Testing.Rates.Per.100000, 
          COVID.Cases.Per.100000 = Case.Rates.Per.100000, 
          COVID.Deaths.Per.100000, 
          COVID.Positive.Tests.Perc, 
-         COVID.Mortality.Perc)
+         COVID.Mortality.Perc, 
+         State.Hospitalizations.Per.100000)
 
 
 ###########  RELOAD FROM HERE  ###################
@@ -838,7 +845,9 @@ COVID19County_YESTERDAY = COVID19ALL_MERGE %>%
          YEST.COVID.Cases.Per.100000=COVID.Cases.Per.100000,
          YEST.COVID.Deaths.Per.100000=COVID.Deaths.Per.100000,
          YEST.COVID.Positive.Tests.Perc=COVID.Positive.Tests.Perc,
-         YEST.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
+         YEST.COVID.Mortality.Perc=COVID.Mortality.Perc,
+         YEST.Total.State.Hospitalizations=Total.State.Hospitalizations,
+         YEST.State.Hospitalizations.Per.100000=State.Hospitalizations.Per.100000) %>% 
   mutate(Yest = Date+1) %>% 
   select(., -Date)
 COVID19County_TWODAY = COVID19ALL_MERGE %>% 
@@ -850,7 +859,9 @@ COVID19County_TWODAY = COVID19ALL_MERGE %>%
          TWODAY.COVID.Cases.Per.100000=COVID.Cases.Per.100000,
          TWODAY.COVID.Deaths.Per.100000=COVID.Deaths.Per.100000,
          TWODAY.COVID.Positive.Tests.Perc=COVID.Positive.Tests.Perc,
-         TWODAY.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
+         TWODAY.COVID.Mortality.Perc=COVID.Mortality.Perc,
+         TWODAY.Total.State.Hospitalizations=Total.State.Hospitalizations,
+         TWODAY.State.Hospitalizations.Per.100000=State.Hospitalizations.Per.100000) %>% 
   mutate(TwoDay = Date+2) %>% 
   select(., -Date)
 COVID19County_TOM = COVID19ALL_MERGE %>% 
@@ -862,7 +873,9 @@ COVID19County_TOM = COVID19ALL_MERGE %>%
          TOM.COVID.Cases.Per.100000=COVID.Cases.Per.100000,
          TOM.COVID.Deaths.Per.100000=COVID.Deaths.Per.100000,
          TOM.COVID.Positive.Tests.Perc=COVID.Positive.Tests.Perc,
-         TOM.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
+         TOM.COVID.Mortality.Perc=COVID.Mortality.Perc,
+         TOM.Total.State.Hospitalizations=Total.State.Hospitalizations,
+         TOM.State.Hospitalizations.Per.100000=State.Hospitalizations.Per.100000) %>% 
   mutate(Tom = Date-1) %>% 
   select(., -Date)
 COVID19County_AFTERNEXT = COVID19ALL_MERGE %>% 
@@ -874,7 +887,9 @@ COVID19County_AFTERNEXT = COVID19ALL_MERGE %>%
          AFTERNEXT.COVID.Cases.Per.100000=COVID.Cases.Per.100000,
          AFTERNEXT.COVID.Deaths.Per.100000=COVID.Deaths.Per.100000,
          AFTERNEXT.COVID.Positive.Tests.Perc=COVID.Positive.Tests.Perc,
-         AFTERNEXT.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
+         AFTERNEXT.COVID.Mortality.Perc=COVID.Mortality.Perc,
+         AFTERNEXT.Total.State.Hospitalizations=Total.State.Hospitalizations,
+         AFTERNEXT.State.Hospitalizations.Per.100000=State.Hospitalizations.Per.100000) %>% 
   mutate(AfterNext = Date-2) %>% 
   select(., -Date)
 COVID19County_LASTWEEK = COVID19ALL_MERGE %>% 
@@ -886,7 +901,9 @@ COVID19County_LASTWEEK = COVID19ALL_MERGE %>%
          LASTWEEK.COVID.Cases.Per.100000=COVID.Cases.Per.100000,
          LASTWEEK.COVID.Deaths.Per.100000=COVID.Deaths.Per.100000,
          LASTWEEK.COVID.Positive.Tests.Perc=COVID.Positive.Tests.Perc,
-         LASTWEEK.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
+         LASTWEEK.COVID.Mortality.Perc=COVID.Mortality.Perc,
+         LASTWEEK.Total.State.Hospitalizations=Total.State.Hospitalizations,
+         LASTWEEK.State.Hospitalizations.Per.100000=State.Hospitalizations.Per.100000) %>% 
   mutate(LastWeek = Date+7) %>% 
   select(., -Date)
 
@@ -907,20 +924,25 @@ COVID19ALL_MERGE =
             by=c("COUNTY"="COUNTY", "Date"="LastWeek"))
 
 
-COVID19ALL_MERGE = COVID19ALL_MERGE %>% 
-  mutate(., 
-         New.Tests = Total.Tests - YEST.Total.Tests,
+COVID19ALL_MERGE = COVID19ALL_MERGE %>%
+  mutate(., New.Tests = Total.Tests - YEST.Total.Tests,
          New.Cases = Total.Cases - YEST.Total.Cases,
          New.Deaths = Total.Deaths - YEST.Total.Deaths,
+         New.State.Hospitalizations = 
+           Total.State.Hospitalizations - YEST.Total.State.Hospitalizations,
          New.Tests.Last.Week = Total.Tests - LASTWEEK.Total.Tests,
          New.Cases.Last.Week = Total.Cases - LASTWEEK.Total.Cases,
          New.Deaths.Last.Week = Total.Deaths - LASTWEEK.Total.Deaths,
+         New.State.Hospitalizations.Last.Week = 
+           Total.State.Hospitalizations - LASTWEEK.Total.State.Hospitalizations,
          Change.in.Tests.Per.100000=
            COVID.Tests.Per.100000-YEST.COVID.Tests.Per.100000,
          Change.in.Cases.Per.100000=
            COVID.Cases.Per.100000-YEST.COVID.Cases.Per.100000,
          Change.in.Deaths.Per.100000=
-           COVID.Deaths.Per.100000-YEST.COVID.Deaths.Per.100000)
+           COVID.Deaths.Per.100000-YEST.COVID.Deaths.Per.100000,
+         Change.in.State.Hospitalizations.Per.100000 = 
+           State.Hospitalizations.Per.100000 - YEST.State.Hospitalizations.Per.100000)
 
 COVID19County_THREEDAY2 = COVID19ALL_MERGE %>% 
   select(COUNTY, Date, 
@@ -931,7 +953,10 @@ COVID19County_THREEDAY2 = COVID19ALL_MERGE %>%
          THREEDAY.Change.in.Cases.Per.100000=Change.in.Cases.Per.100000,
          THREEDAY.Change.in.Deaths.Per.100000=Change.in.Deaths.Per.100000,
          THREEDAY.COVID.Positive.Tests.Perc=COVID.Positive.Tests.Perc,
-         THREEDAY.COVID.Mortality.Perc=COVID.Mortality.Perc) %>% 
+         THREEDAY.COVID.Mortality.Perc=COVID.Mortality.Perc,
+         THREEDAY.New.State.Hospitalizations = New.State.Hospitalizations,
+         THREEDAY.Change.in.State.Hospitalizations.Per.100000 = 
+           Change.in.State.Hospitalizations.Per.100000) %>% 
   mutate(ThreeDay = Date+3) %>% 
   select(., -Date)       
 COVID19County_TWODAY2 = COVID19ALL_MERGE %>% 
@@ -941,7 +966,10 @@ COVID19County_TWODAY2 = COVID19ALL_MERGE %>%
          TWODAY.New.Deaths = New.Deaths,
          TWODAY.Change.in.Tests.Per.100000=Change.in.Tests.Per.100000,
          TWODAY.Change.in.Cases.Per.100000=Change.in.Cases.Per.100000,
-         TWODAY.Change.in.Deaths.Per.100000=Change.in.Deaths.Per.100000) %>% 
+         TWODAY.Change.in.Deaths.Per.100000=Change.in.Deaths.Per.100000,
+         TWODAY.New.State.Hospitalizations = New.State.Hospitalizations,
+         TWODAY.Change.in.State.Hospitalizations.Per.100000 = 
+           Change.in.State.Hospitalizations.Per.100000) %>% 
   mutate(TwoDay = Date+2) %>% 
   select(., -Date)
 COVID19County_YESTERDAY2 = COVID19ALL_MERGE %>% 
@@ -951,7 +979,10 @@ COVID19County_YESTERDAY2 = COVID19ALL_MERGE %>%
          YEST.New.Deaths = New.Deaths,
          YEST.Change.in.Tests.Per.100000=Change.in.Tests.Per.100000,
          YEST.Change.in.Cases.Per.100000=Change.in.Cases.Per.100000,
-         YEST.Change.in.Deaths.Per.100000=Change.in.Deaths.Per.100000) %>% 
+         YEST.Change.in.Deaths.Per.100000=Change.in.Deaths.Per.100000,
+         YEST.New.State.Hospitalizations = New.State.Hospitalizations,
+         YEST.Change.in.State.Hospitalizations.Per.100000 = 
+           Change.in.State.Hospitalizations.Per.100000) %>% 
   mutate(Yest = Date+1) %>% 
   select(., -Date)
 COVID19County_TOM2 = COVID19ALL_MERGE %>% 
@@ -961,7 +992,10 @@ COVID19County_TOM2 = COVID19ALL_MERGE %>%
          TOM.New.Deaths = New.Deaths,
          TOM.Change.in.Tests.Per.100000=Change.in.Tests.Per.100000,
          TOM.Change.in.Cases.Per.100000=Change.in.Cases.Per.100000,
-         TOM.Change.in.Deaths.Per.100000=Change.in.Deaths.Per.100000) %>% 
+         TOM.Change.in.Deaths.Per.100000=Change.in.Deaths.Per.100000,
+         TOM.New.State.Hospitalizations = New.State.Hospitalizations,
+         TOM.Change.in.State.Hospitalizations.Per.100000 = 
+           Change.in.State.Hospitalizations.Per.100000) %>% 
   mutate(Tom = Date-1) %>% 
   select(., -Date)
 COVID19County_AFTERNEXT2 = COVID19ALL_MERGE %>% 
@@ -971,7 +1005,10 @@ COVID19County_AFTERNEXT2 = COVID19ALL_MERGE %>%
          AFTERNEXT.New.Deaths = New.Deaths,
          AFTERNEXT.Change.in.Tests.Per.100000=Change.in.Tests.Per.100000,
          AFTERNEXT.Change.in.Cases.Per.100000=Change.in.Cases.Per.100000,
-         AFTERNEXT.Change.in.Deaths.Per.100000=Change.in.Deaths.Per.100000) %>% 
+         AFTERNEXT.Change.in.Deaths.Per.100000=Change.in.Deaths.Per.100000,
+         AFTERNEXT.New.State.Hospitalizations = New.State.Hospitalizations,
+         AFTERNEXT.Change.in.State.Hospitalizations.Per.100000 = 
+           Change.in.State.Hospitalizations.Per.100000) %>% 
   mutate(AfterNext = Date-2) %>% 
   select(., -Date)
 
@@ -1013,6 +1050,9 @@ COVID19ALL_MERGE = COVID19ALL_MERGE %>%
          New.Tests.5.Day.Avg = rowMeans(select(., TWODAY.New.Tests,YEST.New.Tests, New.Tests, TOM.New.Tests, AFTERNEXT.New.Tests)),
          New.Cases.5.Day.Avg = rowMeans(select(., TWODAY.New.Cases,YEST.New.Cases, New.Cases, TOM.New.Cases, AFTERNEXT.New.Cases)),
          New.Deaths.5.Day.Avg = rowMeans(select(., TWODAY.New.Deaths,YEST.New.Deaths, New.Deaths, TOM.New.Deaths, AFTERNEXT.New.Deaths)),
+         New.State.Hospitalizations.5.Day.Avg = rowMeans(select(., TWODAY.New.State.Hospitalizations,
+                                                                YEST.New.State.Hospitalizations, New.State.Hospitalizations,
+                                                                TOM.New.State.Hospitalizations, AFTERNEXT.New.State.Hospitalizations)),
          # YEST.New.Tests.5.Day.Avg = rowMeans(select(., TWODAY.New.Tests,YEST.New.Tests, New.Tests, TOM.New.Tests, THREEDAY.New.Tests)),
          # YEST.New.Cases.5.Day.Avg = rowMeans(select(., TWODAY.New.Cases,YEST.New.Cases, New.Cases, TOM.New.Cases, THREEDAY.New.Cases)),
          # YEST.New.Deaths.5.Day.Avg = rowMeans(select(., TWODAY.New.Deaths,YEST.New.Deaths, New.Deaths, TOM.New.Deaths, THREEDAY.New.Deaths)),
@@ -1070,18 +1110,18 @@ COVID19ALL_MERGE = COVID19ALL_MERGE %>%
 
 COVID19DATA = COVID19ALL_MERGE %>% 
   select(., COUNTY, Date, POP, starts_with("Total"), 
-         New.Tests, New.Cases, New.Deaths, 
+         New.Tests, New.Cases, New.Deaths, New.State.Hospitalizations,
          contains("Last"),contains("Perc"), 
          contains("100"), contains("5.Day")
          )
 
 COVID19ALL_MERGE = COVID19ALL_MERGE %>% 
-  select(., -Positive.Tests.Perc, -Mortality.Perc, -New.Tests, -New.Cases, -New.Deaths, 
-         COUNTY, Date, POP, contains("5.Day"), contains("100"), 
+  select(., -Positive.Tests.Perc, -Mortality.Perc, -New.Tests, -New.Cases, -New.Deaths,
+         -New.State.Hospitalizations,
+         COUNTY, Date, POP, starts_with("Total"), contains("5.Day"), contains("100"), 
          starts_with("Total"))
          
          
-
 #unique(COVID19ALL_MERGE$COUNTY)
 COVID19ALL_MERGE = COVID19ALL_MERGE %>% 
   mutate(COUNTY = fct_relevel(COUNTY, "ADAMS","ALAMOSA","ARAPAHOE","ARCHULETA","BACA",
@@ -1637,6 +1677,9 @@ to_string <- function(string_text) {
 }
 no_periods <- function(string_text) {
   gsub(".", " ", string_text, fixed=T)
+}
+yes_periods <- function(string_text) {
+  gsub(" ", ".", string_text, fixed=T)
 }
 no_underscore <- function(string_text) {
   gsub("_", " ", string_text, fixed=T)

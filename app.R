@@ -21,7 +21,11 @@ library(plotrix)
 require(ggiraph)
 require(shinydashboard)
 require(DT)
-
+convertMenuItem <- function(mi,tabName) {
+    mi$children[[1]]$attribs['data-toggle']="tab"
+    mi$children[[1]]$attribs['data-value'] = tabName
+    mi
+}
 ui <- dashboardPage(
     # theme --> semantic.dashboard, skins from SHINY website
     dashboardHeader(title = "Colorado COVID"),
@@ -38,23 +42,30 @@ ui <- dashboardPage(
                      # icon=icon("list-alt")
                      icon=NULL, href = "https://twitter.com/datatodavid"
             ),
+            menuItem("County Dashboard", icon=icon("info-circle"), tabName = "County_Dash"),
+            
             # menuItem("twitter.com/datatodavid", icon=NULL),
-            menuItem("COVID vs. Demographics", tabName = "Main Dashboard",
-                     icon=icon("bar-chart-o")),
-            radioButtons(inputId = "COVIDbuttons", 
+            convertMenuItem(menuItem("COVID vs. Demographics", tabName = "Main_Dash", 
+                     icon=icon("bar-chart-o"), #startExpanded = TRUE,
+            
+            #menuSubItem(#tabName = "COVID Measure:",
+                radioButtons(inputId = "COVIDbuttons", 
                          label = "COVID Measure:",
-                         choices = c("Tests Per 100000" = 
+                         choices = c("Tests Rate (Per 100000)" = 
                                          "COVID.Tests.Per.100000",
-                                     "Cases Per 100000" = 
+                                     "Cases Rate (Per 100000)" = 
                                          "COVID.Cases.Per.100000",
-                                     "Deaths Per 100000" = 
+                                     "Deaths Rate (Per 100000)" = 
                                          "COVID.Deaths.Per.100000",
-                                     "Positivity Percentage" = 
-                                         "COVID.Positivity.Perc",
+                                     "Positive Tests Percentage" = 
+                                         "COVID.Positive.Tests.Perc",
                                      "Mortality Percentage" = 
                                          "COVID.Mortality.Perc"),
-                         selected = "COVID.Cases.Per.100000"),
-            selectizeInput(inputId = "catbuttons",
+                         selected = "COVID.Cases.Per.100000")
+            #)
+            ,
+            #menuSubItem(#tabName = "Demographic Category List",
+                selectizeInput(inputId = "catbuttons",
                            label = "Demographic Category List",
                            choices = c("Demographics" =
                                            "CO_DEMOGRAPHICS",
@@ -70,10 +81,16 @@ ui <- dashboardPage(
                                            "CO_PRIOR_MEDICAL",
                                        "Summary Scores" =
                                            "CO_SUMMARY_SCORES"),
-                           selected = "CO_HEALTHCARE_ACCESS"),
-            selectizeInput(inputId = "DemoData",
+                           selected = "CO_HEALTHCARE_ACCESS")
+            #)
+            ,
+            #menuSubItem(#tabName = "Demographic Measure:",
+                selectizeInput(inputId = "DemoData",
                            label = "Demographic Measure:",
-                           choices = colnames("catbuttons")[-1:-6]),
+                           choices = colnames("catbuttons")[-1:-6]))
+                           # choices = "catnames"[-1:-6]))
+            #)
+            , tabName = "Main_Dash"),
             
             menuItem("Source code", icon = icon("file-code-o"), 
                      href = "https://github.com/rstudio/shinydashboard/"),
@@ -98,32 +115,115 @@ ui <- dashboardPage(
             #             label = "County Individual Data",
             #             choices = unique(COVID19ALL_MERGE$COUNTY)[-1])
         )),
-    
-    dashboardBody(
+    dashboardBody( 
         #titlePanel("Demographic Measures vs. COVID Outcomes by County"),
-        fluidRow(
+        
+            tabItems(
+                tabItem(tabName = "County_Dash",
+                        
+                tabsetPanel(
+                tabPanel("County COVID Data",#tabName = "County_Dash",
+                         fluidRow(
+                         valueBoxOutput("DaysSince", width=3), 
+                         valueBoxOutput("lastweekcases", width=3),
+                         # valueBoxOutput("lastweekdeaths"),
+                         valueBoxOutput("diff", width=3),
+                         valueBoxOutput("caseranking", width=3),
+                         box(status="warning", solidHeader = T, title="Selections for this page are found here:",
+                             selectizeInput(inputId = "single",
+                                            label = "Select a County:",
+                                            choices = unique(COVID19ALL_MERGE$COUNTY)[-1], 
+                                            selected = "DENVER"),
+                             br(),
+                             # width=4),
+                             # box(status="warning", 
+                             selectizeInput(inputId = "COVIDselect",
+                                            label = "Select a COVID Measure:",
+                                            choices = c("Total Tests" = "Total.Tests",
+                                                        "Total Cases" = "Total.Cases",                  
+                                                        "Total Deaths" = "Total.Deaths",
+                                                        "Total State Hospitalizations" = "Total.State.Hospitalizations",
+                                                        "Tests Rate (Per 100000)" = "Tests.Per.100000",
+                                                        "Cases Rate (Per 100000)" = "Cases.Per.100000",             
+                                                        "Deaths Rate (Per 100000)" = "Deaths.Per.100000",   
+                                                        "State Hospitalizations Per 100000" = "State.Hospitalizations.Per.100000",
+                                                        "New Tests Last Week" = "New.Tests.Last.Week",          
+                                                        "New Cases Last Week" = "New.Cases.Last.Week",          
+                                                        "New Deaths Last Week" = "New.Deaths.Last.Week",
+                                                        "New State Hospitalizations Last Week" = "New.State.Hospitalizations.Last.Week",
+                                                        "New Tests 5 Day Average" = "New.Tests.5.Day.Avg",          
+                                                        "New Cases 5 Day Average" = "New.Cases.5.Day.Avg",          
+                                                        "New Deaths 5 Day Average" = "New.Deaths.5.Day.Avg",         
+                                                        "New State Hospitalizations 5 Day Average" = "New.State.Hospitalizations.5.Day.Avg",
+                                                        "Positive Tests Percentange 5 Day Average" = "Positive.Tests.Perc.5.Day.Avg",
+                                                        "Mortality Percentage 5 Day Average" = "Mortality.Perc.5.Day.Avg"),
+                                                # colnames(COVID19ALL_MERGE)[-1:-3],
+                                            selected = "New.Cases.5.Day.Avg"),
+                             br(),
+                             # width=4),
+                             # box(status="warning", 
+                             sliderInput("daterange", 
+                                         "Select a Date Range:", 
+                                         min = as.Date("2020-03-17"), 
+                                         max = as.Date(Sys.Date()), 
+                                         value = c(as.Date("2020-03-17"), as.Date(Sys.Date()))
+                                         # ,step=1,
+                                         ,timeFormat="%B %d"
+                             ),
+                             br(),
+                             radioButtons(inputId = "yscale", label="Choose a Scale:",
+                                          choices = c("Relative (Logarithmic)" = "log2", "Fixed (Linear)"="identity")),
+                             br(),
+                             radioButtons(inputId = "state", label="Display State Data?",
+                                          choices = c("Yes"="COLORADO",
+                                                      "No" = ""))
+                             
+                             # width=4),
+                             # box(status="warning", 
+                             
+                             ,width=4),
+                         # box(status="primary",girafeOutput("indmap"), width=4),
+                         box(status="primary",girafeOutput("indcounty"), width=8),
+                         box(title = "Complete Colorado COVID Data by County",status="primary",
+                             solidHeader = T, "Export either all returned data or a selection using the buttons below. Click on the boxes below the Column names to filter results by column.",
+                             dataTableOutput("ind_data"), width=12)
+                )
+                ),
+                tabPanel("More Information")
+            )
+        ),
+        tabItem(tabName = "Main_Dash",
+        
             # mainPanel(
             tabsetPanel(
-                tabPanel("Demographic Explorer",
-                         column(width=3,
-                                
-                                box(title = "Select a COVID Measure and Demographic Category List from the left sidebar to load new Measures to explore",
-                                    status="success",
-                                    # background = "green",
+                tabPanel("Category Explorer", #tabName = "Main_Dash",
+                         fluidRow(
+                             column(width=3,
+                                box(title = "Welcome to the Demographics Explorer!", status = "success",
                                     width = NULL, solidHeader = T,
                                     "This interactive Shiny website allows the examination of the relationships among over 100 Demographic Measures against COVID Outcomes in Colorado. This is an exploratory tool designed for policy makers, epidemiologists, statisticians, and anyone interested in exploring. Almost all of the entire site is interactive and can be exported (check the top right corners of the visualizations).", br(),"Let me know what you discover at twitter.com/datatodavid"
-                                ),
-                                box(title = "Select a Correlation Method (optional):",
+                                    ),
+                                br(),
+                                box(title = "Select a COVID Measure and Demographic Category List from the left sidebar to load new Measures to explore",
                                     status="warning",
-                                    # color = "purple",
+                                    # background = "green",
                                     width = NULL, solidHeader = T,
-                                    radioButtons(inputId = "corr_type",
-                                                 label = NULL,
-                                                 # "Select a Correlation Method:",
-                                                 choices = c("Pearson" = "pearson",
-                                                             "Kendall" = "kendall",
-                                                             "Spearman" = "spearman"),
-                                                 selected = "pearson"), height=150)
+                                    "Since there are so many Measures to explore, I have split them up by category. To see which category may interest you, choose a COVID measure and Demographic Category List on the left sidebar and see which Measures show the strongest relationships. Then, you can click on the other tabs to explore how these factors break down by County"
+                                )
+                                
+                                
+                                # ,
+                                # box(title = "Select a Correlation Method (optional):",
+                                #     status="warning",
+                                #     # color = "purple",
+                                #     width = NULL, solidHeader = T,
+                                #     radioButtons(inputId = "corr_type",
+                                #                  label = NULL,
+                                #                  # "Select a Correlation Method:",
+                                #                  choices = c("Pearson" = "pearson",
+                                #                              "Kendall" = "kendall",
+                                #                              "Spearman" = "spearman"),
+                                #                  selected = "pearson"), height=150)
                                 # ,
                                 # box(title = "About this Shiny App",
                                 #     status = "primary",
@@ -138,15 +238,36 @@ ui <- dashboardPage(
                          box(title = "Selected Colorado Demographic Data by County", status="primary",
                              solidHeader = T, "Export either all returned data or a selection using the buttons below. Click on the boxes below the Column names to filter results by column.",
                              dataTableOutput("corr_data"), width=12)
-                ),
-                tabPanel("Statewide Data", 
+               ) ),
+               tabPanel("Filter Group Explorer", #tabName = "Main_Dash",
+                         fluidRow(
+                             box(status="primary",ggiraphOutput("scatterplot"), 
+                                 # height=420, 
+                                 width=6),
+                             box(status="primary",ggiraphOutput("bi_cor"), 
+                                 # height=420, 
+                                 width=6),
+                             # box(plotOutput("density"), height=320, width=6),
+                             box(title ="Select a Filter Measure for the Scatterplot & Map",status="warning",solidHeader = T,
+                                 radioButtons(inputId = "balancebuttons",
+                                              label = NULL,
+                                              choices = c("COVID Groups" = "COVID.Groups",
+                                                          "Income Groups" = "Income.Groups",
+                                                          "Rural Groups" = "Rural.Groups"),
+                                              selected = "Rural.Groups"), width=3),
+                             box(status="primary",girafeOutput("corr_map"), 
+                                 # height = 500, 
+                                 width=9)
+                         ) ),
+                tabPanel("Statewide Data", #tabName = "Main_Dash",
                          #box(plotOutput("top20"), width=9, height = 420),
+                         fluidRow(
                          box(status="primary",ggiraphOutput("top20"), width=9),
                          box(title ="Selection Filters",status="warning",solidHeader = T,
                              # "Selecting these will filter map & data output for this page only",
                              sliderInput("covidrange", 
                                          "Total COVID Cases in County:", 
-                                         0, 10000, value=c(0,10000), step=25),
+                                         0, 10000, value=c(25,10000), step=25),
                              sliderInput("medianrange", 
                                          "Median Income Range of County:", 
                                          30000, 130000, value=c(30000,130000),
@@ -164,25 +285,26 @@ ui <- dashboardPage(
                          )
                          #,box(tableOutput("demo_data"), height = 130, width=12)
                          #,box(tableOutput("COVID_data"), height = 130, width=12)
-                )
-                ,tabPanel("Maps",
+                ) )
+                ,tabPanel("Colorado Maps", #tabName = "Main_Dash",
                           # box(plotOutput("bi_map_legend"), height=120, width=5),
-                          box(status="warning",
-                              solidHeader = T, title = "Bivariate Color Legend with number of Counties in each section",
-                              "These maps visualize correlations using a (3-tile) color grid for one or both measures. Each individual measure is split into even groups of Low, Med, or High.", 
-                              
-                              # br(), "However, when the two measures are overlapped (as happens to the right), the distribution of counties is not evenly grouped.",
-                              plotOutput("bi_analysis"),
-                              "The three left-most purple colors correspond to the selected COVID Measure", 
-                              br(), "The three bottom teal colors correspond to the selected Demographic Measure.",
-                              height = 540,
-                              width=6),
-                          box(status="primary", 
-                              solidHeader=T, title = "Bivariate Interactive Colorado Map",
-                              "Hover over any County to see its data. Click to visit its Wikipedia page.",
-                              girafeOutput("bi_map"), 
-                              height = 540,
-                              width=6),
+                          fluidRow(
+                          # box(status="warning",
+                          #     solidHeader = T, title = "Bivariate Color Legend with number of Counties in each section",
+                          #     "These maps visualize correlations using a (3-tile) color grid for one or both measures. Each individual measure is split into even groups of Low, Med, or High.", 
+                          #     
+                          #     # br(), "However, when the two measures are overlapped (as happens to the right), the distribution of counties is not evenly grouped.",
+                          #     plotOutput("bi_analysis"),
+                          #     "The three left-most purple colors correspond to the selected COVID Measure", 
+                          #     br(), "The three bottom teal colors correspond to the selected Demographic Measure.",
+                          #     height = 540,
+                          #     width=6),
+                          # box(status="primary",
+                          #     solidHeader=T, title = "Bivariate Interactive Colorado Map",
+                          #     "Hover over any County to see its data. Click to visit its Wikipedia page.",
+                          #     girafeOutput("bi_map"),
+                          #     height = 540,
+                          #     width=6),
                           box(status="primary",
                               ggiraphOutput("covid_map"), 
                               # height = 400, 
@@ -191,35 +313,39 @@ ui <- dashboardPage(
                               ggiraphOutput("demo_map"), 
                               # height = 400, 
                               width=6)
-                )
-                ,tabPanel("Correlation Measures",
-                          box(status="primary",ggiraphOutput("scatterplot"), 
-                              # height=420, 
-                              width=6),
-                          box(status="primary",ggiraphOutput("bi_cor"), 
-                              # height=420, 
-                              width=6),
-                          # box(plotOutput("density"), height=320, width=6),
-                          box(title ="Select a Filter Measure for the Scatterplot & Map",status="warning",solidHeader = T,
-                              radioButtons(inputId = "balancebuttons",
-                                           label = NULL,
-                                           choices = c("COVID Groups" = "COVID.Groups",
-                                                       "Income Groups" = "Income.Groups",
-                                                       "Rural Groups" = "Rural.Groups"),
-                                           selected = "Rural.Groups"), width=3),
-                          box(status="primary",girafeOutput("corr_map"), 
-                              # height = 500, 
-                              width=9)
-                )
+                          ,
+                          box(status="primary",
+                              solidHeader=T, title = "Bivariate Interactive Colorado Map",
+                              "Hover over any County to see its data. Click to visit its Wikipedia page.",
+                              girafeOutput("bi_map"),
+                              height = 540,
+                              width=6)
+                          # ,
+                ) )
+                
                 # ,tabPanel("Stats",
                 
-                ,tabPanel("Race/Ethnicity Comparisons",
+                ,tabPanel("Race/Ethnicity Comparisons", #tabName = "Main_Dash",
+                          fluidRow(
                           box(status="warning", solidHeader = T,
                               title = "Select a Demographic Measure Here for Race/Ethnicity Comparisons --- (COVID Measure is still selected on the left sidebar)",
                               selectizeInput(inputId = "RaceDemo",
                                              label = NULL,
-                                             choices = (colnames(
-                                                 CO_Race_Measures_COVID19[4:13])),
+                                             choices = 
+                                                 c("Years of Potential Life Lost Rate" =
+                                                       "Years.of.Potential.Life.Lost.Rate",
+                                                   "Teen Birth Rate" = "Teen.Birth.Rate",
+                                                   "Preventable Hospitalization Rate" = 
+                                                       "Preventable.Hospitalization.Rate",
+                                                   "Percentage Flu Vaccinated" = "Perc.Flu.Vaccinated",
+                                                   "Percentage Children in Poverty" = "Perc.Children.in.Poverty",
+                                                   "Injury Death Rate" = "Injury.Death.Rate",
+                                                   "Percentage Drive Alone" = "Perc.Drive.Alone",
+                                                   "Median Household Income" = "Median.Household.Income",
+                                                   "Demographics Percentage" = "Demographics.Perc",
+                                                   "Segregation Index" = "Segregation.Index"),
+                                                   
+                                                 # colnames(CO_Race_Measures_COVID19[4:13])),
                                              selected = "Preventable.Hospitalization.Rate"),
                               height=100,width=12),
                           box(status="primary",plotOutput("Racefacetgrid"),
@@ -238,51 +364,8 @@ ui <- dashboardPage(
                           box(status="primary",title = "Race/Ethnicity Summary Statistics",
                               dataTableOutput("Race_Stats"),
                               width=12)
-                )
-                ,tabPanel("County COVID Data",
-                          valueBoxOutput("DaysSince", width=3), 
-                          valueBoxOutput("lastweekcases", width=3),
-                          # valueBoxOutput("lastweekdeaths"),
-                          valueBoxOutput("diff", width=3),
-                          valueBoxOutput("caseranking", width=3),
-                          box(status="warning", solidHeader = T, title="Selections for this page are found here:",
-                              selectizeInput(inputId = "single",
-                                             label = "Select a County:",
-                                             choices = unique(COVID19ALL_MERGE$COUNTY)[-1], 
-                                             selected = "DENVER"),
-                              br(),
-                              # width=4),
-                              # box(status="warning", 
-                              selectizeInput(inputId = "COVIDselect",
-                                             label = "Select a COVID Measure:",
-                                             choices = colnames(COVID19ALL_MERGE)[-1:-3],
-                                             selected = "New.Cases.5.Day.Avg"),
-                              br(),
-                              # width=4),
-                              # box(status="warning", 
-                              sliderInput("daterange", 
-                                          "Select a Date Range:", 
-                                          min = as.Date("2020-03-17"), 
-                                          max = as.Date(Sys.Date()), 
-                                          value = c(as.Date("2020-03-17"), as.Date(Sys.Date()))
-                                          # ,step=1,
-                                          ,timeFormat="%B %d"
-                              ),
-                              br(),
-                              radioButtons(inputId = "state", label="Display State Data?",
-                                           choices = c("Yes"="COLORADO",
-                                                       "No" = ""))
-                              
-                              # width=4),
-                              # box(status="warning", 
-                              
-                              ,width=4),
-                          # box(status="primary",girafeOutput("indmap"), width=4),
-                          box(status="primary",girafeOutput("indcounty"), width=8),
-                          box(title = "Complete Colorado COVID Data by County",status="primary",
-                              solidHeader = T, "Export either all returned data or a selection using the buttons below. Click on the boxes below the Column names to filter results by column.",
-                              dataTableOutput("ind_data"), width=12)
-                )
+                ) )
+                
                 # dateRangeInput("daterange", "Date range:",
                 #                start  = "2020-03-17",
                 #                end    = "2010-07-17",
@@ -296,7 +379,9 @@ ui <- dashboardPage(
                 
                 # )
             )))
-)
+        )
+    )
+
 server <- function(input, output, session){
     # DemoData <- reactive({
     #   Demochoices == colnames(input$catbuttons)
@@ -304,9 +389,10 @@ server <- function(input, output, session){
     observe({
         Demochoices = get(input$catbuttons)
         updateSelectizeInput(session, "DemoData", 
-                             choices = colnames(Demochoices)[-1:-6],
-                             selected = colnames(Demochoices)[7])
+                             choices = no_periods(colnames(Demochoices)[-1:-6]),
+                             selected = no_periods(colnames(Demochoices)[7]))
     }) 
+    catnames = reactive({no_periods(colnames(input$catbuttons))})
     output$value <- renderText({ input$state })
     covidrange = reactive({seq(min(x), max(x), 
                                length.out = input$COVID.Cases.Max)})
@@ -369,10 +455,12 @@ server <- function(input, output, session){
     
     
     output$corr_explorer <- renderGirafe({
-        explorer = correlate(get(input$catbuttons)[-1], method=input$corr_type) %>% 
+        # reactive({levels(colnames(input$catbuttons)) = no_periods(colnames(input$catbuttons))})
+        explorer = correlate(get(input$catbuttons)[-1], method="pearson") %>% 
             focus(COVID.Tests.Per.100000, COVID.Cases.Per.100000, 
-                  COVID.Deaths.Per.100000, COVID.Positivity.Perc, COVID.Mortality.Perc) %>% 
-            mutate(rowname = reorder(rowname, get(input$COVIDbuttons))) %>%
+                  COVID.Deaths.Per.100000, COVID.Positive.Tests.Perc, 
+                  COVID.Mortality.Perc) %>% 
+            mutate(rowname = reorder(no_periods(rowname), get(input$COVIDbuttons))) %>%
             ggplot(aes(rowname, get(input$COVIDbuttons), fill=get(input$COVIDbuttons))) +
             scale_fill_gradient2(low="red", mid="grey80", high="blue") +
             labs(title=paste("Correlation Values of", 
@@ -393,16 +481,18 @@ server <- function(input, output, session){
                 legend.background =
                     element_rect(fill="#F2F5F7", color="gray", size=1)) +
             xlab(paste0(catbuttons_clean(), " Measures")) +
-            ylab(paste0("Correlation range [-1,1] by ", ylab_short())) + coord_flip() + 
+            ylab(paste0("Correlation range [-1,1] by ", ylab_short())) + 
+            # scale_x_discrete(labels = catbuttons_long()) +
+            coord_flip() + 
             geom_col_interactive(aes(tooltip=
                                          paste("In Colorado counties,\n", long_perc(no_periods(rowname)), 
                                                "\n& ", ylab_long_perc(),
                                                "\nhave a", round(get(input$COVIDbuttons),2),
-                                               stri_trans_totitle(input$corr_type),"Correlation", sep=" "))) +
-            geom_vline_interactive(xintercept=-0.2, aes(tooltip="Significant Negative Correlation"),
-                                   color="darkblue", linetype="dashed", alpha=0.5, size=1) +
-            geom_vline_interactive(xintercept=0.2, aes(tooltip="Significant Positive Correlation"),
-                                   color="darkred", linetype="dashed", alpha=0.5, size=1) 
+                                               "Pearson Correlation", sep=" "))) +
+            geom_hline_interactive(yintercept=-0.2, aes(tooltip="Significant Negative Correlation"),
+                                   color="darkred", linetype="dashed", alpha=0.5, size=1) +
+            geom_hline_interactive(yintercept=0.2, aes(tooltip="Significant Positive Correlation"),
+                                   color="darkblue", linetype="dashed", alpha=0.5, size=1) 
         
         # ggiraph(code=print(explorer))
         girafe(ggobj = explorer, options = list(
@@ -469,7 +559,7 @@ server <- function(input, output, session){
         
         topcounties = 
             CO_COUNTY_COVID_FILTER %>% 
-            filter(., !is.na(get(input$DemoData)) &
+            filter(., !is.na(get(yes_periods(input$DemoData))) &
                        !is.na(get(input$COVIDbuttons)) &
                        !is.na(COUNTY) 
                    & COVID.Cases.Max >= min(input$covidrange)
@@ -483,37 +573,39 @@ server <- function(input, output, session){
             #     slice_head(., n=20)
             # CO_COUNTY_COVID_FILTER %>% 
             #     #filter(., COUNTY %in% top20counties$COUNTY) %>% 
-            ggplot(., aes(x=
+            ggplot(., aes(y=
                               #COUNTY,
-                              reorder(COUNTY, -get(input$DemoData)), 
-                          y=get(input$DemoData),
+                              reorder(COUNTY, get(yes_periods(input$DemoData))), 
+                          x=get(yes_periods(input$DemoData)),
                           fill=get(input$COVIDbuttons))) +
             geom_col() + 
-            ggtitle(str_wrap(paste0("Colorado Counties -- ", xlab_long_perc()),35)) + 
+            ggtitle(str_wrap(xlab_long_perc(),35)) + 
             scale_fill_gradient(low="#3399FF", high="red2") +
             
-            labs(x="Counties", y=xlab_perc()
+            labs(y="Colorado Counties", x=xlab_perc()
                  , fill = str_wrap(ylab_perc(), 7)
                  , subtitle = paste0("Color Shading by ", ylab_short())
             ) +
             # geom_text(aes(label=round(get(input$DemoData),1)), 
             #          position = position_jitter(width=0, height=1.5), vjust=5.5, color="white"
             #           ) +
-            theme(panel.grid.major.x = element_blank(),
-                  axis.text.x =
-                      element_text(angle=90, hjust=1, vjust=0.3, face="bold", size=6),
-                  axis.text.y = element_text(face="bold"),
+            theme(panel.grid.major.y = element_blank(),
+                  axis.text.y =
+                      element_text(#angle=90, hjust=1, vjust=0.3, 
+                          face="bold", size=5),
+                  axis.text.x = element_text(face="bold"),
                   legend.title = element_text(color="darkblue", face="bold"),
                   legend.text = element_text(color="darkblue"),
                   plot.title = element_text(hjust=0.5, face="bold", size=18),
                   plot.subtitle = element_text(hjust=0.5, face="bold", color="darkblue", size=14),
                   axis.title = element_text(face="bold", size=14),
-                  strip.text.x = element_text(face="bold"),
+                  strip.text.y = element_text(face="bold"),
                   legend.background =
                       element_rect(fill="#F2F5F7", color="gray", size=1)) +
+            
             geom_col_interactive(stat="identity", 
                                  aes(tooltip = paste(paste0(COUNTY, " COUNTY"),
-                                                     (paste(round(get(input$DemoData),1), xlab_perc(), sep=" ")),
+                                                     (paste(round(get(yes_periods(input$DemoData)),1), xlab_perc(), sep=" ")),
                                                      (paste(round(get(input$COVIDbuttons),1), ylab_perc(), sep=" ")),
                                                      sep="\n"),
                                      data_id = COUNTY))
@@ -548,10 +640,10 @@ server <- function(input, output, session){
         #                           by="COUNTY")
         point2disp = CO_MAP_COVID_BAL %>%
             filter(., #Demographic != "ALL" & 
-                   !is.na(get(input$DemoData)) &
+                   !is.na(get(yes_periods(input$DemoData))) &
                        !is.na(COUNTY) 
             ) %>% 
-            ggplot(aes(x=get(input$DemoData), y=get(input$COVIDbuttons)
+            ggplot(aes(x=get(yes_periods(input$DemoData)), y=get(input$COVIDbuttons)
                        #,color = bi_class
                        #,color=as.character(var1), shape=as.character(var2)
             )
@@ -565,7 +657,7 @@ server <- function(input, output, session){
                                        
                                        color = get(input$balancebuttons),
                                        tooltip = paste(paste0(COUNTY, " COUNTY"),
-                                                       (paste(round(get(input$DemoData),1), xlab_perc(), sep=" ")),
+                                                       (paste(round(get(yes_periods(input$DemoData)),1), xlab_perc(), sep=" ")),
                                                        (paste(round(get(input$COVIDbuttons),1), ylab_perc(), sep=" ")), sep=" \n")
                                    )) +
             geom_smooth(method="glm") +
@@ -590,30 +682,6 @@ server <- function(input, output, session){
         #                                             paste0("& ", ylab_short()),
         #                                             sep="\n"),
         
-        ### RdYlBl colors
-        #' breaks = c("1-1", "2-1", "3-1",
-        #'            "1-2", "2-2", "3-2",
-        #'            "1-3", "2-3", "3-3"),
-        #' # FIRST COLOR PALETTE (blue-->red)
-        #' values = c('#234F1E',
-        #'            '#4575b4','#74add1','#abd9e9',
-        #'            #'#e0f3f8','#ffffbf','yellow',
-        #'            '#fee090',
-        #'            '#fdae61','#f46d43','#d73027', 
-        #'            'darkred'),
-        #' # SECOND COLOR PALETTE (blue green yellow red)
-        #' # values = c('#3288bd','#66c2a5','#abdda4',
-        #' #            '#e6f598','#ffffbf','#fee08b',
-        #' #            '#fdae61','#f46d43','#d53e4f'),
-        #' labels = c("Low Demo / Low COVID", 
-        #'            "Med Demo / Low COVID", 
-        #'            "High Demo / Low COVID",
-        #'            "Low Demo / Med COVID", 
-        #'            "Med Demo / Med COVID",
-        #'            "High Demo / Med COVID", 
-        #'            "Low Demo / High COVID", 
-        #'            "Med Demo / High COVID", 
-        #'            "High Demo / High COVID")
         # )
         # ggiraph(code=print(point2disp))
         girafe(ggobj = point2disp, options = list(
@@ -744,7 +812,7 @@ server <- function(input, output, session){
     output$combined_data = renderDataTable({
         demo_datasheet = CO_COUNTY_COVID_FILTER %>% 
             filter(., #Demographic != "ALL" & 
-                   !is.na(get(input$DemoData)) &
+                   !is.na(get(yes_periods(input$DemoData))) &
                        !is.na(COUNTY) 
                    & COVID.Cases.Max >= min(input$covidrange)
                    & COVID.Cases.Max <= max(input$covidrange)
@@ -755,21 +823,21 @@ server <- function(input, output, session){
             ) %>% 
             select(., COUNTY, COVID.Tests.Per.100000, 
                    COVID.Cases.Per.100000,  COVID.Deaths.Per.100000, 
-                   COVID.Positivity.Perc, COVID.Mortality.Perc, input$DemoData
+                   COVID.Positive.Tests.Perc, COVID.Mortality.Perc, yes_periods(input$DemoData)
             ) %>% 
             summarise(., Measure = xlab_clean(),
                       Counties = n(),
-                      Min = round(min(get(input$DemoData)),2),
-                      Q1 = round(quantile(get(input$DemoData), 0.25),2),
-                      Median = round(median(get(input$DemoData)),2),
-                      Mean = round(mean(get(input$DemoData)),2),
-                      Q3 = round(quantile(get(input$DemoData), 0.75),2),
-                      Max = round(max(get(input$DemoData)),2),
-                      Range = round(max(get(input$DemoData)) -
-                                        min(get(input$DemoData)),2),
-                      S.Dev = round(sd(get(input$DemoData)),2),
-                      S.Error = round(std.error(get(input$DemoData)),2),
-                      Skew = round(skew(get(input$DemoData)),2))
+                      Min = round(min(get(yes_periods(input$DemoData))),2),
+                      Q1 = round(quantile(get(yes_periods(input$DemoData)), 0.25),2),
+                      Median = round(median(get(yes_periods(input$DemoData))),2),
+                      Mean = round(mean(get(yes_periods(input$DemoData))),2),
+                      Q3 = round(quantile(get(yes_periods(input$DemoData)), 0.75),2),
+                      Max = round(max(get(yes_periods(input$DemoData))),2),
+                      Range = round(max(get(yes_periods(input$DemoData))) -
+                                        min(get(yes_periods(input$DemoData))),2),
+                      S.Dev = round(sd(get(yes_periods(input$DemoData))),2),
+                      S.Error = round(std.error(get(yes_periods(input$DemoData))),2),
+                      Skew = round(skew(get(yes_periods(input$DemoData))),2))
         
         covid_datasheet = CO_COUNTY_COVID_FILTER %>% 
             filter(., #Demographic != "ALL" & 
@@ -784,7 +852,7 @@ server <- function(input, output, session){
             ) %>% 
             select(., COUNTY, COVID.Tests.Per.100000, 
                    COVID.Cases.Per.100000,  COVID.Deaths.Per.100000, 
-                   COVID.Positivity.Perc, COVID.Mortality.Perc, input$DemoData
+                   COVID.Positive.Tests.Perc, COVID.Mortality.Perc, yes_periods(input$DemoData)
             ) %>% 
             summarise(., Measure = ylab_clean(),
                       Counties = n(),
@@ -838,7 +906,7 @@ server <- function(input, output, session){
     output$demo_map <- renderGirafe({
         CO_MAP_COVID_DEMO = CO_MAP_COVID %>%
             mutate(.,
-                   demo_var = ntile(get(input$DemoData), 3)
+                   demo_var = ntile(get(yes_periods(input$DemoData)), 3)
             ) 
         CO_MAP_COVID_DEMO$demo_var %<>%
             gsub(1, "(Low)", .) %>%
@@ -850,7 +918,7 @@ server <- function(input, output, session){
                                      group=group,
                                      #               fill=as.character(demo_var))) +
                                      # scale_fill_manual_interactive(values=c('#e8e8e8','#ace4e4','#5ac8c8')) +
-                                     fill=get(input$DemoData))) +
+                                     fill=get(yes_periods(input$DemoData)))) +
             scale_fill_gradient_interactive(low='#e8e8e8',high='#5ac8c8') +
             # scale_fill_distiller(palette = "Spectral") +
             # bi_scale_fill(pal = "DkBlue", dim = 3) +
@@ -868,7 +936,7 @@ server <- function(input, output, session){
             
             geom_polygon_interactive(aes(tooltip = 
                                              paste(paste0(COUNTY, " COUNTY"),
-                                                   paste(round(get(input$DemoData),1), xlab_perc(), demo_var, sep=" "), 
+                                                   paste(round(get(yes_periods(input$DemoData)),1), xlab_perc(), demo_var, sep=" "), 
                                                    sep="\n"),
                                          data_id = COUNTY, onclick = WIKI),color="black")
         
@@ -952,13 +1020,13 @@ server <- function(input, output, session){
                                                    paste0("Population: ", Population),
                                                    paste0("Median Income: $", Median.Household.Income),
                                                    paste0(Perc.Rural, "% Rural"),
-                                                   paste(get(input$DemoData),xlab_perc(), sep=" "),
+                                                   paste(get(yes_periods(input$DemoData)),xlab_perc(), sep=" "),
                                                    paste(round(get(input$COVIDbuttons),1),ylab_perc(), sep=" "),
                                                    sep="\n"),
                                          data_id = COUNTY, onclick = WIKI),
                                      color="black") +
             theme(
-                legend.title = element_text(color="darkblue", face = "bold", size=13),
+                legend.title = element_text(color="darkblue", face = "bold", size=13, hjust=1),
                 legend.position = "right",
                 legend.text = element_text(color="darkblue", face = "bold", size=11),
                 plot.title = element_text(hjust=0.5, size=17),
@@ -993,15 +1061,15 @@ server <- function(input, output, session){
     output$bi_map <- renderGirafe({
         CO_MAP_COVID1 = CO_MAP_COVID %>%
             mutate(.,
-                   var1 = ntile(get(input$DemoData), 3),
+                   var1 = ntile(get(yes_periods(input$DemoData)), 3),
                    var2 = ntile(get(input$COVIDbuttons), 3),
                    bi_class = paste0(
-                       as.numeric(var1), "-",
+                       as.numeric(var1), "-", 
                        as.numeric(var2)
                    ))
         CO_COUNTY_BI_CLASS = CO_COUNTY_COVID_FILTER %>%
             mutate(.,
-                   demo_var = ntile(get(input$DemoData), 3),
+                   demo_var = ntile(get(yes_periods(input$DemoData)), 3),
                    covid_var = ntile(get(input$COVIDbuttons), 3),
                    bi_class = paste0(
                        as.numeric(demo_var), "-",
@@ -1037,7 +1105,7 @@ server <- function(input, output, session){
                           group=group,
                           fill=bi_class)) +
             bi_scale_fill(pal = "DkBlue", dim = 3) +
-            labs(subtitle = paste(ylab_clean(), str_wrap(xlab_long_perc(),30), sep="\nvs. ")
+            labs(subtitle = paste(ylab_long_perc(), str_wrap(xlab_long_perc(),30), sep="\nvs. ")
                  # ,x = "Bivariate Analysis")
             )+
             theme(plot.subtitle = element_text(hjust=1),
@@ -1051,7 +1119,7 @@ server <- function(input, output, session){
             #coord_map("polyconic" ) #+
             geom_polygon_interactive(aes(tooltip = 
                                              paste(paste0(COUNTY, " COUNTY"),
-                                                   paste(round(get(input$DemoData),1), xlab_perc(), 
+                                                   paste(round(get(yes_periods(input$DemoData)),1), xlab_perc(), 
                                                          paste0("(",demo_var,")"), sep=" "), 
                                                    paste(round(get(input$COVIDbuttons),1), ylab_frontspace(), 
                                                          paste0(" (",covid_var,") "),
@@ -1072,7 +1140,7 @@ server <- function(input, output, session){
     output$bi_cor <- renderGirafe({
         CO_COUNTY_BI_SLIDERS = CO_COUNTY_COVID_FILTER %>%
             mutate(., 
-                   demo_var = ntile(get(input$DemoData), 3),
+                   demo_var = ntile(get(yes_periods(input$DemoData)), 3),
                    covid_var = ntile(get(input$COVIDbuttons), 3),
                    bi_class = paste0(
                        as.numeric(demo_var), "-",
@@ -1247,7 +1315,7 @@ server <- function(input, output, session){
             xlab("County Category") +
             ylab("Percent of Counties with Correlation") +
             scale_y_continuous(labels = scales::percent) +
-            labs(title="Counties with Influencing Factors showing \nStrong Positive or Negative Correlation", 
+            labs(title="Counties with Influencing Factors:\nStrong Positive or Negative Correlation", 
                  subtitle = paste0(ylab_short(), " vs. ", xlab_long_perc()),
                  caption = "Hover over any bar to see County Type statistics") +
             theme(panel.grid.major.y = element_blank(),
@@ -1576,27 +1644,22 @@ server <- function(input, output, session){
                 )
             ) +
             geom_vline_interactive(xintercept = as.Date("2020-03-25"), aes(
-                tooltip="March 25th - Shutdown Announced\n
-                                             (Stay-at-Home Order)"), 
+                tooltip="March 25th - Shutdown Announced\n(Stay-at-Home Order)"), 
                 color="#CC5500", linetype="dashed", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-04-27"),aes(
-                tooltip="April 27th - Phased Reopening Begins\n
-                                             (Safer-at-Home Order)"),
+                tooltip="April 27th - Phased Reopening Begins\n(Safer-at-Home Order)"),
                 color="orange",linetype="dashed", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-05-27"),aes(
-                tooltip="May 27th - Phased Reopening Continues\n
-                                             In-Person Dining / Summer Camps Reopen"),
+                tooltip="May 27th - Phased Reopening Continues\nIn-Person Dining / Summer Camps Reopen"),
                 color="yellow3",linetype="dashed", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-06-18"),aes(
-                tooltip="June 18th - Bars Reopen at 50% Capacity\n
-                                             (Protect-Our-Neighbors Order)"),
+                tooltip="June 18th - Bars Reopen at 50% Capacity\n(Protect-Our-Neighbors Order)"),
                 color="green",linetype="dashed", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-06-30"),aes(
                 tooltip="June 30th - Bars Reclosed"),
                 color="yellow3",linetype="dashed", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-07-16"), aes(
-                tooltip="July 16th - Governor Polis issues\n
-                                             Statewide Mask Order"
+                tooltip="July 16th - Governor Polis issues\nStatewide Mask Order"
                 # ,onclick="location.href = https://coloradosun.com/2020/06/30/colorado-bars-close-back-down-coronavirus/"
             ),
             color="orange",linetype="dashed", size=1) +
@@ -1648,6 +1711,7 @@ server <- function(input, output, session){
             scale_x_date(date_labels = "%B %d"
                          # ,breaks = "weekly"
             ) +
+            scale_y_continuous(trans = input$yscale) +
             xlim(min(input$daterange),max(input$daterange)) 
         # ?scale_x_date()
         
@@ -1691,7 +1755,7 @@ server <- function(input, output, session){
                       )
                   )
         ) %>%
-            formatRound(columns = c(4:13), digits=2)
+            formatRound(columns = -c(1:12), digits=2)
         
     })
     output$DaysSince <- renderValueBox({
@@ -1709,12 +1773,12 @@ server <- function(input, output, session){
     output$caseranking <- renderValueBox({
         RankCOVID = COVID19DATA %>% 
             filter(., Date == max(Date)) %>% 
-            mutate(minrank = min_rank(desc(Positivity.Perc))) %>% 
+            mutate(minrank = min_rank(desc(Positive.Tests.Perc))) %>% 
             filter(COUNTY == input$single)
         Rank = RankCOVID$minrank
-        Pos = RankCOVID$Positivity.Perc
+        Pos = RankCOVID$Positive.Tests.Perc
         valueBox(
-            paste0("#",Rank," (", round(Pos,1), "%)"), "of 64 Counties in COVID Positivity",
+            paste0("#",Rank," (", round(Pos,1), "%)"), "of 64 Counties in Positive Tests %",
             # icon = icon("rank"),
             color = "purple"
         )
@@ -1769,8 +1833,8 @@ server <- function(input, output, session){
         absdiff = abs(difference)
         valueBox(
             ifelse(difference >=0,
-                   paste0(absdiff, "% Increase"), 
-                   paste0(absdiff, "% Decrease")),
+                   paste0(absdiff, "% Up"), 
+                   paste0(absdiff, "% Down")),
             "in Cases from a week before", 
             # icon = icon("bar-chart-o"),
             color = "red"
