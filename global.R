@@ -1666,10 +1666,19 @@ CO_MAP_COVID_BAL$COVID.Groups =
   factor(CO_MAP_COVID_BAL$COVID.Groups, 
          levels = c("High COVID", "Med COVID", "Low COVID")) 
 
+CO_MAP_COVID_BAL$WIKI <- sprintf("window.open(\"%s%s\")",
+                                 "http://en.wikipedia.org/wiki/", paste0(as.character(to_underscore(stri_trans_totitle(CO_MAP_COVID_BAL$COUNTY))), "_County,_Colorado"))
+CO_MAP_COVID$WIKI <- sprintf("window.open(\"%s%s\")",
+                             "http://en.wikipedia.org/wiki/", paste0(as.character(to_underscore(stri_trans_totitle(CO_MAP_COVID$COUNTY))), "_County,_Colorado"))
+
+
 
 #names(CO_MAP_COVID)
 bi_colors = c("#be64ac","#dfb0d6","#e8e8e8","#8c62aa","#a5add3","#ace4e4",
               "#3b4994","#5698b9","#5ac8c8")
+
+
+
 
 #### Functions for Label Creation ####
 to_string <- function(string_text) {
@@ -1702,6 +1711,15 @@ no_perc <- function(string_text) {
 long_perc <- function(string_text) {
   gsub("Perc", "Percentage", string_text, fixed=T)
 }
+long_avg <- function(string_text) {
+  gsub("Avg", "Average", string_text, fixed=T)
+}
+avg_parentheses <- function(string_text) {
+  gsub("5 Day Avg", "(5 Day Avg)", string_text, fixed=T)
+}
+per_parentheses <- function(string_text) {
+  gsub("Per 100000", "Rate (Per 100000)", string_text, fixed=T)
+}
 rev_perc <- function(string_text) {
   gsub(" COVID Mortality Perc", "% COVID Mortality", string_text, fixed=T)
 }
@@ -1733,10 +1751,8 @@ weekly <- function(x) {
 rotate <- function(x) {
   t(apply(x, 2, rev))
 }
-CO_MAP_COVID_BAL$WIKI <- sprintf("window.open(\"%s%s\")",
-                                 "http://en.wikipedia.org/wiki/", paste0(as.character(to_underscore(stri_trans_totitle(CO_MAP_COVID_BAL$COUNTY))), "_County,_Colorado"))
-CO_MAP_COVID$WIKI <- sprintf("window.open(\"%s%s\")",
-                             "http://en.wikipedia.org/wiki/", paste0(as.character(to_underscore(stri_trans_totitle(CO_MAP_COVID$COUNTY))), "_County,_Colorado"))
+
+
 
 
 
