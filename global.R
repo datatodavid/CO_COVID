@@ -1,20 +1,91 @@
----
-title: "CO CoVID"
-author: "David Gottlieb"
-date: "5/13/2020"
-output: html_document
-runtime: shiny
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
 library(Hmisc)
 library(tidyverse)
 library(magrittr)
 library(rsconnect)
-devtools::install_version("mnormt", version = "1.5-7", repos = "http://cran.us.r-project.org")
-
+library(stringi)
+# devtools::install_version("mnormt", version = "1.5-7", repos = "http://cran.us.r-project.org")
+# library(mnormt)
 setwd("C:/Users/gottl/Dropbox/Data Science/NYCDSA/Projects/Project 1 Shiny App/CO_COVID")
+#### Functions for Label Creation ####
+to_string <- function(string_text) {
+  deparse(substitute(string_text))
+}
+no_periods <- function(string_text) {
+  gsub(".", " ", string_text, fixed=T)
+}
+yes_periods <- function(string_text) {
+  gsub(" ", ".", string_text, fixed=T)
+}
+no_underscore <- function(string_text) {
+  gsub("_", " ", string_text, fixed=T)
+}
+to_underscore <- function(string_text) {
+  gsub(" ", "_", string_text, fixed=T)
+}
+no_CO <- function(string_text) {
+  gsub("CO ", "COLORADO ", string_text, fixed=T)
+}
+no_Co <- function(string_text) {
+  gsub("Co ", "Colorado ", string_text, fixed=T)
+}
+upper_Co <- function(string_text) {
+  gsub("Co ", "CO ", string_text, fixed=T)
+}
+no_perc <- function(string_text) {
+  gsub("Perc", "%", string_text, fixed=T)
+}
+long_perc <- function(string_text) {
+  gsub("Perc", "Percentage", string_text, fixed=T)
+}
+long_avg <- function(string_text) {
+  gsub("Avg", "Average", string_text, fixed=T)
+}
+avg_parentheses <- function(string_text) {
+  gsub("5 Day Avg", "(5 Day Avg)", string_text, fixed=T)
+}
+per_parentheses <- function(string_text) {
+  gsub("Per 100000", "Rate (Per 100000)", string_text, fixed=T)
+}
+rev_perc <- function(string_text) {
+  gsub(" COVID Mortality Perc", "% COVID Mortality", string_text, fixed=T)
+}
+frontspace<- function(string_text) {
+  gsub("COVID", " COVID", string_text, fixed=T)
+}
+convertMenuItem <- function(mi,tabName) {
+  mi$children[[1]]$attribs['data-toggle']="tab"
+  mi$children[[1]]$attribs['data-value'] = tabName
+  mi
+}
+bimonthly <- function(x) {
+  x_range <- range(x, na.rm = TRUE)
+  
+  date_range <- c(
+    floor_date(x_range[1], "month"),
+    ceiling_date(x_range[2], "month")
+  )
+  monthly <- seq(date_range[1], date_range[2], by = "1 month")
+  
+  sort(c(monthly, monthly + days(14)))
+}
+weekly <- function(x) {
+  x_range <- range(x, na.rm = TRUE)
+  
+  date_range <- c(
+    floor_date(x_range[1], "month"),
+    ceiling_date(x_range[2], "month")
+  )
+  monthly <- seq(date_range[1], date_range[2], by = "1 month")
+  
+  sort(c(monthly, monthly + days(7), monthly + days(14), monthly + days(21)))
+}
+rotate <- function(x) {
+  t(apply(x, 2, rev))
+}
+
+
+
+
 
 #### RWJ Demographic Data ####
 COdataRWJ2020 = read.csv("2020 County Health Rankings Colorado Data Life Measures CLEANED 2 col header.csv", stringsAsFactors = F, header = T)
@@ -708,7 +779,7 @@ COVID19County$Date =
 
 ## COVID DATASET #2 ##
 COVID19Positive = read.csv("Colorado_COVID-19_Positive_Cases_and_Rates_of_Infection_by_County_of_Identification.csv", header=T, stringsAsFactors = F)
-
+# colnames(COVID19Positive)
 names(COVID19Positive) %<>% gsub("__", "_", ., fixed=T) 
 COVID19Positive$County_Deaths[is.na(COVID19Positive$County_Deaths)] <- 0
 COVID19Positive = COVID19Positive %>% 
@@ -1677,80 +1748,6 @@ CO_MAP_COVID$WIKI <- sprintf("window.open(\"%s%s\")",
 bi_colors = c("#be64ac","#dfb0d6","#e8e8e8","#8c62aa","#a5add3","#ace4e4",
               "#3b4994","#5698b9","#5ac8c8")
 
-
-
-
-#### Functions for Label Creation ####
-to_string <- function(string_text) {
-  deparse(substitute(string_text))
-}
-no_periods <- function(string_text) {
-  gsub(".", " ", string_text, fixed=T)
-}
-yes_periods <- function(string_text) {
-  gsub(" ", ".", string_text, fixed=T)
-}
-no_underscore <- function(string_text) {
-  gsub("_", " ", string_text, fixed=T)
-}
-to_underscore <- function(string_text) {
-  gsub(" ", "_", string_text, fixed=T)
-}
-no_CO <- function(string_text) {
-  gsub("CO ", "COLORADO ", string_text, fixed=T)
-}
-no_Co <- function(string_text) {
-  gsub("Co ", "Colorado ", string_text, fixed=T)
-}
-upper_Co <- function(string_text) {
-  gsub("Co ", "CO ", string_text, fixed=T)
-}
-no_perc <- function(string_text) {
-  gsub("Perc", "%", string_text, fixed=T)
-}
-long_perc <- function(string_text) {
-  gsub("Perc", "Percentage", string_text, fixed=T)
-}
-long_avg <- function(string_text) {
-  gsub("Avg", "Average", string_text, fixed=T)
-}
-avg_parentheses <- function(string_text) {
-  gsub("5 Day Avg", "(5 Day Avg)", string_text, fixed=T)
-}
-per_parentheses <- function(string_text) {
-  gsub("Per 100000", "Rate (Per 100000)", string_text, fixed=T)
-}
-rev_perc <- function(string_text) {
-  gsub(" COVID Mortality Perc", "% COVID Mortality", string_text, fixed=T)
-}
-frontspace<- function(string_text) {
-  gsub("COVID", " COVID", string_text, fixed=T)
-}
-bimonthly <- function(x) {
-  x_range <- range(x, na.rm = TRUE)
-  
-  date_range <- c(
-    floor_date(x_range[1], "month"),
-    ceiling_date(x_range[2], "month")
-  )
-  monthly <- seq(date_range[1], date_range[2], by = "1 month")
-  
-  sort(c(monthly, monthly + days(14)))
-}
-weekly <- function(x) {
-  x_range <- range(x, na.rm = TRUE)
-  
-  date_range <- c(
-    floor_date(x_range[1], "month"),
-    ceiling_date(x_range[2], "month")
-  )
-  monthly <- seq(date_range[1], date_range[2], by = "1 month")
-  
-  sort(c(monthly, monthly + days(7), monthly + days(14), monthly + days(21)))
-}
-rotate <- function(x) {
-  t(apply(x, 2, rev))
-}
 
 
 

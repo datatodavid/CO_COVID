@@ -1,9 +1,11 @@
 library(shiny)
 library(psych)
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 library(magrittr)
 library(lubridate)
 library(mapproj)
+
 # library(sf)
 # library(rgeos)
 library(maps)
@@ -13,19 +15,19 @@ library(stringr)
 library(stringi)
 library(corrr)
 library(cowplot)
-
+library(extrafont)
+library(extrafontdb)
 library(plotrix)
-# library(gridExtra)
+library(grid)
+library(gridExtra)
 # library(multipanelfigure)
 # library(data.table)
 require(ggiraph)
 require(shinydashboard)
 require(DT)
-convertMenuItem <- function(mi,tabName) {
-    mi$children[[1]]$attribs['data-toggle']="tab"
-    mi$children[[1]]$attribs['data-value'] = tabName
-    mi
-}
+
+# devtools::install_version("cpp11", version = "0.1", repos = "http://cran.us.r-project.org")
+
 ui <- dashboardPage(
     # theme --> semantic.dashboard, skins from SHINY website
     dashboardHeader(title = "Colorado COVID"),
@@ -60,17 +62,17 @@ ui <- dashboardPage(
                                        "Tests Rate (Per 100000)" = "Tests.Per.100000",
                                        "Cases Rate (Per 100000)" = "Cases.Per.100000",             
                                        "Deaths Rate (Per 100000)" = "Deaths.Per.100000",   
-                                       "State Hospitalizations Per 100000" = "State.Hospitalizations.Per.100000",
+                                       "State Hospitalizations Rate (Per 100000)" = "State.Hospitalizations.Per.100000",
                                        "New Tests Last Week" = "New.Tests.Last.Week",          
                                        "New Cases Last Week" = "New.Cases.Last.Week",          
                                        "New Deaths Last Week" = "New.Deaths.Last.Week",
                                        "New State Hospitalizations Last Week" = "New.State.Hospitalizations.Last.Week",
-                                       "New Tests 5 Day Average" = "New.Tests.5.Day.Avg",          
-                                       "New Cases 5 Day Average" = "New.Cases.5.Day.Avg",          
-                                       "New Deaths 5 Day Average" = "New.Deaths.5.Day.Avg",         
-                                       "New State Hospitalizations 5 Day Average" = "New.State.Hospitalizations.5.Day.Avg",
-                                       "Positive Tests Percentange 5 Day Average" = "Positive.Tests.Perc.5.Day.Avg",
-                                       "Mortality Percentage 5 Day Average" = "Mortality.Perc.5.Day.Avg"),
+                                       "New Tests (5 Day Average)" = "New.Tests.5.Day.Avg",          
+                                       "New Cases (5 Day Average)" = "New.Cases.5.Day.Avg",          
+                                       "New Deaths (5 Day Average)" = "New.Deaths.5.Day.Avg",         
+                                       "New State Hospitalizations (5 Day Average)" = "New.State.Hospitalizations.5.Day.Avg",
+                                       "Positive Tests Percentange (5 Day Average)" = "Positive.Tests.Perc.5.Day.Avg",
+                                       "Mortality Percentage (5 Day Average)" = "Mortality.Perc.5.Day.Avg"),
                            # colnames(COVID19ALL_MERGE)[-1:-3],
                            selected = "New.Cases.5.Day.Avg"),
             
@@ -94,16 +96,22 @@ ui <- dashboardPage(
                                      "No" = "")),
             
             radioButtons(inputId = "mapmeasure",
-                         label = "Sort Map by:",
+                         label = "Sort Heat Map by:",
                          # "Select a Correlation Method:",
-                         choices = c("Highest Value" = "Maximum",
-                                     "Average Value" = "Mean",
-                                     "Latest Value" = "Latest"
-                         ))
+                         choices = c("Latest Value" = "Latest",
+                                     "Highest Value in Date Range" = "Maximum",
+                                     "Average Value in Date Range" = "Mean"
+                                     
+                         )
+                         # selected = "Maximum"
+                         ), br()
             ), 
             tabName = "County_Dash"),
             # menuItem("twitter.com/datatodavid", icon=NULL),
-            convertMenuItem(menuItem("COVID vs. Demographics", tabName = "Main_Dash", 
+            convertMenuItem(menuItem("COVID vs. Demographics", 
+                                     # status="warning",
+                                     # color="red",
+                                     tabName = "Main_Dash", 
                      icon=icon("bar-chart-o"), #startExpanded = TRUE,
             
             #menuSubItem(#tabName = "COVID Measure:",
@@ -151,18 +159,20 @@ ui <- dashboardPage(
             , tabName = "Main_Dash"),
             menuItem("Sources:",
                      # icon=icon("list-alt")
-                     icon=NULL
-            ),
-            menuItem("Source code", icon = icon("file-code-o"), 
+                     # icon=NULL
+                     icon=icon("folder-open")
+             ,
+             menuSubItem("Source code", icon = icon("file-code-o"), 
                      href = "https://github.com/rstudio/shinydashboard/"),
-            menuItem("CDPHE CO COVID Data", icon = icon("list-alt"), 
+             menuSubItem("CDPHE CO COVID Data", icon = icon("list-alt"), 
                      href = "https://data-cdphe.opendata.arcgis.com/search?collection=Dataset&q=covid19&sort=name"),
-            menuItem("CDPHE Community Data", icon = icon("list-alt"), 
+             menuSubItem("CDPHE Community Data", icon = icon("list-alt"), 
                      href = "https://data-cdphe.opendata.arcgis.com/search?collection=Dataset&q=cdphe%20community%20level%20estimates%20(county)%20"),
-            menuItem("BRFSS County Data", icon = icon("list-alt"), 
+             menuSubItem("BRFSS County Data", icon = icon("list-alt"), 
                      href = "https://data-cdphe.opendata.arcgis.com/search?collection=Dataset&q=BRFSS%202014-2017%20County%20Datasets&sort=name"),
-            menuItem("RWJ County Health Rankings", icon = icon("list-alt"), 
+             menuSubItem("RWJ County Health Rankings", icon = icon("list-alt"), 
                      href = "https://www.countyhealthrankings.org/app/colorado/2020/downloads")
+            )
             # ,
             # menuItem("Additional Charts", tabName = "Race/Ethnicity",
             #          icon=icon("bar-chart-o"))
@@ -177,14 +187,21 @@ ui <- dashboardPage(
             #             choices = unique(COVID19ALL_MERGE$COUNTY)[-1])
         )),
     dashboardBody( 
+        tags$head(tags$style("*:not(.fa){ font-family: 'calibri', !important;, font-weight:500; }")),
+        # tags$sidebar(tags$style(" { font-family: 'Garamond', serif !important;, font-weight:500; }")),
+        # tags$title(tags$style(" { font-family: 'Garamond', serif !important;, font-weight:500; }")),
+        # tags$tabItems(tags$style(" { font-family: 'Garamond', serif !important;, font-weight:500; }")),
         #titlePanel("Demographic Measures vs. COVID Outcomes by County"),
-        
+        # tags$style(HTML("
+        #     font-family: 'Adobe Garamond Pro', 'Garamond', serif  !important;
+        # }"),
+        # style = "font-family: 'Adobe Garamond Pro', 'Garamond', serif !important;, font-weight:500;",
             tabItems(
                 tabItem(tabName = "County_Dash",
                         
                 tabsetPanel(
                 tabPanel("County COVID Dashboard",#tabName = "County_Dash",
-                         fluidRow(
+                         fluidRow(        
                          valueBoxOutput("DaysSince", width=3), 
                          valueBoxOutput("lastweekcases", width=3),
                          # valueBoxOutput("lastweekdeaths"),
@@ -194,19 +211,23 @@ ui <- dashboardPage(
                          ),
                         fluidRow(
                             # column(width=6,
-                            box(status="primary",girafeOutput("indcounty"),
-                                solidHeader = T, title = "County vs. State COVID Trend Analysis"
+                            box(status="primary",
+                                solidHeader = T, title = "County vs. State COVID Trend Analysis",
                                 # )
+                                girafeOutput("indcounty"),
+                                "Hover over Vertical lines to read about major events in Colorado's statewide response to the pandemic.",
                             ),
                         # column(width=6,
-                                box(title = "Map of Colorado Counties",
+                                box(title = "Heat Map of COVID in Colorado Counties",
+                                    
                                  status="primary",
                                  # color = "purple",
                                  # width = NULL, 
                              solidHeader = T,
                                  
                             # box(status="primary", 
-                            girafeOutput("ind_map"))
+                            girafeOutput("ind_map"),
+                            "Gray will display when no data is available. Hospitalization data is only published on the state level.")
                         # )
                           
                         
@@ -218,9 +239,12 @@ ui <- dashboardPage(
                              dataTableOutput("ind_graph_data"), width=12))
                 
                 ),
-                tabPanel("Complete COVID Data Table",
-                         box(title = "Complete Colorado COVID Data by County",status="primary",
-                             solidHeader = T, "Export either all returned data or a selection using the buttons below. Click on the boxes below the Column names to filter results by column.",
+                tabPanel("Colorado COVID Dataset Explorer",
+                         box(title = "Complete & Cleaned Colorado COVID Dataset by County",status="primary",
+                             solidHeader = T, 
+                             "Click on the boxes below the Column names to filter results by column.",
+                             br(),
+                             "Export either all returned data or a selection using the buttons below.",
                              dataTableOutput("ind_data"), width=12))
             )
         ),
@@ -236,7 +260,7 @@ ui <- dashboardPage(
                                     "This interactive Shiny website allows the examination of the relationships among over 100 Demographic Measures against COVID Outcomes in Colorado. This is an exploratory tool designed for policy makers, epidemiologists, statisticians, and anyone interested in exploring. Almost all of the entire site is interactive and can be exported (check the top right corners of the visualizations).", br(),"Let me know what you discover at twitter.com/datatodavid"
                                     ),
                                 br(),
-                                box(title = "Select a COVID Measure and Demographic Category List from the left sidebar to load new Measures to explore",
+                                box(title = "Select a COVID Measure and Demographic Category List from the left sidebar to begin",
                                     status="warning",
                                     # background = "green",
                                     width = NULL, solidHeader = T,
@@ -262,10 +286,21 @@ ui <- dashboardPage(
                                 #     width = NULL, solidHeader = T,
                                 #     "This tool allows you to examine the relationships of over 100 Demographic categories against COVID Outcomes in Colorado. Almost the entire site is interactive and can be exported, so make sure to explore and stay safe!")
                          ),
-                         column(width=9, 
-                                box(status="primary",solidHeader=T, title="Use this tool to explore Demographic Categories & Measures",
+                         
+                         column(width=6, 
+                                box(status="info",solidHeader=T, title="Use this tool to explore Demographic Categories & Measures",
                                     ggiraphOutput("corr_explorer"),width = NULL)
                                 
+                         ),
+                         column(width=3,
+                                box(status="primary",width=NULL, solidHeader = T, 
+                                    title = "A Positive Correlation Relationship means:", 
+                                    "The higher the Demographic Measure in a county,",br(), "the higher the selected COVID Measure.",
+                                    br(), br(), "A value greater than 0.2 suggests that this relationship is statistically significant based on the 64 Colorado counties."),
+                                box(status="danger", width=NULL,solidHeader = T, 
+                                    title = "A Negative Correlation Relationship means:", 
+                                    "The lower the Demographic Measure in a county,",br(), "the higher the selected COVID Measure.",
+                                    br(), br(), "A value less than -0.2 suggests that this relationship is statistically significant based on the 64 Colorado counties.")
                          ),
                          
                          box(title = "Selected Colorado Demographic Data by County", status="primary",
@@ -347,7 +382,8 @@ ui <- dashboardPage(
                                          0, 100, value=c(0,100), step=1) 
                              # "Cases, Income, and Rural factors can impact or explain other correlations.", "Use these filters to see if they affect your observations."
                              )),
-                        column(width=7,box(status="primary",width = NULL,solidHeader = T, title="County by County Demographic Rankings Bar Chart",
+                        column(width=7,box(status="primary",width = NULL,solidHeader = T, 
+                                           title="County by County Demographic Rankings Bar Chart",
                             ggiraphOutput("top20")))),
                          box(status="primary",
                              title = "Summary Statistics", solidHeader = T,
@@ -359,18 +395,9 @@ ui <- dashboardPage(
                          #,box(tableOutput("COVID_data"), height = 130, width=12)
                 ) 
                 ,tabPanel("Colorado Maps", #tabName = "Main_Dash",
-                          # box(plotOutput("bi_map_legend"), height=120, width=5),
+                          # 
                           fluidRow(
-                          # box(status="warning",
-                          #     solidHeader = T, title = "Bivariate Color Legend with number of Counties in each section",
-                          #     "These maps visualize correlations using a (3-tile) color grid for one or both measures. Each individual measure is split into even groups of Low, Med, or High.", 
-                          #     
-                          #     # br(), "However, when the two measures are overlapped (as happens to the right), the distribution of counties is not evenly grouped.",
-                          #     plotOutput("bi_analysis"),
-                          #     "The three left-most purple colors correspond to the selected COVID Measure", 
-                          #     br(), "The three bottom teal colors correspond to the selected Demographic Measure.",
-                          #     height = 540,
-                          #     width=6),
+                          # 
                           # box(status="primary",
                           #     solidHeader=T, title = "Bivariate Interactive Colorado Map",
                           #     "Hover over any County to see its data. Click to visit its Wikipedia page.",
@@ -390,13 +417,49 @@ ui <- dashboardPage(
                               solidHeader = T, title="Demographic Measure Severity Map",
                               width=6)
                           ,
-                          box(status="primary",
-                              solidHeader=T, title = "Overlap of COVID + Demographic Measures Map",
-                              # "Hover over any County to see its data. Click to visit its Wikipedia page.",
+                          # fluidRow(
+                              box(status="success",
+                              solidHeader=T, title = "Overlap of COVID Measure & Demographic Measure Severity Maps",
+                              "Color grid created by overlapping two graphs above - see legend on right.",br(),
+                              "Hover over any County to see its data. Click to visit its Wikipedia page.", 
+                              
                               girafeOutput("bi_map"),
                               # height = 540,
-                              width=12)
-                          # ,
+                              width=8),
+                          box(status="warning",
+                              solidHeader = T, title = "Overlap Map Color Legend with number of Counties in each group",
+                              "This legend shows the distribution of Colorado's 64 counties into each of the 9 Low/Med/High combinations.",
+                                   # br(), "However, when the two measures are overlapped (as happens to the right), the distribution of counties is not evenly grouped.",
+                                   br(), "The more Purple the color is, the higher the COVID measure.", br(),# (vertical) colors show the selected COVID Measure",
+                                   "The more Teal the color is, the higher the Demographic measure.",# (horizontal) colors correspond to the selected Demographic Measure.",
+                              #      
+                              plotOutput("bi_map_vlegend"),
+                              # height = 540,
+                              width=4)
+                          
+                          #     ,
+                          # box(status="warning",
+                          #      solidHeader = T, title = "Overlap Map Color Legend with number of Counties in each section",
+                          #      "This grid shows the distribution of Colorado's 64 counties into each of the 9 Low/Med/High combinations.",
+                          #      # br(), "However, when the two measures are overlapped (as happens to the right), the distribution of counties is not evenly grouped.",
+                          #      br(), "The more Purple the color is, the higher the COVID measure.", br(),# (vertical) colors show the selected COVID Measure",
+                          #      "The more Teal the color is, the higher the Demographic measure.",# (horizontal) colors correspond to the selected Demographic Measure.",
+                          #      
+                          #      plotOutput("bi_analysis"),
+                          #      
+                          #      width=5))
+                          # width=7)
+                          # ,box(status="warning",
+                          #          solidHeader = T, title = "Overlap Map Color Legend with number of Counties in each section",
+                          #          "This grid shows the distribution of Colorado's 64 counties into each of the 9 Low/Med/High combinations.",
+                          #          # br(), "However, when the two measures are overlapped (as happens to the right), the distribution of counties is not evenly grouped.",
+                          #      br(), "The more Purple the color is, the higher the COVID measure.", br(),# (vertical) colors show the selected COVID Measure",
+                          #      "The more Teal the color is, the higher the Demographic measure.",# (horizontal) colors correspond to the selected Demographic Measure.",
+                          #      
+                          #      plotOutput("bi_analysis"),
+                          #          
+                          #          width=5)
+                          # # ,
                 ) )
                 
                 # ,tabPanel("Stats",
@@ -430,9 +493,11 @@ ui <- dashboardPage(
                                              choices = c("Relative Scaling (easier to see Counties)" = "free_x", 
                                                          "Fixed Scaling (easier to see Distribution)" = "fixed")), 
                               height=100, width=3),
-                          box(status="primary",plotOutput("Racefacetgrid"),
+                          box(status="primary",plotOutput("Racefacetgrid"), 
+                              style="font-family: 'times', 'Garamond', serif !important;, font-weight:500;",
                               solidHeader = T, title = "Use this tool to compare and contrast trends for the 10 Demographic Factors with Race/Ethnicity Data",
-                              height = 420, width=12),
+                              # height = 480, 
+                              width=12),
                           #          box(sliderInput("covidrange1", 
                           #                          "Number of COVID Cases in County:", 
                           #                          0, 10000, value=c(0,10000), step=100),
@@ -560,6 +625,7 @@ server <- function(input, output, session){
                  # ,subtitle = "Scale between -1 and 1"
             ) +
             theme(
+                text=element_text(family="calibri"),
                 axis.text = element_text(face="bold"),
                 legend.title = element_text(color="darkblue", face="bold"),
                 legend.text = element_text(color="darkblue"),
@@ -672,17 +738,23 @@ server <- function(input, output, session){
             scale_fill_gradient(low="#3399FF", high="red2") +
             
             labs(y="Colorado Counties", x=xlab_perc()
-                 , fill = str_wrap(ylab_perc(), 7)
+                 , fill = str_wrap(ylab_perc(), 6.5)
                  , subtitle = paste0("Color Shading by ", ylab_short())
             ) +
             # geom_text(aes(label=round(get(input$DemoData),1)), 
             #          position = position_jitter(width=0, height=1.5), vjust=5.5, color="white"
             #           ) +
-            theme(panel.grid.major.y = element_blank(),
+            theme(text=element_text(family="calibri"),
+                  panel.grid.major.y = element_blank(),
                   axis.text.y =
                       element_text(#angle=90, hjust=1, vjust=0.3, 
-                          face="bold", size=5),
+                          face="bold", size=7),
                   axis.text.x = element_text(face="bold"),
+                  # axis.ticks = margin(r=0.5),
+                  # axis.text.y = position_nudge(x=0.2), 
+                  # plot.margin = unit(c(0,0,0,6),"mm"),
+                  # axis.ticks.length.y = 0,
+                  # axis.ticks.y = element_text(hjust=-0.3),
                   legend.title = element_text(color="darkblue", face="bold"),
                   legend.text = element_text(color="darkblue"),
                   plot.title = element_text(hjust=0.5, face="bold", size=18),
@@ -764,7 +836,8 @@ server <- function(input, output, session){
                  , caption = "Linear Regression Model"
                  ) +
             guides(colour = guide_legend(override.aes = list(size = 10))) +
-            theme(axis.text.x = element_text(face="bold"),
+            theme(text=element_text(family="calibri"),
+                  axis.text.x = element_text(face="bold"),
                   axis.text.y = element_text(face="bold"),
                   # legend.key = element_rect(),
                   legend.title = element_text(color="darkblue", face="bold", size=15, hjust=0.5),
@@ -1021,16 +1094,28 @@ server <- function(input, output, session){
                                      #               fill=as.character(demo_var))) +
                                      # scale_fill_manual_interactive(values=c('#e8e8e8','#ace4e4','#5ac8c8')) +
                                      fill=get(yes_periods(input$DemoData)))) +
-            scale_fill_gradient_interactive(low='#e8e8e8',high='#5ac8c8') +
+            scale_fill_gradient_interactive(low='#e8e8e8',high='#00CED1') +
+            # scale_fill_gradient_interactive(low='#e8e8e8',high='#5ac8c8') +
             # scale_fill_distiller(palette = "Spectral") +
             # bi_scale_fill(pal = "DkBlue", dim = 3) +
             labs(subtitle = str_wrap(xlab_long_perc(),29)
-                 
+                 ,fill = str_wrap(xlab_perc(), 8)
             ) +
-            theme(plot.subtitle = element_text(hjust=1)
+            theme(
+                text=element_text(family="calibri"),
+                plot.subtitle = element_text(hjust=1)
+                
+                # ,
+                # legend.title = element_text(size = 5), 
+                # legend.text = element_text(size = 4)
+                
                   #plot.margin=unit(c(2,2,0,0),"cm")
             ) +
-            guides(fill=FALSE, x.axis=FALSE) +
+            guides(
+                # fill=FALSE, 
+            
+                
+                x.axis=FALSE) +
             #theme(title)
             bi_theme() + coord_map("mercator") +
             xlim(-109.25, -101.75) + ylim(36.75, 41.25) +
@@ -1042,6 +1127,14 @@ server <- function(input, output, session){
                                                    sep="\n"),
                                          data_id = COUNTY, onclick = WIKI),color="black")
         
+        
+        demographic_map = demographic_map +
+            guides(shape = guide_legend(override.aes = list(size = 1.5))
+        ,color = guide_legend(override.aes = list(size = 1.5))
+        ) +
+            theme(legend.title = element_text(size = 13),
+                   legend.text = element_text(size = 12),
+                  text=element_text(family="calibri"))
         # ggiraph(code = print(demographic_map))
         girafe(ggobj = demographic_map, options = list(
             # opts_sizing(rescale = TRUE, width = .7),
@@ -1070,12 +1163,17 @@ server <- function(input, output, session){
             # fill=covid_var)) +
             #         scale_fill_manual_interactive(values=c('#e8e8e8', "#dfb0d6", "#be64ac")) +
             # + scale_fill_brewer_interactive(palette = "")
-            labs(subtitle = ylab_perc()
+            labs(subtitle = str_wrap(ylab_perc(),28)
+                 ,fill = str_wrap(ylab_perc(), 10)
             ) +
-            theme(plot.subtitle = element_text(hjust=1)
+            theme(
+                text=element_text(family="calibri"),
+                plot.subtitle = element_text(hjust=1)
                   #plot.margin=unit(c(2,2,0,0),"cm")
             ) +
-            guides(fill=FALSE, x.axis=FALSE) +
+            guides(
+                # fill=FALSE, 
+                x.axis=FALSE) +
             #theme(title)
             bi_theme() + coord_map("mercator") +
             xlim(-109.25, -101.75) + ylim(36.75, 41.25) +
@@ -1087,6 +1185,13 @@ server <- function(input, output, session){
                                                    sep="\n"),
                                          data_id = COUNTY, onclick = WIKI),color="black")
         
+        cov_map = cov_map +
+            guides(shape = guide_legend(override.aes = list(size = 1.5))
+                   ,color = guide_legend(override.aes = list(size = 1.5))
+            ) +
+            theme(legend.title = element_text(size = 13),
+                  legend.text = element_text(size = 12),
+                  text=element_text(family="calibri"))
         # ggiraph(code = print(cov_map))
         girafe(ggobj = cov_map, options = list(
             # opts_sizing(rescale = TRUE, width = .7),
@@ -1128,6 +1233,7 @@ server <- function(input, output, session){
                                          data_id = COUNTY, onclick = WIKI),
                                      color="black") +
             theme(
+                text=element_text(family="calibri"),
                 legend.title = element_text(color="darkblue", face = "bold", size=13),
                 legend.position = "right",
                 legend.text = element_text(color="darkblue", face = "bold", size=11),
@@ -1178,6 +1284,9 @@ server <- function(input, output, session){
                        as.numeric(covid_var)
                    )) %>%
             select(., COUNTY, demo_var, covid_var, bi_class)
+        bi_var_table = CO_COUNTY_BI_CLASS %>% 
+            group_by(bi_class) %>% 
+            summarise(counties = n())
         CO_MAP_COVID1 = left_join(CO_MAP_COVID, CO_COUNTY_BI_CLASS, by="COUNTY")
         CO_MAP_COVID1$bi_class %<>%
             gsub("NA-1", NA, .) %>%
@@ -1185,7 +1294,17 @@ server <- function(input, output, session){
             gsub("NA-3", NA, .) %>% 
             gsub("1-NA", NA, .) %>% 
             gsub("2-NA", NA, .) %>% 
-            gsub("3-NA", NA, .)
+            gsub("3-NA", NA, .) #%>% 
+            # gsub("1-1", "Both Low", .) %>%
+            # gsub("1-2", "Low Demo / Med COVID", .) %>%
+            # gsub("1-3", "Low Demo / High COVID", .) %>% 
+            # gsub("2-1", "Med Demo / Low COVID", .) %>% 
+            # gsub("2-2", "Both Med", .) %>% 
+            # gsub("2-3", "Med Demo / High COVID", .) %>% 
+            # gsub("3-1", "High Demo / Low COVID", .) %>% 
+            # gsub("3-2", "High Demo / Med COVID", .) %>% 
+            # gsub("3-3", "Both High", .)
+            
         # CO_MAP_COVID1$demo_var %<>%
         #     gsub(1, paste0("Low ",xlab_perc()), .) %>%
         #     gsub(2, paste0("Med ",xlab_perc()), .) %>%
@@ -1207,13 +1326,18 @@ server <- function(input, output, session){
                           group=group,
                           fill=bi_class)) +
             bi_scale_fill(pal = "DkBlue", dim = 3) +
-            labs(subtitle = paste(ylab_long_perc(), str_wrap(xlab_long_perc(),30), sep="\nvs. ")
+            labs(subtitle = str_wrap(paste(ylab_long_perc(), xlab_long_perc(), sep="\nvs. "), 20)
                  # ,x = "Bivariate Analysis")
-            )+
-            theme(plot.subtitle = element_text(hjust=1)
+            ) + 
+            
+            theme(text=element_text(family="calibri"),
+                  plot.subtitle = element_text(hjust=1, size = 8),
+                  legend.title = element_blank()
                   #plot.margin=unit(c(2,2,0,0),"cm")
             ) +
-            guides(fill=FALSE, x.axis=FALSE) +
+            guides(
+                fill=FALSE,
+                   x.axis=FALSE) +
             #theme(title)
             bi_theme() + coord_map("mercator") +
             xlim(-109.25, -101.75) + ylim(36.75, 41.25) +
@@ -1229,15 +1353,175 @@ server <- function(input, output, session){
                                          data_id = COUNTY, onclick = WIKI
             ),color="black")
         
+        map2 = map2 +
+        #     # bi_scale_fill(pal = "DkBlue", dim = 3) +
+        #     scale_fill_manual(#name = "County Types",
+        #         # labels = c("Both Low", "Low Demo / Med COVID", "Low Demo / High COVID",
+        #         #            "Med Demo / Low COVID", "Both Medium", "Med Demo / High COVID",
+        #         #            "High Demo / Low COVID", "High Demo / Med COVID", "Both High"),
+        #         labels = c(paste0("Both Low (", bi_var_table$counties[1], ")"), 
+        #                    paste0("Low Demo / Med COVID (", bi_var_table$counties[2], ")"), 
+        #                    paste0("Low Demo / High COVID (", bi_var_table$counties[3], ")"),
+        #                    paste0("Med Demo / Low COVID (", bi_var_table$counties[4], ")"), 
+        #                    paste0("Both Medium (", bi_var_table$counties[5], ")"), 
+        #                    paste0("Med Demo / High COVID (", bi_var_table$counties[6], ")"),
+        #                    paste0("High Demo / Low COVID (", bi_var_table$counties[7], ")"), 
+        #                    paste0("High Demo / Med COVID (", bi_var_table$counties[8], ")"), 
+        #                    paste0("Both High (", bi_var_table$counties[9], ")")),
+        #         # values = bi_colors) +
+        #         values = c("#e8e8e8","#dfb0d6","#be64ac",
+        #                    "#ace4e4","#a5add3","#8c62aa",
+        #                    "#5ac8c8","#5698b9","#3b4994")) +
+            #     
+            # guides(shape = guide_legend(override.aes = list(size = 0.6))
+            #        ,fill = guide_legend(override.aes = list(size = 0.4))
+            # ) +
+            theme(text=element_text(family="calibri"))
+            #       legend.text = element_text(size = 8)) #+ 
+        
         # ggiraph(code = print(map2))
         girafe(ggobj = map2, options = list(
-            opts_sizing(rescale = TRUE, width = .7),
+            # opts_sizing(rescale = TRUE, width = .7),
             opts_hover(css = "opacity:0.8;"),
             opts_tooltip(offx = 20, offy = -55),
             opts_selection(type = "none"
                            , only_shiny = FALSE
             )
         ))
+    })
+    output$bi_map_vlegend <- renderPlot({
+        CO_MAP_COVID1 = CO_MAP_COVID %>%
+            mutate(.,
+                   var1 = ntile(get(yes_periods(input$DemoData)), 3),
+                   var2 = ntile(get(input$COVIDbuttons), 3),
+                   bi_class = paste0(
+                       as.numeric(var1), "-", 
+                       as.numeric(var2)
+                   ))
+        CO_COUNTY_BI_CLASS = CO_COUNTY_COVID_FILTER %>%
+            mutate(.,
+                   demo_var = ntile(get(yes_periods(input$DemoData)), 3),
+                   covid_var = ntile(get(input$COVIDbuttons), 3),
+                   bi_class = paste0(
+                       as.numeric(demo_var), "-",
+                       as.numeric(covid_var)
+                   )) %>%
+            select(., COUNTY, demo_var, covid_var, bi_class)
+        bi_var_table = CO_COUNTY_BI_CLASS %>% 
+            group_by(bi_class) %>% 
+            summarise(counties = n())
+        CO_MAP_COVID1 = left_join(CO_MAP_COVID, CO_COUNTY_BI_CLASS, by="COUNTY")
+        CO_MAP_COVID1$bi_class %<>%
+            gsub("NA-1", NA, .) %>%
+            gsub("NA-2", NA, .) %>%
+            gsub("NA-3", NA, .) %>% 
+            gsub("1-NA", NA, .) %>% 
+            gsub("2-NA", NA, .) %>% 
+            gsub("3-NA", NA, .) #%>% 
+        # gsub("1-1", "Both Low", .) %>%
+        # gsub("1-2", "Low Demo / Med COVID", .) %>%
+        # gsub("1-3", "Low Demo / High COVID", .) %>% 
+        # gsub("2-1", "Med Demo / Low COVID", .) %>% 
+        # gsub("2-2", "Both Med", .) %>% 
+        # gsub("2-3", "Med Demo / High COVID", .) %>% 
+        # gsub("3-1", "High Demo / Low COVID", .) %>% 
+        # gsub("3-2", "High Demo / Med COVID", .) %>% 
+        # gsub("3-3", "Both High", .)
+        
+        # CO_MAP_COVID1$demo_var %<>%
+        #     gsub(1, paste0("Low ",xlab_perc()), .) %>%
+        #     gsub(2, paste0("Med ",xlab_perc()), .) %>%
+        #     gsub(3, paste0("High ",xlab_perc()), .)
+        # CO_MAP_COVID1$covid_var %<>%
+        #     gsub(1, paste0("Low ",ylab_perc()), .) %>%
+        #     gsub(2, paste0("Med ",ylab_perc()), .) %>%
+        #     gsub(3, paste0("High ",ylab_perc()), .)
+        CO_MAP_COVID1$demo_var %<>%
+            gsub(1, "Low", .) %>%
+            gsub(2, "Med", .) %>%
+            gsub(3, "High", .)
+        CO_MAP_COVID1$covid_var %<>%
+            gsub(1, "Low", .) %>%
+            gsub(2, "Med", .) %>%
+            gsub(3, "High", .)
+        leg2 = ggplot(CO_MAP_COVID1,
+                      aes(x=long, y=lat,
+                          group=group,
+                          fill=bi_class)) +
+            bi_scale_fill(pal = "DkBlue", dim = 3) +
+            labs(subtitle = str_wrap(paste(ylab_long_perc(), xlab_long_perc(), sep="\nvs. "), 20)
+                 # ,x = "Bivariate Analysis")
+            ) + 
+            
+            theme(text=element_text(family="calibri"),
+                  plot.subtitle = element_text(hjust=1, size = 8)
+                  # ,
+                  # legend.title = element_blank()
+                  # #plot.margin=unit(c(2,2,0,0),"cm")
+            ) +
+            guides(
+                # fill=FALSE, 
+                x.axis=FALSE) +
+            #theme(title)
+            bi_theme() + coord_map("mercator") +
+            xlim(-109.25, -101.75) + ylim(36.75, 41.25) +
+            xlab(NULL) + ylab(NULL) +
+            #coord_map("polyconic" ) #+
+            geom_polygon_interactive(aes(tooltip = 
+                                             paste(paste0(COUNTY, " COUNTY"),
+                                                   paste(round(get(yes_periods(input$DemoData)),1), xlab_perc(), 
+                                                         paste0("(",demo_var,")"), sep=" "), 
+                                                   paste(formatC(get(input$COVIDbuttons), format="f", big.mark = ",", digits=1), ylab_frontspace(), 
+                                                         paste0(" (",covid_var,") "),
+                                                         sep=""), sep="\n"),
+                                         data_id = COUNTY, onclick = WIKI
+            ),color="black")
+        
+        leg2 = leg2 +
+            # bi_scale_fill(pal = "DkBlue", dim = 3) +
+            scale_fill_manual(name = str_wrap(paste0("Colorado's 64 Counties by\n", xlab_long_perc(), " vs. \n", ylab_long_perc()), 30),
+                # labels = c("Both Low", "Low Demo / Med COVID", "Low Demo / High COVID",
+                #            "Med Demo / Low COVID", "Both Medium", "Med Demo / High COVID",
+                #            "High Demo / Low COVID", "High Demo / Med COVID", "Both High"),
+                labels = c(paste0("Both Low (", bi_var_table$counties[1], ")"), 
+                           paste0("Low Demo / Med COVID (", bi_var_table$counties[2], ")"), 
+                           paste0("Low Demo / High COVID (", bi_var_table$counties[3], ")"),
+                           paste0("Med Demo / Low COVID (", bi_var_table$counties[4], ")"), 
+                           paste0("Both Medium (", bi_var_table$counties[5], ")"), 
+                           paste0("Med Demo / High COVID (", bi_var_table$counties[6], ")"),
+                           paste0("High Demo / Low COVID (", bi_var_table$counties[7], ")"), 
+                           paste0("High Demo / Med COVID (", bi_var_table$counties[8], ")"), 
+                           paste0("Both High (", bi_var_table$counties[9], ")")),
+                # values = bi_colors) +
+                values = c("#e8e8e8","#dfb0d6","#be64ac",
+                           "#ace4e4","#a5add3","#8c62aa",
+                           "#5ac8c8","#5698b9","#3b4994")) +
+            
+            # guides(shape = guide_legend(override.aes = list(size = 4))
+            #        ,color = guide_legend(override.aes = list(size = 4))
+            # ) +
+            theme(#legend.title = element_blank()
+                  legend.spacing = unit(0.4,'cm'),
+                  legend.title = element_text(hjust=0.5,size = 22, face="bold", family="calibri"), #+
+                  legend.text = element_text(size = 20, family="calibri"
+                                             ,margin=margin(t = 0.2, b=0.2, l=0.2, unit="cm")
+                                             )
+            )
+        leg2 = leg2 + theme(text=element_text(family="serif"))
+        legend <- cowplot::get_legend(leg2)
+        
+        grid.newpage()
+        grid.draw(legend)
+        
+        # ggiraph(code = print(map2))
+        # girafe(code = print(legend), options = list(
+        #     # opts_sizing(rescale = TRUE, width = .7),
+        #     opts_hover(css = "opacity:0.8;"),
+        #     opts_tooltip(offx = 20, offy = -55),
+        #     opts_selection(type = "none"
+        #                    , only_shiny = FALSE
+            # )
+        # ))
     })
     output$bi_cor <- renderGirafe({
         CO_COUNTY_BI_SLIDERS = CO_COUNTY_COVID_FILTER %>%
@@ -1411,9 +1695,9 @@ server <- function(input, output, session){
             maptable2 %>% 
             ggplot(aes(x=County.Type, y=Perc.0_1.Counties, fill=Correlation)) + 
             # geom_col(width=0.8, position=position_dodge(width=0.8)) + 
-            theme(
+            # theme(
                 # axis.text.x = element_text(angle=90, hjust=1, vjust=0.3)
-            ) + 
+            # ) + 
             xlab("County Category") +
             ylab("Percent of Counties with Correlation") +
             scale_y_continuous(labels = scales::percent) +
@@ -1421,7 +1705,8 @@ server <- function(input, output, session){
                  subtitle = paste0(ylab_short(), " vs. ", xlab_long_perc())
                  # ,caption = "Hover over any bar to see County Type statistics"
                  ) +
-            theme(panel.grid.major.y = element_blank(),
+            theme(text=element_text(family="calibri"),
+                  panel.grid.major.y = element_blank(),
                   axis.text.x = element_text(face="bold"),
                   axis.text.y = element_text(face="bold"),
                   legend.title = element_text(color="darkblue", face="bold", size=13, hjust=0),
@@ -1459,7 +1744,7 @@ server <- function(input, output, session){
     output$bi_analysis <- renderPlot({
         CO_COUNTY_BI_CLASS = CO_COUNTY_COVID_FILTER %>%
             mutate(., 
-                   demo_var = ntile(get(input$DemoData), 3),
+                   demo_var = ntile(get(yes_periods(input$DemoData)), 3),
                    covid_var = ntile(get(input$COVIDbuttons), 3),
                    bi_class = paste0(
                        as.numeric(demo_var), "-",
@@ -1506,52 +1791,53 @@ server <- function(input, output, session){
         
         
     })
-    output$bi_map_legend <- renderPlot({
-        CO_COUNTY_BI_CLASS = CO_COUNTY_COVID_FILTER %>%
-            mutate(., 
-                   demo_var = ntile(get(input$DemoData), 3),
-                   covid_var = ntile(get(input$COVIDbuttons), 3),
-                   bi_class = paste0(
-                       as.numeric(demo_var), "-",
-                       as.numeric(covid_var)
-                   )) %>% 
-            select(., COUNTY, demo_var, covid_var, bi_class)
-        CO_COUNTY_BI_CLASS$bi_class %<>% 
-            gsub("NA-1", NA, .) %>% 
-            gsub("NA-2", NA, .) %>% 
-            gsub("NA-3", NA, .) %>% 
-            gsub("1-NA", NA, .) %>% 
-            gsub("2-NA", NA, .) %>% 
-            gsub("3-NA", NA, .)
-        #TRYING TO make a Matrix
-        # bi_var_table = CO_COUNTY_BI_CLASS %>% 
-        #     group_by(bi_class) %>% 
-        #     summarise(counties = n())
-        # bi_matrix = matrix(bi_var_table$counties, nrow=3, ncol=3)
-        # bi_matrix = t(bi_matrix)
-        # bi_matrix = rotate(rotate(rotate(bi_matrix)))
-        # bi_colors = c('#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090',
-        # '#fdae61', '#f46d43', '#d73027')
-        # bi_colors_matrix = matrix(bi_colors, nrow=3, ncol=3)
-        # color2D.matplot(bi_matrix, axes=T, 
-        #                 xlab = paste0("Higher ", str_wrap(xlab_perc(),29), expression("" %->% "")),
-        #                 ylab = paste0("Higher ", ylab_short(),expression("" %->% "")),
-        #                 ), cellcolors = c([['#4575b4', '#74add1', '#abd9e9'], 
-        #                                   ['#e0f3f8', '#ffffbf', '#fee090'],
-        #                                   ['#fdae61', '#f46d43', '#d73027']])
+    # output$bi_map_legend <- renderPlot({
+    #     CO_COUNTY_BI_CLASS = CO_COUNTY_COVID_FILTER %>%
+    #         mutate(., 
+    #                demo_var = ntile(get(yes_periods(input$DemoData)), 3),
+    #                covid_var = ntile(get(input$COVIDbuttons), 3),
+    #                bi_class = paste0(
+    #                    as.numeric(demo_var), "-",
+    #                    as.numeric(covid_var)
+    #                )) %>% 
+    #         select(., COUNTY, demo_var, covid_var, bi_class)
+    #     CO_COUNTY_BI_CLASS$bi_class %<>% 
+    #         gsub("NA-1", NA, .) %>% 
+    #         gsub("NA-2", NA, .) %>% 
+    #         gsub("NA-3", NA, .) %>% 
+    #         gsub("1-NA", NA, .) %>% 
+    #         gsub("2-NA", NA, .) %>% 
+    #         gsub("3-NA", NA, .)
+    #     #TRYING TO make a Matrix
+    #     bi_var_table = CO_COUNTY_BI_CLASS %>%
+    #         group_by(bi_class) %>%
+    #         summarise(counties = n())
+    #     bi_matrix = matrix(bi_var_table$counties, nrow=3, ncol=3)
+    #     bi_matrix = t(bi_matrix)
+    #     bi_matrix = rotate(rotate(rotate(bi_matrix)))
+    #     bi_colors = c('#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090',
+    #     '#fdae61', '#f46d43', '#d73027')
+    #     bi_colors_matrix = matrix(bi_colors, nrow=3, ncol=3)
+    #     color2D.matplot(bi_matrix, axes=T,
+    #                     xlab = paste0("Higher ", str_wrap(xlab_perc(),29), expression("" %->% "")),
+    #                     ylab = paste0("Higher ", ylab_short(),expression("" %->% "")),
+    #                     cellcolors = c([['#4575b4', '#74add1', '#abd9e9'],
+    #                                       ['#e0f3f8', '#ffffbf', '#fee090'],
+    #                                       ['#fdae61', '#f46d43', '#d73027']])
+    #                     )
         
         
-        bi_df = as.data.frame(bi_matrix)
-        #### This has correct numbers. Now to just paste them...
-        legend2 = bi_legend(pal = "DkBlue",
-                            dim = 3,
-                            #xlab = paste0("Higher ", xlab_perc()),
-                            xlab = paste0("Higher ", str_wrap(xlab_perc(),29)),
-                            ylab = paste0("Higher ", ylab_short()),
-                            # xlab = "xlab",
-                            # ylab = "ylab",
-                            size = 18)
-        legend2
+        # bi_df = as.data.frame(bi_matrix)
+        # #### This has correct numbers. Now to just paste them...
+        # legend2 = bi_legend(pal = "DkBlue",
+        #                     dim = 3,
+        #                     #xlab = paste0("Higher ", xlab_perc()),
+        #                     xlab = paste0("Higher ", str_wrap(xlab_perc(),29)),
+        #                     ylab = paste0("Higher ", ylab_short()),
+        #                     # xlab = "xlab",
+        #                     # ylab = "ylab",
+        #                     size = 18)
+        # legend2
         # BiVarPlotMap = ggdraw() +
         #     draw_label(bi_df) +
         # #     draw_plot(map2, -0.09, 0, 1, 1) +
@@ -1570,7 +1856,7 @@ server <- function(input, output, session){
         #     draw_label(bi_var_table$counties[7], size=30, x=0.67, y=0.25) +
         #     draw_label(bi_var_table$counties[8], size=30, x=0.67, y=0.50) +
         #     draw_label(bi_var_table$counties[9], size=30, hjust=0.67, vjust=0.75) 
-    })
+    # })
     
     
     
@@ -1688,7 +1974,8 @@ server <- function(input, output, session){
             stat_smooth(method=lm, color="black", alpha=0.2) +
             ggtitle("Race/Ethnicity Outcomes by County") +
             labs(subtitle = paste0(ylab_short(), " vs. ", race_xlab_long_perc())) +
-            theme(plot.title =
+            theme(text=element_text(family="calibri"),
+                  plot.title =
                       element_text(face="bold", hjust=0.5, size=22),
                   plot.subtitle = element_text(hjust=0.5, color="darkblue", size=18),
                   legend.text = element_text(size=12, color="darkblue", face="bold"),
@@ -1706,6 +1993,7 @@ server <- function(input, output, session){
             ylab(ylab_perc())
         Facet_race
     })
+    
     output$indcounty = renderGirafe({
         # COVID19ALL_MERGE = COVID19ALL_MERGE %>% 
         #     filter(., 
@@ -1801,7 +2089,8 @@ server <- function(input, output, session){
                             " County Timeline:\nCOVID ", covid_lab_long()),
              y=covid_lab_perc(), 
              subtitle = "including Major Events in Colorado's COVID response") +
-            theme(legend.position = "bottom", 
+            theme(text=element_text(family="calibri"),
+                  legend.position = "bottom", 
                   legend.title = element_blank(),
                   legend.text = element_text(size=12, face="bold", color="darkblue"), 
                   plot.subtitle = element_text(hjust=0.5, color = "darkblue", 
@@ -1992,7 +2281,7 @@ server <- function(input, output, session){
             # fill=covid_var)) +
             #         scale_fill_manual_interactive(values=c('#e8e8e8', "#dfb0d6", "#be64ac")) +
             # scale_fill_brewer_interactive(palette = "Set1") +
-            labs(title = str_wrap(paste0("COVID ",covid_lab_long()), 26), 
+            labs(title = str_wrap(paste0("COVID ",covid_lab_long()), 32), 
                  fill=str_wrap(covid_lab_perc_no_avg(),8),
                  subtitle = "Hover over any county for additional information"
             ) +
@@ -2024,11 +2313,11 @@ server <- function(input, output, session){
                                          data_id = COUNTY, onclick = WIKI)
                                      ,color="black"
                                      ) +
-            theme(
-                legend.title = element_text(color="darkblue", face = "bold", size=13, hjust=1),
+            theme(text=element_text(family="calibri"),
+                legend.title = element_text(color="darkblue", face = "bold", size=13, hjust=0),
                 legend.position = "right",
                 legend.text = element_text(color="darkblue", face = "bold", size=11),
-                plot.title = element_text(hjust=0.5, size=17, vjust=-1),
+                plot.title = element_text(hjust=0.5, size=18, vjust=-1),
                 plot.subtitle = element_text(hjust=0.5, color = "darkblue", 
                                              face="italic", size=12, vjust=-1),
                 # axis.title.x = element_text(face="italic", size=6),
@@ -2036,7 +2325,7 @@ server <- function(input, output, session){
                 strip.text.x = element_text(face="bold"),
                 legend.background =
                     element_rect(fill="#F2F5F7", color="gray", size=1)
-                ,plot.margin=unit(c(-2.2,0,0,0),"cm") 
+                ,plot.margin=unit(c(-1.2,0,0,0),"cm")
             ) 
        
         girafe(ggobj = ind_map_out, 
@@ -2110,7 +2399,7 @@ server <- function(input, output, session){
                                    full_join(MaxDate, ind_table_graph, 
                                             by="COUNTY"), by="COUNTY")
         ind_table_join = ind_table_join %>% select(
-            COUNTY, Measure, Rank, Start.Date, Highest.Date = Max.Date, everything()
+            COUNTY, Measure, Rank, Start.Date, Highest.Point = Max.Date, everything()
         )
        
         datatable(ind_table_join, rownames = F, 
