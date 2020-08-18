@@ -163,7 +163,7 @@ ui <- dashboardPage(
                      icon=icon("folder-open")
              ,
              menuSubItem("Source code", icon = icon("file-code-o"), 
-                     href = "https://github.com/rstudio/shinydashboard/"),
+                     href = "https://github.com/datatodavid/CO_COVID"),
              menuSubItem("CDPHE CO COVID Data", icon = icon("list-alt"), 
                      href = "https://data-cdphe.opendata.arcgis.com/search?collection=Dataset&q=covid19&sort=name"),
              menuSubItem("CDPHE Community Data", icon = icon("list-alt"), 
