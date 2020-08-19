@@ -277,11 +277,11 @@ ui <- dashboardPage(
                                          0, 11000, value=c(20,11000), step=20),
                              sliderInput("medianrange", 
                                          "Median Income Range of County:", 
-                                         31000, 121000, value=c(31000,121000),
+                                         31000, 121000, value=c(31000,121000), pre="$",
                                          step=2000),
                              sliderInput("ruralrange", 
                                          "Rural Population % of County:", 
-                                         0, 100, value=c(0,100), step=1)
+                                         0, 100, value=c(0,100), step=1, post="%")
                             )
                         ),
                         column(width=7,box(status="primary",width = NULL,solidHeader = T, 
@@ -1136,9 +1136,27 @@ server <- function(input, output, session){
                    & Median.Household.Income <= max(input$medianrange)
                    & Perc.Rural >= min(input$ruralrange)
                    & Perc.Rural <= max(input$ruralrange)
-            ) %>%
-            
-            ggplot(., aes(x=get(yes_periods(input$DemoData)),
+            ) 
+        CorrelationTable = topcounties %>% 
+            select(., COUNTY, COVID.Tests.Per.100000, 
+                   COVID.Cases.Per.100000, COVID.Deaths.Per.100000, 
+                   COVID.Positive.Tests.Perc, COVID.Mortality.Perc, 
+                   yes_periods(input$DemoData)
+            ) %>% 
+            summarise(., Counties = n(), 
+                         Correlation = round(cor(get(input$COVIDbuttons),get(yes_periods(input$DemoData))),2)
+                     )
+        Correlation = CorrelationTable$Correlation
+        Counties = CorrelationTable$Counties
+        Significance = ifelse(Correlation>=0.2, "(Significant Positive Correlation)",
+                                                    ifelse((Correlation<0.2 & Correlation>=0.1), "(Weak Positive Correlation)",
+                                                           ifelse((Correlation<0.1 & Correlation>-0.1), "(No Meaningful Correlation)",
+                                                                 ifelse((Correlation>-0.2 & Correlation<=-0.1), "(Weak Negative Correlation)",
+                                                                         ifelse(Correlation<=-0.2, "(Significant Negative Correlation)",
+                                                                            "(No Correlation Available)")))))
+        
+        
+        topcountiesgg = ggplot(topcounties, aes(x=get(yes_periods(input$DemoData)),
                           y=reorder(COUNTY, get(yes_periods(input$DemoData))), 
                           fill=get(input$COVIDbuttons))) +
             geom_col() + 
@@ -1147,12 +1165,21 @@ server <- function(input, output, session){
             labs(x=xlab_perc(),
                  y="Colorado Counties", 
                  fill = str_wrap(ylab_perc(), 6.5),
-                 subtitle = paste0("Color Shading by ", ylab_short())
+                 subtitle = paste0("Color Shading by ", ylab_short()),
+                 caption = paste0("Correlation = ", Correlation, 
+                                  " ", Significance,
+                                  " for the ", Counties," Colorado Counties with\n",
+                                  formatC(min(input$covidrange), format="f", big.mark = ",", digits=0), "-", 
+                                  formatC(max(input$covidrange), format="f", big.mark = ",", digits=0), " COVID Cases, $",
+                                  formatC(min(input$medianrange), format="f", big.mark = ",", digits=0), "-$", 
+                                  formatC(max(input$medianrange), format="f", big.mark = ",", digits=0), " Median Income, ", " and ",
+                                  min(input$ruralrange), "-", max(input$ruralrange), "% Rural Population.")
             ) +
             theme(text=element_text(family="calibri"),
                   plot.title = element_text(hjust=0.5, face="bold", size=18),
                   plot.subtitle = element_text(hjust=0.5, face="bold", color="darkblue",
                                                size=14),
+                  plot.caption = element_text(face="bold", color="darkblue", hjust=0.5),
                   strip.text.y = element_text(face="bold"),
                   axis.title = element_text(face="bold", size=14),
                   axis.text.y =
@@ -1171,7 +1198,8 @@ server <- function(input, output, session){
                                                      sep="\n"),
                                      data_id = COUNTY))
         
-        girafe(ggobj = topcounties, options = list(
+        
+        girafe(ggobj = topcountiesgg, options = list(
             opts_hover(css = "opacity:0.8;"),
             opts_selection(type = "none")
         ))
@@ -1196,6 +1224,7 @@ server <- function(input, output, session){
             ) %>% 
             summarise(., Measure = xlab_long_perc(),
                       Counties = n(),
+                      Correlation = round(cor(get(input$COVIDbuttons),get(yes_periods(input$DemoData))),2),
                       Min = round(min(get(yes_periods(input$DemoData))),2),
                       Q1 = round(quantile(get(yes_periods(input$DemoData)), 0.25),2),
                       Median = round(median(get(yes_periods(input$DemoData))),2),
@@ -1225,6 +1254,7 @@ server <- function(input, output, session){
             ) %>% 
             summarise(., Measure = ylab_clean(),
                       Counties = n(),
+                      Correlation = round(cor(get(input$COVIDbuttons),get(yes_periods(input$DemoData))),2),
                       Min = round(min(get(input$COVIDbuttons)),2),
                       Q1 = round(quantile(get(input$COVIDbuttons), 0.25),2),
                       Median = round(median(get(input$COVIDbuttons)),2),
