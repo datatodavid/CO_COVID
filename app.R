@@ -405,6 +405,7 @@ server <- function(input, output, session){
     race_xlab_long_perc = reactive({long_perc(no_periods(input$RaceDemo))})
     
     covid_lab_perc = reactive({no_perc(per_parentheses(avg_parentheses(no_periods(input$COVIDselect))))})
+    covid_lab_rev_perc = reactive({no_perc(per_parentheses(avg_parentheses(rev_perc_mort(rev_perc_pos(no_periods(input$COVIDselect))))))})
     covid_lab_perc_no_avg = reactive({long_avg(per_parentheses(avg_parentheses(no_perc(no_periods(input$COVIDselect)))))})
     covid_lab_long = reactive({long_avg(per_parentheses(avg_parentheses(long_perc(no_periods(input$COVIDselect)))))})
     
@@ -515,7 +516,7 @@ server <- function(input, output, session){
             geom_line_interactive(size=1.5) +
             geom_point_interactive(
                 aes(tooltip = paste(paste(round(get(input$COVIDselect),1),
-                                          covid_lab_perc(), sep=" "),
+                                          covid_lab_rev_perc(), sep=" "),
                                     paste0("on ", format(Date, format = "%B %d"), 
                                            " for ", stri_trans_totitle(COUNTY)),
                                     sep="\n"),
