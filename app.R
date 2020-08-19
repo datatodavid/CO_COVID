@@ -1293,7 +1293,7 @@ server <- function(input, output, session){
                    color = guide_legend(override.aes = list(size = 1.5))
                    ) +
             theme(legend.title = element_text(size = 13, face="bold"),
-                  legend.text = element_text(size = 12),
+                  legend.text = element_text(size = 11),
                   text=element_text(family="calibri"))
         
         girafe(ggobj = cov_map, options = list(
@@ -1340,7 +1340,7 @@ server <- function(input, output, session){
                    color = guide_legend(override.aes = list(size = 1.5))
                    ) +
             theme(legend.title = element_text(size = 13, face="bold"),
-                   legend.text = element_text(size = 12),
+                   legend.text = element_text(size = 11),
                   text=element_text(family="calibri"))
         
         girafe(ggobj = demographic_map, options = list(
