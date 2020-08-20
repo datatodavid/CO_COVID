@@ -76,20 +76,20 @@ ui <- dashboardPage(
                         timeFormat="%B %d"
             ),
             
-            radioButtons(inputId = "yscale", label="Choose a Scale:",
-                         choices = c("Relative (Logarithmic)" = "log2", 
-                                     "Fixed (Linear)"="identity")),
-        
-            radioButtons(inputId = "state", label="Display State Data?",
-                         choices = c("Yes"="COLORADO",
-                                     "No" = "")),
-            
-            radioButtons(inputId = "mapmeasure",
-                         label = "Sort Heat Map by:",
-                         choices = c("Latest Value" = "Latest",
-                                     "Highest Value in Date Range" = "Maximum",
-                                     "Average Value in Date Range" = "Mean")
-                         ), 
+            # radioButtons(inputId = "yscale", label="Choose a Scale:",
+            #              choices = c("Relative (Logarithmic)" = "log2", 
+            #                          "Fixed (Linear)"="identity")),
+            # 
+            # radioButtons(inputId = "state", label="Display State Data?",
+            #              choices = c("Yes"="COLORADO",
+            #                          "No" = "")),
+            # 
+            # radioButtons(inputId = "mapmeasure",
+            #              label = "Sort Heat Map by:",
+            #              choices = c("Latest Value" = "Latest",
+            #                          "Highest Value in Date Range" = "Maximum",
+            #                          "Average Value in Date Range" = "Mean")
+            #              ), 
             br()
             ), 
             
@@ -175,6 +175,23 @@ ui <- dashboardPage(
                                 solidHeader = T,
                                 girafeOutput("ind_map"),
                                 "Gray displays when no data is available. Hospitalization data is only published on the state level.")
+                        ),
+                        fluidRow(
+                            box(title = "Choose a Scale:", solidHeader = T, status="warning",
+                                radioButtons(inputId = "yscale", label=NULL,
+                                              choices = c("Relative (Logarithmic)" = "log2", 
+                                                          "Fixed (Linear)"="identity")), width=3),
+                                 
+                            box(title="Display State Data?", solidHeader = T, status="warning",
+                                radioButtons(inputId = "state", label=NULL,
+                                              choices = c("Yes"="COLORADO",
+                                                          "No" = "")), width=3),
+                                 
+                            box(title = "Sort Heat Map by:", solidHeader = T, status="warning",
+                                 selectizeInput(inputId = "mapmeasure", label=NULL,
+                                              choices = c("Latest Value" = "Latest",
+                                                          "Highest Value in Date Range" = "Maximum",
+                                                          "Average Value in Date Range" = "Mean")), width=6)
                         ),
                         fluidRow(
                          box(title = "County vs. State COVID Summary Data", status="primary",
@@ -409,6 +426,7 @@ server <- function(input, output, session){
     covid_lab_perc_no_avg = reactive({long_avg(per_parentheses(avg_parentheses(no_perc(no_periods(input$COVIDselect)))))})
     covid_lab_long = reactive({long_avg(per_parentheses(avg_parentheses(long_perc(no_periods(input$COVIDselect)))))})
     
+    mapmeasurelab = reactive({long_map_latest(long_map_avg(long_map_max(input$mapmeasure)))})
 #################################  PAGES  ################################# 
     
 ################### County Dashboard ###################
@@ -525,6 +543,7 @@ server <- function(input, output, session){
             ) + 
             labs(title = paste0(stri_trans_totitle(countyname()), 
                                 " County Timeline:\nCOVID ", covid_lab_long()),
+                 x=paste0("Dates\n(", format(min(input$daterange),format="%B %d")," - ",format(max(input$daterange),format="%B %d"), ")"),
                  y=covid_lab_perc(), 
                  subtitle = "including Major Events in Colorado's COVID response") +
             theme(text=element_text(family="calibri"),
@@ -585,7 +604,8 @@ server <- function(input, output, session){
             scale_fill_gradient_interactive(low="#3399FF", high="red2") +
             labs(title = str_wrap(paste0("COVID ",covid_lab_long()), 32), 
                  fill=str_wrap(covid_lab_perc_no_avg(),8),
-                 subtitle = "Hover over any county for additional information"
+                 caption = "Hover over any county for additional information",
+                 subtitle = paste0("Sorted by ", mapmeasurelab())
             ) +
             bi_theme() + 
             coord_map("mercator") +
@@ -610,9 +630,11 @@ server <- function(input, output, session){
             ) +
             theme(text=element_text(family="calibri"),
                   plot.title = element_text(hjust=0.5, size=18, vjust=-1),
-                  plot.subtitle = element_text(hjust=0.5, color = "darkblue", 
+                  plot.caption = element_text(hjust=0.5, color = "darkblue", 
                                                face="italic", size=12, vjust=-1),
-                  strip.text.x = element_text(face="bold"),legend.title = element_text(color="darkblue", face = "bold", size=13, hjust=0),
+                  plot.subtitle = element_text(face="italic", size=15, color="darkblue", hjust=0.5, margin=margin(5,0,-5,0)),
+                  strip.text.x = element_text(face="botld"),
+                  legend.title = element_text(color="darkblue", face = "bold", size=13, hjust=0),
                   legend.position = "right",
                   legend.text = element_text(color="darkblue", face = "bold", size=11),
                   legend.background =

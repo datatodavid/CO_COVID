@@ -55,9 +55,19 @@ rev_perc_mort <- function(string_text) {
 rev_perc_pos <- function(string_text) {
   gsub("Positive Tests Perc", "% Positive Tests", string_text, fixed=T)
 }
-frontspace<- function(string_text) {
+frontspace <- function(string_text) {
   gsub("COVID", " COVID", string_text, fixed=T)
 }
+long_map_avg <- function(string_text) {
+  gsub("Mean", "Average Value in Date Range", string_text, fixed=T)
+}
+long_map_max <- function(string_text) {
+  gsub("Maximum", "Highest Value in Date Range", string_text, fixed=T)
+}
+long_map_latest <- function(string_text) {
+  gsub("Latest", "Latest Value", string_text, fixed=T)
+}
+
 
 # This function helps restore clicking attributes for sidebar that are lost when adding subMenu items. #
 convertMenuItem <- function(mi,tabName) {
