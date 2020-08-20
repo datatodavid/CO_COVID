@@ -508,6 +508,19 @@ server <- function(input, output, session){
     
     # County vs. State COVID Trend Analysis (Time Series) #
     output$indcounty <- renderGirafe({
+        ind_dates = COVID19ALL_MERGE %>% 
+            filter(., (COUNTY == input$single | COUNTY == input$state) 
+                   & !is.na(get(input$COVIDselect)) 
+                   & Date >= min(input$daterange)
+                   & Date <= max(input$daterange)
+                   ) %>% 
+            summarise(., 
+                      Min_Date_Range = min(Date),
+                      Max_Date_Range = max(Date)
+                      ) 
+        Min_Date = ind_dates$Min_Date_Range
+        Max_Date = ind_dates$Max_Date_Range
+        
         indcounties = COVID19ALL_MERGE %>% 
             filter(., COUNTY == input$single | COUNTY == input$state) %>% 
             ggplot(
@@ -543,7 +556,7 @@ server <- function(input, output, session){
             ) + 
             labs(title = paste0(stri_trans_totitle(countyname()), 
                                 " County Timeline:\nCOVID ", covid_lab_long()),
-                 x=paste0("Dates\n(", format(min(input$daterange),format="%B %d")," - ",format(max(input$daterange),format="%B %d"), ")"),
+                 x=paste0("Dates\n(", format(Min_Date, format="%B %d")," - ", format(Max_Date,format="%B %d"), ")"),
                  y=covid_lab_perc(), 
                  subtitle = "including Major Events in Colorado's COVID response") +
             theme(text=element_text(family="calibri"),
