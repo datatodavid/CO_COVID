@@ -7,6 +7,7 @@ library(tidyverse)
 library(magrittr)
 library(rsconnect)
 library(stringi)
+library(lubridate)
 
 
 #### Functions for Label Text Modification ####
@@ -65,7 +66,7 @@ long_map_max <- function(string_text) {
   gsub("Maximum", "Highest Value in Date Range", string_text, fixed=T)
 }
 long_map_latest <- function(string_text) {
-  gsub("Latest", "Latest Value", string_text, fixed=T)
+  gsub("Latest", "Most Recent Value", string_text, fixed=T)
 }
 
 
@@ -101,6 +102,9 @@ weekly <- function(x) {
 rotate <- function(x) {
   t(apply(x, 2, rev))
 }
+
+setwd("C:/Users/gottl/Dropbox/Data Science/NYCDSA/Projects/Project 1 Shiny App/CO_COVID")
+
 
 #######################  DEMOGRAPHIC DATA  #######################  
 
@@ -792,11 +796,11 @@ COVID19CountySummarise = COVID19County %>%
                100*(COVID_Num_Days_Since_First_Case/
                       (as.numeric(Sys.Date()) - 
                   as.numeric(as.Date('2020-03-17')))),
-             COVID_Cases_Max = max(Colorado.Case.Counts.by.County, na.rm = TRUE),
+             COVID_Cases_Max = max(Cases.of.COVID.19.in.Colorado.by.County, na.rm = TRUE),
              COVID_Max_Testing_Rates_Per_100000 =
-               max(Testing.Rates.Per.100000, na.rm = TRUE),
+               max(Total.COVID.19.Testing.Rate.per.100.000.People.in.Colorado.by.County, na.rm = TRUE),
              COVID_Mean_Testing_Rates_Per_100000 =
-               mean(Testing.Rates.Per.100000, na.rm = TRUE),
+               mean(Total.COVID.19.Testing.Rate.per.100.000.People.in.Colorado.by.County, na.rm = TRUE),
              COVID_Mean_Case_Rates_Per_100000 =
                mean(Case.Rates.Per.100000, na.rm = TRUE),
              COVID_Mean_Cases_per_Day =
@@ -847,20 +851,20 @@ COVID19State_MERGE = COVID19StateData %>%
          State.Hospitalizations.Per.100000)
 
 COVID19County_MERGE = COVID19County %>% 
-  mutate(., COVID.Deaths.Per.100000 = 100000*Number.of.Deaths.by.County/POP,
+  mutate(., COVID.Deaths.Per.100000 = 100000*Deaths.Among.COVID.19.Cases.in.Colorado.by.County/POP,
          COVID.Positive.Tests.Perc = ifelse(Total.COVID.19.Tests.Performed.in.Colorado.by.County!=0,
-                                        100*Colorado.Case.Counts.by.County/
+                                        100*Cases.of.COVID.19.in.Colorado.by.County/
            Total.COVID.19.Tests.Performed.in.Colorado.by.County, NA),
-         COVID.Mortality.Perc = ifelse(Colorado.Case.Counts.by.County!=0,
-                                       100*Number.of.Deaths.by.County/Colorado.Case.Counts.by.County,
+         COVID.Mortality.Perc = ifelse(Cases.of.COVID.19.in.Colorado.by.County!=0,
+                                       100*Deaths.Among.COVID.19.Cases.in.Colorado.by.County/Cases.of.COVID.19.in.Colorado.by.County,
                                        NA),
          Total.State.Hospitalizations = NA, State.Hospitalizations.Per.100000 = NA) %>% 
   select(., COUNTY, Date, POP, 
          Total.Tests = Total.COVID.19.Tests.Performed.in.Colorado.by.County, 
-         Total.Cases = Colorado.Case.Counts.by.County, 
-         Total.Deaths = Number.of.Deaths.by.County, 
+         Total.Cases = Cases.of.COVID.19.in.Colorado.by.County, 
+         Total.Deaths = Deaths.Among.COVID.19.Cases.in.Colorado.by.County, 
          Total.State.Hospitalizations,
-         COVID.Tests.Per.100000 = Testing.Rates.Per.100000, 
+         COVID.Tests.Per.100000 = Total.COVID.19.Testing.Rate.per.100.000.People.in.Colorado.by.County, 
          COVID.Cases.Per.100000 = Case.Rates.Per.100000, 
          COVID.Deaths.Per.100000, 
          COVID.Positive.Tests.Perc, 
@@ -1333,19 +1337,19 @@ CO_COUNTY_BAL_SLIDERS = CO_COUNTY_COVID_FILTER %>%
                                                         ifelse(Perc.Rural==100,4,NA))))) %>% 
                            select(., COUNTY, COVID.Groups, Income.Groups, Rural.Groups)
                 
-            CO_COUNTY_BAL_SLIDERS$COVID.Groups %<>%
-                gsub(1, "Low COVID", .) %>% 
-                gsub(2, "Med COVID", .) %>% 
-                gsub(3, "High COVID", .)
-            CO_COUNTY_BAL_SLIDERS$Income.Groups %<>%
-                gsub(1, "Low Income", .) %>% 
-                gsub(2, "Med Income", .) %>% 
-                gsub(3, "High Income", .)
-            CO_COUNTY_BAL_SLIDERS$Rural.Groups %<>%
-                gsub(1, "Urban/Suburban", .) %>% 
-                gsub(2, "Somewhat Rural", .) %>% 
-                gsub(3, "Mostly Rural", .) %>% 
-                gsub(4, "100% Rural", .)
+CO_COUNTY_BAL_SLIDERS$COVID.Groups %<>%
+    gsub(1, "Low COVID", .) %>% 
+    gsub(2, "Med COVID", .) %>% 
+    gsub(3, "High COVID", .)
+CO_COUNTY_BAL_SLIDERS$Income.Groups %<>%
+    gsub(1, "Low Income", .) %>% 
+    gsub(2, "Med Income", .) %>% 
+    gsub(3, "High Income", .)
+CO_COUNTY_BAL_SLIDERS$Rural.Groups %<>%
+    gsub(1, "Urban/Suburban", .) %>% 
+    gsub(2, "Somewhat Rural", .) %>% 
+    gsub(3, "Mostly Rural", .) %>% 
+    gsub(4, "100% Rural", .)
             
 CO_MAP_COVID_BAL = left_join(CO_MAP_COVID, CO_COUNTY_BAL_SLIDERS, by="COUNTY") 
 
@@ -1364,6 +1368,12 @@ CO_MAP_COVID$WIKI <- sprintf("window.open(\"%s%s\")",
                              "http://en.wikipedia.org/wiki/", paste0(as.character(to_underscore(stri_trans_totitle(CO_MAP_COVID$COUNTY))), "_County,_Colorado"))
 
 
+
+
+
+
+
+#####################################################################
 #### ******OPTIONAL****** ADDITIONAL BREAKDOWNS BY FILTER ####
 #colnames(CO_COUNTY_COVID_FILTER)
 # CO_MORTALITY_MORBIDITY_FULL = CO_COUNTY_COVID_FILTER %>% select(., COUNTY, 

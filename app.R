@@ -189,7 +189,7 @@ ui <- dashboardPage(
                                  
                             box(title = "Sort Heat Map by:", solidHeader = T, status="warning",
                                  selectizeInput(inputId = "mapmeasure", label=NULL,
-                                              choices = c("Latest Value" = "Latest",
+                                              choices = c("Most Recent Value" = "Latest",
                                                           "Highest Value in Date Range" = "Maximum",
                                                           "Average Value in Date Range" = "Mean")), width=6)
                         ),
@@ -468,12 +468,12 @@ server <- function(input, output, session){
         twowk = COVID19DATA %>%
             select(COUNTY, Date, New.Cases.Last.Week) %>%
             filter(COUNTY == input$single & 
-                       Date == max(Date)-9)
+                       Date == max(Date)-7)
         
         lastwk = COVID19DATA %>%
             select(COUNTY, Date, New.Cases.Last.Week) %>%
             filter(COUNTY == input$single & 
-                       Date == max(Date)-2)
+                       Date == max(Date))
         
         twowkcase = twowk$New.Cases.Last.Week
         lastwkcase = lastwk$New.Cases.Last.Week
@@ -485,7 +485,7 @@ server <- function(input, output, session){
             ifelse(difference >=0,
                    paste0(absdiff, "% More"), 
                    paste0(absdiff, "% Fewer")),
-            "Cases since last week", 
+            paste0("Cases this week in ", stri_trans_totitle(countyname())), 
             color = "red"
         )
     })
@@ -528,22 +528,22 @@ server <- function(input, output, session){
             ) +
             geom_vline_interactive(xintercept = as.Date("2020-03-25"), aes(
                 tooltip="March 25th - Shutdown Announced\n(Stay-at-Home Order)"), 
-                color="#CC5500", linetype="dashed", size=1) +
+                color="#CC5500", linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-04-27"),aes(
                 tooltip="April 27th - Phased Reopening Begins\n(Safer-at-Home Order)"),
-                color="orange",linetype="dashed", size=1) +
+                color="orange",linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-05-27"),aes(
                 tooltip="May 27th - Phased Reopening Continues\nIn-Person Dining / Summer Camps Reopen"),
-                color="yellow3",linetype="dashed", size=1) +
+                color="yellow3",linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-06-18"),aes(
                 tooltip="June 18th - Bars Reopen at 50% Capacity\n(Protect-Our-Neighbors Order)"),
-                color="green",linetype="dashed", size=1) +
+                color="green",linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-06-30"),aes(
                 tooltip="June 30th - Bars Reclosed"),
-                color="yellow3",linetype="dashed", size=1) +
+                color="yellow3",linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-07-16"), aes(
                 tooltip="July 16th - Governor Polis issues\nStatewide Mask Order"),
-                color="orange",linetype="dashed", size=1) +
+                color="orange",linetype="longdash", size=1) +
             geom_line_interactive(size=1.5) +
             geom_point_interactive(
                 aes(tooltip = paste(paste(round(get(input$COVIDselect),1),
@@ -556,7 +556,7 @@ server <- function(input, output, session){
             ) + 
             labs(title = paste0(stri_trans_totitle(countyname()), 
                                 " County Timeline:\nCOVID ", covid_lab_long()),
-                 x=paste0("Dates\n(", format(Min_Date, format="%B %d")," - ", format(Max_Date,format="%B %d"), ")"),
+                 x=paste0("Date Range\n(", format(Min_Date, format="%B %d")," - ", format(Max_Date,format="%B %d"), ")"),
                  y=covid_lab_perc(), 
                  subtitle = "including Major Events in Colorado's COVID response") +
             theme(text=element_text(family="calibri"),
@@ -571,10 +571,12 @@ server <- function(input, output, session){
                   strip.text.x = element_text(face="bold"),
                   legend.background =
                       element_rect(fill="#F2F5F7", color="gray", size=1)) +
-            scale_x_date(date_labels = "%B %d"
-            ) +
-            scale_y_continuous(trans = input$yscale) +
-            xlim(min(input$daterange),max(input$daterange)) 
+            scale_y_continuous(trans = input$yscale)  
+        
+        indcounties = indcounties +
+            # xlim(min(input$daterange),max(input$daterange)) + 
+            scale_x_date(date_labels = "%b %d", date_minor_breaks = "1 day", 
+                         limits = c(min(input$daterange),max(input$daterange)))
         
         options(scipen=999)
         girafe(ggobj = indcounties, options = list(
@@ -592,6 +594,8 @@ server <- function(input, output, session){
             filter(., Date == max(Date)) %>%
             select(COUNTY, Max.Date = Date, Latest = input$COVIDselect)
         
+        Max_Date = ind_map_fill$Max.Date[1]
+            
         ind_map_hover = COVID19ALL_MERGE %>% 
             filter(., 
                    !is.na(get(input$COVIDselect)) 
@@ -604,8 +608,16 @@ server <- function(input, output, session){
                       Mean = round(mean(get(input$COVIDselect)),2),
                       Maximum = round(max(get(input$COVIDselect)),2),
                       Min_Date_Range = min(Date),
-                      Max_Date_Range = max(Date)) 
+                      Max_Date_Range = max(Date))
         
+        ind_map_assign = ind_map_hover %>% 
+            summarise(.,
+                      Min_Min_Date = min(Min_Date_Range),
+                      Max_Max_Date = max(Max_Date_Range)) 
+        
+        Min_Date_State = ind_map_assign$Min_Min_Date[1]
+        Max_Date_State = ind_map_assign$Max_Max_Date[1]
+
         CO_MAP_IND = left_join(CO_MAP_COVID_BAL, full_join(ind_map_fill, ind_map_hover,
                                                            by="COUNTY"), by="COUNTY")
         
@@ -616,9 +628,14 @@ server <- function(input, output, session){
                              )) +
             scale_fill_gradient_interactive(low="#3399FF", high="red2") +
             labs(title = str_wrap(paste0("COVID ",covid_lab_long()), 32), 
+                 subtitle = paste0("Sorted by ", mapmeasurelab()),
                  fill=str_wrap(covid_lab_perc_no_avg(),8),
-                 caption = "Hover over any county for additional information",
-                 subtitle = paste0("Sorted by ", mapmeasurelab())
+                 # caption = "Hover over any county for additional information",
+                 caption = paste0("Most Recent Value: ",
+                                  format(Max_Date, format = "%B %d"),  ". Date Range: ",
+                                  format(Min_Date_State, format = "%B %d"), " - ",
+                                  format(Max_Date_State, format = "%B %d"), ".")
+                 
             ) +
             bi_theme() + 
             coord_map("mercator") +
@@ -630,13 +647,13 @@ server <- function(input, output, session){
                                                           formatC(Median.Household.Income, format="f", big.mark = ",", digits=0), 
                                                           "  --  ",
                                                           Perc.Rural, "% Rural"),
+                                                   paste0("Most Recent Value on ",
+                                                          format(Max.Date, format = "%B %d"), ": ",
+                                                          round(Latest,2)),
                                                    paste0("Between ", format(Min_Date_Range, format = "%B %d"), " & ",
                                                           format(Max_Date_Range, format = "%B %d"), ":"),
                                                    paste0("Highest ", covid_lab_perc_no_avg(), ": ", Maximum),
                                                    paste0("Average ", covid_lab_perc_no_avg(), ": ", Mean),
-                                                   paste0("Latest Value on ",
-                                                          format(Max.Date, format = "%B %d"), ": ",
-                                                          round(Latest,2)),
                                                    sep="\n"),
                                          data_id = COUNTY, onclick = WIKI)
                                      ,color="black"
@@ -644,7 +661,7 @@ server <- function(input, output, session){
             theme(text=element_text(family="calibri"),
                   plot.title = element_text(hjust=0.5, size=18, vjust=-1),
                   plot.caption = element_text(hjust=0.5, color = "darkblue", 
-                                               face="italic", size=12, vjust=-1),
+                                               face="bold", size=12, vjust=-1),
                   plot.subtitle = element_text(face="italic", size=15, color="darkblue", hjust=0.5, margin=margin(5,0,-5,0)),
                   strip.text.x = element_text(face="botld"),
                   legend.title = element_text(color="darkblue", face = "bold", size=13, hjust=0),

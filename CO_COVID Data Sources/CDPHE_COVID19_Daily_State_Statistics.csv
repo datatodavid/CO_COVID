@@ -155,8 +155,19 @@ Colorado,State Data,08/16/2020,53176,631008,873051,1896,1768,5694287,933.85,6735
 Colorado,State Data,08/17/2020,53370,636081,881252,1896,1778,5694287,937.26,6739,63,545,154
 Colorado,State Data,08/18/2020,53631,640250,887859,1899,1788,5694287,941.84,6781,63,552,155
 Colorado,State Data,08/19/2020,53901,645170,895207,1900,1800,5694287,946.58,6784,63,561,156
-Note,Data is updated daily by about 4 p.m. and includes cases reported through the previous day.,,,,,,,,,,,,157
-Note,The number of cases includes people who have had a test that indicated they were positive for COVID-19. The number of cases also includes epidemiologically-linked cases -- or cases where public health epidemiologists have determined that infection is highly likely because a person exhibited symptoms and had close contact with someone who tested positive. The number of epidemiologically-linked cases represents a very small portion of the reported cases.,,,,,,,,,,,,158
-Note,Total people tested may not include all negative results. Testing data excludes serology and only counts PCR.,,,,,,,,,,,,159
-Note,A person is counted once in the number of People Tested. A person is counted once each day they are tested in the number of Test Encounters.,,,,,,,,,,,,160
-Note,Deaths due to COVID-19: https://www.cdc.gov/nchs/nvss/vsrr/covid19/index.htm (Table 2),,,,,,,,,,,,161
+Colorado,State Data,08/20/2020,54230,651250,906693,1903,1815,5694287,952.36,6797,63,566,157
+Colorado,State Data,08/21/2020,54586,657852,918926,1910,1815,5763976,947.02,6808,63,567,158
+Colorado,State Data,08/22/2020,54883,663781,930152,1918,1815,5763976,952.17,6831,63,570,159
+Colorado,State Data,08/23/2020,55143,668994,938596,1918,1815,5763976,956.68,6841,63,571,160
+Colorado,State Data,08/24/2020,55341,673913,947645,1919,1824,5763976,960.12,6845,63,572,161
+Colorado,State Data,08/25/2020,55800,678335,955641,1926,1826,5763976,968.08,6894,63,581,162
+Colorado,State Data,08/26/2020,55993,682339,962754,1927,1835,5763976,971.43,6902,63,590,163
+Colorado,State Data,08/27/2020,56343,687530,972990,1931,1835,5763976,977.5,6928,63,594,164
+Colorado,State Data,08/28/2020,56773,695569,985622,1937,1843,5763976,984.96,6945,63,600,165
+Colorado,State Data,08/29/2020,57041,701377,994951,1944,1843,5763976,989.61,6993,63,602,166
+Colorado,State Data,08/30/2020,57223,706067,1002802,1944,1843,5763976,992.77,7010,63,604,167
+Note,Data is updated daily by about 4 p.m. and includes cases reported through the previous day.,,,,,,,,,,,,168
+Note,The number of cases includes people who have had a test that indicated they were positive for COVID-19. The number of cases also includes epidemiologically-linked cases -- or cases where public health epidemiologists have determined that infection is highly likely because a person exhibited symptoms and had close contact with someone who tested positive. The number of epidemiologically-linked cases represents a very small portion of the reported cases.,,,,,,,,,,,,169
+Note,Total people tested may not include all negative results. Testing data excludes serology and only counts PCR.,,,,,,,,,,,,170
+Note,A person is counted once in the number of People Tested. A person is counted once each day they are tested in the number of Test Encounters.,,,,,,,,,,,,171
+Note,Deaths due to COVID-19: https://www.cdc.gov/nchs/nvss/vsrr/covid19/index.htm (Table 2),,,,,,,,,,,,172
