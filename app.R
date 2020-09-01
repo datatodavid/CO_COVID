@@ -291,7 +291,7 @@ ui <- dashboardPage(
                              # "Selecting these will filter map & data output for this page only",
                              sliderInput("covidrange", 
                                          "Total COVID Cases in County:", 
-                                         0, 12000, value=c(20,12000), step=20),
+                                         0, denver_cases, value=c(20,denver_cases), step=20),
                              sliderInput("medianrange", 
                                          "Median Income Range of County:", 
                                          31000, 121000, value=c(31000,121000), pre="$",

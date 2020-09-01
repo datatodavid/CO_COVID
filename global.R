@@ -69,7 +69,6 @@ long_map_latest <- function(string_text) {
   gsub("Latest", "Most Recent Value", string_text, fixed=T)
 }
 
-
 # This function helps restore clicking attributes for sidebar that are lost when adding subMenu items. #
 convertMenuItem <- function(mi,tabName) {
   mi$children[[1]]$attribs['data-toggle']="tab"
@@ -104,6 +103,13 @@ rotate <- function(x) {
 }
 
 setwd("C:/Users/gottl/Dropbox/Data Science/NYCDSA/Projects/Project 1 Shiny App/CO_COVID")
+
+
+
+
+###### SKIP TO COVID SECTION FOR DAILY REFRESH ######
+
+
 
 
 #######################  DEMOGRAPHIC DATA  #######################  
@@ -704,9 +710,10 @@ Perc.100000.Total.Health.Facilities = 100000*Total.Health.Facilities/Population.
 
 
 ######################## COVID ##############################
-####  Daily Data refreshes start here ####
+#######  Daily Data refreshes start here #######
 
 ## COVID DATASET #1 - COUNTY LEVEL OPEN REPOSITORY ##
+download.file("https://opendata.arcgis.com/datasets/1456d8d43486449292e5784dcd9ce4a7_0.csv", "CDPHE_COVID19_County-Level_Open_Data_Repository.csv")
 COVID19County = read.csv("CDPHE_COVID19_County-Level_Open_Data_Repository.csv", stringsAsFactors = F, header=T)
 
 COVID19County$Metric %<>%  
@@ -753,6 +760,7 @@ COVID19County$Date =
 
 
 ## COVID DATASET #2 - Positive Cases and Rates of Infection by County ##
+download.file("https://opendata.arcgis.com/datasets/222c9d85e93540dba523939cfb718d76_0.csv?outSR=%7B%22latestWkid%22%3A4326%2C%22wkid%22%3A4326%7D","Colorado_COVID-19_Positive_Cases_and_Rates_of_Infection_by_County_of_Identification.csv")
 COVID19Positive = read.csv("Colorado_COVID-19_Positive_Cases_and_Rates_of_Infection_by_County_of_Identification.csv", header=T, stringsAsFactors = F)
 
 names(COVID19Positive) %<>% gsub("__", "_", ., fixed=T) 
@@ -830,6 +838,7 @@ COVID19CountyANALYSIS = COVID19CountyANALYSIS %>%
 
 
 #### COVID DATASET #3 -- STATE & COUNTY DAILY DATA  ####
+download.file("https://opendata.arcgis.com/datasets/bd4ee19bc7fc4288a20db8d5a7bd2be2_0.csv","CDPHE_COVID19_Daily_State_Statistics.csv")
 COVID19StateData = read.csv("CDPHE_COVID19_Daily_State_Statistics.csv", header=T, stringsAsFactors = F)
 
 COVID19StateData$Date = as.Date(COVID19StateData$Date, format="%m/%d/%Y")
@@ -1367,8 +1376,13 @@ CO_MAP_COVID_BAL$WIKI <- sprintf("window.open(\"%s%s\")",
 CO_MAP_COVID$WIKI <- sprintf("window.open(\"%s%s\")",
                              "http://en.wikipedia.org/wiki/", paste0(as.character(to_underscore(stri_trans_totitle(CO_MAP_COVID$COUNTY))), "_County,_Colorado"))
 
+denver_cases = COVID19ALL_MERGE %>% 
+  filter(COUNTY == "DENVER") %>% 
+  summarise(max(Total.Cases))
+denver_cases = as.numeric(denver_cases)
 
 
+save.image("./COVID_single_file/.RData")
 
 
 
