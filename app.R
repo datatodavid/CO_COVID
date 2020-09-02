@@ -294,7 +294,7 @@ ui <- dashboardPage(
                                          0, denver_cases, value=c(20,denver_cases), step=20),
                              sliderInput("medianrange", 
                                          "Median Income Range of County:", 
-                                         31000, 121000, value=c(31000,121000), pre="$",
+                                         min_income, max_income, value=c(min_income,max_income), pre="$",
                                          step=2000),
                              sliderInput("ruralrange", 
                                          "Rural Population % of County:", 

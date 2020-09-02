@@ -1381,6 +1381,13 @@ denver_cases = COVID19ALL_MERGE %>%
   summarise(max(Total.Cases))
 denver_cases = as.numeric(denver_cases)
 
+min_income = CO_COUNTY_COVID_FILTER %>% 
+  summarise(min(Median.Household.Income))
+min_income = as.numeric(min_income)
+
+max_income = CO_COUNTY_COVID_FILTER %>% 
+  summarise(max(Median.Household.Income))
+max_income = as.numeric(max_income)
 
 save.image("./COVID_single_file/.RData")
 
