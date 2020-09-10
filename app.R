@@ -73,7 +73,7 @@ ui <- dashboardPage(
                         min = as.Date("2020-03-17"), 
                         max = as.Date(Sys.Date()), 
                         value = c(as.Date("2020-03-17"), as.Date(Sys.Date())),
-                        timeFormat="%B %d"
+                        timeFormat="%b %d"
             ),
             
             # radioButtons(inputId = "yscale", label="Choose a Scale:",
@@ -544,6 +544,9 @@ server <- function(input, output, session){
             geom_vline_interactive(xintercept=as.Date("2020-07-16"), aes(
                 tooltip="July 16th - Governor Polis issues\nStatewide Mask Order"),
                 color="orange",linetype="longdash", size=1) +
+            geom_vline_interactive(xintercept=as.Date("2020-08-17"),aes(
+                tooltip="August 17th - School Year Starts for most of CO\n(Mix of In Person / Hybrid / Online Learning)"),
+                color="green",linetype="longdash", size=1) +
             geom_line_interactive(size=1.5) +
             geom_point_interactive(
                 aes(tooltip = paste(paste(round(get(input$COVIDselect),1),
@@ -655,13 +658,15 @@ server <- function(input, output, session){
                                                    paste0("Highest ", covid_lab_perc_no_avg(), ": ", Maximum),
                                                    paste0("Average ", covid_lab_perc_no_avg(), ": ", Mean),
                                                    sep="\n"),
-                                         data_id = COUNTY, onclick = WIKI)
+                                         data_id = COUNTY
+                                         # , onclick = WIKI
+                                         )
                                      ,color="black"
             ) +
             theme(text=element_text(family="calibri"),
                   plot.title = element_text(hjust=0.5, size=18, vjust=-1),
                   plot.caption = element_text(hjust=0.5, color = "darkblue", 
-                                               face="bold", size=12, vjust=-1),
+                                               face="bold", size=11, vjust=-1),
                   plot.subtitle = element_text(face="italic", size=15, color="darkblue", hjust=0.5, margin=margin(5,0,-5,0)),
                   strip.text.x = element_text(face="botld"),
                   legend.title = element_text(color="darkblue", face = "bold", size=13, hjust=0),
