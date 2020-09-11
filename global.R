@@ -53,9 +53,16 @@ per_parentheses <- function(string_text) {
 rev_perc_mort <- function(string_text) {
   gsub("Mortality Perc", "% Mortality", string_text, fixed=T)
 }
+rev_perc_mort_co <- function(string_text) {
+  gsub("COVID Mortality Perc", "% COVID Mortality", string_text, fixed=T)
+}
 rev_perc_pos <- function(string_text) {
   gsub("Positive Tests Perc", "% Positive Tests", string_text, fixed=T)
 }
+rev_perc_pos_co <- function(string_text) {
+  gsub("COVID Positive Tests Perc", "% COVID Positive Tests", string_text, fixed=T)
+}
+
 frontspace <- function(string_text) {
   gsub("COVID", " COVID", string_text, fixed=T)
 }

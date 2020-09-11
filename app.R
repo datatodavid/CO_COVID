@@ -201,9 +201,9 @@ ui <- dashboardPage(
                 tabPanel("Colorado COVID Dataset Explorer",
                          box(title = "Complete & Cleaned Colorado COVID Dataset by County",status="primary",
                              solidHeader = T, 
-                             "Click on the boxes below the Column names to filter results by column.",
+                             "Click on the boxes below the column Category names to filter results by Category.",
                              br(),
-                             "Export either all returned data or a selection using the buttons below.",
+                             "Export selected data using the buttons below.",
                              dataTableOutput("ind_data"), width=12))
             )
         ),
@@ -239,7 +239,7 @@ ui <- dashboardPage(
                          ),
                          
                          box(title = "Selected Colorado Demographic Data by County", status="primary",
-                             solidHeader = T, "Export either all returned data or a selection using the buttons below. Click on the boxes below the Column names to filter results by column.",
+                             solidHeader = T, "Export selected data using the buttons below. Click on the boxes below the Column names to filter results by column.",
                              dataTableOutput("corr_data"), width=12)
                          ) 
                ),
@@ -406,8 +406,9 @@ server <- function(input, output, session){
     
     ylab_clean = reactive({per_parentheses(no_periods(input$COVIDbuttons))})
     ylab_perc = reactive({per_parentheses(no_perc(no_periods(input$COVIDbuttons)))})
+    ylab_perc_flip = reactive({per_parentheses(rev_perc_pos_co(rev_perc_mort_co(no_periods(input$COVIDbuttons))))})
     ylab_short = reactive({word(no_periods(input$COVIDbuttons), 1,2, sep=" ")})
-    ylab_frontspace = reactive({per_parentheses(rev_perc(frontspace(no_periods(input$COVIDbuttons))))})
+    ylab_frontspace = reactive({per_parentheses(rev_perc_pos(rev_perc_mort(frontspace(no_periods(input$COVIDbuttons)))))})
     ylab_long_perc = reactive({per_parentheses(long_perc(no_periods(input$COVIDbuttons)))})
     
     countyname = reactive({input$single})
@@ -485,7 +486,7 @@ server <- function(input, output, session){
             ifelse(difference >=0,
                    paste0(absdiff, "% More"), 
                    paste0(absdiff, "% Fewer")),
-            paste0("Cases this week in ", stri_trans_totitle(countyname())), 
+            paste0("cases this week in ", stri_trans_totitle(countyname())), 
             color = "red"
         )
     })
@@ -501,7 +502,7 @@ server <- function(input, output, session){
         Pos = RankCOVID$Positive.Tests.Perc
         
         valueBox(
-            paste0("#",Rank," (", round(Pos,1), "%)"), "of 64 in Positive Tests %",
+            paste0("#",Rank," (", round(Pos,1), "%)"), "of 64 in CO Positive Tests %",
             color = "purple"
         )
     })
@@ -1251,7 +1252,7 @@ server <- function(input, output, session){
             geom_col_interactive(stat="identity", 
                                  aes(tooltip = paste(paste0(COUNTY, " COUNTY"),
                                                      (paste(round(get(yes_periods(input$DemoData)),1), xlab_perc(), sep=" ")),
-                                                     (paste(round(get(input$COVIDbuttons),1), ylab_perc(), sep=" ")),
+                                                     (paste(round(get(input$COVIDbuttons),1), ylab_perc_flip(), sep=" ")),
                                                      sep="\n"),
                                      data_id = COUNTY))
         
@@ -1358,7 +1359,7 @@ server <- function(input, output, session){
                              group=group,
                              fill=get(input$COVIDbuttons))) +
             scale_fill_gradient_interactive(low='#e8e8e8', high= "#be64ac") +
-            labs(subtitle = str_wrap(ylab_perc(),28),
+            labs(subtitle = str_wrap(ylab_long_perc(),28),
                  fill = str_wrap(ylab_perc(), 10)
                  ) +
             theme(
@@ -1372,7 +1373,7 @@ server <- function(input, output, session){
             xlab(NULL) + ylab(NULL) +
             geom_polygon_interactive(aes(tooltip = 
                                              paste(paste0(COUNTY, " COUNTY"),
-                                                   paste(formatC(get(input$COVIDbuttons), format="f", big.mark = ",", digits=1), ylab_perc(), covid_var, sep=" "), 
+                                                   paste(formatC(get(input$COVIDbuttons), format="f", big.mark = ",", digits=1), ylab_perc_flip(), covid_var, sep=" "), 
                                                    sep="\n"),
                                          data_id = COUNTY, onclick = WIKI),color="black")
         
@@ -1501,9 +1502,9 @@ server <- function(input, output, session){
                                              paste(paste0(COUNTY, " COUNTY"),
                                                    paste(round(get(yes_periods(input$DemoData)),1), xlab_perc(), 
                                                          paste0("(",demo_var,")"), sep=" "), 
-                                                   paste(formatC(get(input$COVIDbuttons), format="f", big.mark = ",", digits=1), ylab_frontspace(), 
-                                                         paste0(" (",covid_var,") "),
-                                                         sep=""), sep="\n"),
+                                                   paste(formatC(get(input$COVIDbuttons), format="f", big.mark = ",", digits=1), ylab_perc_flip(), 
+                                                         paste0(" (",covid_var,")"),
+                                                         sep=" "), sep="\n"),
                                          data_id = COUNTY, onclick = WIKI
                                          ),
                                      color="black")
