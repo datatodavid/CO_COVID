@@ -1,2 +1,5 @@
 # CO_COVID
-Colorado CoVID testing, infection rate, and death rate by County against 300+ demographic measures to investigate potential correlations.
+This website serves 2 functions:
+1) Acts as an advanced dashboard for over 15 Colorado COVID metrics and allows county vs. state trend analysis
+2) Compares Colorado's COVID testing rate, case rate, death rate, positive test percentage, and mortality percentage by County against 100 demographic measures to investigate potential correlations.
+

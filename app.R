@@ -128,7 +128,7 @@ ui <- dashboardPage(
                                            "CO_PRIOR_MEDICAL",
                                        "Summary Scores" =
                                            "CO_SUMMARY_SCORES"),
-                           selected = "CO_HEALTHCARE_ACCESS"),
+                           selected = "CO_DEMOGRAPHICS"),
                 
                 selectizeInput(inputId = "DemoData",
                            label = "Demographic Measure:",
@@ -245,33 +245,35 @@ ui <- dashboardPage(
                ),
                tabPanel("Filter Group Explorer", 
                          fluidRow(
-                             # box(status="primary",
-                             #     "This page is meant to explore Colorado Counties by important groupings.", br(),
-                             #     "Select a COVID Measure and Demographic Measure on the left sidebar to update the Table and Scatterplot.", br(),
-                             #     "Then, choose a Group in the orange box to the right.", br(),
-                             #     "Hover over any bars, points, or states on this page to see more information.",
-                             #     br(), br(),
-                             #     ggiraphOutput("bi_cor"),
-                             #     solidHeader = T, title="Breakdown of Colorado Counties by Group",
-                             #     width=4, height=620),
+                             box(status="primary",
+                                 "This page is meant to explore Colorado Counties by important groupings.", br(),
+                                 "Select a COVID Measure and Demographic Measure on the left sidebar to update the Table and Scatterplot.", br(),
+                                 "Then, choose a Group in the orange box to the right.", br(),
+                                 "Hover over any bars, points, or states on this page to see more information.",
+                                 br(), br(),
+                                 ggiraphOutput("bi_cor"),
+                                 solidHeader = T, title="Breakdown of Colorado Counties by Group",
+                                 width=4, height=620),
                              box(title ="Select a Filter Measure for the Scatterplot & Map",status="warning",solidHeader = T,
                                  selectizeInput(inputId = "balancebuttons",
                                               label = NULL,
                                               choices = c("COVID Groups" = "COVID.Groups",
                                                           "Income Groups" = "Income.Groups",
                                                           "Rural Groups" = "Rural.Groups"),
-                                              selected = "Rural.Groups"), width=12, height = 100),
+                                              selected = "Rural.Groups"), width=8, height = 100),
                              box(status="primary",
                                  "Hover over any point to find out detailed county information.", br(), br(),
                                  ggiraphOutput("scatterplot"),
                                  solidHeader = T, title = "County Scatterplot with Linear Regression", 
-                                 width=6, height=650),
+                                 width=4, height=500),
+                                 # width=6, height=650), # if 2 graphs
                              box(status="primary",
                                  "Hover over any County to find out detailed group information.", br(),
                                  "Legend is shared with the Scatterplot to the left.", 
                                  girafeOutput("corr_map"),
                                  solidHeader = T, title = "Colorado County Map by Group",
-                                 width=6, height = 650),
+                                 width=4, height = 500),
+                                 # width=6, height=650), # if 2 graphs
                              box(width=12, status="success", title="How were these groups calculated?", solidHeader = T,
                                  "The 64 Colorado Counties were split into groups using the following methods:", br(),
                                  ">>> COVID Caseload -- 3 (Almost) Even Groups: 22 Low, 21 Med, 21 High", br(),
@@ -870,218 +872,218 @@ server <- function(input, output, session){
     
     
     #### Breakdown of Colorado Counties by Group ####
-    # output$bi_cor <- renderGirafe({
-    # 
-    #     CO_COUNTY_BI_SLIDERS = CO_COUNTY_COVID_FILTER %>%
-    #         mutate(., 
-    #                demo_var = ntile(get(yes_periods(input$DemoData)), 3),
-    #                covid_var = ntile(get(input$COVIDbuttons), 3),
-    #                bi_class = paste0(
-    #                    as.numeric(demo_var), "-",
-    #                    as.numeric(covid_var)
-    #                ),
-    #                COVID_MAX_var = ntile(COVID.Cases.Max, 3),
-    #                INCOME_var = ntile(Median.Household.Income, 3),
-    #                RURAL_var = ifelse(Perc.Rural<25,1,
-    #                                   ifelse((Perc.Rural>=25 & Perc.Rural<50),2,
-    #                                          ifelse((Perc.Rural>=50 & Perc.Rural<100),3,
-    #                                                 ifelse(Perc.Rural==100,4,NA))))
-    #         ) %>% 
-    #         select(., COUNTY, demo_var, covid_var, bi_class, 
-    #                COVID_MAX_var, INCOME_var, RURAL_var)
-    #     
-    #     CO_COUNTY_BI_SLIDERS$bi_class %<>% 
-    #         gsub("NA-1", NA, .) %>% 
-    #         gsub("NA-2", NA, .) %>% 
-    #         gsub("NA-3", NA, .) %>% 
-    #         gsub("1-NA", NA, .) %>% 
-    #         gsub("2-NA", NA, .) %>% 
-    #         gsub("3-NA", NA, .)
-    #     
-    #     #ALL COUNTIES
-    #     pos_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., bi_class=="1-1" | bi_class=="2-2" | bi_class=="3-3") %>% 
-    #         nrow()
-    #     neg_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., bi_class=="1-3" | bi_class=="2-2" | bi_class=="3-1") %>% 
-    #         nrow()
-    #     
-    #     #HIGH CASES
-    #     pos_high_case_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-1" | bi_class=="2-2" | bi_class=="3-3")
-    #                & COVID_MAX_var=="3") %>% 
-    #         nrow()
-    #     neg_high_case_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-3" | bi_class=="2-2" | bi_class=="3-1")
-    #                & COVID_MAX_var=="3") %>% 
-    #         nrow()
-    #     #LOW CASES
-    #     pos_low_case_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-1" | bi_class=="2-2" | bi_class=="3-3")
-    #                & COVID_MAX_var=="1") %>% 
-    #         nrow()
-    #     neg_low_case_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-3" | bi_class=="2-2" | bi_class=="3-1")
-    #                & COVID_MAX_var=="1") %>% 
-    #         nrow()
-    #     
-    #     #HIGH INCOME
-    #     pos_high_income_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-1" | bi_class=="2-2" | bi_class=="3-3")
-    #                & INCOME_var=="3") %>% 
-    #         nrow()
-    #     neg_high_income_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-3" | bi_class=="2-2" | bi_class=="3-1")
-    #                & INCOME_var=="3") %>% 
-    #         nrow()
-    #     #LOW INCOME
-    #     pos_low_income_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-1" | bi_class=="2-2" | bi_class=="3-3")
-    #                & INCOME_var=="1") %>% 
-    #         nrow()
-    #     neg_low_income_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-3" | bi_class=="2-2" | bi_class=="3-1")
-    #                & INCOME_var=="1") %>% 
-    #         nrow()
-    #     
-    #     #100% RURAL
-    #     pos_100_rural_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-1" | bi_class=="2-2" | bi_class=="3-3")
-    #                & RURAL_var=="4") %>% 
-    #         nrow()
-    #     neg_100_rural_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-3" | bi_class=="2-2" | bi_class=="3-1")
-    #                & RURAL_var=="4") %>% 
-    #         nrow()
-    #     #MOSTLY RURAL
-    #     pos_most_rural_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-1" | bi_class=="2-2" | bi_class=="3-3")
-    #                & RURAL_var=="3") %>% 
-    #         nrow()
-    #     neg_most_rural_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-3" | bi_class=="2-2" | bi_class=="3-1")
-    #                & RURAL_var=="3") %>% 
-    #         nrow()
-    #     #MOSTLY URBAN
-    #     pos_most_urban_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-1" | bi_class=="2-2" | bi_class=="3-3")
-    #                & RURAL_var=="2") %>% 
-    #         nrow()
-    #     neg_most_urban_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-3" | bi_class=="2-2" | bi_class=="3-1")
-    #                & RURAL_var=="2") %>% 
-    #         nrow()
-    #     #URBAN
-    #     pos_urban_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-1" | bi_class=="2-2" | bi_class=="3-3")
-    #                & RURAL_var=="1") %>% 
-    #         nrow()
-    #     neg_urban_cor = CO_COUNTY_BI_SLIDERS %>% 
-    #         filter(., (bi_class=="1-3" | bi_class=="2-2" | bi_class=="3-1")
-    #                & RURAL_var=="1") %>% 
-    #         nrow()
-    #     
-    #     
-    #     perc_pos_cor = round(pos_cor/64*100,1)
-    #     perc_neg_cor = round(neg_cor/64*100,1)
-    #     perc_pos_high_case_cor = round(pos_high_case_cor/21*100,1)
-    #     perc_neg_high_case_cor = round(neg_high_case_cor/21*100,1)
-    #     perc_pos_low_case_cor = round(pos_low_case_cor/22*100,1)
-    #     perc_neg_low_case_cor = round(neg_low_case_cor/22*100,1)
-    #     perc_pos_high_income_cor = round(pos_high_income_cor/21*100,1)
-    #     perc_neg_high_income_cor = round(neg_high_income_cor/21*100,1)
-    #     perc_pos_low_income_cor = round(pos_low_income_cor/22*100,1)
-    #     perc_neg_low_income_cor = round(neg_low_income_cor/22*100,1)
-    #     perc_pos_100_rural_cor = round(pos_100_rural_cor/24*100,1)
-    #     perc_neg_100_rural_cor = round(neg_100_rural_cor/24*100,1)
-    #     perc_pos_most_rural_cor = round(pos_most_rural_cor/10*100,1)
-    #     perc_neg_most_rural_cor = round(neg_most_rural_cor/10*100,1)
-    #     perc_pos_most_urban_cor = round(pos_most_urban_cor/15*100,1)
-    #     perc_neg_most_urban_cor = round(neg_most_urban_cor/15*100,1)
-    #     perc_pos_urban_cor = round(pos_urban_cor/15*100,1)
-    #     perc_neg_urban_cor = round(neg_urban_cor/15*100,1)
-    #     
-    #     
-    #     maptable2 = data.frame(
-    #         County.Type = rep(c("All", "High COVID", "Low COVID", "High Income", 
-    #                             "Low Income", "100% Rural", "Mostly Rural", "Somewhat Rural", 
-    #                             "Urban/Suburban"), each=2),
-    #         Correlation = rep(c("Positive", "Negative"), 9),
-    #         Total.Counties = rep(c(64, 21, 22,21, 22, 24, 10, 15, 15), each=2),
-    #         Number.of.Counties = c(pos_cor, neg_cor, 
-    #                                pos_high_case_cor, neg_high_case_cor,
-    #                                pos_low_case_cor, neg_low_case_cor,
-    #                                pos_high_income_cor, neg_high_income_cor,
-    #                                pos_low_income_cor, neg_low_income_cor,
-    #                                pos_100_rural_cor, neg_100_rural_cor,
-    #                                pos_most_rural_cor, neg_most_rural_cor,
-    #                                pos_most_urban_cor, neg_most_urban_cor,
-    #                                pos_urban_cor, neg_urban_cor),
-    #         Perc.Counties = c(perc_pos_cor, perc_neg_cor, 
-    #                           perc_pos_high_case_cor, perc_neg_high_case_cor,
-    #                           perc_pos_low_case_cor, perc_neg_low_case_cor,
-    #                           perc_pos_high_income_cor, perc_neg_high_income_cor,
-    #                           perc_pos_low_income_cor, perc_neg_low_income_cor,
-    #                           perc_pos_100_rural_cor, perc_neg_100_rural_cor,
-    #                           perc_pos_most_rural_cor, perc_neg_most_rural_cor,
-    #                           perc_pos_most_urban_cor, perc_neg_most_urban_cor,
-    #                           perc_pos_urban_cor, perc_neg_urban_cor)
-    #     )
-    #     
-    #     maptable2 = maptable2 %>% 
-    #         mutate(Perc.0_1.Counties = Perc.Counties/100)
-    #     maptable2$Correlation =
-    #         factor(maptable2$Correlation,
-    #                levels = c("Negative", "Positive"))
-    #     maptable2$County.Type = 
-    #         factor(maptable2$County.Type, 
-    #                levels = c( "100% Rural", "Mostly Rural", 
-    #                            "Somewhat Rural", "Urban/Suburban", "Low Income", "High Income", 
-    #                            "Low COVID", "High COVID", "All"))
-    #     maptable2disp = 
-    #         maptable2 %>% 
-    #         ggplot(aes(x=County.Type, y=Perc.0_1.Counties, fill=Correlation)) + 
-    #         xlab("County Category") +
-    #         ylab("Percent of Counties with Correlation") +
-    #         scale_y_continuous(labels = function(x) paste0(x*100, "%")) +
-    #         labs(title="Counties with Influencing Factors:\nStrong Positive or Negative Correlation", 
-    #              subtitle = paste0(ylab_short(), " vs. ", xlab_long_perc())
-    #         ) +
-    #         theme(text=element_text(family="calibri"),
-    #               panel.grid.major.y = element_blank(),
-    #               plot.title = element_text(hjust=0.5, face="bold", size=18),
-    #               plot.subtitle = element_text(hjust=0.5, color="darkblue", size=14),
-    #               axis.title = element_text(face="bold", size=12),
-    #               axis.text.x = element_text(face="bold"),
-    #               axis.text.y = element_text(face="bold"),
-    #               legend.title = element_text(color="darkblue", face="bold", size=13, hjust=0),
-    #               legend.text = element_text(face="bold", color="darkblue", size=11),
-    #               legend.background =
-    #                   element_rect(fill="#F2F5F7", color="gray", size=1),
-    #               strip.text.x = element_text(face="bold")) +
-    #         geom_col_interactive(stat="identity", 
-    #                              aes(order=Correlation, 
-    #                                  tooltip = paste0(paste0(Perc.Counties, "%"),
-    #                                                   paste0(" (", Number.of.Counties, "/", Total.Counties, ") of ", County.Type, " Counties"),
-    #                                                   paste0("\nhave a ", Correlation, " Correlation")
-    #                                  ),
-    #                                  data_id = County.Type
-    #                              ),
-    #                              width=0.8, 
-    #                              position=position_dodge2(width=0.8)) +
-    #         coord_flip() +
-    #         guides(fill = guide_legend(reverse = TRUE)) 
-    #     
-    #     girafe(ggobj = maptable2disp, options = list(
-    #         opts_hover(css = "opacity:0.8;"),
-    #         opts_tooltip(offx = 20, offy = -55),
-    #         opts_selection(type = "none"
-    #                        , only_shiny = FALSE
-    #         )
-    #     ))
-    # })
-    # 
-    #### County Scatterplot with Linear Regression ####
+    output$bi_cor <- renderGirafe({
+
+        CO_COUNTY_BI_SLIDERS = CO_COUNTY_COVID_FILTER %>%
+            mutate(.,
+                   demo_var = ntile(get(yes_periods(input$DemoData)), 3),
+                   covid_var = ntile(get(input$COVIDbuttons), 3),
+                   bi_class = paste0(
+                       as.numeric(demo_var), "-",
+                       as.numeric(covid_var)
+                   ),
+                   COVID_MAX_var = ntile(COVID.Cases.Max, 3),
+                   INCOME_var = ntile(Median.Household.Income, 3),
+                   RURAL_var = ifelse(Perc.Rural<25,1,
+                                      ifelse((Perc.Rural>=25 & Perc.Rural<50),2,
+                                             ifelse((Perc.Rural>=50 & Perc.Rural<100),3,
+                                                    ifelse(Perc.Rural==100,4,NA))))
+            ) %>%
+            select(., COUNTY, demo_var, covid_var, bi_class,
+                   COVID_MAX_var, INCOME_var, RURAL_var)
+
+        CO_COUNTY_BI_SLIDERS$bi_class %<>%
+            gsub("NA-1", NA, .) %>%
+            gsub("NA-2", NA, .) %>%
+            gsub("NA-3", NA, .) %>%
+            gsub("1-NA", NA, .) %>%
+            gsub("2-NA", NA, .) %>%
+            gsub("3-NA", NA, .)
+
+        #ALL COUNTIES
+        pos_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., bi_class=="1-1" | bi_class=="3-3") %>%
+            nrow()
+        neg_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., bi_class=="1-3" | bi_class=="3-1") %>%
+            nrow()
+
+        #HIGH CASES
+        pos_high_case_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-1" | bi_class=="3-3")
+                   & COVID_MAX_var=="3") %>%
+            nrow()
+        neg_high_case_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-3" | bi_class=="3-1")
+                   & COVID_MAX_var=="3") %>%
+            nrow()
+        #LOW CASES
+        pos_low_case_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-1" | bi_class=="3-3")
+                   & COVID_MAX_var=="1") %>%
+            nrow()
+        neg_low_case_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-3" | bi_class=="3-1")
+                   & COVID_MAX_var=="1") %>%
+            nrow()
+
+        #HIGH INCOME
+        pos_high_income_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-1" | bi_class=="3-3")
+                   & INCOME_var=="3") %>%
+            nrow()
+        neg_high_income_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-3" | bi_class=="3-1")
+                   & INCOME_var=="3") %>%
+            nrow()
+        #LOW INCOME
+        pos_low_income_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-1" | bi_class=="3-3")
+                   & INCOME_var=="1") %>%
+            nrow()
+        neg_low_income_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-3" | bi_class=="3-1")
+                   & INCOME_var=="1") %>%
+            nrow()
+
+        #100% RURAL
+        pos_100_rural_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-1" | bi_class=="3-3")
+                   & RURAL_var=="4") %>%
+            nrow()
+        neg_100_rural_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-3" | bi_class=="3-1")
+                   & RURAL_var=="4") %>%
+            nrow()
+        #MOSTLY RURAL
+        pos_most_rural_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-1" | bi_class=="3-3")
+                   & RURAL_var=="3") %>%
+            nrow()
+        neg_most_rural_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-3" | bi_class=="3-1")
+                   & RURAL_var=="3") %>%
+            nrow()
+        #MOSTLY URBAN
+        pos_most_urban_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-1" | bi_class=="3-3")
+                   & RURAL_var=="2") %>%
+            nrow()
+        neg_most_urban_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-3" | bi_class=="3-1")
+                   & RURAL_var=="2") %>%
+            nrow()
+        #URBAN
+        pos_urban_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-1" | bi_class=="3-3")
+                   & RURAL_var=="1") %>%
+            nrow()
+        neg_urban_cor = CO_COUNTY_BI_SLIDERS %>%
+            filter(., (bi_class=="1-3" | bi_class=="3-1")
+                   & RURAL_var=="1") %>%
+            nrow()
+
+
+        perc_pos_cor = round(pos_cor/64*100,1)
+        perc_neg_cor = round(neg_cor/64*100,1)
+        perc_pos_high_case_cor = round(pos_high_case_cor/21*100,1)
+        perc_neg_high_case_cor = round(neg_high_case_cor/21*100,1)
+        perc_pos_low_case_cor = round(pos_low_case_cor/22*100,1)
+        perc_neg_low_case_cor = round(neg_low_case_cor/22*100,1)
+        perc_pos_high_income_cor = round(pos_high_income_cor/21*100,1)
+        perc_neg_high_income_cor = round(neg_high_income_cor/21*100,1)
+        perc_pos_low_income_cor = round(pos_low_income_cor/22*100,1)
+        perc_neg_low_income_cor = round(neg_low_income_cor/22*100,1)
+        perc_pos_100_rural_cor = round(pos_100_rural_cor/24*100,1)
+        perc_neg_100_rural_cor = round(neg_100_rural_cor/24*100,1)
+        perc_pos_most_rural_cor = round(pos_most_rural_cor/10*100,1)
+        perc_neg_most_rural_cor = round(neg_most_rural_cor/10*100,1)
+        perc_pos_most_urban_cor = round(pos_most_urban_cor/15*100,1)
+        perc_neg_most_urban_cor = round(neg_most_urban_cor/15*100,1)
+        perc_pos_urban_cor = round(pos_urban_cor/15*100,1)
+        perc_neg_urban_cor = round(neg_urban_cor/15*100,1)
+
+
+        maptable2 = data.frame(
+            County.Type = rep(c("All", "High COVID", "Low COVID", "High Income",
+                                "Low Income", "100% Rural", "Mostly Rural", "Somewhat Rural",
+                                "Urban/Suburban"), each=2),
+            Correlation = rep(c("Positive", "Negative"), 9),
+            Total.Counties = rep(c(64, 21, 22,21, 22, 24, 10, 15, 15), each=2),
+            Number.of.Counties = c(pos_cor, neg_cor,
+                                   pos_high_case_cor, neg_high_case_cor,
+                                   pos_low_case_cor, neg_low_case_cor,
+                                   pos_high_income_cor, neg_high_income_cor,
+                                   pos_low_income_cor, neg_low_income_cor,
+                                   pos_100_rural_cor, neg_100_rural_cor,
+                                   pos_most_rural_cor, neg_most_rural_cor,
+                                   pos_most_urban_cor, neg_most_urban_cor,
+                                   pos_urban_cor, neg_urban_cor),
+            Perc.Counties = c(perc_pos_cor, perc_neg_cor,
+                              perc_pos_high_case_cor, perc_neg_high_case_cor,
+                              perc_pos_low_case_cor, perc_neg_low_case_cor,
+                              perc_pos_high_income_cor, perc_neg_high_income_cor,
+                              perc_pos_low_income_cor, perc_neg_low_income_cor,
+                              perc_pos_100_rural_cor, perc_neg_100_rural_cor,
+                              perc_pos_most_rural_cor, perc_neg_most_rural_cor,
+                              perc_pos_most_urban_cor, perc_neg_most_urban_cor,
+                              perc_pos_urban_cor, perc_neg_urban_cor)
+        )
+
+        maptable2 = maptable2 %>%
+            mutate(Perc.0_1.Counties = Perc.Counties/100)
+        maptable2$Correlation =
+            factor(maptable2$Correlation,
+                   levels = c("Negative", "Positive"))
+        maptable2$County.Type =
+            factor(maptable2$County.Type,
+                   levels = c( "100% Rural", "Mostly Rural",
+                               "Somewhat Rural", "Urban/Suburban", "Low Income", "High Income",
+                               "Low COVID", "High COVID", "All"))
+        maptable2disp =
+            maptable2 %>%
+            ggplot(aes(x=County.Type, y=Perc.0_1.Counties, fill=Correlation)) +
+            xlab("County Category") +
+            ylab("Percent of Counties with Correlation") +
+            scale_y_continuous(labels = function(x) paste0(x*100, "%")) +
+            labs(title="Counties with Influencing Factors:\nStrong Positive or Negative Correlation",
+                 subtitle = paste0(ylab_short(), " vs. ", xlab_long_perc())
+            ) +
+            theme(text=element_text(family="calibri"),
+                  panel.grid.major.y = element_blank(),
+                  plot.title = element_text(hjust=0.5, face="bold", size=18),
+                  plot.subtitle = element_text(hjust=0.5, color="darkblue", size=14),
+                  axis.title = element_text(face="bold", size=12),
+                  axis.text.x = element_text(face="bold"),
+                  axis.text.y = element_text(face="bold"),
+                  legend.title = element_text(color="darkblue", face="bold", size=13, hjust=0),
+                  legend.text = element_text(face="bold", color="darkblue", size=11),
+                  legend.background =
+                      element_rect(fill="#F2F5F7", color="gray", size=1),
+                  strip.text.x = element_text(face="bold")) +
+            geom_col_interactive(stat="identity",
+                                 aes(order=Correlation,
+                                     tooltip = paste0(paste0(Perc.Counties, "%"),
+                                                      paste0(" (", Number.of.Counties, "/", Total.Counties, ") of ", County.Type, " Counties"),
+                                                      paste0("\nhave a ", Correlation, " Correlation")
+                                     ),
+                                     data_id = County.Type
+                                 ),
+                                 width=0.8,
+                                 position=position_dodge2(width=0.8)) +
+            coord_flip() +
+            guides(fill = guide_legend(reverse = TRUE))
+
+        girafe(ggobj = maptable2disp, options = list(
+            opts_hover(css = "opacity:0.8;"),
+            opts_tooltip(offx = 20, offy = -55),
+            opts_selection(type = "none"
+                           , only_shiny = FALSE
+            )
+        ))
+    })
+
+    ### County Scatterplot with Linear Regression ####
     output$scatterplot <- renderGirafe({
         point2disp = CO_MAP_COVID_BAL %>%
             filter(., !is.na(get(yes_periods(input$DemoData))) &
