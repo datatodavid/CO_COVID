@@ -168,7 +168,7 @@ ui <- dashboardPage(
                             box(status="primary",
                                 solidHeader = T, title = "County vs. State COVID Trend Analysis",
                                 girafeOutput("indcounty"),
-                                "Hover over Vertical lines to read about major events in Colorado's statewide response to the pandemic.",
+                                "Hover over Vertical lines to read about major events in Colorado's response to the pandemic.",
                             ),
                             box(title = "Heat Map of COVID in Colorado Counties",
                                 status="primary",
