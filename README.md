@@ -4,12 +4,12 @@ This website serves 2 functions:
 2) Compares Colorado's COVID testing rate, case rate, death rate, positive test percentage, and mortality percentage by County against 100 demographic measures to investigate potential correlations.
 
 For more info, please contact datatodavid@gmail.com or visit https://www.linkedin.com/in/david-gottlieb-a351bb3b/
-
+----------------------------------------------------------------------------------------------------------------
 Blogpost explaining the purpose of this project and how to use the website can be found at:
 https://nycdatascience.com/blog/student-works/colorado-covid-vs-demographics/
 
 A text-only version of that blogpost can be found below:
-----------------------------------------------------------------------------------------------------------------
+
 COLORADO COVID vs. DEMOGRAPHICS 
 A SHINY WEBSITE BY DAVID GOTTLIEB
 https://datatodavid.shinyapps.io/Colorado_COVID_vs_Demographics/
