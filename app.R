@@ -36,7 +36,7 @@ ui <- dashboardPage(
     dashboardSidebar(
         sidebarMenu(
             menuItem("A Shiny App by David Gottlieb",
-                     icon=NULL, href = "https://twitter.com/datatodavid"
+                     icon=NULL, href = "https://www.linkedin.com/in/david-gottlieb-a351bb3b/"
             ),
             convertMenuItem(
                 menuItem("County Dashboard", icon=icon("info-circle"), 
@@ -148,6 +148,8 @@ ui <- dashboardPage(
                  menuSubItem("RWJ County Health Rankings", icon = icon("list-alt"), 
                          href = "https://www.countyhealthrankings.org/app/colorado/2020/downloads")
             ),
+            menuItem("Blog Post - Using this Website", icon = icon("blog"), 
+                 href = "https://nycdatascience.com/blog/student-works/colorado-covid-vs-demographics/"),
             menuItem("~ David Gottlieb LinkedIn ~", icon = icon("linkedin"), 
                      href = "https://www.linkedin.com/in/david-gottlieb-a351bb3b/")
             )
@@ -359,7 +361,7 @@ ui <- dashboardPage(
                                                    "Median Household Income" = "Median.Household.Income",
                                                    "Demographics Percentage" = "Demographics.Perc",
                                                    "Segregation Index" = "Segregation.Index"),
-                                             selected = "Preventable.Hospitalization.Rate"),
+                                             selected = "Median.Household.Income"),
                               height=100,width=9),
                           box(status = "warning", solidHeader=T, 
                               title="Choose a Scale:", 
