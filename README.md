@@ -1,4 +1,6 @@
 # CO_COVID
+https://datatodavid.shinyapps.io/Colorado_COVID_vs_Demographics/
+-----------------------------------------
 This website serves 2 functions:
 1) Acts as an advanced dashboard for over 15 Colorado COVID metrics and allows county vs. state trend analysis
 2) Compares Colorado's COVID testing rate, case rate, death rate, positive test percentage, and mortality percentage by County against 100 demographic measures to investigate potential correlations.
@@ -7,7 +9,7 @@ For more info, please contact datatodavid@gmail.com or visit https://www.linkedi
 ----------------------------------------------------------------------------------------------------------------
 Blogpost explaining the purpose of this project and how to use the website can be found at:
 https://nycdatascience.com/blog/student-works/colorado-covid-vs-demographics/
-
+------------------------------------------------------------------------------
 A text-only version of that blogpost can be found below:
 
 COLORADO COVID vs. DEMOGRAPHICS 
