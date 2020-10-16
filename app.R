@@ -67,7 +67,7 @@ ui <- dashboardPage(
                                        "New State Hospitalizations (5 Day Average)" = "New.State.Hospitalizations.5.Day.Avg",
                                        "Positive Tests Percentange (5 Day Average)" = "Positive.Tests.Perc.5.Day.Avg",
                                        "Mortality Percentage (5 Day Average)" = "Mortality.Perc.5.Day.Avg"),
-                           selected = "New.Cases.5.Day.Avg"),
+                           selected = "New.Cases.Last.Week"),
             sliderInput("daterange", 
                         "Select a Date Range:", 
                         min = as.Date("2020-03-17"), 
