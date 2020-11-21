@@ -71,8 +71,8 @@ ui <- dashboardPage(
             sliderInput("daterange", 
                         "Select a Date Range:", 
                         min = as.Date("2020-03-17"), 
-                        max = as.Date(Sys.Date()), 
-                        value = c(as.Date("2020-03-17"), as.Date(Sys.Date())),
+                        max = as.Date(Sys.Date())-1, 
+                        value = c(as.Date("2020-03-17"), as.Date(Sys.Date())-1),
                         timeFormat="%b %d"
             ),
             
@@ -161,7 +161,8 @@ ui <- dashboardPage(
                 tabsetPanel(
                     tabPanel("County COVID Dashboard",
                          fluidRow(        
-                         valueBoxOutput("DaysSince", width=3), 
+                         # valueBoxOutput("DaysSince", width=3), 
+                         valueBoxOutput("lastdayCOcases", width=3),
                          valueBoxOutput("lastweekcases", width=3),
                          valueBoxOutput("diff", width=3),
                          valueBoxOutput("caseranking", width=3)
@@ -439,7 +440,7 @@ server <- function(input, output, session){
     
     ######## County COVID Dashboard ########
     
-    # ValueBox #1 (Days in County with COVID) #
+    # ValueBox #1a (Days in County with COVID) #
     output$DaysSince <- renderValueBox({
         DaysCOVID = COVID19CountyANALYSIS %>% 
             select(COUNTY, COVID_Num_Days_Since_First_Case) %>% 
@@ -450,6 +451,21 @@ server <- function(input, output, session){
         valueBox(
             paste0(Days, " Days"),
             paste0("since 1st case in ", stri_trans_totitle(countyname())),
+            color = "navy"
+        )
+    })
+    
+    # ValueBox #1b (Last Day Cases in State with COVID) #
+    output$lastdayCOcases <- renderValueBox({
+        DaysCOVID = COVID19DATA %>% 
+            filter(Date == max(Date) & 
+                   COUNTY == "COLORADO")
+        
+        CODays = DaysCOVID$New.Cases
+        
+        valueBox(
+            paste0(CODays, " Cases"),
+            paste0("yesterday in Colorado"),
             color = "navy"
         )
     })
@@ -553,6 +569,9 @@ server <- function(input, output, session){
             geom_vline_interactive(xintercept=as.Date("2020-08-17"),aes(
                 tooltip="August 17th - School Year Starts for most of CO\n(Mix of In Person / Hybrid / Online Learning)"),
                 color="green",linetype="longdash", size=1) +
+            geom_vline_interactive(xintercept=as.Date("2020-11-20"),aes(
+                tooltip="November 20th - 20 Counties Enter Level Red -- Severe Risk\n(Most Indoor Activities / Dining Banned, Offices & Gyms at 10%)"),
+                color="orange",linetype="longdash", size=1) +
             geom_line_interactive(size=1.5) +
             geom_point_interactive(
                 aes(tooltip = paste(paste(round(get(input$COVIDselect),1),
@@ -674,7 +693,7 @@ server <- function(input, output, session){
                   plot.caption = element_text(hjust=0.5, color = "darkblue", 
                                                face="bold", size=11, vjust=-1),
                   plot.subtitle = element_text(face="italic", size=15, color="darkblue", hjust=0.5, margin=margin(5,0,-5,0)),
-                  strip.text.x = element_text(face="botld"),
+                  strip.text.x = element_text(face="bold"),
                   legend.title = element_text(color="darkblue", face = "bold", size=13, hjust=0),
                   legend.position = "right",
                   legend.text = element_text(color="darkblue", face = "bold", size=11),
