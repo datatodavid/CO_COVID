@@ -407,7 +407,7 @@ Asthma_Rates$Asthma_County_Rate %<>%
 Asthma_Rates$Asthma_Rate_CIL95 %<>% 
   gsub(".*: ", "", .) %>% 
   gsub(" -.*", "", .) %>% 
-  as.numeric(.) %>% 
+  as.numeric(.) 
 
 Asthma_Rates$Asthma_Rate_CIH95  %<>%  
   gsub(".*- ", "", .) %>% 
@@ -720,7 +720,10 @@ Perc.100000.Total.Health.Facilities = 100000*Total.Health.Facilities/Population.
 #######  Daily Data refreshes start here #######
 
 ## COVID DATASET #1 - COUNTY LEVEL OPEN REPOSITORY ##
-download.file("https://opendata.arcgis.com/datasets/1456d8d43486449292e5784dcd9ce4a7_0.csv", "CDPHE_COVID19_County-Level_Open_Data_Repository.csv")
+download.file(#"https://opendata.arcgis.com/datasets/1456d8d43486449292e5784dcd9ce4a7_0.csv", "CDPHE_COVID19_County-Level_Open_Data_Repository.csv")
+               #"https://opendata.arcgis.com/datasets/52fb11a8a07f49c1b28335a9de9ba99f_0.csv", "CDPHE_COVID19_County-Level_Open_Data_Repository.csv")
+               #"https://opendata.arcgis.com/datasets/8ff1603466cb4fadaff7018612dc58a0_0.csv", "CDPHE_COVID19_County-Level_Open_Data_Repository.csv")
+                "https://opendata.arcgis.com/datasets/efd7f5f77efa4122a70a0c5c405ce8be_0.csv", "CDPHE_COVID19_County-Level_Open_Data_Repository.csv")
 COVID19County = read.csv("CDPHE_COVID19_County-Level_Open_Data_Repository.csv", stringsAsFactors = F, header=T)
 
 COVID19County$Metric %<>%  
@@ -734,7 +737,7 @@ COVID19County$Value = COVID19County$Value %>% replace_na(., 0)
 COVID19County$Rate = COVID19County$Rate %>% replace_na(., 0)
 
 names(COVID19County) %<>%  
-  gsub("ï..COUNTY", "COUNTY", ., fixed=T)
+  gsub("ï..", "", ., fixed=T) 
 
 ## Creating single numerical list & Eliminating Notes from Data ##
 COVID19County = COVID19County %>% 
@@ -845,20 +848,40 @@ COVID19CountyANALYSIS = COVID19CountyANALYSIS %>%
 
 
 #### COVID DATASET #3 -- STATE & COUNTY DAILY DATA  ####
-download.file("https://opendata.arcgis.com/datasets/bd4ee19bc7fc4288a20db8d5a7bd2be2_0.csv","CDPHE_COVID19_Daily_State_Statistics.csv")
+
+download.file(#"https://opendata.arcgis.com/datasets/bd4ee19bc7fc4288a20db8d5a7bd2be2_0.csv","CDPHE_COVID19_Daily_State_Statistics-1.csv")
+              #"https://opendata.arcgis.com/datasets/89d3380a96374a6ab04c3256d766132b_0.csv","CDPHE_COVID19_Daily_State_Statistics-1.csv")
+              #"https://opendata.arcgis.com/datasets/566216cf203e400f8cbf2e6b4354bc57_0.csv","CDPHE_COVID19_Daily_State_Statistics-1.csv")
+  "https://opendata.arcgis.com/datasets/80193066bcb84a39893fbed995fc8ed0_0.csv", "CDPHE_COVID19_Daily_State_Statistics.csv")
 COVID19StateData = read.csv("CDPHE_COVID19_Daily_State_Statistics.csv", header=T, stringsAsFactors = F)
+# COVID19StateData
+
+# COVID19StateData = rbind.data.frame(COVID19StateData, c("Colorado",	"State Data",	"11/22/2020",	198600,	1611564,	2855610,	2806,	2355,	5763976,	3445.54,	12484,	64,	1908,	199))
+# COVID19StateData = rbind.data.frame(COVID19StateData, c("Colorado",	"State Data",	"11/23/2020",	202289,	1630871,	2901740,	2810,	2456,	5763976,	3509.54,	12526,	64,	1925,	200))
+# COVID19StateData = rbind.data.frame(COVID19StateData, c("Colorado",	"State Data",	"11/24/2020",	206439,	1645109,	2939263,	2860,	2466,	5763976,	3581.54,	12836,	64, 1990, 149))
+# COVID19StateData = rbind.data.frame(COVID19StateData, c("Colorado",	"State Data",	"11/25/2020",	210630,	1662003,	2980399,	2906,	2521,	5763976,	3654.25,	13044,	64,	2086,	150))
+# COVID19StateData = rbind.data.frame(COVID19StateData, c("Colorado",	"State Data",	"11/26/2020",	216683,	1689657,	3046149,	2957,	2521,	5763976,	3759.26,	13248,	64,	2117,	151))
+# COVID19StateData = rbind.data.frame(COVID19StateData, c("Colorado",	"State Data",	"11/27/2020",	220953,	1707374,	3091838,	2977,	2521,	5763976,	3833.34,	13287,	64,	2131,	152))
+# COVID19StateData = rbind.data.frame(COVID19StateData, c("Colorado",	"State Data",	"11/28/2020",	225283,	1725452,	3143227,	2983,	2521,	5763976,	3908.47,	13369,	64,	2135,	153))
+# COVID19StateData = rbind.data.frame(COVID19StateData, c("Colorado",	"State Data",	"11/29/2020",	228772,	1737952,	3175126,	3003,	2521,	5763976,	3969,	13428,	64,	2136,	258))
+# COVID19StateData = rbind.data.frame(COVID19StateData, c("Colorado",	"State Data",	"11/30/2020",	232905,	1754047,	3218851,	3037,	2656,	5763976,	4040.7,	13488,	64,	2143,	259))
+
 
 COVID19StateData$Date = as.Date(COVID19StateData$Date, format="%m/%d/%Y")
-
+# COVID19StateData[,4:14] = sapply(COVID19StateData[,4:14], as.numeric)
+# lapply(COVID19StateData, class)
+# COVID19StateData[,4:14]
+names(COVID19StateData) %<>%  
+  gsub("ï..", "", ., fixed=T) 
 COVID19StateData = COVID19StateData %>% 
-  select(., COUNTY = ï..Name, POP = Population, Date, Tested, Cases, Deaths, 
+  select(., COUNTY = Name, POP = Population, Date, Tested, Cases, Deaths, 
          Total.State.Hospitalizations = Hosp, Outbreaks, Counties, COVID.Cases.Per.100000=Rate) %>% 
   filter(., COUNTY != "Note") %>% 
-  mutate(., COVID.Tests.Per.100000 = 100000*Tested/POP,
-            COVID.Deaths.Per.100000 = 100000*Deaths/POP,
+  mutate(., COVID.Tests.Per.100000 = 100000*Tested/5763976,
+            COVID.Deaths.Per.100000 = 100000*Deaths/5763976,
             COVID.Positive.Tests.Perc = ifelse(Tested!=0, 100*Cases/Tested, NA),
             COVID.Mortality.Perc = ifelse(Cases!=0, 100*Deaths/Cases, NA),
-            State.Hospitalizations.Per.100000 = 100000*Total.State.Hospitalizations/POP
+            State.Hospitalizations.Per.100000 = 100000*Total.State.Hospitalizations/5763976
          )
 COVID19State_MERGE = COVID19StateData %>% 
   select(., COUNTY, Date, POP, Total.Tests = Tested, Total.Cases = Cases, 
@@ -1595,3 +1618,4 @@ save.image("./COVID_single_file/.RData")
 # #CO_COMPLETE_SUBLISTS_NO_DEMO
 # write.csv(CO_COMPLETE_SUBLISTS_NO_DEMO, "CO_COMPLETE_SUBLISTS_NO_DEMO.csv", 
 #           row.names = F)
+

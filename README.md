@@ -1,9 +1,11 @@
 # CO_COVID
 https://datatodavid.shinyapps.io/Colorado_COVID_vs_Demographics/
 -----------------------------------------
-This website serves 2 functions:
-1) Acts as an advanced dashboard for over 15 Colorado COVID metrics and allows county vs. state trend analysis
-2) Compares Colorado's COVID testing rate, case rate, death rate, positive test percentage, and mortality percentage by County against 100 demographic measures to investigate potential correlations.
+This website was built in 2020 to serve 2 functions:
+1) Act as an advanced dashboard for over 15 Colorado COVID metrics and allows county vs. state trend analysis
+2) Compare Colorado's COVID testing rate, case rate, death rate, positive test percentage, and mortality percentage by County against 100 demographic measures to investigate potential correlations.
+
+This project contains 14 months of comprehensive Colorado COVID Data spanning from March 17, 2020 (the first lockdown) to May 17, 2021 (most counties are reopened at 100% capacity). 
 
 For more info, please contact datatodavid@gmail.com or visit https://www.linkedin.com/in/david-gottlieb-a351bb3b/
 ----------------------------------------------------------------------------------------------------------------
@@ -50,7 +52,7 @@ In order to see if this negative correlation holds, I created a “Statewide Dat
 --- Comparing Race/Ethnic Group Outcomes ---
 The final breakdown one can do is to see how COVID outcomes differ based on Race/Ethnic groups in Colorado. There are ten demographic measures that contained demographic breakdowns in the datasets used for this website. The “Race/Ethnicity Comparisons” tab allows one to see how these ten measures compare to our five COVID outcomes for American Indian / American Native (AIAN), Asian, Black, Hispanic, and White groups. Counties are represented as data points and linear regression with confidence windows are shown for each. In the example below, we can see there appears to be a slightly positive, but not significant, correlation between Median Household Income and COVID Death Rate (“ALL” column). However, this correlation is not the identical across our subgroups, with a significant negative correlation between these measures in the Black community and a decidedly larger positive correlation in the AIAN community. As one can see from the confidence window, there are a limited number of county data points to model a line of best fit, so the results – as well as any suggestion of direct correlation or causation – should be taken with a grain of salt. However, this tool can suggest relationships that may be worth exploring in greater depth, as well as help illuminate inequalities in COVID outcomes. 
  
-Together, these tools can help people make informed decisions while gaining a more detailed picture of how COVID is affecting the counties they live, work, and vacation in. All data sources are open access to the public and one can download any visualization or table on the website. The website is updated daily with the newest CDPHE COVID data.
+Together, these tools can help people make informed decisions while gaining a more detailed picture of how COVID is affecting the counties they live, work, and vacation in. All data sources are open access to the public and one can download any visualization or table on the website. The website was updated daily with the newest CDPHE COVID data until the end of COVID restrictions throughout the majority of the state on May 17, 2021.
 
 For more info, please contact datatodavid@gmail.com or visit https://www.linkedin.com/in/david-gottlieb-a351bb3b/
 
