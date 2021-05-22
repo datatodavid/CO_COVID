@@ -71,9 +71,12 @@ ui <- dashboardPage(
             sliderInput("daterange", 
                         "Select a Date Range:", 
                         min = as.Date("2020-03-17"), 
-                        max = as.Date(Sys.Date())-1, 
-                        value = c(as.Date("2020-03-17"), as.Date(Sys.Date())-1),
-                        timeFormat="%b %d"
+                        max = as.Date("2021-05-17"),
+                        # max = as.Date(Sys.Date())-1, 
+                        value = c(as.Date("2020-03-17"), 
+                                  as.Date("2021-05-17")),
+                                  # as.Date(Sys.Date())-1),
+                        timeFormat="%b %e '%y"
             ),
             
             # radioButtons(inputId = "yscale", label="Choose a Scale:",
@@ -128,7 +131,7 @@ ui <- dashboardPage(
                                            "CO_PRIOR_MEDICAL",
                                        "Summary Scores" =
                                            "CO_SUMMARY_SCORES"),
-                           selected = "CO_DEMOGRAPHICS"),
+                           selected = "CO_HOME"),
                 
                 selectizeInput(inputId = "DemoData",
                            label = "Demographic Measure:",
@@ -161,7 +164,7 @@ ui <- dashboardPage(
                 tabsetPanel(
                     tabPanel("County COVID Dashboard",
                          fluidRow(        
-                         # valueBoxOutput("DaysSince", width=3), 
+                         # valueBoxOutput("DaysSince", width=3),
                          valueBoxOutput("lastdayCOcases", width=3),
                          valueBoxOutput("lastweekcases", width=3),
                          valueBoxOutput("diff", width=3),
@@ -362,7 +365,8 @@ ui <- dashboardPage(
                                                    "Median Household Income" = "Median.Household.Income",
                                                    "Demographics Percentage" = "Demographics.Perc",
                                                    "Segregation Index" = "Segregation.Index"),
-                                             selected = "Median.Household.Income"),
+                                             selected = "Demographics.Perc"),
+                                            # selected = "Median.Household.Income"),
                               height=100,width=9),
                           box(status = "warning", solidHeader=T, 
                               title="Choose a Scale:", 
@@ -458,7 +462,7 @@ server <- function(input, output, session){
     # ValueBox #1b (Last Day Cases in State with COVID) #
     output$lastdayCOcases <- renderValueBox({
         DaysCOVID = COVID19DATA %>% 
-            filter(Date == max(Date) & 
+            filter(Date == max(Date) &
                    COUNTY == "COLORADO")
         
         CODays = DaysCOVID$New.Cases
@@ -549,42 +553,68 @@ server <- function(input, output, session){
                 aes(x=Date, y=get(input$COVIDselect), color=COUNTY)
             ) +
             geom_vline_interactive(xintercept = as.Date("2020-03-25"), aes(
-                tooltip="March 25th - Shutdown Announced\n(Stay-at-Home Order)"), 
+                tooltip="March 25th 2020 - Shutdown Announced\n(Stay-at-Home Order)"), 
                 color="#CC5500", linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-04-27"),aes(
-                tooltip="April 27th - Phased Reopening Begins\n(Safer-at-Home Order)"),
+                tooltip="April 27th 2020 - Phased Reopening Begins\n(Safer-at-Home Order)"),
                 color="orange",linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-05-27"),aes(
-                tooltip="May 27th - Phased Reopening Continues\nIn-Person Dining / Summer Camps Reopen"),
+                tooltip="May 27th 2020 - Phased Reopening Continues\nIn-Person Dining / Summer Camps Reopen"),
                 color="yellow3",linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-06-18"),aes(
-                tooltip="June 18th - Bars Reopen at 50% Capacity\n(Protect-Our-Neighbors Order)"),
+                tooltip="June 18th 2020 - Bars Reopen at 50% Capacity\n(Protect-Our-Neighbors Order)"),
                 color="green",linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-06-30"),aes(
-                tooltip="June 30th - Bars Reclosed"),
+                tooltip="June 30th 2020 - Bars Reclosed"),
                 color="yellow3",linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-07-16"), aes(
-                tooltip="July 16th - Governor Polis issues\nStatewide Mask Order"),
+                tooltip="July 16th 2020 - Governor Polis issues\nStatewide Mask Order"),
                 color="orange",linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-08-17"),aes(
-                tooltip="August 17th - School Year Starts for most of CO\n(Mix of In Person / Hybrid / Online Learning)"),
+                tooltip="August 17th 2020 - School Year Starts for most of CO\n(Mix of In Person / Hybrid / Online Learning)"),
                 color="green",linetype="longdash", size=1) +
             geom_vline_interactive(xintercept=as.Date("2020-11-20"),aes(
-                tooltip="November 20th - 20 Counties Enter Level Red -- Severe Risk\n(Most Indoor Activities / Dining Banned, Offices & Gyms at 10%)"),
+                tooltip="November 20th 2020 - 20 Counties Enter Level Red -- Severe Risk\n(Most Indoor Activities / Dining Banned, Offices & Gyms at 10%)"),
                 color="orange",linetype="longdash", size=1) +
+            
+            geom_vline_interactive(xintercept=as.Date("2020-12-14"),aes(
+                tooltip="December 14th 2020 - First COVID Vaccines\nin Colorado Administered to High-risk Medical Professionals"),
+                color="blue",linetype="longdash", size=1) +
+            geom_vline_interactive(xintercept=as.Date("2020-12-29"),aes(
+                tooltip="December 29th 2020 - New U.K. COVID Variant (B.1.1.7)\nfound in Colorado"),
+                color="#CC5500",linetype="longdash", size=1) +
+            geom_vline_interactive(xintercept=as.Date("2021-01-06"),aes(
+                tooltip="January 6th 2021 - Vaccines available to 70+,\nFirst Responders, and Moderate-risk Medical Professionals"),
+                color="blue",linetype="longdash", size=1) +
+            geom_vline_interactive(xintercept=as.Date("2021-02-08"),aes(
+                tooltip="February 8th 2021 - Vaccines available for 65+ and School Staff"),
+                color="blue",linetype="longdash", size=1) +
+            geom_vline_interactive(xintercept=as.Date("2021-03-05"),aes(
+                tooltip="March 5th 2021 - Vaccines available to 60+, 2+ Co-Morbidities,\nand Agricultural/Grocery Store Workers"),
+                color="blue",linetype="longdash", size=1) +
+            geom_vline_interactive(xintercept=as.Date("2021-03-19"),aes(
+                tooltip="March 19th 2021 - Vaccines available to 50+, 1 Co-Morbidity,\nFrontline workers,and Government employees"),
+                color="blue",linetype="longdash", size=1) +
+            geom_vline_interactive(xintercept=as.Date("2021-04-02"),aes(
+                tooltip="April 2nd 2021 - COVID Vaccinations available\nfor all Colorado Residents 16 and older"),
+                color="blue",linetype="longdash", size=1) +
+            geom_vline_interactive(xintercept=as.Date("2021-05-02"),aes(
+                tooltip="May 2nd 2021 - Masks no longer required in indoor spaces\nif 80% of those inside are fully vaccinated"),
+                color="yellow3",linetype="longdash", size=1) +
+            
             geom_line_interactive(size=1.5) +
             geom_point_interactive(
                 aes(tooltip = paste(paste(round(get(input$COVIDselect),1),
                                           covid_lab_rev_perc(), sep=" "),
-                                    paste0("on ", format(Date, format = "%B %d"), 
-                                           " for ", stri_trans_totitle(COUNTY)),
+                                    (paste(paste0(" in ", stri_trans_totitle(COUNTY)),
+                                    paste0("on ", format(Date, format = "%B %e, %Y")), sep="\n")),
                                     sep="\n"),
                     data_id = Date),
                 size=1.6
             ) + 
             labs(title = paste0(stri_trans_totitle(countyname()), 
                                 " County Timeline:\nCOVID ", covid_lab_long()),
-                 x=paste0("Date Range\n(", format(Min_Date, format="%B %d")," - ", format(Max_Date,format="%B %d"), ")"),
+                 x=paste0("Date Range\n(", format(Min_Date, format="%B %e, %Y")," - ", format(Max_Date,format="%B %e, %Y"), ")"),
                  y=covid_lab_perc(), 
                  subtitle = "including Major Events in Colorado's COVID response") +
             theme(text=element_text(family="calibri"),
@@ -603,7 +633,7 @@ server <- function(input, output, session){
         
         indcounties = indcounties +
             # xlim(min(input$daterange),max(input$daterange)) + 
-            scale_x_date(date_labels = "%b %d", date_minor_breaks = "1 day", 
+            scale_x_date(date_labels = "%b %e '%y", date_minor_breaks = "1 day", 
                          limits = c(min(input$daterange),max(input$daterange)))
         
         options(scipen=999)
@@ -660,9 +690,9 @@ server <- function(input, output, session){
                  fill=str_wrap(covid_lab_perc_no_avg(),8),
                  # caption = "Hover over any county for additional information",
                  caption = paste0("Most Recent Value: ",
-                                  format(Max_Date, format = "%B %d"),  ". Date Range: ",
-                                  format(Min_Date_State, format = "%B %d"), " - ",
-                                  format(Max_Date_State, format = "%B %d"), ".")
+                                  format(Max_Date, format = "%B %e"),  ". Date Range: ",
+                                  format(Min_Date_State, format = "%B %e, %Y"), " - ",
+                                  format(Max_Date_State, format = "%B %e, %Y"), ".")
                  
             ) +
             bi_theme() + 
@@ -819,7 +849,8 @@ server <- function(input, output, session){
             focus(COVID.Tests.Per.100000, COVID.Cases.Per.100000, 
                   COVID.Deaths.Per.100000, COVID.Positive.Tests.Perc, 
                   COVID.Mortality.Perc) %>% 
-            mutate(rowname = reorder(no_periods(rowname), get(input$COVIDbuttons))) %>%
+            mutate(rowname = no_periods(term)) %>% 
+            mutate(rowname = reorder(rowname, get(input$COVIDbuttons))) %>%
             ggplot(aes(rowname, get(input$COVIDbuttons), fill=get(input$COVIDbuttons))) +
             scale_fill_gradient2(low="red", mid="grey80", high="blue") +
             labs(title=paste("Relationship Strength Analysis:", 
@@ -1263,7 +1294,7 @@ server <- function(input, output, session){
                   strip.text.y = element_text(face="bold"),
                   axis.title = element_text(face="bold", size=14),
                   axis.text.y =
-                      element_text(face="bold", size=7),
+                      element_text(face="bold", size=6),
                   axis.text.x = element_text(face="bold"),
                   legend.title = element_text(color="darkblue", face="bold"),
                   legend.text = element_text(color="darkblue"),

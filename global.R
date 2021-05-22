@@ -720,10 +720,7 @@ Perc.100000.Total.Health.Facilities = 100000*Total.Health.Facilities/Population.
 #######  Daily Data refreshes start here #######
 
 ## COVID DATASET #1 - COUNTY LEVEL OPEN REPOSITORY ##
-download.file(#"https://opendata.arcgis.com/datasets/1456d8d43486449292e5784dcd9ce4a7_0.csv", "CDPHE_COVID19_County-Level_Open_Data_Repository.csv")
-               #"https://opendata.arcgis.com/datasets/52fb11a8a07f49c1b28335a9de9ba99f_0.csv", "CDPHE_COVID19_County-Level_Open_Data_Repository.csv")
-               #"https://opendata.arcgis.com/datasets/8ff1603466cb4fadaff7018612dc58a0_0.csv", "CDPHE_COVID19_County-Level_Open_Data_Repository.csv")
-                "https://opendata.arcgis.com/datasets/efd7f5f77efa4122a70a0c5c405ce8be_0.csv", "CDPHE_COVID19_County-Level_Open_Data_Repository.csv")
+# download.file("https://opendata.arcgis.com/datasets/efd7f5f77efa4122a70a0c5c405ce8be_0.csv", "CDPHE_COVID19_County-Level_Open_Data_Repository.csv")
 COVID19County = read.csv("CDPHE_COVID19_County-Level_Open_Data_Repository.csv", stringsAsFactors = F, header=T)
 
 COVID19County$Metric %<>%  
@@ -770,7 +767,7 @@ COVID19County$Date =
 
 
 ## COVID DATASET #2 - Positive Cases and Rates of Infection by County ##
-download.file("https://opendata.arcgis.com/datasets/222c9d85e93540dba523939cfb718d76_0.csv?outSR=%7B%22latestWkid%22%3A4326%2C%22wkid%22%3A4326%7D","Colorado_COVID-19_Positive_Cases_and_Rates_of_Infection_by_County_of_Identification.csv")
+# download.file("https://opendata.arcgis.com/datasets/222c9d85e93540dba523939cfb718d76_0.csv?outSR=%7B%22latestWkid%22%3A4326%2C%22wkid%22%3A4326%7D","Colorado_COVID-19_Positive_Cases_and_Rates_of_Infection_by_County_of_Identification.csv")
 COVID19Positive = read.csv("Colorado_COVID-19_Positive_Cases_and_Rates_of_Infection_by_County_of_Identification.csv", header=T, stringsAsFactors = F)
 
 names(COVID19Positive) %<>% gsub("__", "_", ., fixed=T) 
@@ -849,10 +846,7 @@ COVID19CountyANALYSIS = COVID19CountyANALYSIS %>%
 
 #### COVID DATASET #3 -- STATE & COUNTY DAILY DATA  ####
 
-download.file(#"https://opendata.arcgis.com/datasets/bd4ee19bc7fc4288a20db8d5a7bd2be2_0.csv","CDPHE_COVID19_Daily_State_Statistics-1.csv")
-              #"https://opendata.arcgis.com/datasets/89d3380a96374a6ab04c3256d766132b_0.csv","CDPHE_COVID19_Daily_State_Statistics-1.csv")
-              #"https://opendata.arcgis.com/datasets/566216cf203e400f8cbf2e6b4354bc57_0.csv","CDPHE_COVID19_Daily_State_Statistics-1.csv")
-  "https://opendata.arcgis.com/datasets/80193066bcb84a39893fbed995fc8ed0_0.csv", "CDPHE_COVID19_Daily_State_Statistics.csv")
+# download.file("https://opendata.arcgis.com/datasets/80193066bcb84a39893fbed995fc8ed0_0.csv", "CDPHE_COVID19_Daily_State_Statistics.csv")
 COVID19StateData = read.csv("CDPHE_COVID19_Daily_State_Statistics.csv", header=T, stringsAsFactors = F)
 # COVID19StateData
 
